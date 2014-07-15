@@ -1,0 +1,14 @@
+/*
+ * Theme Customizer CSS
+ *
+ */
+
+#customize-control-dynamicnews_control_header_content,
+#customize-control-dynamicnews_control_posts_length,
+#customize-control-dynamicnews_control_slider_activated {
+	margin-top: 24px;
+}
+
+#customize-control-dynamicnews_control_header_content {
+	margin-bottom: 0;
+}

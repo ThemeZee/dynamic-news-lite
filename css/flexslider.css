@@ -1,0 +1,188 @@
+/*
+ * jQuery FlexSlider v2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+
+/* Browser Resets */
+.zeeflexslider a:active,
+.zeeflexslider a:focus  {outline: none;}
+.zeeslides,
+.zeeflex-control-nav,
+.zeeflex-direction-nav {margin: 0; padding: 0; list-style: none;}
+
+/* FlexSlider Necessary Styles
+*********************************/
+.zeeflexslider {margin: 0; padding: 0;}
+.zeeflexslider .zeeslides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.zeeflexslider .zeeslides img {width: 100%; display: block;}
+.zeeflex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .zeeslides element */
+.zeeslides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .zeeslides {display: block;}
+* html .zeeslides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .zeeslides > li:first-child {display: block;}
+
+.zeeflex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
+.loading .zeeflex-viewport {max-height: 300px;}
+
+/*  ThemeZee Slider Layout
+*****************************************/
+#frontpage-slider-wrap {
+	position: relative;
+}
+#frontpage-slider {
+	position: relative;
+	zoom: 1;
+}
+#frontpage-slider  .zeeslides {
+	zoom: 1;
+}
+#frontpage-slider .zeeslide img {
+	max-width: 1340px;
+	width: 100%;
+	max-height: 450px;
+	height: auto;
+}
+/* Slider Entry */
+#frontpage-slider .zeeslide .slide-entry {
+	line-height: 1.6em;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	margin-top: 1px;
+	padding: 1em 1.5em;
+	color: #fff;
+	background: #333;
+	border-top: 10px solid #e84747;
+}
+#frontpage-slider .zeeslide .slide-title {
+	font-family: 'Francois One', Tahoma, Verdana, Arial;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #fff;
+	line-height: 1.4em;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	text-transform: uppercase;
+	padding: 0.2em 0;
+	border-bottom: 2px solid #ddd;
+	margin-bottom: 1em;
+}
+#frontpage-slider .zeeslide .slide-title a:link, #frontpage-slider .zeeslide .slide-title a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+#frontpage-slider .zeeslide .slide-title a:hover, #frontpage-slider .zeeslide .slide-title a:active{
+	color: #ccc;
+}
+#frontpage-slider .zeeslide .slide-more-link, #frontpage-slider .zeeslide .slide-more-link:link,
+#frontpage-slider .zeeslide .slide-more-link:visited {
+	color: #eee;
+	font-style: italic;
+	display: inline-block;
+	margin: 0.3em 0;
+}
+#frontpage-slider .zeeslide .slide-more-link:hover, #frontpage-slider .zeeslide .slide-more-link:active{
+	text-decoration: underline;
+}
+.frontpage-slider-controls {
+	clear: left;
+}
+/* Direction Nav */
+.frontpage-slider-controls .zeeflex-direction-nav {
+	*height: 0;
+}
+.frontpage-slider-controls .zeeflex-direction-nav a {
+	display: block;
+	position: absolute;
+	margin: -40px 0 0 0;
+	width: 40px;
+	height: 40px;
+	background: #333;
+	text-align: left;
+	color #333;
+	top: 40px;
+	font-size: 0;
+	cursor: pointer;
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+	z-index: 10;
+}
+.frontpage-slider-controls .zeeflex-direction-nav a:hover {
+	text-decoration: none;
+}
+.frontpage-slider-controls .zeeflex-direction-nav a:before {
+	margin: 0.35em;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font: normal 24px/1 Genericons;
+	text-decoration: inherit;
+	vertical-align: text-bottom;
+	color: #fff;
+}
+.frontpage-slider-controls .zeeflex-direction-nav a.zeeflex-next:before {
+	content: '\f429';
+}
+.frontpage-slider-controls .zeeflex-direction-nav a.zeeflex-prev:before {
+	content: '\f430';
+}
+.frontpage-slider-controls .zeeflex-direction-nav .zeeflex-next {
+	left: 41px;
+}
+#frontpage-slider-wrap:hover .zeeflex-direction-nav a {
+	opacity: 1;
+}
+#frontpage-slider-wrap:hover .frontpage-slider-controls a:hover {
+	background-color: #e84747;
+}
+
+/* Control Nav */
+.frontpage-slider-controls .zeeflex-control-nav {
+	width: 100%;
+	position: absolute;
+	margin: 1px 0 0;
+	display: table;
+}
+.frontpage-slider-controls .zeeflex-control-nav li {
+	padding: 0 1px 1px 0;
+	background: #fff;
+	display: table-cell;
+	zoom: 1;
+	*display: inline;
+}
+.frontpage-slider-controls .zeeflex-control-paging li a {
+	height: 15px;
+	display: block;
+	background: #333;
+	cursor: pointer;
+	text-indent: -9999px;
+}
+.frontpage-slider-controls .zeeflex-control-paging li a.zeeflex-active {
+	background: #e84747;
+	cursor: default;
+}
+
+
+/* Tablets (landscape) | <960px */
+@media only screen and (max-width: 60em) {
+
+	.frontpage-slider-controls .zeeflex-direction-nav a {
+		opacity: 1;
+	}
+
+}
