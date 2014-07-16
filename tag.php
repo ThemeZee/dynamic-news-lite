@@ -9,7 +9,7 @@
 		<section id="content" class="primary" role="main">
 
 		<h2 id="tag-title" class="archive-title">
-			<?php printf(__('Tag Archives: %s', 'dynamicnews'), '<span>' . single_cat_title( '', false ) . '</span>'); ?>
+			<?php printf(__('Tag Archives: %s', 'dynamicnewslite'), '<span>' . single_cat_title( '', false ) . '</span>'); ?>
 		</h2>
 
 		<?php if (have_posts()) : while (have_posts()) : the_post();

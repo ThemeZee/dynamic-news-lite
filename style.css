@@ -1,12 +1,12 @@
 /*======================================
-Theme Name: Dynamic News
+Theme Name: Dynamic News Lite
 Theme URI: http://themezee.com/themes/dynamicnews/
 Description: A responsive, multipurpose blogging and magazine theme with bold colors and fonts. It comes with a featured content slider and a magazine page template. Dynamic News is a trending theme on wordpress.com and we are sure you will like the WordPress.org version as well.
 Version: 1.0
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, red, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, blue, silver, white, green, gray
-Text Domain: dynamicnews
+Text Domain: dynamicnewslite
 Domain Path: /languages/
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -453,131 +453,6 @@ input, textarea, select {
 	text-align: right;
 }
 
-/* Custom Recent/Popular Posts Widget */
-.widget-posts-entries ul {
-	padding: 0;
-}
-.widget-posts-entries ul li {
-	list-style: none;
-	margin: 0 0 0.5em 0;
-	overflow: auto;
-}
-.widget-posts-entries .wp-post-image {
-	float: left;
-	margin: 0.3em 0.8em 0.5em 0;
-	max-width: 75px;
-	height: auto;
-}
-.widget-posts-entries .widget-postmeta {
-	color: #777;
-	margin: 0.3em 0;
-	font-size: 0.9em;
-}
-.widget-posts-entries  .widget-postmeta .widget-date {
-	border-right: 1px solid #aaa;
-	padding-right: 0.6em;
-}
-.widget-posts-entries  .widget-postmeta .widget-comment {
-	margin-left: 0.4em;
-}
-
-/* Custom Recent Comments Widget */
-.widget-recent-comments ul {
-	padding: 0;
-}
-.widget-recent-comments ul li {
-	list-style: none;
-	margin: 0 0 0.4em 0;
-	overflow: auto;
-}
-.widget-recent-comments img {
-	float: left;
-	margin: 0.3em 0.8em 0.4em 0;
-}
-.widget-recent-comments .comment-content {
-	font-size: 0.9em;
-	font-style: italic;
-}
-.widget-recent-comments .comment-date {
-	padding: 0;
-	margin-top: 0.2em;
-	font-size: 0.9em;
-	color: #777;
-}
-
-/* Theme Tabbed Widget */
-.widget-tabnavi {
-	margin: -0.5em -0.5em 0;
-	padding: 0;
-	overflow: auto;
-	list-style: none;
-}
-.widget-tabnav {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	list-style-position: outside;
-	position: relative;
-}
-.widget-tabnavi ul {
-	text-indent: 0;
-	list-style: none;
-}
-.widget-tabnav li {
-	float:left;
-	list-style: none;
-	position: relative;
-	margin: 0;
-	padding: 0;
-}
-.widget-tabnav li a {
-	display: block;
-	margin: 0 1px 1px 0;
-	padding: 0.5em 1em;
-	font-size: 0.9em;
-	text-decoration: none;
-	background-color: #e84747;
-}
-.widget-tabnav li a:link, .widget-tabnav li a:visited  {
-	color: #fff;
-}
-.widget-tabnavi li a:hover, .widget-tabnavi li a:active {
-	background-color: #303030;
-	text-decoration: none;
-}
-.widget-tabnavi li a.current-tab{
-	text-decoration: underline;
-}
-.widget-tabbed .tabdiv {
-	padding: 0;
-	margin: 1em 0 0 0;
-}
-.widget-tabbed .tabdiv li.widget-thumb {
-	list-style: none;
-	margin: 0 0 0.5em 0;
-	overflow: auto;
-}
-.widget-tabbed .tabdiv  li.widget-thumb .wp-post-image {
-	float: left;
-	margin: 0.3em 0.8em 0.5em 0;
-	max-width: 75px;
-	height: auto;
-}
-.widget-tabbed .tabdiv li.widget-avatar{
-	list-style: none;
-	margin: 0 0 0.3em 0;
-	overflow: auto;
-}
-.widget-tabbed .tabdiv li.widget-avatar img {
-	float: left;
-	margin: 0.3em 0.8em 0.3em 0;
-}
-.widget-tabbed .tabdiv ul li .widget-postmeta {
-	margin: 0.1em 0;
-	padding: 0;
-	font-size: 0.8em;
-	color: #777;
-}
 
 /* Posts and Pages
 -------------------------------------------------------------- */
@@ -740,34 +615,6 @@ input, textarea, select {
 	text-decoration: underline;
 }
 
-
-/* Infinite Scroll Pagination */
-.infinite-scroll .post-pagination {
-	display: none;
-}
-.infinite-loader {
-	position: relative;
-	left: 50%;
-	margin-bottom: 1.5em;
-}
-.infinite-scroll #infinite-handle {
-	margin-bottom: 1.5em;
-}
-.infinite-scroll #infinite-handle span {
-	display: block;
-	padding: 0.8em 1em;
-	font-size: 1.0em;
-	font-weight: bold;
-	box-shadow: 0 0 4px #ddd;
-	border: 1px solid #ddd;
-	background: #fff;
-	color: #e84747;
-	text-transform: uppercase;
-	text-align: center;
-}
-.infinite-scroll #infinite-handle span:hover {
-	color: #333;
-}
 
 /* Text Elements
 -------------------------------------------------------------- */
@@ -1366,64 +1213,6 @@ embed, iframe, object, video {
 	background: #eee;
 }
 
-/* Footer Widget Area
--------------------------------------------------------------- */
-#footer-widgets-bg {
-	background: #333;
-}
-#footer-widgets {
-	padding-top: 1.5em;
-	padding-left: 1.5em;
-}
-.footer-widget-column {
-	float: left;
-	width: 25%;
-	padding-right: 1.5em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-/* Footer Widget Styling */
-#footer-widgets .widget {
-	box-shadow: none;
-	border: none;
-	background: rgba(255, 255, 255, 0.05);
-}
-#footer-widgets .widgettitle {
-	color: #fff;
-	background: rgba(255, 255, 255, 0.1);
-}
-#footer-widgets .widget ul, #footer-widgets .widget div{
-	color: #fff;
-}
-#footer-widgets .widget a:link, #footer-widgets .widget a:visited  {
-	color: #ccc;
-}
-#footer-widgets .widget a:hover, #footer-widgets .widget a:active {
-	text-decoration: underline;
-}
-
-/* Custom Widget Styling */
-#footer-widgets #wp-calendar {
-	color: #fff;
-}
-#footer-widgets .widget-recent-posts .widget-postmeta {
-	color: #ccc;
-}
-#footer-widgets .widget-recent-comments .comment-content {
-	color: #ccc;
-}
-#footer-widgets .widget-recent-comments .comment-date {
-	color: #ccc;
-}
-#footer-widgets .widget-tabnav li a:link, #footer-widgets .widget-tabnav li a:visited {
-	color: #333;
-	background-color: #eee;
-}
-#footer-widgets .widget-tabnavi li a:hover, #footer-widgets .widget-tabnavi li a:active {
-	background-color: #ccc;
-}
-
 /* Footer
 -------------------------------------------------------------- */
 #footer-wrap {
@@ -1483,29 +1272,19 @@ embed, iframe, object, video {
 	#wrapper {
 		width: 94%;
 	}
-	.footer-widget-column {
-		width: 50%;
-	}
 }
 /* Smaller screens | <1120px */
 @media only screen and (max-width: 65em) {
 	#wrapper {
 		width: 96%;
 	}
-	.widget, .type-post, .type-page, .type-attachment,
-	#comments {
+	.widget, .type-post, .type-page, .type-attachment, #comments {
 		box-shadow: none;
 		border: none;
 		padding: 0;
 	}
 	.widgettitle {
 		margin: 0 0 1.5em 0;
-	}
-	#footer-widgets .widget {
-		padding: 1.5em;
-	}
-	#footer-widgets .widgettitle {
-		margin: -0.5em -0.5em 1.5em -0.5em;
 	}
 }
 /* Tablets (landscape) | <960px */
@@ -1550,10 +1329,6 @@ embed, iframe, object, video {
 	}
 	#footer-widgets {
 		margin-right: 0;
-	}
-	.footer-widget-column {
-		float: none;
-		width: 100%;
 	}
 	.widget, .type-post, .type-page, .type-attachment, #comments {
 		box-shadow: 0 0 4px #ddd;
@@ -1691,12 +1466,6 @@ embed, iframe, object, video {
 	}
 	.widgettitle {
 		margin: 0 0 1.5em 0;
-	}
-	#footer-widgets .widget {
-		padding: 1.5em;
-	}
-	#footer-widgets .widgettitle {
-		margin: -0.5em -0.5em 1.5em -0.5em;
 	}
 	.entry h1, .comment h1 {
 	font-size: 2.2em;

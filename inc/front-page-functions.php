@@ -18,7 +18,7 @@ function dynamicnews_display_category_posts_boxed($category) {
 		'post_type' => 'post',
 		'post_status' => 'publish',
 		'showposts' => 4,
-		'caller_get_posts' => 1,
+		'ignore_sticky_posts' => true,
 		'orderby' => 'date',
 		'cat' => (int)$category
 	);
@@ -56,7 +56,7 @@ function dynamicnews_display_category_posts_columns($category_one, $category_two
 		'post_type' => 'post',
 		'post_status' => 'publish',
 		'showposts' => 4,
-		'caller_get_posts' => 1,
+		'ignore_sticky_posts' => true,
 		'orderby' => 'date',
 		'cat' => (int)$category_one
 	);
@@ -90,7 +90,7 @@ function dynamicnews_display_category_posts_columns($category_one, $category_two
 		'post_type' => 'post',
 		'post_status' => 'publish',
 		'showposts' => 4,
-		'caller_get_posts' => 1,
+		'ignore_sticky_posts' => true,
 		'orderby' => 'date',
 		'cat' => (int)$category_two
 	);
@@ -136,7 +136,7 @@ function dynamicnews_display_category_posts_grid($category, $count = 4) {
 		'post_type' => 'post',
 		'post_status' => 'publish',
 		'showposts' => (int)$count,
-		'caller_get_posts' => 1,
+		'ignore_sticky_posts' => true,
 		'orderby' => 'date',
 		'cat' => (int)$category
 	);
@@ -209,7 +209,7 @@ function dynamicnews_display_postmeta_frontpage() { ?>
 
 <?php if ( comments_open() ) : ?>
 	<span class="meta-comments sep">
-		<?php comments_popup_link( __('Leave a comment', 'dynamicnews'),__('One comment','dynamicnews'),__('% comments','dynamicnews') ); ?>
+		<?php comments_popup_link( __('Leave a comment', 'dynamicnewslite'),__('One comment','dynamicnewslite'),__('% comments','dynamicnewslite') ); ?>
 	</span>
 <?php endif;
 

@@ -33,7 +33,7 @@ Template Name: Magazine Front Page
 		else : ?>
 
 			<p class="frontpage-magazine-no-widgets">
-				<?php _e('There are no widgets to be displayed. Please go to Appearance → Widgets and add at least one widget to the "Magazine Front Page" widget area. You can use the three Category Posts widgets to set up the theme like the demo website.', 'dynamicnews'); ?>
+				<?php _e('There are no widgets to be displayed. Please go to Appearance → Widgets and add at least one widget to the "Magazine Front Page" widget area. You can use the three Category Posts widgets to set up the theme like the demo website.', 'dynamicnewslite'); ?>
 			</p>
 
 		<?php endif; ?>

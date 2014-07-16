@@ -30,12 +30,7 @@
 			<div id="logo" class="clearfix">
 			
 				<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-			<?php // Display Logo Image or Site Title
-				if ( isset($theme_options['header_logo']) and $theme_options['header_logo'] <> '' ) : ?>
-					<img class="logo-image" src="<?php echo esc_url($theme_options['header_logo']); ?>" alt="Logo" /></a>
-			<?php else: ?>
 					<h1 class="site-title"><?php bloginfo('name'); ?></h1>
-			<?php endif; ?>
 				</a>
 				
 			<?php // Display Tagline on header if activated

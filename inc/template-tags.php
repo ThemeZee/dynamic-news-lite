@@ -40,7 +40,7 @@ if ( ! function_exists( 'dynamicnews_display_postmeta' ) ):
 	function dynamicnews_display_postmeta() { ?>
 		
 		<span class="meta-date">
-		<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>', 'dynamicnews'), 
+		<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>', 'dynamicnewslite'), 
 				esc_url( get_permalink() ),
 				esc_attr( get_the_time() ),
 				esc_attr( get_the_date( 'c' ) ),
@@ -50,9 +50,9 @@ if ( ! function_exists( 'dynamicnews_display_postmeta' ) ):
 		</span>
 		
 		<span class="meta-author sep">
-		<?php printf(__('<a href="%1$s" title="%2$s" rel="author">%3$s</a>', 'dynamicnews'), 
+		<?php printf(__('<a href="%1$s" title="%2$s" rel="author">%3$s</a>', 'dynamicnewslite'), 
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-				esc_attr( sprintf( __( 'View all posts by %s', 'dynamicnews' ), get_the_author() ) ),
+				esc_attr( sprintf( __( 'View all posts by %s', 'dynamicnewslite' ), get_the_author() ) ),
 				get_the_author()
 			);
 		?>
@@ -61,13 +61,13 @@ if ( ! function_exists( 'dynamicnews_display_postmeta' ) ):
 	<?php if ( comments_open() ) : ?>
 		
 		<span class="meta-comments sep">
-			<?php comments_popup_link( __('Leave a comment', 'dynamicnews'),__('One comment','dynamicnews'),__('% comments','dynamicnews') ); ?>
+			<?php comments_popup_link( __('Leave a comment', 'dynamicnewslite'),__('One comment','dynamicnewslite'),__('% comments','dynamicnewslite') ); ?>
 		</span>
 		
 	<?php endif; ?>
 	
 	<?php
-		edit_post_link(__( 'Edit Post', 'dynamicnews' ));
+		edit_post_link(__( 'Edit Post', 'dynamicnewslite' ));
 	}
 	
 endif;
@@ -131,7 +131,7 @@ if ( ! function_exists( 'dynamicnews_display_postinfo_single' ) ):
 		$tag_list = get_the_tag_list('', ', ');
 		if ( $tag_list ) : ?>
 			<span class="meta-tags">
-				<?php printf(__('tagged with %1$s', 'dynamicnews'), $tag_list); ?>
+				<?php printf(__('tagged with %1$s', 'dynamicnewslite'), $tag_list); ?>
 			</span>
 	<?php
 		endif;
@@ -206,7 +206,7 @@ function dynamicnews_display_social_icons() {
 	else: // Display Hint how to configure Social Icons ?>
 
 		<p class="social-icons-hint">
-			<?php _e('Please go to WP-Admin-> Appearance-> Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" theme location.', 'dynamicnews'); ?>
+			<?php _e('Please go to WP-Admin-> Appearance-> Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" theme location.', 'dynamicnewslite'); ?>
 		</p>
 <?php
 	endif;

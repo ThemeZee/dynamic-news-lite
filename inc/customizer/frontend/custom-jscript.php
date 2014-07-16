@@ -15,11 +15,11 @@ function dynamicnews_custom_jscript_navigation() {
 
 	// Set Parameters array
 	$params = array(
-		'menuTitle' => __('Menu', 'dynamicnews')
+		'menuTitle' => __('Menu', 'dynamicnewslite')
 	);
 	
 	// Passing Parameters to Javascript
-	wp_localize_script( 'dynamicnews-jquery-navigation', 'dynamicnews_navigation_params', $params );
+	wp_localize_script( 'dynamicnewslite-jquery-navigation', 'dynamicnews_navigation_params', $params );
 }
 endif;
 
@@ -42,7 +42,7 @@ function dynamicnews_custom_jscript_slider() {
 	endif;
 	
 	// Passing Parameters to Javascript
-	wp_localize_script( 'dynamicnews-jquery-frontpage_slider', 'dynamicnews_slider_params', $params );
+	wp_localize_script( 'dynamicnewslite-jquery-frontpage_slider', 'dynamicnews_slider_params', $params );
 }
 endif;
 

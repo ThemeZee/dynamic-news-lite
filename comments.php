@@ -10,7 +10,7 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['
 	die ('Please do not load this page directly. Thanks!');
 
 if ( post_password_required()) : ?>
-	<p><?php _e('Enter password to view comments.', 'dynamicnews'); ?></p>
+	<p><?php _e('Enter password to view comments.', 'dynamicnewslite'); ?></p>
 <?php return; endif; ?>
 
 
@@ -20,7 +20,7 @@ if ( post_password_required()) : ?>
 	
 		<?php if ( have_comments() ) : ?>
 
-			<h3 class="comments-title"><span><?php comments_number( '', __('One comment','dynamicnews'), __('% comments','dynamicnews') );?></span></h3>
+			<h3 class="comments-title"><span><?php comments_number( '', __('One comment','dynamicnewslite'), __('% comments','dynamicnewslite') );?></span></h3>
 
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 			<div class="comment-pagination clearfix">

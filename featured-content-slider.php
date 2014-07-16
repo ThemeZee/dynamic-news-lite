@@ -11,7 +11,7 @@ $slider_posts = dynamicnews_get_featured_content();
 if ( empty( $slider_posts ) ) : ?>
 
 	<p class="frontpage-slider-empty-posts">
-		<?php _e('There is no featured content to be displayed in the slider. To set up the slider, go to Appearance → Customize, and add a tag under Tag Name in the Featured Content section. The slideshow will then display all posts which are tagged with that keyword.', 'dynamicnews'); ?>
+		<?php _e('There is no featured content to be displayed in the slider. To set up the slider, go to Appearance → Customize, and add a tag under Tag Name in the Featured Content section. The slideshow will then display all posts which are tagged with that keyword.', 'dynamicnewslite'); ?>
 	</p>
 	
 <?php
@@ -45,7 +45,7 @@ add_filter('excerpt_length', 'dynamicnews_slideshow_excerpt_length');
 				<div class="slide-entry clearfix">
 					<h2 class="slide-title"><a href="<?php esc_url(the_permalink()) ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 					<div class="slide-content"><?php the_excerpt(); ?></div>
-					<a href="<?php esc_url(the_permalink()) ?>" class="slide-more-link"><?php _e('Read more &raquo;', 'dynamicnews'); ?></a>
+					<a href="<?php esc_url(the_permalink()) ?>" class="slide-more-link"><?php _e('Read more &raquo;', 'dynamicnewslite'); ?></a>
 				</div>
 
 			</li>

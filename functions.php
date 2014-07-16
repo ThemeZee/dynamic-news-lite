@@ -16,29 +16,32 @@ function dynamicnews_enqueue_scripts() {
 	$theme_options = dynamicnews_theme_options();
 	
 	// Register and Enqueue Stylesheet
-	wp_enqueue_style('dynamicnews-stylesheet', get_stylesheet_uri());
+	wp_enqueue_style('dynamicnewslite-stylesheet', get_stylesheet_uri());
 	
 	// Register Genericons
-	wp_enqueue_style('dynamicnews-genericons', get_template_directory_uri() . '/css/genericons.css');
+	wp_enqueue_style('dynamicnewslite-genericons', get_template_directory_uri() . '/css/genericons.css');
 
 	// Register and Enqueue FlexSlider JS and CSS if necessary
 	if ( ( isset($theme_options['slider_activated_blog']) and $theme_options['slider_activated_blog'] == true )
 		|| ( isset($theme_options['slider_activated_front_page']) and $theme_options['slider_activated_front_page'] == true ) ) :
 
 		// FlexSlider CSS
-		wp_enqueue_style('dynamicnews-flexslider', get_template_directory_uri() . '/css/flexslider.css');
+		wp_enqueue_style('dynamicnewslite-flexslider', get_template_directory_uri() . '/css/flexslider.css');
 
 		// FlexSlider JS
-		wp_enqueue_script('dynamicnews-jquery-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'));
+		wp_enqueue_script('dynamicnewslite-jquery-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'));
 
 		// Register and enqueue slider.js
-		wp_enqueue_script('dynamicnews-jquery-frontpage_slider', get_template_directory_uri() .'/js/slider.js', array('dynamicnews-jquery-flexslider'));
+		wp_enqueue_script('dynamicnewslite-jquery-frontpage_slider', get_template_directory_uri() .'/js/slider.js', array('dynamicnewslite-jquery-flexslider'));
 
 	endif;
 
 	// Register and enqueue navigation.js
-	wp_enqueue_script('dynamicnews-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
-
+	wp_enqueue_script('dynamicnewslite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
+	
+	// Register and Enqueue Font
+	wp_enqueue_style('dynamicnewslite-lite-default-font', '//fonts.googleapis.com/css?family=Droid+Sans');
+	wp_enqueue_style('dynamicnewslite-lite-default-title-font', '//fonts.googleapis.com/css?family=Francois+One');
 }
 endif;
 
@@ -59,7 +62,7 @@ if ( ! function_exists( 'dynamicnews_setup' ) ):
 function dynamicnews_setup() {
 
 	// init Localization
-	load_theme_textdomain('dynamicnews', get_template_directory() . '/languages' );
+	load_theme_textdomain('dynamicnewslite', get_template_directory() . '/languages' );
 
 	// Add Theme Support
 	add_theme_support('post-thumbnails');
@@ -67,9 +70,7 @@ function dynamicnews_setup() {
 	add_editor_style();
 	
 	// Add Custom Background
-	add_theme_support('custom-background', array(
-		'default-color' => 'e5e5e5',
-		'default-image' => get_template_directory_uri() . '/images/background.png'));
+	add_theme_support('custom-background', array('default-color' => 'e5e5e5'));
 
 	// Add Custom Header
 	add_theme_support('custom-header', array(
@@ -86,11 +87,11 @@ function dynamicnews_setup() {
 	);
 
 	// Register Navigation Menus
-	register_nav_menu( 'primary', __('Main Navigation', 'dynamicnews') );
-	register_nav_menu( 'footer', __('Footer Navigation', 'dynamicnews') );
+	register_nav_menu( 'primary', __('Main Navigation', 'dynamicnewslite') );
+	register_nav_menu( 'footer', __('Footer Navigation', 'dynamicnewslite') );
 	
 	// Register Social Icons Menu
-	register_nav_menu( 'social', __('Social Icons', 'dynamicnews') );
+	register_nav_menu( 'social', __('Social Icons', 'dynamicnewslite') );
 
 }
 endif;
@@ -130,61 +131,24 @@ function dynamicnews_register_sidebars() {
 
 	// Register Sidebars
 	register_sidebar( array(
-		'name' => __( 'Sidebar', 'dynamicnews' ),
+		'name' => __( 'Sidebar', 'dynamicnewslite' ),
 		'id' => 'sidebar',
-		'description' => __( 'Appears on posts and pages except front page and fullwidth template.', 'dynamicnews' ),
+		'description' => __( 'Appears on posts and pages except front page and fullwidth template.', 'dynamicnewslite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widgettitle"><span>',
 		'after_title' => '</span></h3>',
 	));
 	register_sidebar( array(
-		'name' => __( 'Magazine Front Page', 'dynamicnews' ),
+		'name' => __( 'Magazine Front Page', 'dynamicnewslite' ),
 		'id' => 'frontpage-magazine',
-		'description' => __( 'Appears on Magazine Front Page page template only. You can use the Category Posts widgets here.', 'dynamicnews' ),
+		'description' => __( 'Appears on Magazine Front Page page template only. You can use the Category Posts widgets here.', 'dynamicnewslite' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widgettitle">',
 		'after_title' => '</h3>',
 	));
-
-	//Register Footer Widgets
-	register_sidebar( array(
-		'name' => __( 'Footer Left', 'dynamicnews' ),
-		'id' => 'footer-left',
-		'description' => __( 'Appears on footer on the left hand side.', 'dynamicnews' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Footer Center Left', 'dynamicnews' ),
-		'id' => 'footer-center-left',
-		'description' => __( 'Appears on footer on center left position.', 'dynamicnews' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Footer Center Right', 'dynamicnews' ),
-		'id' => 'footer-center-right',
-		'description' => __( 'Appears on footer on center right position.', 'dynamicnews' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Footer Right', 'dynamicnews' ),
-		'id' => 'footer-right',
-		'description' => __( 'Appears on footer on the right hand side.', 'dynamicnews' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
+	
 }
 endif;
 
@@ -210,7 +174,7 @@ function dynamicnews_wp_title( $title, $sep = '' ) {
 
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'dynamicnews' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'dynamicnewslite' ), max( $paged, $page ) );
 
 	return $title;
 }
@@ -231,17 +195,10 @@ function dynamicnews_get_featured_content() {
 // Display Credit Link Function
 function dynamicnews_credit_link() {
 	
-	// Get Theme Options from Database
-	$theme_options = dynamicnews_theme_options();
-	
-	if ( isset($theme_options['credit_link']) and $theme_options['credit_link'] == true ) :
-	
-		printf(__( 'Powered by %1$s and %2$s.', 'dynamicnews' ), 
-				sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'dynamicnews' ) ),
-				sprintf( '<a href="http://themezee.com/themes/dynamicnews/" title="Dynamic News WordPress Theme">%s</a>', __( 'Dynamic News', 'dynamicnews' ) )
-			);
-		
-	endif;
+	printf(__( 'Powered by %1$s and %2$s.', 'dynamicnewslite' ), 
+			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'dynamicnewslite' ) ),
+			sprintf( '<a href="http://themezee.com/themes/dynamicnews/" title="Dynamic News WordPress Theme">%s</a>', __( 'Dynamic News', 'dynamicnewslite' ) )
+		);
 }
 
 
@@ -278,8 +235,8 @@ function dynamicnews_list_comments($comment, $args, $depth) {
 	if( $comment->comment_type == 'pingback' or $comment->comment_type == 'trackback' ) : ?>
 
 		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-			<p><?php _e( 'Pingback:', 'dynamicnews' ); ?> <?php comment_author_link(); ?>
-			<?php edit_comment_link( __( '(Edit)', 'dynamicnews' ), '<span class="edit-link">', '</span>' ); ?>
+			<p><?php _e( 'Pingback:', 'dynamicnewslite' ); ?> <?php comment_author_link(); ?>
+			<?php edit_comment_link( __( '(Edit)', 'dynamicnewslite' ), '<span class="edit-link">', '</span>' ); ?>
 			</p>
 
 	<?php else : ?>
@@ -288,27 +245,36 @@ function dynamicnews_list_comments($comment, $args, $depth) {
 
 			<div id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 
-				<div class="comment-author vcard">
-					<?php echo get_avatar( $comment, 56 ); ?>
-					<?php printf(__('<span class="fn">%s</span>', 'dynamicnews'), get_comment_author_link()) ?>
+				<div class="comment-author vcard clearfix">
+					<span class="fn"><?php echo get_comment_author_link(); ?></span>
+					<div class="comment-meta commentmetadata">
+						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+							<?php echo get_comment_date(); ?>
+							<?php echo get_comment_time(); ?>
+						</a>
+						<?php edit_comment_link(__('(Edit)', 'dynamicnewslite'),'  ','') ?>
+					</div>
+
 				</div>
 
-		<?php if ($comment->comment_approved == '0') : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'dynamicnews' ); ?></p>
-		<?php endif; ?>
+				<div class="comment-content clearfix">
 
-				<div class="comment-meta commentmetadata">
-					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf(__('%1$s at %2$s', 'dynamicnews'), get_comment_date(),  get_comment_time()) ?></a>
-					<?php edit_comment_link(__('(Edit)', 'dynamicnews'),'  ','') ?>
+					<?php echo get_avatar( $comment, 72 ); ?>
+
+					<?php if ($comment->comment_approved == '0') : ?>
+						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'dynamicnewslite' ); ?></p>
+					<?php endif; ?>
+
+					<?php comment_text(); ?>
+
 				</div>
-
-				<div class="comment-content"><?php comment_text(); ?></div>
 
 				<div class="reply">
 					<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 				</div>
 
 			</div>
+
 <?php
 	endif;
 
@@ -326,8 +292,6 @@ require( get_template_directory() . '/inc/customizer/customizer.php' );
 require( get_template_directory() . '/inc/customizer/default-options.php' );
 
 // include Customization Files
-require( get_template_directory() . '/inc/customizer/frontend/custom-colors.php' );
-require( get_template_directory() . '/inc/customizer/frontend/custom-fonts.php' );
 require( get_template_directory() . '/inc/customizer/frontend/custom-layout.php' );
 require( get_template_directory() . '/inc/customizer/frontend/custom-jscript.php' );
 
@@ -336,12 +300,6 @@ require( get_template_directory() . '/inc/template-tags.php' );
 require( get_template_directory() . '/inc/front-page-functions.php' );
 
 // include Widget Files
-require( get_template_directory() . '/inc/widgets/widget-social-icons.php' );
-require( get_template_directory() . '/inc/widgets/widget-recent-comments.php' );
-require( get_template_directory() . '/inc/widgets/widget-recent-posts.php' );
-require( get_template_directory() . '/inc/widgets/widget-popular-posts.php' );
-require( get_template_directory() . '/inc/widgets/widget-tabbed-content.php' );
-
 require( get_template_directory() . '/inc/widgets/widget-category-posts-boxed.php' );
 require( get_template_directory() . '/inc/widgets/widget-category-posts-columns.php' );
 require( get_template_directory() . '/inc/widgets/widget-category-posts-grid.php' );

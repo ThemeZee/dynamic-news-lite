@@ -1,6 +1,4 @@
 
-	<?php get_sidebar('footer'); ?>
-
 	<div id="footer-wrap">
 	
 		<footer id="footer" class="container clearfix" role="contentinfo">

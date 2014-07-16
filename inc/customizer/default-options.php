@@ -42,11 +42,7 @@ function dynamicnews_default_options() {
 		'credit_link' 						=> true,
 		'slider_activated_front_page' 		=> false,
 		'slider_activated_blog' 			=> false,
-		'slider_animation' 					=> 'horizontal',
-		'text_font' 						=> 'Droid Sans',
-		'title_font' 						=> 'Francois One',
-		'navi_font' 						=> 'Francois One',
-		'widget_title_font' 				=> 'Droid Sans'
+		'slider_animation' 					=> 'horizontal'
 	);
 	
 	return $default_options;

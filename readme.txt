@@ -1,8 +1,8 @@
-Dynamic News WordPress Theme, Copyright 2014 ThemeZee.com
-Dynamic News is distributed under the terms of the GNU GPL
+Dynamic News Lite WordPress Theme, Copyright 2014 ThemeZee.com
+Dynamic News Lite is distributed under the terms of the GNU GPL
 
 ===================================
-Thanks for Downloading Dynamic News
+Thanks for Downloading Dynamic News Lite
 ===================================
 
 Thank you for downloading my theme. 
@@ -52,7 +52,7 @@ To find out more about installing WordPress themes please also see the WordPress
 C) Theme Options
 ===================================
 
-Dynamic News supports the awesome Theme Customizer for all theme settings. 
+Dynamic News Lite supports the awesome Theme Customizer for all theme settings. 
 Go to WP-Admin > Appearance > Customize to open the Customizer.
 
 ===================================
@@ -78,7 +78,7 @@ I have included a few, nice page templates for advanced content presentation.
 F) Theme License
 ===================================
 
-Dynamic News is released under the GNU general public license. 
+Dynamic News Lite is released under the GNU general public license. 
 That means you can use this theme on all of your websites - for personal or commercial purposes!
 
 ===================================
@@ -97,10 +97,12 @@ G) Licenses of bundled resources
 	2. Screenshot Photography (used on screenshot.png)
 	The demo photos used in screenshot.png are coming from Pixabay and are licensed under CC0 (GPL compatible).
 	Source URL: http://pixabay.com
-	Image 1: http://pixabay.com/de/buch-offen-seiten-bibliothek-92771/
-	Image 2: http://pixabay.com/de/bemaltes-holz-holz-stangen-bunt-8196/
-	Image 3: http://pixabay.com/de/pastellkreiden-ölpastellkreiden-bunt-212297/
-	Image 4: http://pixabay.com/de/buntstifte-farbstifte-sternf%C3%B6rmig-179167/
+	Image 1: http://pixabay.com/en/papilio-rumanzovia-butterfly-animal-44882/
+	Image 2: http://pixabay.com/en/journal-green-leaf-veins-filigree-141494/
+	Image 3: http://pixabay.com/en/oak-sawfly-larva-larva-insect-252371/
+	Image 4: http://pixabay.com/en/butterfly-yellow-insect-nature-196745/
+	Image 5: http://pixabay.com/en/almond-blossom-cherry-blossom-5378/
+	Image 6: http://pixabay.com/en/insect-nature-tettigonia-viridissima-212943/
 	License URL: http://creativecommons.org/publicdomain/zero/1.0/deed.de
 
 	3. Flexslider, Copyright 2012 WooThemes
@@ -108,7 +110,7 @@ G) Licenses of bundled resources
 	Free to use under the GPLv2 license: http://www.woothemes.com/flexslider/
 	
 	4. Featured Content class, Copyright 2014 Twenty Fourteen theme
-	Dynamic News uses the Featured Content class for the post slideshow
+	Dynamic News Lite uses the Featured Content class for the post slideshow
 	License of Twenty Fourteen: http://www.gnu.org/licenses/gpl.html
 
 	5. Fonts

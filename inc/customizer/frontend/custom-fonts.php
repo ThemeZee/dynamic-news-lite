@@ -12,8 +12,8 @@ function dynamicnews_load_web_fonts() {
 	// Embed Text Font
 	if( isset($theme_options['text_font']) and !in_array($theme_options['text_font'], $default_fonts)) :
 		
-		wp_register_style('dynamicnews-text-font', '//fonts.googleapis.com/css?family=' . $theme_options['text_font']);
-		wp_enqueue_style('dynamicnews-text-font');
+		wp_register_style('dynamicnewslite-text-font', '//fonts.googleapis.com/css?family=' . $theme_options['text_font']);
+		wp_enqueue_style('dynamicnewslite-text-font');
 		
 		// add embedded font to array to prevent second font embed
 		$default_fonts[] = $theme_options['text_font']; 
@@ -22,8 +22,8 @@ function dynamicnews_load_web_fonts() {
 	// Embed Title Font
 	if( isset($theme_options['title_font']) and !in_array($theme_options['title_font'], $default_fonts)) :
 		
-		wp_register_style('dynamicnews-title-font', '//fonts.googleapis.com/css?family=' . $theme_options['title_font']);
-		wp_enqueue_style('dynamicnews-title-font');
+		wp_register_style('dynamicnewslite-title-font', '//fonts.googleapis.com/css?family=' . $theme_options['title_font']);
+		wp_enqueue_style('dynamicnewslite-title-font');
 		
 		// add embedded font to array to prevent second font embed
 		$default_fonts[] = $theme_options['title_font']; 
@@ -32,8 +32,8 @@ function dynamicnews_load_web_fonts() {
 	// Embed Navigation Font
 	if( isset($theme_options['navi_font']) and !in_array($theme_options['navi_font'], $default_fonts)) :
 		
-		wp_register_style('dynamicnews-navi-font', '//fonts.googleapis.com/css?family=' . $theme_options['navi_font']);
-		wp_enqueue_style('dynamicnews-navi-font');
+		wp_register_style('dynamicnewslite-navi-font', '//fonts.googleapis.com/css?family=' . $theme_options['navi_font']);
+		wp_enqueue_style('dynamicnewslite-navi-font');
 		
 		// add embedded font to array to prevent second font embed
 		$default_fonts[] = $theme_options['navi_font']; 
@@ -42,8 +42,8 @@ function dynamicnews_load_web_fonts() {
 	// Embed Widget Title Font
 	if( isset($theme_options['widget_title_font']) and !in_array($theme_options['widget_title_font'], $default_fonts)) :
 		
-		wp_register_style('dynamicnews-widget-title-font', '//fonts.googleapis.com/css?family=' . $theme_options['widget_title_font']);
-		wp_enqueue_style('dynamicnews-widget-title-font');
+		wp_register_style('dynamicnewslite-widget-title-font', '//fonts.googleapis.com/css?family=' . $theme_options['widget_title_font']);
+		wp_enqueue_style('dynamicnewslite-widget-title-font');
 		
 		// add embedded font to array to prevent second font embed
 		$default_fonts[] = $theme_options['widget_title_font']; 

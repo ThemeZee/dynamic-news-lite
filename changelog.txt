@@ -1,5 +1,5 @@
 ===================================
-Dynamic News Changelog
+Dynamic News Lite Changelog
 ===================================
 
 Version 1.0
