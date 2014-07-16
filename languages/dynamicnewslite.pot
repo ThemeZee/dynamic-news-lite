@@ -1,0 +1,513 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Dynamic News Lite\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-16 11:28+0100\n"
+"PO-Revision-Date: 2014-07-16 11:28+0100\n"
+"Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
+"Language-Team: ThemeZee <contact@themezee.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_x;_ex;_n;esc_attr_e;esc_attr__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: 404.php:9
+msgid "404 Error: Not found"
+msgstr ""
+
+#: 404.php:12
+msgid ""
+"The page you trying to reach does not exist, or has been moved. Please use "
+"the menus or the search box to find what you are looking for"
+msgstr ""
+
+#: 404.php:14
+msgid "Search"
+msgstr ""
+
+#: 404.php:17
+msgid "Recent Posts"
+msgstr ""
+
+#: 404.php:27
+msgid "Pages"
+msgstr ""
+
+#: archive.php:14
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:14
+msgid "F Y"
+msgstr ""
+
+#: archive.php:16
+msgid "Archives"
+msgstr ""
+
+#: author.php:16
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+#: category.php:12
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: comments.php:13
+msgid "Enter password to view comments."
+msgstr ""
+
+#: comments.php:23 inc/front-page-functions.php:212 inc/template-tags.php:64
+msgid "One comment"
+msgstr ""
+
+#: comments.php:23 inc/front-page-functions.php:212 inc/template-tags.php:64
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: content-excerpt.php:12 content.php:11
+msgid "Read more"
+msgstr ""
+
+#: featured-content-slider.php:14
+msgid ""
+"There is no featured content to be displayed in the slider. To set up the "
+"slider, go to Appearance → Customize, and add a tag under Tag Name in the "
+"Featured Content section. The slideshow will then display all posts which "
+"are tagged with that keyword."
+msgstr ""
+
+#: featured-content-slider.php:48
+msgid "Read more &raquo;"
+msgstr ""
+
+#: functions.php:90
+msgid "Main Navigation"
+msgstr ""
+
+#: functions.php:91
+msgid "Footer Navigation"
+msgstr ""
+
+#: functions.php:94
+msgid "Social Icons"
+msgstr ""
+
+#: functions.php:134 inc/customizer/customizer.php:56
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:136
+msgid "Appears on posts and pages except front page and fullwidth template."
+msgstr ""
+
+#: functions.php:143
+msgid "Magazine Front Page"
+msgstr ""
+
+#: functions.php:145
+msgid ""
+"Appears on Magazine Front Page page template only. You can use the Category "
+"Posts widgets here."
+msgstr ""
+
+#: functions.php:177
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: functions.php:198
+#, php-format
+msgid "Powered by %1$s and %2$s."
+msgstr ""
+
+#: functions.php:199
+msgid "WordPress"
+msgstr ""
+
+#: functions.php:200
+msgid "Dynamic News"
+msgstr ""
+
+#: functions.php:238
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:239 functions.php:255
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:265
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: image.php:19
+msgid "Previous"
+msgstr ""
+
+#: image.php:20
+msgid "Next"
+msgstr ""
+
+#: image.php:26
+msgid "Return to Gallery"
+msgstr ""
+
+#: image.php:27
+msgid "Return to"
+msgstr ""
+
+#: search.php:13 search.php:27
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:33
+msgid ""
+"No matches. Please try again, or use the navigation menus to find what you "
+"search for."
+msgstr ""
+
+#: searchform.php:4
+msgid "Search for:"
+msgstr ""
+
+#: sidebar.php:14
+msgid "Widget Area"
+msgstr ""
+
+#: sidebar.php:16
+msgid ""
+"There are no active widgets to be displayed. Please go to Appearance -> "
+"Widgets to setup your sidebar."
+msgstr ""
+
+#: tag.php:12
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: template-frontpage.php:36
+msgid ""
+"There are no widgets to be displayed. Please go to Appearance → Widgets and "
+"add at least one widget to the \"Magazine Front Page\" widget area. You can "
+"use the three Category Posts widgets to set up the theme like the demo "
+"website."
+msgstr ""
+
+#: inc/featured-content.php:419
+msgid "Featured Content"
+msgstr ""
+
+#: inc/featured-content.php:420
+#, php-format
+msgid ""
+"Use a <a href=\"%1$s\">tag</a> to feature your posts. If no posts match the "
+"tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
+msgstr ""
+
+#: inc/featured-content.php:421 inc/featured-content.php:430
+#: inc/featured-content.php:490
+msgid "featured"
+msgstr ""
+
+#: inc/featured-content.php:442
+msgid "Tag Name"
+msgstr ""
+
+#: inc/featured-content.php:447
+msgid "Don&rsquo;t display tag on front end."
+msgstr ""
+
+#: inc/front-page-functions.php:212 inc/template-tags.php:64
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/template-tags.php:43
+#, php-format
+msgid ""
+"<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time datetime=\"%3$s\">"
+"%4$s</time></a>"
+msgstr ""
+
+#: inc/template-tags.php:53
+#, php-format
+msgid "<a href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
+msgstr ""
+
+#: inc/template-tags.php:55
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: inc/template-tags.php:70
+msgid "Edit Post"
+msgstr ""
+
+#: inc/template-tags.php:134
+#, php-format
+msgid "tagged with %1$s"
+msgstr ""
+
+#: inc/template-tags.php:209
+msgid ""
+"Please go to WP-Admin-> Appearance-> Menus and create a new custom menu with "
+"custom links to all your social networks. Then click on \"Manage Locations\" "
+"tab and assign your created menu to the \"Social Icons\" theme location."
+msgstr ""
+
+#: inc/theme-info.php:15
+msgid "Welcome to Dynamic News Lite"
+msgstr ""
+
+#: inc/theme-info.php:16
+msgid "Theme Info"
+msgstr ""
+
+#: inc/theme-info.php:35
+#, php-format
+msgid "Welcome to %1s %2s"
+msgstr ""
+
+#: inc/theme-info.php:41
+msgid "Important Links:"
+msgstr ""
+
+#: inc/theme-info.php:42
+msgid "Theme Info Page"
+msgstr ""
+
+#: inc/theme-info.php:43
+msgid "Changelog"
+msgstr ""
+
+#: inc/theme-info.php:44
+msgid "Theme Demo"
+msgstr ""
+
+#: inc/theme-info.php:45 inc/theme-info.php:66
+msgid "Theme Documentation"
+msgstr ""
+
+#: inc/theme-info.php:46
+msgid "Rate this theme"
+msgstr ""
+
+#: inc/theme-info.php:63
+#, php-format
+msgid "Getting Started with %s"
+msgstr ""
+
+#: inc/theme-info.php:68
+msgid ""
+"Need any help to setup and configure this theme? We got you covered with an "
+"extensive theme documentation on our website."
+msgstr ""
+
+#: inc/theme-info.php:70
+msgid "Visit Dynamic News Documentation"
+msgstr ""
+
+#: inc/theme-info.php:75 inc/customizer/customizer.php:17
+msgid "Theme Options"
+msgstr ""
+
+#: inc/theme-info.php:77
+msgid ""
+"Dynamic News supports the awesome Theme Customizer for all theme settings. "
+"Click \"Customize Theme\" to open the Customizer now."
+msgstr ""
+
+#: inc/theme-info.php:84 inc/customizer/customizer.php:22
+msgid "PRO Version"
+msgstr ""
+
+#: inc/theme-info.php:86
+msgid ""
+"Need more features? Check out the PRO version which comes with additional "
+"features and advanced customization options."
+msgstr ""
+
+#: inc/theme-info.php:88
+msgid "Learn more about the PRO Version of Dynamic News"
+msgstr ""
+
+#: inc/theme-info.php:108
+#, php-format
+msgid ""
+"Dynamic News is proudly brought to you by %1s. If you like this theme, "
+"%2s :) "
+msgstr ""
+
+#: inc/theme-info.php:110
+msgid "rate it"
+msgstr ""
+
+#: inc/customizer/customizer.php:36
+msgid "Site Layout"
+msgstr ""
+
+#: inc/customizer/customizer.php:42
+msgid "Boxed Layout Width"
+msgstr ""
+
+#: inc/customizer/customizer.php:43
+msgid "Wide Layout (Fullwidth)"
+msgstr ""
+
+#: inc/customizer/customizer.php:62
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/customizer/customizer.php:63
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/customizer/customizer.php:77
+msgid "Header Content"
+msgstr ""
+
+#: inc/customizer/customizer.php:92
+msgid ""
+"The Header Content configured below will be displayed on the right hand side "
+"of the header area."
+msgstr ""
+
+#: inc/customizer/customizer.php:109
+msgid "Display search field on header area"
+msgstr ""
+
+#: inc/customizer/customizer.php:125
+msgid "Display Social Icons on header area"
+msgstr ""
+
+#: inc/customizer/customizer.php:141
+msgid "Header Text Line"
+msgstr ""
+
+#: inc/customizer/customizer.php:158
+msgid "Post Length on archives"
+msgstr ""
+
+#: inc/customizer/customizer.php:164
+msgid "Show full posts"
+msgstr ""
+
+#: inc/customizer/customizer.php:165
+msgid "Show post summaries (excerpt)"
+msgstr ""
+
+#: inc/customizer/customizer.php:178
+msgid "Display featured images on archive pages"
+msgstr ""
+
+#: inc/customizer/customizer.php:194
+msgid "Display featured images on single posts"
+msgstr ""
+
+#: inc/customizer/customizer.php:211
+msgid "Activate Featured Post Slider"
+msgstr ""
+
+#: inc/customizer/customizer.php:226
+msgid "Display Slider on Magazine Front Page template."
+msgstr ""
+
+#: inc/customizer/customizer.php:241
+msgid "Display Slider on normal blog index."
+msgstr ""
+
+#: inc/customizer/customizer.php:257
+msgid "Slider Animation"
+msgstr ""
+
+#: inc/customizer/customizer.php:263
+msgid "Horizontal Slider"
+msgstr ""
+
+#: inc/customizer/customizer.php:264
+msgid "Fade Slider"
+msgstr ""
+
+#: inc/customizer/customizer.php:279
+msgid "Need more features?"
+msgstr ""
+
+#: inc/customizer/customizer.php:294
+msgid ""
+"Check out the PRO version which comes with additional features and advanced "
+"customization options."
+msgstr ""
+
+#: inc/customizer/customizer.php:309
+msgid "Learn more about the PRO Version"
+msgstr ""
+
+#: inc/customizer/customizer.php:335
+msgid "Display Tagline below site title."
+msgstr ""
+
+#: inc/customizer/frontend/custom-jscript.php:18
+msgid "Menu"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:8
+msgid ""
+"Display latest posts from category in boxed layout. Please use this widget "
+"ONLY on Frontpage Magazine widget area."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:35
+#: inc/widgets/widget-category-posts-grid.php:38
+msgid "Please specify a category on the Category Posts Widget settings."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:60
+#: inc/widgets/widget-category-posts-columns.php:63
+#: inc/widgets/widget-category-posts-grid.php:65
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:65
+#: inc/widgets/widget-category-posts-grid.php:70
+msgid "Category:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:8
+msgid ""
+"Display latest posts from two specified categories. Please use this widget "
+"ONLY on Frontpage Magazine widget area."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:36
+msgid "Please specify two categories on the Category Posts Widget settings."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:68
+msgid "Left Category:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:82
+msgid "Right Category:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:8
+msgid ""
+"Display latest posts from category in a grid layout. Please use this widget "
+"ONLY on Frontpage Magazine widget area."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:84
+msgid "Number of posts:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:86
+msgid "Please chose an even number (2, 4, 6, 8)."
+msgstr ""
