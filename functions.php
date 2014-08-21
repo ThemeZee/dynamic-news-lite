@@ -1,9 +1,5 @@
 <?php
 
-// Set Content Width
-if ( ! isset( $content_width ) )
-	$content_width = 860;
-
 /*==================================== THEME SETUP ====================================*/
 
 // Load default style.css and Javascripts
@@ -54,6 +50,19 @@ function dynamicnews_enqueue_comment_reply() {
 	}
 }
 
+// HTML5shiv for old IE
+add_action('wp_head', 'dynamicnews_enqueue_html5shiv');
+
+function dynamicnews_enqueue_html5shiv(){
+    
+	/* Embeds HTML5shiv to support HTML5 elements in older IE versions plus CSS Backgrounds */ ?>
+	<!--[if lt IE 9]>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
+	<![endif]-->
+	
+<?php
+}
+
 
 // Setup Function: Registers support for various WordPress features
 add_action( 'after_setup_theme', 'dynamicnews_setup' );
@@ -61,6 +70,11 @@ add_action( 'after_setup_theme', 'dynamicnews_setup' );
 if ( ! function_exists( 'dynamicnews_setup' ) ):
 function dynamicnews_setup() {
 
+	// Set Content Width
+	global $content_width;
+	if ( ! isset( $content_width ) )
+		$content_width = 860;
+		
 	// init Localization
 	load_theme_textdomain('dynamicnewslite', get_template_directory() . '/languages' );
 

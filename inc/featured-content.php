@@ -21,7 +21,7 @@
  *
  */
  
-class Featured_Content {
+class Dynamic_News_Featured_Content {
 
 	/**
 	 * The maximum number of posts a Featured Content area can contain.
@@ -30,7 +30,7 @@ class Featured_Content {
 	 * this by defining a "max_posts" entry in the second parameter
 	 * passed in the call to add_theme_support( 'featured-content' ).
 	 *
-	 * @see Featured_Content::init()
+	 * @see Dynamic_News_Featured_Content::init()
 	 *
 	 * @since Dynamic News 1.0
 	 *
@@ -223,7 +223,7 @@ class Featured_Content {
 	 *
 	 * Hooks in the "save_post" action.
 	 *
-	 * @see Featured_Content::validate_settings().
+	 * @see Dynamic_News_Featured_Content::validate_settings().
 	 *
 	 * @static
 	 * @access public
@@ -284,11 +284,11 @@ class Featured_Content {
 	 *
 	 * It's important to mention that the transient needs to be deleted,
 	 * too. While it may not be obvious by looking at the function alone,
-	 * the transient is deleted by Featured_Content::validate_settings().
+	 * the transient is deleted by Dynamic_News_Featured_Content::validate_settings().
 	 *
 	 * Hooks in the "delete_post_tag" action.
 	 *
-	 * @see Featured_Content::validate_settings().
+	 * @see Dynamic_News_Featured_Content::validate_settings().
 	 *
 	 * @static
 	 * @access public
@@ -321,7 +321,7 @@ class Featured_Content {
 	 * @param array $taxonomies An array of taxonomy slugs.
 	 * @return array A filtered array of terms.
 	 *
-	 * @uses Featured_Content::get_setting()
+	 * @uses Dynamic_News_Featured_Content::get_setting()
 	 */
 	public static function hide_featured_term( $terms, $taxonomies ) {
 
@@ -365,7 +365,7 @@ class Featured_Content {
 	 * @param array $taxonomy An array of taxonomy slugs.
 	 * @return array Filtered array of terms.
 	 *
-	 * @uses Featured_Content::get_setting()
+	 * @uses Dynamic_News_Featured_Content::get_setting()
 	 */
 	public static function hide_the_featured_term( $terms, $id, $taxonomy ) {
 
@@ -505,7 +505,7 @@ class Featured_Content {
 	 *
 	 * Make sure that all user supplied content is in an expected
 	 * format before saving to the database. This function will also
-	 * delete the transient set in Featured_Content::get_featured_content().
+	 * delete the transient set in Dynamic_News_Featured_Content::get_featured_content().
 	 *
 	 * @static
 	 * @access public
@@ -542,6 +542,6 @@ class Featured_Content {
 
 		return $output;
 	}
-} // Featured_Content
+} // Dynamic_News_Featured_Content
 
-Featured_Content::setup();
+Dynamic_News_Featured_Content::setup();

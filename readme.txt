@@ -95,7 +95,7 @@ G) Licenses of bundled resources
 	License of Genericon Icon font: http://www.gnu.org/licenses/gpl.html
 
 	2. Screenshot Photography (used on screenshot.png)
-	The demo photos used in screenshot.png are coming from Pixabay and are licensed under CC0 (GPL compatible).
+	We only use verified demo images on screenshot.png from Pixabay, which are licensed under CC0 (GPL compatible).
 	Source URL: http://pixabay.com
 	Image 1: http://pixabay.com/en/papilio-rumanzovia-butterfly-animal-44882/
 	Image 2: http://pixabay.com/en/journal-green-leaf-veins-filigree-141494/
