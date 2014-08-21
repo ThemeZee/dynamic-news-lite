@@ -2,6 +2,13 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.0.1
+-----------------------------------
+[fixed] set content_width in theme setup function
+[fixed] moved html5 shiv to function hooked to wp_head
+[fixed] proper namespacing Featured_Content class
+
+
 Version 1.0
 -----------------------------------
 Final Version
