@@ -44,4 +44,4 @@ Template Name: Magazine Front Page
 	
 	</div>
 	
-<?php get_footer(); ?>	
+<?php get_footer(); ?>

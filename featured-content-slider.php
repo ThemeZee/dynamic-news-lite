@@ -38,7 +38,7 @@ add_filter('excerpt_length', 'dynamicnews_slideshow_excerpt_length');
 
 				else: ?>
 
-					<img src="<?php echo get_template_directory_uri(); ?>/images/default-slider-image.png" class="slide-image wp-post-image" alt="default-image" />
+					<img src="<?php echo get_template_directory_uri(); ?>/images/default-slider-image.png" class="slide-image default-slide-image wp-post-image" alt="default-image" />
 
 			<?php endif;?>
 

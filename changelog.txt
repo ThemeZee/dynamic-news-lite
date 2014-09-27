@@ -2,12 +2,19 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.0.2
+-----------------------------------
+[added] class for default slider image
+[fixed] styling of search field for Safari
+[added] new customizer panel for theme options
+[added] new sections for better overview of all settings
+[moved] all theme settings and sections to the new panel
+
 Version 1.0.1
 -----------------------------------
 [fixed] set content_width in theme setup function
 [fixed] moved html5 shiv to function hooked to wp_head
 [fixed] proper namespacing Featured_Content class
-
 
 Version 1.0
 -----------------------------------
