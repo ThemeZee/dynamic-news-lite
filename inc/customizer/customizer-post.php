@@ -12,7 +12,7 @@ function dynamicnews_customize_register_post_settings( $wp_customize ) {
 	// Add Sections for Post Settings
 	$wp_customize->add_section( 'dynamicnews_section_post', array(
         'title'    => __( 'Post Settings', 'dynamicnewslite' ),
-        'priority' => 40,
+        'priority' => 30,
 		'panel' => 'dynamicnews_options_panel' 
 		)
 	);
@@ -83,6 +83,38 @@ function dynamicnews_customize_register_post_settings( $wp_customize ) {
         'settings' => 'dynamicnews_theme_options[post_thumbnails_single]',
         'type'     => 'checkbox',
 		'priority' => 4
+		)
+	);
+	
+	// Add Excerpt Text setting
+	$wp_customize->add_setting( 'dynamicnews_theme_options[excerpt_text_headline]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new Dynamic_News_Customize_Header_Control(
+        $wp_customize, 'dynamicnews_control_excerpt_text_headline', array(
+            'label' => __( 'Excerpt More Text', 'dynamicnewslite' ),
+            'section' => 'dynamicnews_section_post',
+            'settings' => 'dynamicnews_theme_options[excerpt_text_headline]',
+            'priority' => 5
+            )
+        )
+    );
+	$wp_customize->add_setting( 'dynamicnews_theme_options[excerpt_text]', array(
+        'default'           => false,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'dynamicnews_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'dynamicnews_control_excerpt_text', array(
+        'label'    => __( 'Display [...] after text excerpts.', 'dynamicnewslite' ),
+        'section'  => 'dynamicnews_section_post',
+        'settings' => 'dynamicnews_theme_options[excerpt_text]',
+        'type'     => 'checkbox',
+		'priority' => 6
 		)
 	);
 

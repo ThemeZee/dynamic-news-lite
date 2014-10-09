@@ -2,6 +2,12 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.0.3
+-----------------------------------
+[added] theme option to display excerpt more text
+[added] setup description to Post Slider section
+[removed] accidently added logo image option (part of PRO version)
+
 Version 1.0.2
 -----------------------------------
 [added] class for default slider image

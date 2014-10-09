@@ -233,10 +233,20 @@ function dynamicnews_frontpage_category_excerpt_length($length) {
     return 25;
 }
 
+
 // Change Excerpt More
 add_filter('excerpt_more', 'dynamicnews_excerpt_more');
 function dynamicnews_excerpt_more($more) {
-    return '';
+    
+	// Get Theme Options from Database
+	$theme_options = dynamicnews_theme_options();
+
+	// Return Excerpt Text
+	if ( isset($theme_options['excerpt_text']) and $theme_options['excerpt_text'] == true ) :
+		return ' [...]';
+	else :
+		return '';
+	endif;
 }
 
 

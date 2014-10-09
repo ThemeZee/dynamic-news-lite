@@ -39,6 +39,7 @@ function dynamicnews_default_options() {
 		'posts_length' 						=> 'index',
 		'post_thumbnails_index'				=> true,
 		'post_thumbnails_single' 			=> true,
+		'excerpt_text' 						=> '',
 		'credit_link' 						=> true,
 		'slider_activated_front_page' 		=> false,
 		'slider_activated_blog' 			=> false,

@@ -12,6 +12,7 @@ function dynamicnews_customize_register_slider_settings( $wp_customize ) {
 	// Add Sections for Slider Settings
 	$wp_customize->add_section( 'dynamicnews_section_slider', array(
         'title'    => __( 'Post Slider', 'dynamicnewslite' ),
+		'description' => __( 'The slideshow displays your featured posts, which you can configure on the "Featured Content" section above.', 'dynamicnewslite' ),
         'priority' => 50,
 		'panel' => 'dynamicnews_options_panel' 
 		)
