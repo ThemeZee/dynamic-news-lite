@@ -317,7 +317,7 @@ require( get_template_directory() . '/inc/customizer/default-options.php' );
 
 // include Customization Files
 require( get_template_directory() . '/inc/customizer/frontend/custom-layout.php' );
-require( get_template_directory() . '/inc/customizer/frontend/custom-jscript.php' );
+require( get_template_directory() . '/inc/customizer/frontend/custom-slider.php' );
 
 // include Template Functions
 require( get_template_directory() . '/inc/template-tags.php' );

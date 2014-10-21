@@ -22,6 +22,7 @@ function dynamicnews_customize_register_header_settings( $wp_customize ) {
         'default'           => '',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
         )
     );
     $wp_customize->add_control( new Dynamic_News_Customize_Header_Control(
@@ -37,6 +38,7 @@ function dynamicnews_customize_register_header_settings( $wp_customize ) {
         'default'           => '',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
         )
     );
     $wp_customize->add_control( new Dynamic_News_Customize_Description_Control(

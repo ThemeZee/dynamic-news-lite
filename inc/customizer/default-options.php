@@ -9,19 +9,20 @@
 // Return theme options
 function dynamicnews_theme_options() {
     
-	// Get theme options from DB
-	$theme_options = get_option( 'dynamicnews_theme_options' );
-    
-	// Check if user has already configured theme options
-	if ( false === $theme_options ) :
+	// Merge Theme Options Array from Database with Default Options Array
+	$theme_options = wp_parse_args( 
 		
-		// Set Default Options
-		$theme_options = dynamicnews_default_options();
+		// Get saved theme options from WP database
+		get_option( 'dynamicnews_theme_options', array() ), 
 		
-    endif;
-	
+		// Merge with Default Options if setting was not saved yet
+		dynamicnews_default_options() 
+		
+	);
+
 	// Return theme options
 	return $theme_options;
+	
 }
 
 

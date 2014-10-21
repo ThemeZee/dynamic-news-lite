@@ -2,6 +2,13 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.0.4
+-----------------------------------
+[added] improved way to set sane defaults for theme options
+[changed] structure and organization of theme files for the Customizer
+[changed] implementation of menu icons for mobile navigation
+[fixed] line height bug for pre and code HTML tags
+
 Version 1.0.3
 -----------------------------------
 [added] theme option to display excerpt more text

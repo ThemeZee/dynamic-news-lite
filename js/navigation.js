@@ -5,9 +5,6 @@
 jQuery(document).ready(function($) {
 						
 	/** Mobile Footer Navigation */
-	/* Add menu icon */
-	$('#footernav').after('<h3 id=\"footernav-icon\"></h3>');
-	
 	/* Add toggle effect */
 	$('#footernav-icon').on('click', function(){
 		$('#footernav-menu').slideToggle();
@@ -16,9 +13,6 @@ jQuery(document).ready(function($) {
 	
 	
 	/** Mobile Main Navigation */
-	/* Add menu icon */
-	$('#mainnav').before('<h3 id=\"mainnav-icon\">' + dynamicnews_navigation_params.menuTitle + '</h3>');
-	
 	/* Add toggle effect */
 	$('#mainnav-icon').on('click', function(){
 		$('#mainnav-menu').slideToggle();
