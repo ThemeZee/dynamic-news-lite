@@ -6,7 +6,7 @@ class dynamicnews_Category_Posts_Grid_Widget extends WP_Widget {
 	function __construct() {
 
 		$widget_ops = array('classname' => 'dynamicnews_category_posts_grid', 'description' => __('Display latest posts from category in a grid layout. Please use this widget ONLY on Frontpage Magazine widget area.', 'dynamicnewslite') );
-		$this->WP_Widget('dynamicnews_category_posts_grid', 'Category Posts Grid (Dynamic News)', $widget_ops);
+		$this->WP_Widget('dynamicnews_category_posts_grid', __('Category Posts Grid (Dynamic News)', 'dynamicnewslite'), $widget_ops);
 	}
 
 	function widget($args, $instance) {
@@ -49,7 +49,7 @@ class dynamicnews_Category_Posts_Grid_Widget extends WP_Widget {
 	function update($new_instance, $old_instance) {
 
 		$instance = $old_instance;
-		$instance['title'] = isset($new_instance['title']) ? esc_attr($new_instance['title']) : '';
+		$instance['title'] = isset($new_instance['title']) ? sanitize_text_field($new_instance['title']) : '';
 		$instance['category'] = isset($new_instance['category']) ? (int)$new_instance['category'] : 0;
 		$instance['number'] = (int)$new_instance['number'];
 
@@ -57,13 +57,13 @@ class dynamicnews_Category_Posts_Grid_Widget extends WP_Widget {
 	}
 
 	function form($instance) {
-		$title = isset($instance['title']) ? esc_attr($instance['title']) : '';
+		$title = isset($instance['title']) ? sanitize_text_field($instance['title']) : '';
 		$category = isset($instance['category']) ? (int)$instance['category'] : 0;
 		$number = isset($instance['number']) ? absint($instance['number']) : 4;
 	?>
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'dynamicnewslite'); ?> 
-			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
+			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo sanitize_text_field($title); ?>" />
 			</label>
 		</p>
 		<p>

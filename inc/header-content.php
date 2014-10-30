@@ -36,7 +36,7 @@
 	if ( isset($theme_options['header_text']) and $theme_options['header_text'] <> '' ) : ?>
 
 		<div id="header-text">
-			<p><?php echo esc_attr($theme_options['header_text']); ?></p>
+			<p><?php echo esc_html($theme_options['header_text']); ?></p>
 		</div>
 
 	<?php

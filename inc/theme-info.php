@@ -120,18 +120,19 @@ function dynamicnews_display_theme_info_page() {
 
 // Add CSS for Theme Info Panel
 add_action('admin_enqueue_scripts', 'dynamicnews_theme_info_page_css');
-function dynamicnews_theme_info_page_css() { 
+function dynamicnews_theme_info_page_css($hook) { 
+
+	// Load styles and scripts only on theme info page
+	if ( 'appearance_page_dynamicnewslite' != $hook ) {
+		return;
+	}
 	
-	// Load styles and scripts only on themezee page
-	if ( isset($_GET['page']) and $_GET['page'] == 'dynamicnewslite' ) :
-		
-		// Embed theme info css style
-		wp_enqueue_style('dynamicnewslite-theme-info-css', get_template_directory_uri() .'/css/theme-info.css');
-		
-		// Register Genericons
-		wp_enqueue_style('dynamicnewslite-genericons', get_template_directory_uri() . '/css/genericons.css');
-		
-	endif;
+	// Embed theme info css style
+	wp_enqueue_style('dynamicnewslite-theme-info-css', get_template_directory_uri() .'/css/theme-info.css');
+	
+	// Register Genericons
+	wp_enqueue_style('dynamicnewslite-genericons', get_template_directory_uri() . '/css/genericons.css');
+
 }
 
 

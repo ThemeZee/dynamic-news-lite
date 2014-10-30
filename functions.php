@@ -36,8 +36,8 @@ function dynamicnews_enqueue_scripts() {
 	wp_enqueue_script('dynamicnewslite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
 	
 	// Register and Enqueue Font
-	wp_enqueue_style('dynamicnewslite-lite-default-font', '//fonts.googleapis.com/css?family=Droid+Sans');
-	wp_enqueue_style('dynamicnewslite-lite-default-title-font', '//fonts.googleapis.com/css?family=Francois+One');
+	wp_enqueue_style('dynamicnewslite-default-fonts', dynamicnews_fonts_url(), array(), null );
+
 }
 endif;
 
@@ -61,6 +61,48 @@ function dynamicnews_enqueue_html5shiv(){
 	<![endif]-->
 	
 <?php
+}
+
+
+/*
+* Retrieve Font URL to register default Google Fonts
+* Source: http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
+*/
+function dynamicnews_fonts_url() {
+    $fonts_url = '';
+	
+    /* Translators: If there are characters in your language that are not
+    * supported by Droid Sans, translate this to 'off'. Do not translate
+    * into your own language.
+    */
+    $droid_sans = _x( 'on', 'Droid Sans font: on or off', 'dynamicnewslite' );
+ 
+    /* Translators: If there are characters in your language that are not
+    * supported by Francois One, translate this to 'off'. Do not translate
+    * into your own language.
+    */
+    $francois_one = _x( 'on', 'Francois One font: on or off', 'dynamicnewslite' );
+ 
+    if ( 'off' !== $droid_sans || 'off' !== $francois_one ) {
+        $font_families = array();
+ 
+        if ( 'off' !== $droid_sans ) {
+            $font_families[] = 'Droid Sans:400,700';
+        }
+ 
+        if ( 'off' !== $francois_one ) {
+            $font_families[] = 'Francois One';
+        }
+ 
+        $query_args = array(
+            'family' => urlencode( implode( '|', $font_families ) ),
+            'subset' => urlencode( 'latin,latin-ext' ),
+        );
+ 
+        $fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+    }
+ 
+    return $fonts_url;
 }
 
 

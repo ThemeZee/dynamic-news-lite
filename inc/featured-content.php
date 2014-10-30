@@ -425,7 +425,11 @@ class Dynamic_News_Featured_Content {
 			'theme_supports' => 'featured-content',
 		) );
 
-		// Add Featured Content settings.
+		/* Add Featured Content settings.
+		 *
+		 * Sanitization callback registered in Featured_Content::validate_settings().
+		 * See http://themeshaper.com/2013/04/29/validation-sanitization-in-customizer/comment-page-1/#comment-12374
+		 */
 		$wp_customize->add_setting( 'featured-content[tag-name]', array(
 			'default'              => _x( 'featured', 'featured content default tag slug', 'dynamicnewslite' ),
 			'type'                 => 'option',

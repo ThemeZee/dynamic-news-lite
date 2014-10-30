@@ -20,7 +20,7 @@ function dynamicnews_sanitize_checkbox( $value ) {
 // Sanitize the layout width value.
 function dynamicnews_sanitize_layout( $value ) {
 
-	if ( ! in_array( $value, array( 'boxed', 'wide' ) ) ) :
+	if ( ! in_array( $value, array( 'boxed', 'wide' ), true ) ) :
         $value = 'boxed';
 	endif;
 
@@ -31,7 +31,7 @@ function dynamicnews_sanitize_layout( $value ) {
 // Sanitize the layout sidebar value.
 function dynamicnews_sanitize_sidebar( $value ) {
 
-	if ( ! in_array( $value, array( 'left-sidebar', 'right-sidebar', 'fullwidth' ) ) ) :
+	if ( ! in_array( $value, array( 'left-sidebar', 'right-sidebar', 'fullwidth' ), true ) ) :
         $value = 'right-sidebar';
 	endif;
 
@@ -42,7 +42,7 @@ function dynamicnews_sanitize_sidebar( $value ) {
 // Sanitize the post length value.
 function dynamicnews_sanitize_post_length( $value ) {
 
-	if ( ! in_array( $value, array( 'index', 'excerpt' ) ) ) :
+	if ( ! in_array( $value, array( 'index', 'excerpt' ), true ) ) :
         $value = 'index';
 	endif;
 
@@ -53,7 +53,7 @@ function dynamicnews_sanitize_post_length( $value ) {
 // Sanitize the slider animation value.
 function dynamicnews_sanitize_slider_animation( $value ) {
 
-	if ( ! in_array( $value, array( 'horizontal', 'fade' ) ) ) :
+	if ( ! in_array( $value, array( 'horizontal', 'fade' ), true ) ) :
         $value = 'horizontal';
 	endif;
 

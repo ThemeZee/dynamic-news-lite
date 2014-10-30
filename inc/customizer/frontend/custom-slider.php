@@ -21,7 +21,7 @@ function dynamicnews_custom_slider_parameter() {
 	
 	// Define Slider Animation
 	if( isset($theme_options['slider_animation']) ) :
-		$params['animation'] = esc_attr($theme_options['slider_animation']);
+		$params['animation'] = esc_js($theme_options['slider_animation']);
 	endif;
 	
 	// Passing Parameters to Javascript
