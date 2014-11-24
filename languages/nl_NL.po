@@ -1,87 +1,88 @@
+# Translation of Dynamic News Lite in Dutch
+# This file is distributed under the same license as the Dynamic News Lite package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Dynamic News Lite\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-24 13:56+0100\n"
-"PO-Revision-Date: 2014-11-24 13:56+0100\n"
-"Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
-"Language-Team: ThemeZee <contact@themezee.com>\n"
+"PO-Revision-Date: 2014-11-24 13:58+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x;_ex;_n;esc_attr_e;esc_attr__\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 1.5.7\n"
-"X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:9
 msgid "404 Error: Not found"
-msgstr ""
+msgstr "404 Fout: niet gevonden"
 
 #: 404.php:12
 msgid ""
 "The page you trying to reach does not exist, or has been moved. Please use "
 "the menus or the search box to find what you are looking for"
 msgstr ""
+"De pagina die je probeert te openen bestaat niet, of is verwijderd. Gebruik "
+"het menu of het zoekveld om te vinden waar je naar op zoek bent"
 
 #: 404.php:14
 msgid "Search"
-msgstr ""
+msgstr "Zoeken"
 
 #: 404.php:17
 msgid "Recent Posts"
-msgstr ""
+msgstr "Recente berichten"
 
 #: 404.php:27
 msgid "Pages"
-msgstr ""
+msgstr "Pagina's"
 
 #: archive.php:14
 #, php-format
 msgid "Monthly Archives: %s"
-msgstr ""
+msgstr "Maandelijks archief: %s"
 
 #: archive.php:14
 msgid "F Y"
-msgstr ""
+msgstr "F Y"
 
 #: archive.php:16
 msgid "Archives"
-msgstr ""
+msgstr "Archief"
 
 #: author.php:16
 #, php-format
 msgid "Author Archives: %s"
-msgstr ""
+msgstr "Auteur archief: %s"
 
 #: category.php:12
 #, php-format
 msgid "Category Archives: %s"
-msgstr ""
+msgstr "Categorie archief: %s"
 
 #: comments.php:11
 msgid "Enter password to view comments."
-msgstr ""
+msgstr "Voer uw wachtwoord in om de reacties te zien."
 
 #: comments.php:21 inc/template-tags.php:64
 #: inc/widgets/widget-category-posts-boxed.php:184
 #: inc/widgets/widget-category-posts-columns.php:204
 #: inc/widgets/widget-category-posts-grid.php:182
 msgid "One comment"
-msgstr ""
+msgstr "Een reactie"
 
 #: comments.php:21 inc/template-tags.php:64
 #: inc/widgets/widget-category-posts-boxed.php:184
 #: inc/widgets/widget-category-posts-columns.php:204
 #: inc/widgets/widget-category-posts-grid.php:182
-#, php-format
+#, fuzzy, php-format
 msgid "% comments"
-msgstr ""
+msgstr "% reacties"
 
 #: content-excerpt.php:12 content.php:11
 msgid "Read more"
-msgstr ""
+msgstr "Lees meer"
 
 #: featured-content-slider.php:14
 msgid ""
@@ -90,10 +91,14 @@ msgid ""
 "Featured Content section. The slideshow will then display all posts which "
 "are tagged with that keyword."
 msgstr ""
+"Er is geen uitgelichte content om te tonen in de diashow. Om de diashow in "
+"te stellen, ga naar Weergave → Aanpassen, en voeg een tag toe bij Tag naam "
+"in de Uitgelichte content sectie. De diashow zal dan alle berichten "
+"weergeven die zijn voorzien van die tag."
 
 #: featured-content-slider.php:48
 msgid "Read more &raquo;"
-msgstr ""
+msgstr "Lees meer &raquo;"
 
 #: functions.php:78 functions.php:84
 msgid "on"
@@ -101,113 +106,121 @@ msgstr ""
 
 #: functions.php:146
 msgid "Main Navigation"
-msgstr ""
+msgstr "Hoofdnavigatie"
 
 #: functions.php:147
 msgid "Footer Navigation"
-msgstr ""
+msgstr "Voetnavigatie"
 
 #: functions.php:150
 msgid "Social Icons"
-msgstr ""
+msgstr "Social media iconen"
 
 #: functions.php:190 inc/customizer/sections/customizer-general.php:49
 msgid "Sidebar"
-msgstr ""
+msgstr "Zijbalk"
 
 #: functions.php:192
 msgid "Appears on posts and pages except front page and fullwidth template."
 msgstr ""
+"Verschijnt bij berichten en pagina's behalve de voorpagina en de volledige "
+"breedte template."
 
 #: functions.php:199
 msgid "Magazine Front Page"
-msgstr ""
+msgstr "Tijdschrift voorpagina"
 
 #: functions.php:201
 msgid ""
 "Appears on Magazine Front Page page template only. You can use the Category "
 "Posts widgets here."
 msgstr ""
+"Verschijnt allen op de tijdschrift voorpagina template. Je kan de categorie "
+"berichten widgets hier gebruiken."
 
 #: functions.php:233
 #, php-format
 msgid "Page %s"
-msgstr ""
+msgstr "Pagina %s"
 
 #: functions.php:254
 #, php-format
 msgid "Powered by %1$s and %2$s."
-msgstr ""
+msgstr "Ondersteund door %1$s en %2$s."
 
 #: functions.php:255
 msgid "WordPress"
-msgstr ""
+msgstr "WordPress"
 
 #: functions.php:256
 msgid "Dynamic News"
-msgstr ""
+msgstr "Dynamic News"
 
 #: functions.php:304
 msgid "Pingback:"
-msgstr ""
+msgstr "Pingback:"
 
 #: functions.php:305 functions.php:321
 msgid "(Edit)"
-msgstr ""
+msgstr "(Bewerken)"
 
 #: functions.php:331
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Je reactie wacht op moderatie."
 
 #: header.php:49
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: image.php:19
 msgid "Previous"
-msgstr ""
+msgstr "Vorige"
 
 #: image.php:20
 msgid "Next"
-msgstr ""
+msgstr "Volgende"
 
 #: image.php:26
 msgid "Return to Gallery"
-msgstr ""
+msgstr "Terug naar de galerij"
 
 #: image.php:27
 msgid "Return to"
-msgstr ""
+msgstr "Terug naar"
 
 #: search.php:13 search.php:27
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Zoekresultaten voor: %s"
 
 #: search.php:33
 msgid ""
 "No matches. Please try again, or use the navigation menus to find what you "
 "search for."
 msgstr ""
+"Geen resultaten gevonden. Probeer het opnieuw of gebruik het menu om te "
+"vinden waar je naar op zoek bent."
 
 #: searchform.php:4
 msgid "Search for:"
-msgstr ""
+msgstr "Zoeken naar:"
 
 #: sidebar.php:14
 msgid "Widget Area"
-msgstr ""
+msgstr "Widget gebied"
 
 #: sidebar.php:16
 msgid ""
 "There are no active widgets to be displayed. Please go to Appearance -> "
 "Widgets to setup your sidebar."
 msgstr ""
+"Er zijn geen actieve widgets om weer te geven. Ga naar Weergave → Widgets om "
+"de zijbalk in te richten."
 
 #: tag.php:12
 #, php-format
 msgid "Tag Archives: %s"
-msgstr ""
+msgstr "Tag archief: %s"
 
 #: template-frontpage.php:36
 msgid ""
@@ -216,10 +229,14 @@ msgid ""
 "use the three Category Posts widgets to set up the theme like the demo "
 "website."
 msgstr ""
+"Er zijn geen widgets om weer te geven. Ga naar Weergave → Widgets en voeg op "
+"zijn minst één widget toe aan het \"Tijdschrift voorpagina\" widget gebied. "
+"Je kan de drie Categorie berichten widgets gebruiken om het thema zo in te "
+"richten als de demo website."
 
 #: inc/featured-content.php:419
 msgid "Featured Content"
-msgstr ""
+msgstr "Uitgelichte content"
 
 #: inc/featured-content.php:420
 #, php-format
@@ -227,19 +244,22 @@ msgid ""
 "Use a <a href=\"%1$s\">tag</a> to feature your posts. If no posts match the "
 "tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
 msgstr ""
+"Gebruik een <a href=\"%1$s\">tag</a> om berichten uit te lichten. Als er "
+"geen berichten zijn met deze tag, worden er <a href=\"%2$s\">sticky "
+"berichten</a> getoond."
 
 #: inc/featured-content.php:421 inc/featured-content.php:434
 #: inc/featured-content.php:494
 msgid "featured"
-msgstr ""
+msgstr "uitgelicht"
 
 #: inc/featured-content.php:446
 msgid "Tag Name"
-msgstr ""
+msgstr "Tag naam"
 
 #: inc/featured-content.php:451
 msgid "Don&rsquo;t display tag on front end."
-msgstr ""
+msgstr "Tag niet weergeven op de website."
 
 #: inc/template-tags.php:43
 #, php-format
@@ -247,31 +267,33 @@ msgid ""
 "<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time datetime=\"%3$s\">"
 "%4$s</time></a>"
 msgstr ""
+"<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time datetime=\"%3$s\">"
+"%4$s</time></a>"
 
 #: inc/template-tags.php:53
 #, php-format
 msgid "<a href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
-msgstr ""
+msgstr "<a href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
 
 #: inc/template-tags.php:55
 #, php-format
 msgid "View all posts by %s"
-msgstr ""
+msgstr "Toon alle berichten van %s"
 
 #: inc/template-tags.php:64 inc/widgets/widget-category-posts-boxed.php:184
 #: inc/widgets/widget-category-posts-columns.php:204
 #: inc/widgets/widget-category-posts-grid.php:182
 msgid "Leave a comment"
-msgstr ""
+msgstr "Laat een reactie achter"
 
 #: inc/template-tags.php:70
 msgid "Edit Post"
-msgstr ""
+msgstr "Bericht bewerken"
 
 #: inc/template-tags.php:134
 #, php-format
 msgid "tagged with %1$s"
-msgstr ""
+msgstr "getagged met %1$s"
 
 #: inc/template-tags.php:209
 msgid ""
@@ -279,68 +301,76 @@ msgid ""
 "custom links to all your social networks. Then click on \"Manage Locations\" "
 "tab and assign your created menu to the \"Social Icons\" theme location."
 msgstr ""
+"Ga naar WP-Admin -> Weergave -> Menu's en maak een nieuw menu aan met links "
+"naar al je social media netwerken.\n"
+"Klik daarna op de \"Locaties beheren\" tab en wijs het menu toe aan de "
+"\"Social media iconen\" themalocatie."
 
 #: inc/theme-info.php:15
 msgid "Welcome to Dynamic News Lite"
-msgstr ""
+msgstr "Welkom bij Dynamic News Lite"
 
 #: inc/theme-info.php:16
 msgid "Theme Info"
-msgstr ""
+msgstr "Thema info"
 
 #: inc/theme-info.php:35
 #, php-format
 msgid "Welcome to %1s %2s"
-msgstr ""
+msgstr "Welkom bij %1s %2s"
 
 #: inc/theme-info.php:41
 msgid "Important Links:"
-msgstr ""
+msgstr "Belangrijke links:"
 
 #: inc/theme-info.php:42
 msgid "Theme Info Page"
-msgstr ""
+msgstr "Thema informatie pagina"
 
 #: inc/theme-info.php:43
 msgid "Changelog"
-msgstr ""
+msgstr "Verandering log"
 
 #: inc/theme-info.php:44
 msgid "Theme Demo"
-msgstr ""
+msgstr "Thema demo"
 
 #: inc/theme-info.php:45 inc/theme-info.php:66
 msgid "Theme Documentation"
-msgstr ""
+msgstr "Thema documentatie"
 
 #: inc/theme-info.php:46
 msgid "Rate this theme"
-msgstr ""
+msgstr "Beoordeel dit thema"
 
 #: inc/theme-info.php:63
 #, php-format
 msgid "Getting Started with %s"
-msgstr ""
+msgstr "Aan de slag met %s"
 
 #: inc/theme-info.php:68
 msgid ""
 "Need any help to setup and configure this theme? We got you covered with an "
 "extensive theme documentation on our website."
 msgstr ""
+"Heb je hulp nodig bij het configureren van dit thema? We hebben uitgebreide "
+"thema documentatie op onze website."
 
 #: inc/theme-info.php:70
 msgid "Visit Dynamic News Documentation"
-msgstr ""
+msgstr "Bezoek de Dynamic News documentatie"
 
 #: inc/theme-info.php:75 inc/customizer/customizer.php:29
 msgid "Theme Options"
-msgstr ""
+msgstr "Thema opties"
 
 #: inc/theme-info.php:77
 msgid ""
 "Dynamic News supports the awesome Theme Customizer for all theme settings. "
 "Click \"Customize Theme\" to open the Customizer now."
 msgstr ""
+"Dynamic News ondersteund de Theme Customizer voor alle thema instellingen. "
+"Klik op \"Customize Theme\" om de Customizer te openen."
 
 #: inc/theme-info.php:79
 msgid "Customize Theme"
@@ -348,17 +378,19 @@ msgstr ""
 
 #: inc/theme-info.php:84 inc/customizer/sections/customizer-upgrade.php:14
 msgid "PRO Version"
-msgstr ""
+msgstr "PRO versie"
 
 #: inc/theme-info.php:86
 msgid ""
 "Need more features? Check out the PRO version which comes with additional "
 "features and advanced customization options."
 msgstr ""
+"Wil je meer mogelijkheden? Bekijk dan de PRO versie welke extra "
+"mogelijkheden en geavanceerde maatwerk opties heeft."
 
 #: inc/theme-info.php:88
 msgid "Learn more about the PRO Version of Dynamic News"
-msgstr ""
+msgstr "Leer meer over de PRO versie van Dynamic News"
 
 #: inc/theme-info.php:108
 #, php-format
@@ -366,151 +398,160 @@ msgid ""
 "Dynamic News is proudly brought to you by %1s. If you like this theme, "
 "%2s :) "
 msgstr ""
+"Dynamic News wordt u aangeboden door %1s. Als je dit thema waardeert, %2s :) "
 
 #: inc/theme-info.php:110
 msgid "rate it"
-msgstr ""
+msgstr "beoordelen"
 
 #: inc/customizer/customizer.php:54
 msgid "Display Tagline below site title."
-msgstr ""
+msgstr "Toon tag regel onder de site titel."
 
 #: inc/customizer/sections/customizer-general.php:14
 msgid "General Settings"
-msgstr ""
+msgstr "Algemene instellingen"
 
 #: inc/customizer/sections/customizer-general.php:29
 msgid "Site Layout"
-msgstr ""
+msgstr "Site layout"
 
 #: inc/customizer/sections/customizer-general.php:35
 msgid "Boxed Layout Width"
-msgstr ""
+msgstr "Boxed Layout breedte"
 
 #: inc/customizer/sections/customizer-general.php:36
 msgid "Wide Layout (Fullwidth)"
-msgstr ""
+msgstr "Wijde Layout (Volledige breedte)"
 
 #: inc/customizer/sections/customizer-general.php:55
 msgid "Left Sidebar"
-msgstr ""
+msgstr "Zijbalk links"
 
 #: inc/customizer/sections/customizer-general.php:56
 msgid "Right Sidebar"
-msgstr ""
+msgstr "Zijbalk rechts"
 
 #: inc/customizer/sections/customizer-header.php:14
 #: inc/customizer/sections/customizer-header.php:30
 msgid "Header Content"
-msgstr ""
+msgstr "Header content"
 
 #: inc/customizer/sections/customizer-header.php:46
 msgid ""
 "The Header Content configured below will be displayed on the right hand side "
 "of the header area."
 msgstr ""
+"De header content die hieronder is ingesteld wordt weergegeven aan de "
+"rechterkant van het header gebied."
 
 #: inc/customizer/sections/customizer-header.php:63
 msgid "Display search field on header area"
-msgstr ""
+msgstr "Toon zoekveld in de header."
 
 #: inc/customizer/sections/customizer-header.php:79
 msgid "Display Social Icons on header area"
-msgstr ""
+msgstr "Toon Social media iconen in de header."
 
 #: inc/customizer/sections/customizer-header.php:95
 msgid "Header Text Line"
-msgstr ""
+msgstr "Header tekstregel"
 
 #: inc/customizer/sections/customizer-post.php:14
 msgid "Post Settings"
-msgstr ""
+msgstr "Bericht instellingen"
 
 #: inc/customizer/sections/customizer-post.php:29
 msgid "Post Length on archives"
-msgstr ""
+msgstr "Bericht lengte in archief"
 
 #: inc/customizer/sections/customizer-post.php:35
 msgid "Show full posts"
-msgstr ""
+msgstr "Toon volledige berichten"
 
 #: inc/customizer/sections/customizer-post.php:36
 msgid "Show post summaries (excerpt)"
-msgstr ""
+msgstr "Toon bericht samenvattingen (uittreksels)"
 
 #: inc/customizer/sections/customizer-post.php:51
 msgid "Post Images"
-msgstr ""
+msgstr "Bericht afbeeldingen"
 
 #: inc/customizer/sections/customizer-post.php:66
 msgid "Display featured images on archive pages"
-msgstr ""
+msgstr "Toon uitgelichte afbeeldingen op archief pagina's"
 
 #: inc/customizer/sections/customizer-post.php:82
 msgid "Display featured images on single posts"
-msgstr ""
+msgstr "Toon uitgelichte afbeeldingen op alleenstaande berichten"
 
 #: inc/customizer/sections/customizer-post.php:100
 msgid "Excerpt More Text"
-msgstr ""
+msgstr "Samenvatting meer tekst"
 
 #: inc/customizer/sections/customizer-post.php:115
 msgid "Display [...] after text excerpts."
-msgstr ""
+msgstr "Toon [...] na samenvatting"
 
 #: inc/customizer/sections/customizer-slider.php:14
 msgid "Post Slider"
-msgstr ""
+msgstr "Berichten slider"
 
 #: inc/customizer/sections/customizer-slider.php:15
 msgid ""
 "The slideshow displays your featured posts, which you can configure on the "
 "\"Featured Content\" section above."
 msgstr ""
+"De diashow toont jouw favoriete berichten, welke je kan instellingen in de "
+"\"Uitgelichte content\" sectie hierboven."
 
 #: inc/customizer/sections/customizer-slider.php:31
 msgid "Activate Featured Post Slider"
-msgstr ""
+msgstr "Activeer uitgelichte berichten diashow"
 
 #: inc/customizer/sections/customizer-slider.php:46
 msgid "Display Slider on Magazine Front Page template."
-msgstr ""
+msgstr "Toon diashow op Tijdschrift voorpagina template."
 
 #: inc/customizer/sections/customizer-slider.php:61
 msgid "Display Slider on normal blog index."
-msgstr ""
+msgstr "Toon diashow op de normale blog index."
 
 #: inc/customizer/sections/customizer-slider.php:77
 msgid "Slider Animation"
-msgstr ""
+msgstr "Diashow animatie"
 
 #: inc/customizer/sections/customizer-slider.php:83
 msgid "Horizontal Slider"
-msgstr ""
+msgstr "Horizontale diashow"
 
 #: inc/customizer/sections/customizer-slider.php:84
 msgid "Fade Slider"
-msgstr ""
+msgstr "Fadende diashow"
 
 #: inc/customizer/sections/customizer-upgrade.php:30
 msgid "Need more features?"
-msgstr ""
+msgstr "Heb je meer mogelijkheden nodig?"
 
 #: inc/customizer/sections/customizer-upgrade.php:46
 msgid ""
 "Check out the PRO version which comes with additional features and advanced "
 "customization options."
 msgstr ""
+"Bekijk de PRO versie die is uitgerust met extra mogelijkheden en "
+"geavanceerde maatwerk instellingen."
 
 #: inc/customizer/sections/customizer-upgrade.php:62
 msgid "Learn more about the PRO Version"
-msgstr ""
+msgstr "Leer meer over de PRO versie."
 
 #: inc/widgets/widget-category-posts-boxed.php:11
 msgid ""
 "Display latest posts from category in boxed layout. Please use this widget "
 "ONLY on Frontpage Magazine widget area."
 msgstr ""
+"Toon de laatste berichten van een categorie in een blokken layout. Gebruik "
+"deze widget alleen in het Tijdschrift voorpagina widget gebied."
 
 #: inc/widgets/widget-category-posts-boxed.php:13
 msgid "Category Posts Boxed (Dynamic News)"
@@ -520,12 +561,12 @@ msgstr ""
 #: inc/widgets/widget-category-posts-columns.php:230
 #: inc/widgets/widget-category-posts-grid.php:208
 msgid "Title:"
-msgstr ""
+msgstr "Titel:"
 
 #: inc/widgets/widget-category-posts-boxed.php:215
 #: inc/widgets/widget-category-posts-grid.php:214
 msgid "Category:"
-msgstr ""
+msgstr "Categorie:"
 
 #: inc/widgets/widget-category-posts-boxed.php:218
 #: inc/widgets/widget-category-posts-columns.php:239
@@ -539,6 +580,8 @@ msgid ""
 "Display latest posts from two specified categories. Please use this widget "
 "ONLY on Frontpage Magazine widget area."
 msgstr ""
+"Toon de laatste berichten van twee categorieën. Gebruik deze widget alleen "
+"in het Tijdschrift voorpagina widget gebied."
 
 #: inc/widgets/widget-category-posts-columns.php:13
 msgid "Category Posts Columns (Dynamic News)"
@@ -546,17 +589,19 @@ msgstr ""
 
 #: inc/widgets/widget-category-posts-columns.php:236
 msgid "Left Category:"
-msgstr ""
+msgstr "Linker categorie:"
 
 #: inc/widgets/widget-category-posts-columns.php:250
 msgid "Right Category:"
-msgstr ""
+msgstr "Rechter categorie:"
 
 #: inc/widgets/widget-category-posts-grid.php:11
 msgid ""
 "Display latest posts from category in a grid layout. Please use this widget "
 "ONLY on Frontpage Magazine widget area."
 msgstr ""
+"Toon de laatste berichten van een categorie in een raster layout. Gebruik "
+"deze widget alleen in het Tijdschrift voorpagina widget gebied."
 
 #: inc/widgets/widget-category-posts-grid.php:13
 msgid "Category Posts Grid (Dynamic News)"
@@ -564,8 +609,16 @@ msgstr ""
 
 #: inc/widgets/widget-category-posts-grid.php:228
 msgid "Number of posts:"
-msgstr ""
+msgstr "Aantal berichten:"
 
 #: inc/widgets/widget-category-posts-grid.php:230
 msgid "Please chose an even number (2, 4, 6, 8)."
-msgstr ""
+msgstr "Kies een even aantal (2, 4, 6, 8)."
+
+#~ msgid "Please specify a category on the Category Posts Widget settings."
+#~ msgstr ""
+#~ "Selecteer een categorie in de Categorie berichten widget instellingen."
+
+#~ msgid "Please specify two categories on the Category Posts Widget settings."
+#~ msgstr ""
+#~ "Selecteer twee categorieën in de Categorie berichten widget instellingen."

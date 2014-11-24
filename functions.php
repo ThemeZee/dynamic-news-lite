@@ -363,7 +363,6 @@ require( get_template_directory() . '/inc/customizer/frontend/custom-slider.php'
 
 // include Template Functions
 require( get_template_directory() . '/inc/template-tags.php' );
-require( get_template_directory() . '/inc/front-page-functions.php' );
 
 // include Widget Files
 require( get_template_directory() . '/inc/widgets/widget-category-posts-boxed.php' );

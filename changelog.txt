@@ -2,6 +2,12 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.0.6
+-----------------------------------
+[added] language files for Dutch, Spanish and Italian
+[added] sane defaults for widget settings
+[improved] performance of Category Posts widgets by adding transient caching
+
 Version 1.0.5
 -----------------------------------
 [added] usage of $hook variable to load theme-info.css in admin

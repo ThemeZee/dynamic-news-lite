@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the Dynamic News package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Dynamic News\n"
+"Project-Id-Version: Dynamic News Lite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-27 13:39+0100\n"
-"PO-Revision-Date: 2014-10-29 19:56+0100\n"
+"POT-Creation-Date: 2014-11-24 13:56+0100\n"
+"PO-Revision-Date: 2014-11-24 13:58+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -61,15 +61,21 @@ msgstr "Archivio Autori: %s"
 msgid "Category Archives: %s"
 msgstr "Archivio Categorie: %s"
 
-#: comments.php:13
+#: comments.php:11
 msgid "Enter password to view comments."
 msgstr "Inserire la password per visualizzare i commenti."
 
-#: comments.php:23 inc/front-page-functions.php:212 inc/template-tags.php:64
+#: comments.php:21 inc/template-tags.php:64
+#: inc/widgets/widget-category-posts-boxed.php:184
+#: inc/widgets/widget-category-posts-columns.php:204
+#: inc/widgets/widget-category-posts-grid.php:182
 msgid "One comment"
 msgstr "Un commento"
 
-#: comments.php:23 inc/front-page-functions.php:212 inc/template-tags.php:64
+#: comments.php:21 inc/template-tags.php:64
+#: inc/widgets/widget-category-posts-boxed.php:184
+#: inc/widgets/widget-category-posts-columns.php:204
+#: inc/widgets/widget-category-posts-grid.php:182
 #, php-format
 msgid "% comments"
 msgstr "% commenti"
@@ -94,32 +100,36 @@ msgstr ""
 msgid "Read more &raquo;"
 msgstr "Continua a leggere &raquo;"
 
-#: functions.php:104
+#: functions.php:78 functions.php:84
+msgid "on"
+msgstr ""
+
+#: functions.php:146
 msgid "Main Navigation"
 msgstr "Principale"
 
-#: functions.php:105
+#: functions.php:147
 msgid "Footer Navigation"
 msgstr "Footer"
 
-#: functions.php:108
+#: functions.php:150
 msgid "Social Icons"
 msgstr "Social Icons"
 
-#: functions.php:148 inc/customizer/sections/customizer-general.php:49
+#: functions.php:190 inc/customizer/sections/customizer-general.php:49
 msgid "Sidebar"
 msgstr "Barra laterale"
 
-#: functions.php:150
+#: functions.php:192
 msgid "Appears on posts and pages except front page and fullwidth template."
 msgstr ""
 "Compare su articoli e pagine ad eccezione dei template Frontpage e FullWidth."
 
-#: functions.php:157
+#: functions.php:199
 msgid "Magazine Front Page"
 msgstr "Magazine Frontpage"
 
-#: functions.php:159
+#: functions.php:201
 msgid ""
 "Appears on Magazine Front Page page template only. You can use the Category "
 "Posts widgets here."
@@ -127,33 +137,33 @@ msgstr ""
 "Compare solo sul template Magazine Frontpage. Qui puoi usare i widget "
 "\"Articoli di Categoria\"."
 
-#: functions.php:191
+#: functions.php:233
 #, php-format
 msgid "Page %s"
 msgstr "Pagina %s"
 
-#: functions.php:212
+#: functions.php:254
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr "Powered by %1$s e %2$s."
 
-#: functions.php:213
+#: functions.php:255
 msgid "WordPress"
 msgstr "WordPress"
 
-#: functions.php:214
+#: functions.php:256
 msgid "Dynamic News"
 msgstr "Dynamic News"
 
-#: functions.php:262
+#: functions.php:304
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: functions.php:263 functions.php:279
+#: functions.php:305 functions.php:321
 msgid "(Edit)"
 msgstr "(Modifica)"
 
-#: functions.php:289
+#: functions.php:331
 msgid "Your comment is awaiting moderation."
 msgstr "Il tuo commento è in attesa di approvazione."
 
@@ -236,22 +246,18 @@ msgstr ""
 "post combacia con il tag, verrà visualizzato <a href=\"%2$s\">articoli in "
 "evidenza</a>."
 
-#: inc/featured-content.php:421 inc/featured-content.php:430
-#: inc/featured-content.php:490
+#: inc/featured-content.php:421 inc/featured-content.php:434
+#: inc/featured-content.php:494
 msgid "featured"
 msgstr "da promuovere"
 
-#: inc/featured-content.php:442
+#: inc/featured-content.php:446
 msgid "Tag Name"
 msgstr "Nome tag"
 
-#: inc/featured-content.php:447
+#: inc/featured-content.php:451
 msgid "Don&rsquo;t display tag on front end."
 msgstr "Nascondi il tag nel front end."
-
-#: inc/front-page-functions.php:212 inc/template-tags.php:64
-msgid "Leave a comment"
-msgstr "Lascia un commento"
 
 #: inc/template-tags.php:43
 #, php-format
@@ -271,6 +277,12 @@ msgstr "<a href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
 #, php-format
 msgid "View all posts by %s"
 msgstr "Visualizza tutti gli articoli di %s"
+
+#: inc/template-tags.php:64 inc/widgets/widget-category-posts-boxed.php:184
+#: inc/widgets/widget-category-posts-columns.php:204
+#: inc/widgets/widget-category-posts-grid.php:182
+msgid "Leave a comment"
+msgstr "Lascia un commento"
 
 #: inc/template-tags.php:70
 msgid "Edit Post"
@@ -292,9 +304,8 @@ msgstr ""
 "assegna il menù appena creato a \"Social Icons\"."
 
 #: inc/theme-info.php:15
-#, fuzzy
 msgid "Welcome to Dynamic News Lite"
-msgstr "Benvenuto in Dynamic News"
+msgstr "Benvenuto in Dynamic News Lite"
 
 #: inc/theme-info.php:16
 msgid "Theme Info"
@@ -358,6 +369,10 @@ msgstr ""
 "Dynamic News supporta la personalizzazione del tema per tutte le sue "
 "impostazioni. Clicca su \"Personalizza tema\" per farlo subito."
 
+#: inc/theme-info.php:79
+msgid "Customize Theme"
+msgstr ""
+
 #: inc/theme-info.php:84 inc/customizer/sections/customizer-upgrade.php:14
 msgid "PRO Version"
 msgstr ""
@@ -373,11 +388,11 @@ msgid "Learn more about the PRO Version of Dynamic News"
 msgstr ""
 
 #: inc/theme-info.php:108
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "Dynamic News is proudly brought to you by %1s. If you like this theme, "
 "%2s :) "
-msgstr "Dynamic News ti è stato orgogliosamente fornito da %1s."
+msgstr ""
 
 #: inc/theme-info.php:110
 msgid "rate it"
@@ -522,7 +537,7 @@ msgstr ""
 msgid "Learn more about the PRO Version"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:8
+#: inc/widgets/widget-category-posts-boxed.php:11
 msgid ""
 "Display latest posts from category in boxed layout. Please use this widget "
 "ONLY on Frontpage Magazine widget area."
@@ -530,24 +545,29 @@ msgstr ""
 "Visualizza gli ultimi articoli della categoria in un layout boxed. Usa "
 "questo widget SOLO nell'area widget del Frontpage Magazine."
 
-#: inc/widgets/widget-category-posts-boxed.php:35
-#: inc/widgets/widget-category-posts-grid.php:38
-msgid "Please specify a category on the Category Posts Widget settings."
+#: inc/widgets/widget-category-posts-boxed.php:13
+msgid "Category Posts Boxed (Dynamic News)"
 msgstr ""
-"Specifica una categoria nelle impostazioni del widget \"Categoria articoli\"."
 
-#: inc/widgets/widget-category-posts-boxed.php:60
-#: inc/widgets/widget-category-posts-columns.php:63
-#: inc/widgets/widget-category-posts-grid.php:65
+#: inc/widgets/widget-category-posts-boxed.php:209
+#: inc/widgets/widget-category-posts-columns.php:230
+#: inc/widgets/widget-category-posts-grid.php:208
 msgid "Title:"
 msgstr "Titolo:"
 
-#: inc/widgets/widget-category-posts-boxed.php:65
-#: inc/widgets/widget-category-posts-grid.php:70
+#: inc/widgets/widget-category-posts-boxed.php:215
+#: inc/widgets/widget-category-posts-grid.php:214
 msgid "Category:"
 msgstr "Categoria:"
 
-#: inc/widgets/widget-category-posts-columns.php:8
+#: inc/widgets/widget-category-posts-boxed.php:218
+#: inc/widgets/widget-category-posts-columns.php:239
+#: inc/widgets/widget-category-posts-columns.php:253
+#: inc/widgets/widget-category-posts-grid.php:217
+msgid "All Categories"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:11
 msgid ""
 "Display latest posts from two specified categories. Please use this widget "
 "ONLY on Frontpage Magazine widget area."
@@ -555,20 +575,19 @@ msgstr ""
 "Visualizza gli ultimi post delle due categorie specificate. Usa questo "
 "widget SOLO nell'area widget del Frontpage Magazine."
 
-#: inc/widgets/widget-category-posts-columns.php:36
-msgid "Please specify two categories on the Category Posts Widget settings."
+#: inc/widgets/widget-category-posts-columns.php:13
+msgid "Category Posts Columns (Dynamic News)"
 msgstr ""
-"Specifica due categorie nelle impostazioni del widget \"Categoria articoli\"."
 
-#: inc/widgets/widget-category-posts-columns.php:68
+#: inc/widgets/widget-category-posts-columns.php:236
 msgid "Left Category:"
 msgstr "Categoria di sinistra:"
 
-#: inc/widgets/widget-category-posts-columns.php:82
+#: inc/widgets/widget-category-posts-columns.php:250
 msgid "Right Category:"
 msgstr "Categoria di destra:"
 
-#: inc/widgets/widget-category-posts-grid.php:8
+#: inc/widgets/widget-category-posts-grid.php:11
 msgid ""
 "Display latest posts from category in a grid layout. Please use this widget "
 "ONLY on Frontpage Magazine widget area."
@@ -576,13 +595,27 @@ msgstr ""
 "Visualizza gli ultimi articoli della categoria in un layout a griglia. Usa "
 "questo widget SOLO nell'area widget del Frontpage Magazine."
 
-#: inc/widgets/widget-category-posts-grid.php:84
+#: inc/widgets/widget-category-posts-grid.php:13
+msgid "Category Posts Grid (Dynamic News)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:228
 msgid "Number of posts:"
 msgstr "Numero di articoli:"
 
-#: inc/widgets/widget-category-posts-grid.php:86
+#: inc/widgets/widget-category-posts-grid.php:230
 msgid "Please chose an even number (2, 4, 6, 8)."
 msgstr "Scegli un numero pari (2, 4, 6, 8)."
+
+#~ msgid "Please specify a category on the Category Posts Widget settings."
+#~ msgstr ""
+#~ "Specifica una categoria nelle impostazioni del widget \"Categoria articoli"
+#~ "\"."
+
+#~ msgid "Please specify two categories on the Category Posts Widget settings."
+#~ msgstr ""
+#~ "Specifica due categorie nelle impostazioni del widget \"Categoria articoli"
+#~ "\"."
 
 #~ msgid "Install additional Fonts"
 #~ msgstr "Installa Fonts addizionali"
@@ -703,9 +736,6 @@ msgstr "Scegli un numero pari (2, 4, 6, 8)."
 #~ msgid "Show recent comments with gravatar."
 #~ msgstr "Visualizza i commenti recenti con gravatar."
 
-#~ msgid " on"
-#~ msgstr "su"
-
 #~ msgid " said:"
 #~ msgstr "ha detto:"
 
@@ -757,9 +787,6 @@ msgstr "Scegli un numero pari (2, 4, 6, 8)."
 
 #~ msgid "%1$s on %2$s"
 #~ msgstr "%1$s su %2$s"
-
-#~ msgid "Categories"
-#~ msgstr "Categorie"
 
 #~ msgid "Links"
 #~ msgstr "Collegamenti"
