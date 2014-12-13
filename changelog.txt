@@ -2,6 +2,10 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.0.7
+-----------------------------------
+[fixed] cache reset bug of Category Posts widgets by changing from transient caching to object caching
+
 Version 1.0.6
 -----------------------------------
 [added] language files for Dutch, Spanish and Italian

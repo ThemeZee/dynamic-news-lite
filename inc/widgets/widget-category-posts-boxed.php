@@ -21,7 +21,7 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 
 	public function delete_widget_cache() {
 		
-		delete_transient( $this->id );
+		wp_cache_delete('widget_dynamicnews_category_posts_boxed', 'widget');
 		
 	}
 	
@@ -39,13 +39,30 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 	// Display Widget
 	function widget($args, $instance) {
 
-		// Get Sidebar Arguments
+		// Get Widget Object Cache
+		if ( ! $this->is_preview() ) {
+			$cache = wp_cache_get( 'widget_dynamicnews_category_posts_boxed', 'widget' );
+		}
+		if ( ! is_array( $cache ) ) {
+			$cache = array();
+		}
+
+		// Display Widget from Cache if exists
+		if ( isset( $cache[ $this->id ] ) ) {
+			echo $cache[ $this->id ];
+			return;
+		}
+		
+		// Start Output Buffering
+		ob_start();
+			
+		// Extract Sidebar Arguments
 		extract($args);
 		
 		// Get Widget Settings
 		$defaults = $this->default_settings();
 		extract( wp_parse_args( $instance, $defaults ) );
-		
+
 		// Add Widget Title Filter
 		$widget_title = apply_filters('widget_title', $title, $instance, $this->id_base);
 		
@@ -53,117 +70,106 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 		echo $before_widget;
 	?>
 		<div id="widget-category-posts-boxed" class="widget-category-posts clearfix">
-		
+
 			<?php // Display Title
 			if( !empty( $widget_title ) ) { echo $before_title . $widget_title . $after_title; }; ?>
 			
 			<div class="widget-category-posts-content">
 			
-				<?php echo $this->render($instance); ?>
+				<?php $this->render($instance); ?>
 				
 			</div>
 			
 		</div>
 	<?php
 		echo $after_widget;
+		
+		// Set Cache
+		if ( ! $this->is_preview() ) {
+			$cache[ $this->id ] = ob_get_flush();
+			wp_cache_set( 'widget_dynamicnews_category_posts_boxed', $cache, 'widget' );
+		} else {
+			ob_end_flush();
+		}
 	
 	}
 	
 	// Render Widget Content
 	function render($instance) {
 		
-		// Get Output from Cache
-		$output = get_transient( $this->id );
+		// Get Widget Settings
+		$defaults = $this->default_settings();
+		extract( wp_parse_args( $instance, $defaults ) );
 		
-		// Generate output if not cached
-		if( $output === false ) :
+		// Get latest posts from database
+		$query_arguments = array(
+			'posts_per_page' => 4,
+			'ignore_sticky_posts' => true,
+			'cat' => (int)$category
+		);
+		$posts_query = new WP_Query($query_arguments);
+		$i = 0;
 
-			// Get Widget Settings
-			$defaults = $this->default_settings();
-			extract( wp_parse_args( $instance, $defaults ) );
+		// Check if there are posts
+		if( $posts_query->have_posts() ) :
 		
-			// Get latest posts from database
-			$query_arguments = array(
-				'posts_per_page' => 4,
-				'ignore_sticky_posts' => true,
-				'cat' => (int)$category
-			);
-			$posts_query = new WP_Query($query_arguments);
-			$i = 0;
-
-			// Start Output Buffering
-			ob_start();
+			// Limit the number of words for the excerpt
+			add_filter('excerpt_length', 'dynamicnews_frontpage_category_excerpt_length');
 			
-			// Check if there are posts
-			if( $posts_query->have_posts() ) :
-			
-				// Limit the number of words for the excerpt
-				add_filter('excerpt_length', 'dynamicnews_frontpage_category_excerpt_length');
+			// Display Posts
+			while( $posts_query->have_posts() ) :
 				
-				// Display Posts
-				while( $posts_query->have_posts() ) :
-					
-					$posts_query->the_post(); 
-					
-					if(isset($i) and $i == 0) : ?>
+				$posts_query->the_post(); 
+				
+				if(isset($i) and $i == 0) : ?>
 
-						<article id="post-<?php the_ID(); ?>" <?php post_class('first-post'); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('first-post'); ?>>
 
-							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('category_posts_wide_thumb'); ?></a>
+						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('category_posts_wide_thumb'); ?></a>
 
-							<h3 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+						<h3 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 
+						<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
+
+						<div class="entry">
+							<?php the_excerpt(); ?>
+						</div>
+
+					</article>
+
+				<div class="more-posts clearfix">
+
+				<?php else: ?>
+
+					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
+
+					<?php if ( '' != get_the_post_thumbnail() ) : ?>
+						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('category_posts_small_thumb'); ?></a>
+					<?php endif; ?>
+
+						<div class="more-posts-content">
+							<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 							<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
+						</div>
 
-							<div class="entry">
-								<?php the_excerpt(); ?>
-							</div>
+					</article>
 
-						</article>
-
-					<div class="more-posts clearfix">
-
-					<?php else: ?>
-
-						<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
-
-						<?php if ( '' != get_the_post_thumbnail() ) : ?>
-							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('category_posts_small_thumb'); ?></a>
-						<?php endif; ?>
-
-							<div class="more-posts-content">
-								<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-								<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
-							</div>
-
-						</article>
-
-					<?php
-					endif; $i++;
-					
-				endwhile; ?>
-				
-					</div><!-- end .more-posts -->
-					
 				<?php
-				// Remove excerpt filter
-				remove_filter('excerpt_length', 'dynamicnews_frontpage_category_excerpt_length');
+				endif; $i++;
 				
-			endif;
+			endwhile; ?>
 			
-			// Reset Postdata
-			wp_reset_postdata();
-			
-			// Get Buffer Content
-			$output = ob_get_clean();
-			
-			// Set Cache
-			set_transient( $this->id, $output, YEAR_IN_SECONDS );
+				</div><!-- end .more-posts -->
+				
+			<?php
+			// Remove excerpt filter
+			remove_filter('excerpt_length', 'dynamicnews_frontpage_category_excerpt_length');
 			
 		endif;
 		
-		return $output;
-		
+		// Reset Postdata
+		wp_reset_postdata();
+
 	}
 	
 	// Display Postmeta

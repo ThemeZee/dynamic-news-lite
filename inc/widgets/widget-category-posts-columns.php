@@ -21,7 +21,7 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 
 	public function delete_widget_cache() {
 		
-		delete_transient( $this->id );
+		wp_cache_delete('widget_dynamicnews_category_posts_columns', 'widget');
 		
 	}
 	
@@ -40,6 +40,23 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 	// Display Widget
 	function widget($args, $instance) {
 
+		// Get Widget Object Cache
+		if ( ! $this->is_preview() ) {
+			$cache = wp_cache_get( 'widget_dynamicnews_category_posts_columns', 'widget' );
+		}
+		if ( ! is_array( $cache ) ) {
+			$cache = array();
+		}
+
+		// Display Widget from Cache if exists
+		if ( isset( $cache[ $this->id ] ) ) {
+			echo $cache[ $this->id ];
+			return;
+		}
+		
+		// Start Output Buffering
+		ob_start();
+		
 		// Get Sidebar Arguments
 		extract($args);
 		
@@ -67,53 +84,42 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 		</div>
 	<?php
 		echo $after_widget;
+		
+		// Set Cache
+		if ( ! $this->is_preview() ) {
+			$cache[ $this->id ] = ob_get_flush();
+			wp_cache_set( 'widget_dynamicnews_category_posts_columns', $cache, 'widget' );
+		} else {
+			ob_end_flush();
+		}
 	
 	}
 	
 	// Render Widget Content
 	function render($instance) {
 		
-		// Get Output from Cache
-		$output = get_transient( $this->id );
+		// Get Widget Settings
+		$defaults = $this->default_settings();
+		extract( wp_parse_args( $instance, $defaults ) );
 		
-		// Generate output if not cached
-		if( $output === false ) :
-
-			// Get Widget Settings
-			$defaults = $this->default_settings();
-			extract( wp_parse_args( $instance, $defaults ) );
-			
-			// Start Output Buffering
-			ob_start();
-			
-			// Limit the number of words for the excerpt
-			add_filter('excerpt_length', 'dynamicnews_frontpage_category_excerpt_length'); ?>
-			
-			<div class="category-posts-column-left category-posts-columns">
-			
-				<?php $this->display_category_posts($instance, $category_one); ?>
-				
-			</div>
-			
-			<div class="category-posts-column-right category-posts-columns">
-			
-				<?php $this->display_category_posts($instance, $category_two); ?>
-				
-			</div>
-			
-			<?php
-			// Remove excerpt filter
-			remove_filter('excerpt_length', 'dynamicnews_frontpage_category_excerpt_length');
-			
-			// Get Buffer Content
-			$output = ob_get_clean();
-			
-			// Set Cache
-			set_transient( $this->id, $output, YEAR_IN_SECONDS );
-			
-		endif;
+		// Limit the number of words for the excerpt
+		add_filter('excerpt_length', 'dynamicnews_frontpage_category_excerpt_length'); ?>
 		
-		return $output;
+		<div class="category-posts-column-left category-posts-columns">
+		
+			<?php $this->display_category_posts($instance, $category_one); ?>
+			
+		</div>
+		
+		<div class="category-posts-column-right category-posts-columns">
+		
+			<?php $this->display_category_posts($instance, $category_two); ?>
+			
+		</div>
+		
+		<?php
+		// Remove excerpt filter
+		remove_filter('excerpt_length', 'dynamicnews_frontpage_category_excerpt_length');
 		
 	}
 	
