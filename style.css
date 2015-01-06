@@ -2,7 +2,7 @@
 Theme Name: Dynamic News Lite
 Theme URI: http://themezee.com/themes/dynamicnews/
 Description: A responsive, multipurpose blogging and magazine theme with bold colors and fonts. It comes with a featured content slider and a magazine page template. Dynamic News is a trending theme on wordpress.com and we are sure you will like the WordPress.org version as well.
-Version: 1.0.7
+Version: 1.0.8
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, red, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, blue, silver, white, green, gray
@@ -347,6 +347,9 @@ input, textarea, select {
 .widget img {
 	max-width: 100%;
 	height: auto;
+}
+.widgettitle a:link, .widgettitle a:visited  {
+	color: #fff;
 }
 
 /* Custom Widgets
@@ -1121,9 +1124,31 @@ embed, iframe, object, video {
 	line-height: 1.5em;
 	margin-bottom: 1.5em;
 }
+
 /* Category Posts Widgets */
 #frontpage-magazine-widgets .widgettitle {
 	margin: 0 0 1.5em 0;
+}
+.widget-category-posts {
+	margin-bottom: -1em;
+}
+.widget-category-posts .widgettitle .category-archive-link {
+	float: right;
+}
+.widget-category-posts .widgettitle .category-archive-link .genericon-category {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1;
+	font-size: 21px;
+	font-family: 'Genericons';
+	text-decoration: inherit;
+	vertical-align: top;
+	content: '\f301';
+	margin-top: -4px;
+}
+.widget-category-posts .widgettitle .category-archive-link .genericon-category:hover {
+	text-decoration: none;
 }
 .widget-category-posts .type-post {
 	margin: 0;
@@ -1131,47 +1156,47 @@ embed, iframe, object, video {
 	border: none;
 	box-shadow: none;
 }
-.widget-category-posts .type-post .post-title {
+.widget-category-posts .big-post .post-title {
 	font-size: 1.1em;
 }
-.widget-category-posts .type-post .wp-post-image {
+.widget-category-posts .big-post .wp-post-image {
 	margin: 0 0 0.5em 0;
 }
-.widget-category-posts .more-posts .type-post {
+.widget-category-posts .small-post {
 	float: left;
 	display: block;
 	width: 100%;
 	margin: 0 0 1em 0;
 	background: #eee;
 }
-.widget-category-posts .more-posts .wp-post-image {
+.widget-category-posts .small-post .wp-post-image {
 	float: left;
 	margin: 0 0.8em 0 0;
 	max-width: 30%;
 }
-.widget-category-posts .more-posts .more-posts-content {
+.widget-category-posts .small-post .small-post-content {
 	padding: 0.4em 0.8em;
 }
-.widget-category-posts .more-posts .post-title{
+.widget-category-posts .small-post .post-title {
 	border: none;
 	margin: 0;
 	font-size: 0.95em;
 	font-family: 'Droid Sans', Tahoma, Verdana, Arial;
 }
-.widget-category-posts .more-posts .postmeta {
+.widget-category-posts .small-post .postmeta {
 	display: inline-block;
 	background: none;
 	padding: 0 0.3em 0.3em 0;
 	font-size: 0.9em;
 }
-.widget-category-posts .more-posts .postmeta .sep  {
+.widget-category-posts .small-post .postmeta .sep  {
 	padding-left: 0.5em;
 	margin-left: 0.4em;
 	border-left: 1px solid #aaa;
 }
 
 /* Category Posts Boxed Widget */
-#widget-category-posts-boxed .first-post {
+#widget-category-posts-boxed .big-post {
 	float: left;
 	width: 50%;
 	padding-right: 1.5em;
@@ -1179,7 +1204,7 @@ embed, iframe, object, video {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-#widget-category-posts-boxed .more-posts {
+#widget-category-posts-boxed .small-posts {
 	width: 50%;
 	margin-left: 50%;
 }
@@ -1188,13 +1213,20 @@ embed, iframe, object, video {
 #widget-category-posts-grid .category-posts-grid-row {
 	margin-right: -1.5em;
 }
-#widget-category-posts-grid .category-posts-grid-row .type-post {
+#widget-category-posts-grid .category-posts-grid-row.small-post-row {
+	margin-right: -1em;
+}
+#widget-category-posts-grid .category-posts-grid-row .big-post,
+#widget-category-posts-grid .category-posts-grid-row .small-post-wrap {
 	float: left;
 	width: 50%;
 	padding-right: 1.5em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+}
+#widget-category-posts-grid .category-posts-grid-row.small-post-row .small-post-wrap {
+	padding-right: 1em;
 }
 
 /* Front Page Category Area Thre (two columns) */
@@ -1214,12 +1246,8 @@ embed, iframe, object, video {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-#widget-category-posts-columns .category-posts-columns .more-posts .type-post {
-	float: left;
-	display: block;
-	width: 100%;
-	margin: 1em 0 0;
-	background: #eee;
+#widget-category-posts-columns .category-posts-columns .big-post {
+	margin-bottom: 1.5em;
 }
 
 /* Footer
@@ -1584,7 +1612,7 @@ embed, iframe, object, video {
 	.widget-category-posts .type-post .post-title {
 		font-size: 1.0em;
 	}
-	..widget-category-posts .more-posts .post-title{
+	..widget-category-posts .small-post .post-title{
 		font-size: 0.9em;
 	}
 
@@ -1595,24 +1623,25 @@ embed, iframe, object, video {
 	#widget-category-posts-grid .category-posts-grid-row {
 		margin-right: 0;
 	}
-	#widget-category-posts-grid .category-posts-grid-row .type-post,
-	#widget-category-posts-boxed .first-post,
+	#widget-category-posts-grid .category-posts-grid-row .big-post,
+	#widget-category-posts-grid .category-posts-grid-row .small-post-wrap,
+	#widget-category-posts-boxed .big-post,
 	#widget-category-posts-columns .category-posts-column-left {
 		float: none;
 		width: 100%;
 		padding-right: 0;
 	}
-	#widget-category-posts-boxed .more-posts,
+	#widget-category-posts-boxed .small-posts,
 	#widget-category-posts-columns .category-posts-column-right {
 		width: 100%;
 		margin-left: 0;
 		padding-left: 0;
 	}
-	#widget-category-posts-boxed .more-posts,
-	#widget-category-posts-columns .category-posts-columns .more-posts	{
+	#widget-category-posts-boxed .small-posts,
+	#widget-category-posts-columns .category-posts-columns .small-posts	{
 		padding-bottom: 0.5em;
 	}
-	#widget-category-posts-columns .category-posts-columns .more-posts .type-post {
+	#widget-category-posts-columns .category-posts-columns .small-post {
 		margin: 0 0 1em;
 	}
 	#widget-category-posts-columns .category-posts-column-right {

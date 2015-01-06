@@ -30,7 +30,10 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 		$defaults = array(
 			'title'				=> '',
 			'category_one'		=> 0,
-			'category_two'		=> 0
+			'category_two'		=> 0,
+			'number'			=> 4,
+			'highlight_post'	=> true,
+			'category_titles'	=> false
 		);
 		
 		return $defaults;
@@ -40,6 +43,8 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 	// Display Widget
 	function widget($args, $instance) {
 
+		$cache = array();
+				
 		// Get Widget Object Cache
 		if ( ! $this->is_preview() ) {
 			$cache = wp_cache_get( 'widget_dynamicnews_category_posts_columns', 'widget' );
@@ -77,7 +82,7 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 			
 			<div class="widget-category-posts-content">
 			
-				<?php echo $this->render($instance); ?>
+				<?php echo $this->render($args, $instance); ?>
 				
 			</div>
 			
@@ -96,7 +101,7 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 	}
 	
 	// Render Widget Content
-	function render($instance) {
+	function render($args, $instance) {
 		
 		// Get Widget Settings
 		$defaults = $this->default_settings();
@@ -105,14 +110,20 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 		// Limit the number of words for the excerpt
 		add_filter('excerpt_length', 'dynamicnews_frontpage_category_excerpt_length'); ?>
 		
-		<div class="category-posts-column-left category-posts-columns">
+		<div class="category-posts-column-left category-posts-columns clearfix">
 		
+			<?php //Display Category Title
+			$this->display_category_title($args, $instance, $category_one); ?>
+				
 			<?php $this->display_category_posts($instance, $category_one); ?>
 			
 		</div>
 		
-		<div class="category-posts-column-right category-posts-columns">
+		<div class="category-posts-column-right category-posts-columns clearfix">
 		
+			<?php //Display Category Title
+			$this->display_category_title($args, $instance, $category_two); ?>
+				
 			<?php $this->display_category_posts($instance, $category_two); ?>
 			
 		</div>
@@ -126,9 +137,13 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 	// Display Category Posts
 	function display_category_posts($instance, $category_id) {
 	
+		// Get Widget Settings
+		$defaults = $this->default_settings();
+		extract( wp_parse_args( $instance, $defaults ) );
+		
 		// Get latest posts from database
 		$query_arguments = array(
-			'posts_per_page' => 4,
+			'posts_per_page' => (int)$number,
 			'ignore_sticky_posts' => true,
 			'cat' => (int)$category_id
 		);
@@ -143,9 +158,9 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 				
 				$posts_query->the_post(); 
 				
-				if(isset($i) and $i == 0) : ?>
+				if( $highlight_post == true and (isset($i) and $i == 0) ) : ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class('first-post'); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('first-post big-post'); ?>>
 
 						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('category_posts_wide_thumb'); ?></a>
 
@@ -159,17 +174,15 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 
 					</article>
 
-				<div class="more-posts clearfix">
-
 				<?php else: ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('small-post clearfix'); ?>>
 
 					<?php if ( '' != get_the_post_thumbnail() ) : ?>
 						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('category_posts_small_thumb'); ?></a>
 					<?php endif; ?>
 
-						<div class="more-posts-content">
+						<div class="small-post-content">
 							<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 							<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
 						</div>
@@ -180,8 +193,6 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 				endif; $i++;
 				
 			endwhile; ?>
-			
-				</div><!-- end .more-posts -->
 				
 			<?php
 
@@ -212,6 +223,34 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 	<?php endif;
 
 	}
+	
+	// Link Widget Title to Category
+	function display_category_title($args, $instance, $category_id) {
+		
+		// Get Sidebar Arguments
+		extract($args);
+		
+		// Get Widget Settings
+		$defaults = $this->default_settings();
+		extract( wp_parse_args( $instance, $defaults ) );
+		
+		// Display Category title if activated
+		if( $category_titles == true ) : 
+				
+				$cat_name = get_cat_name( $category_id );
+				$link_title = sprintf( __('View all posts from category %s', 'dynamicnewslite'), $cat_name );
+				$link_url = esc_url( get_category_link( $category_id ) );
+				
+				echo $before_title;
+				
+				echo '<a href="'. $link_url .'" title="'. $link_title . '">'. $cat_name . '</a>';
+				echo '<a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '"><span class="genericon-category"></span></a>';
+				
+				echo $after_title; 
+				
+		endif;
+
+	}
 
 	function update($new_instance, $old_instance) {
 
@@ -219,6 +258,9 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 		$instance['title'] = sanitize_text_field($new_instance['title']);
 		$instance['category_one'] = (int)$new_instance['category_one'];
 		$instance['category_two'] = (int)$new_instance['category_two'];
+		$instance['number'] = (int)$new_instance['number'];
+		$instance['highlight_post'] = !empty($new_instance['highlight_post']);
+		$instance['category_titles'] = !empty($new_instance['category_titles']);
 		
 		$this->delete_widget_cache();
 		
@@ -264,6 +306,26 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 				);
 				wp_dropdown_categories( $args ); 
 			?>
+		</p>
+		
+		<p>
+			<label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts:', 'dynamicnewslite'); ?>
+				<input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo (int)$number; ?>" size="3" />
+			</label>
+		</p>
+		
+		<p>
+			<label for="<?php echo $this->get_field_id('highlight_post'); ?>">
+				<input class="checkbox" type="checkbox" <?php checked( $highlight_post ) ; ?> id="<?php echo $this->get_field_id('highlight_post'); ?>" name="<?php echo $this->get_field_name('highlight_post'); ?>" />
+				<?php _e('Highlight First Post (Big Image + Excerpt)', 'dynamicnewslite'); ?>
+			</label>
+		</p>
+		
+		<p>
+			<label for="<?php echo $this->get_field_id('category_titles'); ?>">
+				<input class="checkbox" type="checkbox" <?php checked( $category_titles ) ; ?> id="<?php echo $this->get_field_id('category_titles'); ?>" name="<?php echo $this->get_field_name('category_titles'); ?>" />
+				<?php _e('Display Category Titles', 'dynamicnewslite'); ?>
+			</label>
 		</p>
 		
 <?php

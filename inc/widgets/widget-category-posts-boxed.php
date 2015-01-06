@@ -29,7 +29,8 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 	
 		$defaults = array(
 			'title'				=> '',
-			'category'			=> 0
+			'category'			=> 0,
+			'category_link'		=> false
 		);
 		
 		return $defaults;
@@ -39,6 +40,8 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 	// Display Widget
 	function widget($args, $instance) {
 
+		$cache = array();
+				
 		// Get Widget Object Cache
 		if ( ! $this->is_preview() ) {
 			$cache = wp_cache_get( 'widget_dynamicnews_category_posts_boxed', 'widget' );
@@ -62,9 +65,6 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 		// Get Widget Settings
 		$defaults = $this->default_settings();
 		extract( wp_parse_args( $instance, $defaults ) );
-
-		// Add Widget Title Filter
-		$widget_title = apply_filters('widget_title', $title, $instance, $this->id_base);
 		
 		// Output
 		echo $before_widget;
@@ -72,7 +72,7 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 		<div id="widget-category-posts-boxed" class="widget-category-posts clearfix">
 
 			<?php // Display Title
-			if( !empty( $widget_title ) ) { echo $before_title . $widget_title . $after_title; }; ?>
+			$this->display_widget_title($args, $instance); ?>
 			
 			<div class="widget-category-posts-content">
 			
@@ -123,7 +123,7 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 				
 				if(isset($i) and $i == 0) : ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class('first-post'); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('first-post big-post'); ?>>
 
 						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('category_posts_wide_thumb'); ?></a>
 
@@ -137,17 +137,17 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 
 					</article>
 
-				<div class="more-posts clearfix">
+				<div class="small-posts more-posts clearfix">
 
 				<?php else: ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('small-post clearfix'); ?>>
 
 					<?php if ( '' != get_the_post_thumbnail() ) : ?>
 						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('category_posts_small_thumb'); ?></a>
 					<?php endif; ?>
 
-						<div class="more-posts-content">
+						<div class="small-post-content">
 							<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 							<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
 						</div>
@@ -159,7 +159,7 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 				
 			endwhile; ?>
 			
-				</div><!-- end .more-posts -->
+				</div><!-- end .small-posts -->
 				
 			<?php
 			// Remove excerpt filter
@@ -192,12 +192,51 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 	<?php endif;
 
 	}
+	
+	// Display Widget Title
+	function display_widget_title($args, $instance) {
+		
+		// Get Sidebar Arguments
+		extract($args);
+		
+		// Get Widget Settings
+		$defaults = $this->default_settings();
+		extract( wp_parse_args( $instance, $defaults ) );
+		
+		// Add Widget Title Filter
+		$widget_title = apply_filters('widget_title', $title, $instance, $this->id_base);
+		
+		if( !empty( $widget_title ) ) :
+		
+			echo $before_title;
+			
+			// Link Category Title
+			if( $category_link == true ) : 
+			
+				$link_title = sprintf( __('View all posts from category %s', 'dynamicnewslite'), get_cat_name( $category ) );
+				$link_url = esc_url( get_category_link( $category ) );
+				
+				echo '<a href="'. $link_url .'" title="'. $link_title . '">'. $widget_title . '</a>';
+				echo '<a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '"><span class="genericon-category"></span></a>';
+			
+			else:
+			
+				echo $widget_title;
+			
+			endif;
+			
+			echo $after_title; 
+			
+		endif;
+
+	}
 
 	function update($new_instance, $old_instance) {
 
 		$instance = $old_instance;
 		$instance['title'] = sanitize_text_field($new_instance['title']);
 		$instance['category'] = (int)$new_instance['category'];
+		$instance['category_link'] = !empty($new_instance['category_link']);
 		
 		$this->delete_widget_cache();
 		
@@ -229,6 +268,13 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 				);
 				wp_dropdown_categories( $args ); 
 			?>
+		</p>
+		
+		<p>
+			<label for="<?php echo $this->get_field_id('category_link'); ?>">
+				<input class="checkbox" type="checkbox" <?php checked( $category_link ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
+				<?php _e('Link Widget Title to Category Archive page', 'dynamicnewslite'); ?>
+			</label>
 		</p>
 		
 <?php
