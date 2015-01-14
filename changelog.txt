@@ -2,6 +2,13 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.0.9
+-----------------------------------
+[improved] styling of blockquotes
+[added] extra content-search.php template for search
+[changed] appearance of static pages on search template
+[fixed] small syntax error in style.css
+
 Version 1.0.8
 -----------------------------------
 [added] setting to Category Posts widgets to link widget title to category archive page

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dynamic News Lite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-24 13:56+0100\n"
-"PO-Revision-Date: 2014-11-24 13:56+0100\n"
+"POT-Creation-Date: 2015-01-07 17:56+0100\n"
+"PO-Revision-Date: 2015-01-07 17:57+0100\n"
 "Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
 "Language-Team: ThemeZee <contact@themezee.com>\n"
 "MIME-Version: 1.0\n"
@@ -13,7 +13,6 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.5.7\n"
-"X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:9
 msgid "404 Error: Not found"
@@ -65,16 +64,16 @@ msgid "Enter password to view comments."
 msgstr ""
 
 #: comments.php:21 inc/template-tags.php:64
-#: inc/widgets/widget-category-posts-boxed.php:184
-#: inc/widgets/widget-category-posts-columns.php:204
-#: inc/widgets/widget-category-posts-grid.php:182
+#: inc/widgets/widget-category-posts-boxed.php:190
+#: inc/widgets/widget-category-posts-columns.php:221
+#: inc/widgets/widget-category-posts-grid.php:213
 msgid "One comment"
 msgstr ""
 
 #: comments.php:21 inc/template-tags.php:64
-#: inc/widgets/widget-category-posts-boxed.php:184
-#: inc/widgets/widget-category-posts-columns.php:204
-#: inc/widgets/widget-category-posts-grid.php:182
+#: inc/widgets/widget-category-posts-boxed.php:190
+#: inc/widgets/widget-category-posts-columns.php:221
+#: inc/widgets/widget-category-posts-grid.php:213
 #, php-format
 msgid "% comments"
 msgstr ""
@@ -258,9 +257,9 @@ msgstr ""
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:64 inc/widgets/widget-category-posts-boxed.php:184
-#: inc/widgets/widget-category-posts-columns.php:204
-#: inc/widgets/widget-category-posts-grid.php:182
+#: inc/template-tags.php:64 inc/widgets/widget-category-posts-boxed.php:190
+#: inc/widgets/widget-category-posts-columns.php:221
+#: inc/widgets/widget-category-posts-grid.php:213
 msgid "Leave a comment"
 msgstr ""
 
@@ -516,22 +515,34 @@ msgstr ""
 msgid "Category Posts Boxed (Dynamic News)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:209
-#: inc/widgets/widget-category-posts-columns.php:230
-#: inc/widgets/widget-category-posts-grid.php:208
+#: inc/widgets/widget-category-posts-boxed.php:216
+#: inc/widgets/widget-category-posts-columns.php:241
+#: inc/widgets/widget-category-posts-grid.php:239
+#, php-format
+msgid "View all posts from category %s"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:254
+#: inc/widgets/widget-category-posts-columns.php:278
+#: inc/widgets/widget-category-posts-grid.php:279
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:215
-#: inc/widgets/widget-category-posts-grid.php:214
+#: inc/widgets/widget-category-posts-boxed.php:260
+#: inc/widgets/widget-category-posts-grid.php:285
 msgid "Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:218
-#: inc/widgets/widget-category-posts-columns.php:239
-#: inc/widgets/widget-category-posts-columns.php:253
-#: inc/widgets/widget-category-posts-grid.php:217
+#: inc/widgets/widget-category-posts-boxed.php:263
+#: inc/widgets/widget-category-posts-columns.php:287
+#: inc/widgets/widget-category-posts-columns.php:301
+#: inc/widgets/widget-category-posts-grid.php:288
 msgid "All Categories"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:276
+#: inc/widgets/widget-category-posts-grid.php:315
+msgid "Link Widget Title to Category Archive page"
 msgstr ""
 
 #: inc/widgets/widget-category-posts-columns.php:11
@@ -544,12 +555,25 @@ msgstr ""
 msgid "Category Posts Columns (Dynamic News)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:236
+#: inc/widgets/widget-category-posts-columns.php:284
 msgid "Left Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:250
+#: inc/widgets/widget-category-posts-columns.php:298
 msgid "Right Category:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:312
+#: inc/widgets/widget-category-posts-grid.php:299
+msgid "Number of posts:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:320
+msgid "Highlight First Post (Big Image + Excerpt)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:327
+msgid "Display Category Titles"
 msgstr ""
 
 #: inc/widgets/widget-category-posts-grid.php:11
@@ -562,10 +586,10 @@ msgstr ""
 msgid "Category Posts Grid (Dynamic News)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:228
-msgid "Number of posts:"
+#: inc/widgets/widget-category-posts-grid.php:301
+msgid "Please chose an even number (2, 4, 6, 8)."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:230
-msgid "Please chose an even number (2, 4, 6, 8)."
+#: inc/widgets/widget-category-posts-grid.php:308
+msgid "Display as small posts grid with thumbnails"
 msgstr ""

@@ -15,7 +15,15 @@
 		
 		<?php while (have_posts()) : the_post();
 		
-				get_template_part( 'content', $theme_options['posts_length'] );
+				if ( 'post' == get_post_type() ) :
+		
+					get_template_part( 'content', $theme_options['posts_length'] );
+				
+				else :
+				
+					get_template_part( 'content', 'search' );
+					
+				endif;
 		
 			endwhile;
 			
