@@ -2,7 +2,7 @@
 Theme Name: Dynamic News Lite
 Theme URI: http://themezee.com/themes/dynamicnews/
 Description: A responsive, multipurpose blogging and magazine theme with bold colors and fonts. It comes with a featured content slider and a magazine page template. Dynamic News is a trending theme on wordpress.com and we are sure you will like the WordPress.org version as well.
-Version: 1.0.9
+Version: 1.1
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, red, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, blue, silver, white, green, gray
@@ -58,7 +58,7 @@ html {
 	font-size: 100.01%;
 }
 body {
-	font-family: 'Droid Sans', Tahoma, Verdana, Arial;
+	font-family: 'Droid Sans', Arial, Tahoma;
 	font-size: 1.0em;
 	border: 0;
 	color: #111;
@@ -81,7 +81,7 @@ input, textarea {
 	border: 1px solid #ddd;
 	font-size: 1.0em;
 	color: #333;
-	font-family: 'Droid Sans', Tahoma, Verdana, Arial;
+	font-family: 'Droid Sans', Arial, Tahoma;
 }
 input[type="submit"] {
 	border: none;
@@ -162,7 +162,7 @@ input, textarea, select {
 	font-size: 2.5em;
 	font-weight: bold;
 	color: #e84747;
-	font-family: 'Francois One', Tahoma, Verdana, Arial;
+	font-family: 'Francois One', Tahoma, Arial;
 }
 #logo a:hover {
 	text-decoration: none;
@@ -232,7 +232,7 @@ input, textarea, select {
 	text-transform: uppercase;
 	text-decoration: none;
 	font-size: 1.0em;
-	font-family: 'Francois One', Tahoma, Verdana, Arial;
+	font-family: 'Francois One', Tahoma, Arial;
 	-webkit-transition: all 0.1s ease-out;
 	-moz-transition: all 0.1s ease-out;
 	-ms-transition: all 0.1s ease-out;
@@ -313,7 +313,7 @@ input, textarea, select {
 }
 .widgettitle {
 	font-size: 0.9em;
-	font-family: 'Droid Sans', Tahoma, Verdana, Arial;
+	font-family: 'Droid Sans', Arial, Tahoma;
 	padding: 0.8em;
 	margin: -0.5em -0.5em 1.5em -0.5em;
 	background: #333;
@@ -469,7 +469,7 @@ input, textarea, select {
 }
 .page-title, .post-title {
 	font-weight: bold;
-	font-family: 'Francois One', Tahoma, Verdana, Arial;
+	font-family: 'Francois One', Tahoma, Arial;
 	color: #333;
 	line-height: 1.4em;
 	-ms-word-wrap: break-word;
@@ -967,7 +967,7 @@ embed, iframe, object, video {
 }
 #comments .comments-title, #respond #reply-title {
 	font-weight: bold;
-	font-family: 'Francois One', Tahoma, Verdana, Arial;
+	font-family: 'Francois One', Tahoma, Arial;
 	color: #555;
 	line-height: 1.4em;
 	-ms-word-wrap: break-word;
@@ -1011,7 +1011,7 @@ embed, iframe, object, video {
 .comment-author .fn {
 	display: inline-block;
 	float: left;
-	font-family: 'Francois One', Tahoma, Verdana, Arial;
+	font-family: 'Francois One', Tahoma, Arial;
 	font-size: 1.0em;
 	color: #fff;
 	background: #333;
@@ -1178,7 +1178,7 @@ embed, iframe, object, video {
 	border: none;
 	margin: 0;
 	font-size: 0.95em;
-	font-family: 'Droid Sans', Tahoma, Verdana, Arial;
+	font-family: 'Droid Sans', Arial, Tahoma;
 }
 .widget-category-posts .small-post .postmeta {
 	display: inline-block;
@@ -1414,7 +1414,7 @@ embed, iframe, object, video {
 		text-transform: uppercase;
 		text-decoration: none;
 		font-size: 1.0em;
-		font-family: 'Francois One', Tahoma, Verdana, Arial;
+		font-family: 'Francois One', Tahoma, Arial;
 		color: #fff;
 		background: rgba(255, 255, 255, 0.1);
 		-webkit-transition: all 0.1s ease-out;

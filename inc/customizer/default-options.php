@@ -32,6 +32,7 @@ function dynamicnews_default_options() {
 	$default_options = array(
 		'layout' 							=> 'boxed',
 		'sidebar' 							=> 'right-sidebar',
+		'deactivate_google_fonts'			=> false,
 		'header_logo' 						=> '',
 		'header_tagline' 					=> false,
 		'header_search' 					=> false,

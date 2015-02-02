@@ -70,38 +70,27 @@ function dynamicnews_enqueue_html5shiv(){
 */
 function dynamicnews_fonts_url() {
     $fonts_url = '';
+
+	// Get Theme Options from Database
+	$theme_options = dynamicnews_theme_options();
 	
-    /* Translators: If there are characters in your language that are not
-    * supported by Droid Sans, translate this to 'off'. Do not translate
-    * into your own language.
-    */
-    $droid_sans = _x( 'on', 'Droid Sans font: on or off', 'dynamicnewslite' );
- 
-    /* Translators: If there are characters in your language that are not
-    * supported by Francois One, translate this to 'off'. Do not translate
-    * into your own language.
-    */
-    $francois_one = _x( 'on', 'Francois One font: on or off', 'dynamicnewslite' );
- 
-    if ( 'off' !== $droid_sans || 'off' !== $francois_one ) {
-        $font_families = array();
- 
-        if ( 'off' !== $droid_sans ) {
-            $font_families[] = 'Droid Sans:400,700';
-        }
- 
-        if ( 'off' !== $francois_one ) {
-            $font_families[] = 'Francois One';
-        }
- 
-        $query_args = array(
-            'family' => urlencode( implode( '|', $font_families ) ),
-            'subset' => urlencode( 'latin,latin-ext' ),
-        );
- 
-        $fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
-    }
- 
+	// Only embed Google Fonts if not deactivated
+	if ( ! ( isset($theme_options['deactivate_google_fonts']) and $theme_options['deactivate_google_fonts'] == true ) ) :
+		
+		// Set Default Fonts
+		$font_families = array('Droid Sans:400,700', 'Francois One');
+		 
+		// Set Google Font Query Args
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+		
+		// Create Fonts URL
+		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+		
+	endif;
+	 
     return $fonts_url;
 }
 

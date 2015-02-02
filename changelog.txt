@@ -2,6 +2,12 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.1
+-----------------------------------
+[added] setting for deactivating google fonts in case they are not compatible with user language
+[fixed] ampersand escape bug in pagination links (https://core.trac.wordpress.org/ticket/30831)
+[fixed] wrong textdomain in content-search.php
+
 Version 1.0.9
 -----------------------------------
 [improved] styling of blockquotes
