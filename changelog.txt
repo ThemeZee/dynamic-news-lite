@@ -2,6 +2,10 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.1.1
+-----------------------------------
+[added] check if current user can edit theme options before displaying admin notices on frontend
+
 Version 1.1
 -----------------------------------
 [added] setting for deactivating google fonts in case they are not compatible with user language
