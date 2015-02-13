@@ -1,7 +1,10 @@
 
+	<?php do_action('dynamicnews_before_footer'); ?>
+	
 	<div id="footer-wrap">
 	
 		<footer id="footer" class="container clearfix" role="contentinfo">
+			
 			<nav id="footernav" class="clearfix" role="navigation">
 				<?php 
 					// Get Navigation out of Theme Options
@@ -9,7 +12,11 @@
 				?>
 				<h4 id="footernav-icon"></h4>
 			</nav>
-			<div id="credit-link"><?php dynamicnews_credit_link(); ?></div>
+			
+			<div id="footer-text">
+				<?php do_action('dynamicnews_footer_text'); ?>
+			</div>
+			
 		</footer>
 		
 	</div>

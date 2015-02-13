@@ -90,8 +90,8 @@ function dynamicnews_fonts_url() {
 		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 		
 	endif;
-	 
-    return $fonts_url;
+	
+	return apply_filters( 'dynamicnews_google_fonts_url', $fonts_url );
 }
 
 
@@ -234,16 +234,6 @@ function dynamicnews_default_menu() {
 // Get Featured Posts
 function dynamicnews_get_featured_content() {
 	return apply_filters( 'dynamicnews_get_featured_content', false );
-}
-
-
-// Display Credit Link Function
-function dynamicnews_credit_link() {
-	
-	printf(__( 'Powered by %1$s and %2$s.', 'dynamicnewslite' ), 
-			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'dynamicnewslite' ) ),
-			sprintf( '<a href="http://themezee.com/themes/dynamicnews/" title="Dynamic News WordPress Theme">%s</a>', __( 'Dynamic News', 'dynamicnewslite' ) )
-		);
 }
 
 

@@ -25,14 +25,12 @@
 
 			<div id="logo" class="clearfix">
 			
-				<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-					<h1 class="site-title"><?php bloginfo('name'); ?></h1>
-				</a>
+				<?php do_action('dynamicnews_site_title'); ?>
 				
-			<?php // Display Tagline on header if activated
-			if ( isset($theme_options['header_tagline']) and $theme_options['header_tagline'] == true ) : ?>			
-				<h2 class="site-description"><?php echo bloginfo('description'); ?></h2>
-			<?php endif; ?>
+				<?php // Display Tagline on header if activated
+				if ( isset($theme_options['header_tagline']) and $theme_options['header_tagline'] == true ) : ?>			
+					<h2 class="site-description"><?php echo bloginfo('description'); ?></h2>
+				<?php endif; ?>
 			
 			</div>
 			

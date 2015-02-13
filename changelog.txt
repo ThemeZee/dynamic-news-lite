@@ -5,6 +5,8 @@ Dynamic News Lite Changelog
 Version 1.1.1
 -----------------------------------
 [added] check if current user can edit theme options before displaying admin notices on frontend
+[added] action and filter hooks for footer text, site title and google font url
+[moved] credit link function to /inc/template-tags.php
 [fixed] linked widget titles in Category Post Widgets with "All Categories" selected
 
 Version 1.1

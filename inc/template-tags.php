@@ -8,6 +8,19 @@
  */
 	
 
+// Display Site Title
+add_action( 'dynamicnews_site_title', 'dynamicnews_display_site_title' );
+
+function dynamicnews_display_site_title() { ?>
+
+	<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+		<h1 class="site-title"><?php bloginfo('name'); ?></h1>
+	</a>
+
+<?php
+}
+
+
 // Display Custom Header
 if ( ! function_exists( 'dynamicnews_display_custom_header' ) ):
 	
@@ -181,6 +194,22 @@ if ( ! function_exists( 'dynamicnews_display_pagination' ) ):
 	}
 	
 endif;
+
+
+// Display Footer Text
+add_action( 'dynamicnews_footer_text', 'dynamicnews_display_footer_text' );
+
+function dynamicnews_display_footer_text() { ?>
+
+	<div id="credit-link">
+		<?php printf(__( 'Powered by %1$s and %2$s.', 'dynamicnewslite' ), 
+			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'dynamicnewslite' ) ),
+			sprintf( '<a href="http://themezee.com/themes/dynamicnews/" title="Dynamic News WordPress Theme">%s</a>', __( 'Dynamic News', 'dynamicnewslite' ) )
+		); ?>
+	</div>
+
+<?php
+}
 
 
 // Display Social Icons
