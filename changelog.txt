@@ -5,6 +5,7 @@ Dynamic News Lite Changelog
 Version 1.1.1
 -----------------------------------
 [added] check if current user can edit theme options before displaying admin notices on frontend
+[fixed] linked widget titles in Category Post Widgets with "All Categories" selected
 
 Version 1.1
 -----------------------------------
