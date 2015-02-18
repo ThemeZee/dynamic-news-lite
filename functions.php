@@ -130,6 +130,9 @@ function dynamicnews_setup() {
 		'max_posts'  => 20
 		)
 	);
+	
+	// Add Theme Support for Dynamic News Pro Plugin
+	add_theme_support( 'dynamicnews-pro' );
 
 	// Register Navigation Menus
 	register_nav_menu( 'primary', __('Main Navigation', 'dynamicnewslite') );

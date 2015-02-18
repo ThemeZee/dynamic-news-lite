@@ -33,7 +33,6 @@ function dynamicnews_default_options() {
 		'layout' 							=> 'boxed',
 		'sidebar' 							=> 'right-sidebar',
 		'deactivate_google_fonts'			=> false,
-		'header_logo' 						=> '',
 		'header_tagline' 					=> false,
 		'header_search' 					=> false,
 		'header_icons' 						=> false,
@@ -42,7 +41,6 @@ function dynamicnews_default_options() {
 		'post_thumbnails_index'				=> true,
 		'post_thumbnails_single' 			=> true,
 		'excerpt_text' 						=> '',
-		'credit_link' 						=> true,
 		'slider_activated_front_page' 		=> false,
 		'slider_activated_blog' 			=> false,
 		'slider_animation' 					=> 'horizontal'

@@ -153,11 +153,6 @@ input, textarea, select {
 	float: left;
 	max-width: 100%;
 }
-#logo .logo-image {
-	border: 0;
-	max-width: 100%;
-	height: auto;
-}
 #logo .site-title {
 	font-size: 2.5em;
 	font-weight: bold;
@@ -1263,7 +1258,7 @@ embed, iframe, object, video {
 #footer a:hover {
 	color: #fff;
 }
-#footer #credit-link {
+#footer #footer-text {
 	float: right;
 	font-size: 0.9em;
 }
@@ -1360,9 +1355,6 @@ embed, iframe, object, video {
 	#header-content #header-search #s {
 		max-width: 100%;
 		float: none;
-	}
-	#footer-widgets {
-		margin-right: 0;
 	}
 	.widget, .type-post, .type-page, .type-attachment, #comments {
 		box-shadow: 0 0 4px #ddd;
@@ -1519,7 +1511,7 @@ embed, iframe, object, video {
 	}
 	
 	/* Mobile Footer Navigation */
-	#footer #credit-link {
+	#footer #footer-text {
 		margin-top: -1.05em;
 	}
 		
@@ -1656,7 +1648,7 @@ embed, iframe, object, video {
 		float: none;
 		margin: 1em 0;
 	}
-	#footer #credit-link {
+	#footer #footer-text {
 		float: none;
 		margin-top: 1.05em;
 	}

@@ -30,7 +30,7 @@ function dynamicnews_customize_register_header_settings( $wp_customize ) {
             'label' => __( 'Header Content', 'dynamicnewslite' ),
             'section' => 'dynamicnews_section_header',
             'settings' => 'dynamicnews_theme_options[header_content]',
-            'priority' => 1
+            'priority' => 3
             )
         )
     );
@@ -46,7 +46,7 @@ function dynamicnews_customize_register_header_settings( $wp_customize ) {
             'label' =>  __( 'The Header Content configured below will be displayed on the right hand side of the header area.', 'dynamicnewslite' ),
             'section' => 'dynamicnews_section_header',
             'settings' => 'dynamicnews_theme_options[header_content_description]',
-            'priority' => 2
+            'priority' => 4
             )
         )
     );
@@ -64,7 +64,7 @@ function dynamicnews_customize_register_header_settings( $wp_customize ) {
         'section'  => 'dynamicnews_section_header',
         'settings' => 'dynamicnews_theme_options[header_search]',
         'type'     => 'checkbox',
-		'priority' => 3
+		'priority' => 5
 		)
 	);
 
@@ -80,7 +80,7 @@ function dynamicnews_customize_register_header_settings( $wp_customize ) {
         'section'  => 'dynamicnews_section_header',
         'settings' => 'dynamicnews_theme_options[header_icons]',
         'type'     => 'checkbox',
-		'priority' => 4
+		'priority' => 6
 		)
 	);
 	
@@ -96,7 +96,7 @@ function dynamicnews_customize_register_header_settings( $wp_customize ) {
         'section'  => 'dynamicnews_section_header',
         'settings' => 'dynamicnews_theme_options[header_text]',
         'type'     => 'text',
-		'priority' => 5
+		'priority' => 7
 		)
 	);
 	
