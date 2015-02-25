@@ -2,6 +2,12 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.1.2
+-----------------------------------
+[changed] implementation of title tag to add_theme_support method
+[removed] old unnecessary wp_title filter function
+[fixed] CSS styling of footer text, credit link and logo section
+
 Version 1.1.1
 -----------------------------------
 [added] check if current user can edit theme options before displaying admin notices on frontend
