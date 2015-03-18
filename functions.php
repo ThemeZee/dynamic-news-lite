@@ -338,6 +338,7 @@ require( get_template_directory() . '/inc/template-tags.php' );
 require( get_template_directory() . '/inc/widgets/widget-category-posts-boxed.php' );
 require( get_template_directory() . '/inc/widgets/widget-category-posts-columns.php' );
 require( get_template_directory() . '/inc/widgets/widget-category-posts-grid.php' );
+require( get_template_directory() . '/inc/widgets/widget-category-posts-single.php' );
 
 // Include Featured Content class in case it does not exist yet (e.g. user has not Jetpack installed)
 if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {

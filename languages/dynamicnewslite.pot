@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dynamic News Lite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-07 17:56+0100\n"
-"PO-Revision-Date: 2015-01-07 17:57+0100\n"
+"POT-Creation-Date: 2015-03-18 11:17+0100\n"
+"PO-Revision-Date: 2015-03-18 11:18+0100\n"
 "Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
 "Language-Team: ThemeZee <contact@themezee.com>\n"
 "MIME-Version: 1.0\n"
@@ -63,14 +63,14 @@ msgstr ""
 msgid "Enter password to view comments."
 msgstr ""
 
-#: comments.php:21 inc/template-tags.php:64
+#: comments.php:21 inc/template-tags.php:77
 #: inc/widgets/widget-category-posts-boxed.php:190
 #: inc/widgets/widget-category-posts-columns.php:221
 #: inc/widgets/widget-category-posts-grid.php:213
 msgid "One comment"
 msgstr ""
 
-#: comments.php:21 inc/template-tags.php:64
+#: comments.php:21 inc/template-tags.php:77
 #: inc/widgets/widget-category-posts-boxed.php:190
 #: inc/widgets/widget-category-posts-columns.php:221
 #: inc/widgets/widget-category-posts-grid.php:213
@@ -78,14 +78,15 @@ msgstr ""
 msgid "% comments"
 msgstr ""
 
-#: content-excerpt.php:12 content.php:11
+#: content-excerpt.php:12 content-search.php:8 content.php:11
+#: inc/widgets/widget-category-posts-single.php:130
 msgid "Read more"
 msgstr ""
 
 #: featured-content-slider.php:14
 msgid ""
 "There is no featured content to be displayed in the slider. To set up the "
-"slider, go to Appearance → Customize, and add a tag under Tag Name in the "
+"slider, go to Appearance -> Customize, and add a tag under Tag Name in the "
 "Featured Content section. The slideshow will then display all posts which "
 "are tagged with that keyword."
 msgstr ""
@@ -94,71 +95,49 @@ msgstr ""
 msgid "Read more &raquo;"
 msgstr ""
 
-#: functions.php:78 functions.php:84
-msgid "on"
-msgstr ""
-
-#: functions.php:146
+#: functions.php:139
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:147
+#: functions.php:140
 msgid "Footer Navigation"
 msgstr ""
 
-#: functions.php:150
+#: functions.php:143
 msgid "Social Icons"
 msgstr ""
 
-#: functions.php:190 inc/customizer/sections/customizer-general.php:49
+#: functions.php:183 inc/customizer/sections/customizer-general.php:49
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:192
+#: functions.php:185
 msgid "Appears on posts and pages except front page and fullwidth template."
 msgstr ""
 
-#: functions.php:199
+#: functions.php:192
 msgid "Magazine Front Page"
 msgstr ""
 
-#: functions.php:201
+#: functions.php:194
 msgid ""
 "Appears on Magazine Front Page page template only. You can use the Category "
 "Posts widgets here."
 msgstr ""
 
-#: functions.php:233
-#, php-format
-msgid "Page %s"
-msgstr ""
-
-#: functions.php:254
-#, php-format
-msgid "Powered by %1$s and %2$s."
-msgstr ""
-
-#: functions.php:255
-msgid "WordPress"
-msgstr ""
-
-#: functions.php:256
-msgid "Dynamic News"
-msgstr ""
-
-#: functions.php:304
+#: functions.php:274
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:305 functions.php:321
+#: functions.php:275 functions.php:291
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:331
+#: functions.php:301
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: header.php:49
+#: header.php:46
 msgid "Menu"
 msgstr ""
 
@@ -178,12 +157,12 @@ msgstr ""
 msgid "Return to"
 msgstr ""
 
-#: search.php:13 search.php:27
+#: search.php:13 search.php:35
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
-#: search.php:33
+#: search.php:41
 msgid ""
 "No matches. Please try again, or use the navigation menus to find what you "
 "search for."
@@ -208,9 +187,9 @@ msgstr ""
 msgid "Tag Archives: %s"
 msgstr ""
 
-#: template-frontpage.php:36
+#: template-frontpage.php:39
 msgid ""
-"There are no widgets to be displayed. Please go to Appearance → Widgets and "
+"There are no widgets to be displayed. Please go to Appearance -> Widgets and "
 "add at least one widget to the \"Magazine Front Page\" widget area. You can "
 "use the three Category Posts widgets to set up the theme like the demo "
 "website."
@@ -240,39 +219,52 @@ msgstr ""
 msgid "Don&rsquo;t display tag on front end."
 msgstr ""
 
-#: inc/template-tags.php:43
+#: inc/template-tags.php:56
 #, php-format
 msgid ""
 "<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time datetime=\"%3$s\">"
 "%4$s</time></a>"
 msgstr ""
 
-#: inc/template-tags.php:53
+#: inc/template-tags.php:66
 #, php-format
 msgid "<a href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
 msgstr ""
 
-#: inc/template-tags.php:55
+#: inc/template-tags.php:68
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:64 inc/widgets/widget-category-posts-boxed.php:190
+#: inc/template-tags.php:77 inc/widgets/widget-category-posts-boxed.php:190
 #: inc/widgets/widget-category-posts-columns.php:221
 #: inc/widgets/widget-category-posts-grid.php:213
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:70
+#: inc/template-tags.php:83
 msgid "Edit Post"
 msgstr ""
 
-#: inc/template-tags.php:134
+#: inc/template-tags.php:147
 #, php-format
 msgid "tagged with %1$s"
 msgstr ""
 
-#: inc/template-tags.php:209
+#: inc/template-tags.php:205
+#, php-format
+msgid "Powered by %1$s and %2$s."
+msgstr ""
+
+#: inc/template-tags.php:206
+msgid "WordPress"
+msgstr ""
+
+#: inc/template-tags.php:207
+msgid "Dynamic News"
+msgstr ""
+
+#: inc/template-tags.php:239
 msgid ""
 "Please go to WP-Admin-> Appearance-> Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
@@ -398,6 +390,14 @@ msgstr ""
 msgid "Right Sidebar"
 msgstr ""
 
+#: inc/customizer/sections/customizer-general.php:71
+msgid "Default Fonts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:88
+msgid "Deactivate Google Fonts in case your language is not compatible."
+msgstr ""
+
 #: inc/customizer/sections/customizer-header.php:14
 #: inc/customizer/sections/customizer-header.php:30
 msgid "Header Content"
@@ -515,33 +515,45 @@ msgstr ""
 msgid "Category Posts Boxed (Dynamic News)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:216
-#: inc/widgets/widget-category-posts-columns.php:241
-#: inc/widgets/widget-category-posts-grid.php:239
+#: inc/widgets/widget-category-posts-boxed.php:219
+#: inc/widgets/widget-category-posts-columns.php:245
+#: inc/widgets/widget-category-posts-grid.php:242
+#: inc/widgets/widget-category-posts-single.php:167
+msgid "View all posts"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:231
+#: inc/widgets/widget-category-posts-columns.php:259
+#: inc/widgets/widget-category-posts-grid.php:254
+#: inc/widgets/widget-category-posts-single.php:179
 #, php-format
 msgid "View all posts from category %s"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:254
-#: inc/widgets/widget-category-posts-columns.php:278
-#: inc/widgets/widget-category-posts-grid.php:279
+#: inc/widgets/widget-category-posts-boxed.php:272
+#: inc/widgets/widget-category-posts-columns.php:297
+#: inc/widgets/widget-category-posts-grid.php:297
+#: inc/widgets/widget-category-posts-single.php:221
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:260
-#: inc/widgets/widget-category-posts-grid.php:285
+#: inc/widgets/widget-category-posts-boxed.php:278
+#: inc/widgets/widget-category-posts-grid.php:303
+#: inc/widgets/widget-category-posts-single.php:227
 msgid "Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:263
-#: inc/widgets/widget-category-posts-columns.php:287
-#: inc/widgets/widget-category-posts-columns.php:301
-#: inc/widgets/widget-category-posts-grid.php:288
+#: inc/widgets/widget-category-posts-boxed.php:281
+#: inc/widgets/widget-category-posts-columns.php:306
+#: inc/widgets/widget-category-posts-columns.php:321
+#: inc/widgets/widget-category-posts-grid.php:306
+#: inc/widgets/widget-category-posts-single.php:230
 msgid "All Categories"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:276
-#: inc/widgets/widget-category-posts-grid.php:315
+#: inc/widgets/widget-category-posts-boxed.php:295
+#: inc/widgets/widget-category-posts-grid.php:334
+#: inc/widgets/widget-category-posts-single.php:250
 msgid "Link Widget Title to Category Archive page"
 msgstr ""
 
@@ -555,24 +567,29 @@ msgstr ""
 msgid "Category Posts Columns (Dynamic News)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:284
+#: inc/widgets/widget-category-posts-columns.php:246
+msgid "Latest Posts"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:303
 msgid "Left Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:298
+#: inc/widgets/widget-category-posts-columns.php:318
 msgid "Right Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:312
-#: inc/widgets/widget-category-posts-grid.php:299
+#: inc/widgets/widget-category-posts-columns.php:333
+#: inc/widgets/widget-category-posts-grid.php:318
+#: inc/widgets/widget-category-posts-single.php:242
 msgid "Number of posts:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:320
+#: inc/widgets/widget-category-posts-columns.php:341
 msgid "Highlight First Post (Big Image + Excerpt)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:327
+#: inc/widgets/widget-category-posts-columns.php:348
 msgid "Display Category Titles"
 msgstr ""
 
@@ -586,10 +603,20 @@ msgstr ""
 msgid "Category Posts Grid (Dynamic News)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:301
+#: inc/widgets/widget-category-posts-grid.php:320
 msgid "Please chose an even number (2, 4, 6, 8)."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:308
+#: inc/widgets/widget-category-posts-grid.php:327
 msgid "Display as small posts grid with thumbnails"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-single.php:11
+msgid ""
+"Displays a single post from a selected category. Please use this widget ONLY "
+"in the Frontpage Magazine widget area."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-single.php:13
+msgid "Category Posts Single (Dynamic News)"
 msgstr ""

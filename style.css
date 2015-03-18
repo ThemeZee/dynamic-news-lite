@@ -2,7 +2,7 @@
 Theme Name: Dynamic News Lite
 Theme URI: http://themezee.com/themes/dynamicnews/
 Description: A responsive, multipurpose blogging and magazine theme with bold colors and fonts. It comes with a featured content slider and a magazine page template. Dynamic News is a trending theme on wordpress.com and we are sure you will like the WordPress.org version as well.
-Version: 1.1.2
+Version: 1.1.3
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, red, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, blue, silver, white, green, gray
@@ -1148,6 +1148,12 @@ embed, iframe, object, video {
 	border: none;
 	box-shadow: none;
 }
+.widget-category-posts .more-link:link, .widget-category-posts .more-link:visited  {
+	color: #fff;
+}
+.widget-category-posts .more-link:hover, .widget-category-posts .more-link:active {
+	text-decoration: none;
+}
 .widget-category-posts .big-post .post-title {
 	font-size: 1.1em;
 }
@@ -1240,6 +1246,14 @@ embed, iframe, object, video {
 }
 #widget-category-posts-columns .category-posts-columns .big-post {
 	margin-bottom: 1.5em;
+}
+
+/* Single Category Post ) */
+#widget-category-posts-single .single-post {
+	margin: 0 0 1.2em 0;
+}
+#widget-category-posts-single .single-post .wp-post-image {
+	margin: 0 0 0.5em 0;
 }
 
 /* Footer
