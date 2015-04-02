@@ -2,17 +2,98 @@
 # This file is distributed under the same license as the Dynamic News package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Dynamic News Lite\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-24 13:56+0100\n"
-"PO-Revision-Date: 2014-11-24 13:58+0100\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"PO-Revision-Date: 2015-03-21 10:04+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 1.5.7\n"
+"Project-Id-Version: Dynamic News\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#: inc/widgets/widget-category-posts-boxed.php:216
+#: inc/widgets/widget-category-posts-columns.php:241
+#: inc/widgets/widget-category-posts-grid.php:239
+msgid "View all posts from category %s"
+msgstr "Visualizza tutti gli Articoli della Categoria %s"
+
+#: inc/widgets/widget-category-posts-boxed.php:276
+#: inc/widgets/widget-category-posts-grid.php:315
+msgid "Link Widget Title to Category Archive page"
+msgstr "Collega il Titolo del Widget alla pagina Archivio Categorie"
+
+#: inc/widgets/widget-category-posts-columns.php:320
+msgid "Highlight First Post (Big Image + Excerpt)"
+msgstr "Evidenzia il Primo Articolo (Immagine Grande + Estratto)"
+
+#: inc/widgets/widget-category-posts-columns.php:327
+msgid "Display Category Titles"
+msgstr "Visualizza il Titolo della Categoria"
+
+#: inc/widgets/widget-category-posts-grid.php:308
+msgid "Display as small posts grid with thumbnails"
+msgstr "Visualizza come piccola griglia di articoli con anteprima"
+
+#: functions.php:78 functions.php:84
+msgid "on"
+msgstr "su"
+
+#: inc/theme-info.php:79
+msgid "Customize Theme"
+msgstr "Personalizza  Tema"
+
+#: inc/widgets/widget-category-posts-boxed.php:13
+msgid "Category Posts Boxed (Dynamic News)"
+msgstr "Categoria Articoli in Riquadro (Dynamic News)"
+
+#: inc/widgets/widget-category-posts-boxed.php:263
+#: inc/widgets/widget-category-posts-columns.php:287
+#: inc/widgets/widget-category-posts-columns.php:301
+#: inc/widgets/widget-category-posts-grid.php:288
+msgid "All Categories"
+msgstr "Tutte le Categorie"
+
+#: inc/widgets/widget-category-posts-columns.php:13
+msgid "Category Posts Columns (Dynamic News)"
+msgstr "Categoria Colonne degli Articoli (Dynamic News)"
+
+#: inc/widgets/widget-category-posts-grid.php:13
+msgid "Category Posts Grid (Dynamic News)"
+msgstr "Categoria Griglia degli Articoli (Dynamic News)"
+
+#: inc/customizer/sections/customizer-general.php:14
+msgid "General Settings"
+msgstr "Impostazioni generali"
+
+#: inc/customizer/sections/customizer-post.php:14
+msgid "Post Settings"
+msgstr "Impostazioni degli articoli"
+
+#: inc/customizer/sections/customizer-post.php:51
+msgid "Post Images"
+msgstr "Immagini degli articoli"
+
+#: inc/customizer/sections/customizer-post.php:100
+msgid "Excerpt More Text"
+msgstr "Testo aggiuntivo dell'estratto"
+
+#: inc/customizer/sections/customizer-post.php:115
+msgid "Display [...] after text excerpts."
+msgstr "Visualizza [...] dopo il testo dell'estratto."
+
+#: inc/customizer/sections/customizer-slider.php:14
+msgid "Post Slider"
+msgstr "Slider articolo"
+
+#: inc/customizer/sections/customizer-slider.php:15
+msgid ""
+"The slideshow displays your featured posts, which you can configure on the "
+"\"Featured Content\" section above."
+msgstr ""
+"Lo slideshow visualizza i tuoi articoli da promuovere, che possono essere "
+"configurati nella sezione \"Contenuto da promuovere\"."
 
 #: 404.php:9
 msgid "404 Error: Not found"
@@ -39,7 +120,6 @@ msgid "Pages"
 msgstr "Pagine"
 
 #: archive.php:14
-#, php-format
 msgid "Monthly Archives: %s"
 msgstr "Articoli del mese: %s"
 
@@ -52,12 +132,10 @@ msgid "Archives"
 msgstr "Archivio"
 
 #: author.php:16
-#, php-format
 msgid "Author Archives: %s"
 msgstr "Archivio Autori: %s"
 
 #: category.php:12
-#, php-format
 msgid "Category Archives: %s"
 msgstr "Archivio Categorie: %s"
 
@@ -66,17 +144,16 @@ msgid "Enter password to view comments."
 msgstr "Inserire la password per visualizzare i commenti."
 
 #: comments.php:21 inc/template-tags.php:64
-#: inc/widgets/widget-category-posts-boxed.php:184
-#: inc/widgets/widget-category-posts-columns.php:204
-#: inc/widgets/widget-category-posts-grid.php:182
+#: inc/widgets/widget-category-posts-boxed.php:190
+#: inc/widgets/widget-category-posts-columns.php:221
+#: inc/widgets/widget-category-posts-grid.php:213
 msgid "One comment"
 msgstr "Un commento"
 
 #: comments.php:21 inc/template-tags.php:64
-#: inc/widgets/widget-category-posts-boxed.php:184
-#: inc/widgets/widget-category-posts-columns.php:204
-#: inc/widgets/widget-category-posts-grid.php:182
-#, php-format
+#: inc/widgets/widget-category-posts-boxed.php:190
+#: inc/widgets/widget-category-posts-columns.php:221
+#: inc/widgets/widget-category-posts-grid.php:213
 msgid "% comments"
 msgstr "% commenti"
 
@@ -99,10 +176,6 @@ msgstr ""
 #: featured-content-slider.php:48
 msgid "Read more &raquo;"
 msgstr "Continua a leggere &raquo;"
-
-#: functions.php:78 functions.php:84
-msgid "on"
-msgstr ""
 
 #: functions.php:146
 msgid "Main Navigation"
@@ -138,12 +211,10 @@ msgstr ""
 "\"Articoli di Categoria\"."
 
 #: functions.php:233
-#, php-format
 msgid "Page %s"
 msgstr "Pagina %s"
 
 #: functions.php:254
-#, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr "Powered by %1$s e %2$s."
 
@@ -167,10 +238,6 @@ msgstr "(Modifica)"
 msgid "Your comment is awaiting moderation."
 msgstr "Il tuo commento è in attesa di approvazione."
 
-#: header.php:49
-msgid "Menu"
-msgstr "Menu"
-
 #: image.php:19
 msgid "Previous"
 msgstr "Precedente"
@@ -188,7 +255,6 @@ msgid "Return to"
 msgstr "Torna a"
 
 #: search.php:13 search.php:27
-#, php-format
 msgid "Search Results for: %s"
 msgstr "Risultati della ricerca per: %s"
 
@@ -217,7 +283,6 @@ msgstr ""
 "impostare la tua sidebar."
 
 #: tag.php:12
-#, php-format
 msgid "Tag Archives: %s"
 msgstr "Tag Archivio: %s"
 
@@ -237,7 +302,6 @@ msgid "Featured Content"
 msgstr "Contenuto da promuovere"
 
 #: inc/featured-content.php:420
-#, php-format
 msgid ""
 "Use a <a href=\"%1$s\">tag</a> to feature your posts. If no posts match the "
 "tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
@@ -259,8 +323,13 @@ msgstr "Nome tag"
 msgid "Don&rsquo;t display tag on front end."
 msgstr "Nascondi il tag nel front end."
 
+#: inc/template-tags.php:64 inc/widgets/widget-category-posts-boxed.php:190
+#: inc/widgets/widget-category-posts-columns.php:221
+#: inc/widgets/widget-category-posts-grid.php:213
+msgid "Leave a comment"
+msgstr "Lascia un commento"
+
 #: inc/template-tags.php:43
-#, php-format
 msgid ""
 "<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time datetime=\"%3$s\">"
 "%4$s</time></a>"
@@ -269,27 +338,18 @@ msgstr ""
 "%4$s</time></a>"
 
 #: inc/template-tags.php:53
-#, php-format
 msgid "<a href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
 msgstr "<a href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
 
 #: inc/template-tags.php:55
-#, php-format
 msgid "View all posts by %s"
 msgstr "Visualizza tutti gli articoli di %s"
-
-#: inc/template-tags.php:64 inc/widgets/widget-category-posts-boxed.php:184
-#: inc/widgets/widget-category-posts-columns.php:204
-#: inc/widgets/widget-category-posts-grid.php:182
-msgid "Leave a comment"
-msgstr "Lascia un commento"
 
 #: inc/template-tags.php:70
 msgid "Edit Post"
 msgstr "Modifica articolo"
 
 #: inc/template-tags.php:134
-#, php-format
 msgid "tagged with %1$s"
 msgstr "taggato con %1$s"
 
@@ -312,7 +372,6 @@ msgid "Theme Info"
 msgstr "Info tema"
 
 #: inc/theme-info.php:35
-#, php-format
 msgid "Welcome to %1s %2s"
 msgstr "Benvenuto a %1s %2s"
 
@@ -338,10 +397,9 @@ msgstr "Documentazione del tema"
 
 #: inc/theme-info.php:46
 msgid "Rate this theme"
-msgstr ""
+msgstr "Vota questo tema"
 
 #: inc/theme-info.php:63
-#, php-format
 msgid "Getting Started with %s"
 msgstr "Inizia con %s"
 
@@ -369,42 +427,32 @@ msgstr ""
 "Dynamic News supporta la personalizzazione del tema per tutte le sue "
 "impostazioni. Clicca su \"Personalizza tema\" per farlo subito."
 
-#: inc/theme-info.php:79
-msgid "Customize Theme"
-msgstr ""
-
 #: inc/theme-info.php:84 inc/customizer/sections/customizer-upgrade.php:14
 msgid "PRO Version"
-msgstr ""
+msgstr "Versione PRO"
 
 #: inc/theme-info.php:86
 msgid ""
 "Need more features? Check out the PRO version which comes with additional "
 "features and advanced customization options."
 msgstr ""
+"Hai bisogno di più funzionalità? Acquista la versione PRO con funzionalità "
+"aggiuntive ed opzioni di personalizzazione avanzate."
 
 #: inc/theme-info.php:88
 msgid "Learn more about the PRO Version of Dynamic News"
-msgstr ""
+msgstr "Scopri di più sulla versione PRO di Dynamic News"
 
 #: inc/theme-info.php:108
-#, php-format
 msgid ""
 "Dynamic News is proudly brought to you by %1s. If you like this theme, "
 "%2s :) "
 msgstr ""
+"Dynamic News è fornito con orgoglio da %1s. Se ti piace questo tema, %2s :)"
 
 #: inc/theme-info.php:110
 msgid "rate it"
-msgstr ""
-
-#: inc/customizer/customizer.php:54
-msgid "Display Tagline below site title."
-msgstr "Visualizza Tagline sotto il titolo del sito."
-
-#: inc/customizer/sections/customizer-general.php:14
-msgid "General Settings"
-msgstr "Impostazioni generali"
+msgstr "votalo"
 
 #: inc/customizer/sections/customizer-general.php:29
 msgid "Site Layout"
@@ -451,10 +499,6 @@ msgstr "Visualizza Social Icons nell'intestazione"
 msgid "Header Text Line"
 msgstr "Linea di testo dell'intestazione"
 
-#: inc/customizer/sections/customizer-post.php:14
-msgid "Post Settings"
-msgstr "Impostazioni degli articoli"
-
 #: inc/customizer/sections/customizer-post.php:29
 msgid "Post Length on archives"
 msgstr "Lunghezza articoli negli archivi"
@@ -467,10 +511,6 @@ msgstr "Visualizza articoli completi"
 msgid "Show post summaries (excerpt)"
 msgstr "Visualizza riassunto degli articoli (estratto)"
 
-#: inc/customizer/sections/customizer-post.php:51
-msgid "Post Images"
-msgstr "Immagini degli articoli"
-
 #: inc/customizer/sections/customizer-post.php:66
 msgid "Display featured images on archive pages"
 msgstr "Visualizza immagini in evidenza nelle pagine dell'archivio"
@@ -478,26 +518,6 @@ msgstr "Visualizza immagini in evidenza nelle pagine dell'archivio"
 #: inc/customizer/sections/customizer-post.php:82
 msgid "Display featured images on single posts"
 msgstr "Visualizza immagini in evidenza nei singoli articoli"
-
-#: inc/customizer/sections/customizer-post.php:100
-msgid "Excerpt More Text"
-msgstr "Testo aggiuntivo dell'estratto"
-
-#: inc/customizer/sections/customizer-post.php:115
-msgid "Display [...] after text excerpts."
-msgstr "Visualizza [...] dopo il testo dell'estratto."
-
-#: inc/customizer/sections/customizer-slider.php:14
-msgid "Post Slider"
-msgstr "Slider articolo"
-
-#: inc/customizer/sections/customizer-slider.php:15
-msgid ""
-"The slideshow displays your featured posts, which you can configure on the "
-"\"Featured Content\" section above."
-msgstr ""
-"Lo slideshow visualizza i tuoi articoli da promuovere, che possono essere "
-"configurati nella sezione \"Contenuto da promuovere\"."
 
 #: inc/customizer/sections/customizer-slider.php:31
 msgid "Activate Featured Post Slider"
@@ -525,17 +545,27 @@ msgstr "Slider a scomparsa"
 
 #: inc/customizer/sections/customizer-upgrade.php:30
 msgid "Need more features?"
-msgstr ""
+msgstr "Hai bisogno di più funzionalità?"
 
 #: inc/customizer/sections/customizer-upgrade.php:46
 msgid ""
 "Check out the PRO version which comes with additional features and advanced "
 "customization options."
 msgstr ""
+"Acquista la versione PRO con funzionalità aggiuntive ed opzioni di "
+"personalizzazione avanzate."
 
 #: inc/customizer/sections/customizer-upgrade.php:62
 msgid "Learn more about the PRO Version"
-msgstr ""
+msgstr "Scopri di più sulla versione PRO"
+
+#: inc/customizer/customizer.php:54
+msgid "Display Tagline below site title."
+msgstr "Visualizza Tagline sotto il titolo del sito."
+
+#: header.php:49
+msgid "Menu"
+msgstr "Menu"
 
 #: inc/widgets/widget-category-posts-boxed.php:11
 msgid ""
@@ -545,27 +575,16 @@ msgstr ""
 "Visualizza gli ultimi articoli della categoria in un layout boxed. Usa "
 "questo widget SOLO nell'area widget del Frontpage Magazine."
 
-#: inc/widgets/widget-category-posts-boxed.php:13
-msgid "Category Posts Boxed (Dynamic News)"
-msgstr ""
-
-#: inc/widgets/widget-category-posts-boxed.php:209
-#: inc/widgets/widget-category-posts-columns.php:230
-#: inc/widgets/widget-category-posts-grid.php:208
+#: inc/widgets/widget-category-posts-boxed.php:254
+#: inc/widgets/widget-category-posts-columns.php:278
+#: inc/widgets/widget-category-posts-grid.php:279
 msgid "Title:"
 msgstr "Titolo:"
 
-#: inc/widgets/widget-category-posts-boxed.php:215
-#: inc/widgets/widget-category-posts-grid.php:214
+#: inc/widgets/widget-category-posts-boxed.php:260
+#: inc/widgets/widget-category-posts-grid.php:285
 msgid "Category:"
 msgstr "Categoria:"
-
-#: inc/widgets/widget-category-posts-boxed.php:218
-#: inc/widgets/widget-category-posts-columns.php:239
-#: inc/widgets/widget-category-posts-columns.php:253
-#: inc/widgets/widget-category-posts-grid.php:217
-msgid "All Categories"
-msgstr ""
 
 #: inc/widgets/widget-category-posts-columns.php:11
 msgid ""
@@ -575,15 +594,11 @@ msgstr ""
 "Visualizza gli ultimi post delle due categorie specificate. Usa questo "
 "widget SOLO nell'area widget del Frontpage Magazine."
 
-#: inc/widgets/widget-category-posts-columns.php:13
-msgid "Category Posts Columns (Dynamic News)"
-msgstr ""
-
-#: inc/widgets/widget-category-posts-columns.php:236
+#: inc/widgets/widget-category-posts-columns.php:284
 msgid "Left Category:"
 msgstr "Categoria di sinistra:"
 
-#: inc/widgets/widget-category-posts-columns.php:250
+#: inc/widgets/widget-category-posts-columns.php:298
 msgid "Right Category:"
 msgstr "Categoria di destra:"
 
@@ -595,232 +610,11 @@ msgstr ""
 "Visualizza gli ultimi articoli della categoria in un layout a griglia. Usa "
 "questo widget SOLO nell'area widget del Frontpage Magazine."
 
-#: inc/widgets/widget-category-posts-grid.php:13
-msgid "Category Posts Grid (Dynamic News)"
-msgstr ""
-
-#: inc/widgets/widget-category-posts-grid.php:228
+#: inc/widgets/widget-category-posts-columns.php:312
+#: inc/widgets/widget-category-posts-grid.php:299
 msgid "Number of posts:"
 msgstr "Numero di articoli:"
 
-#: inc/widgets/widget-category-posts-grid.php:230
+#: inc/widgets/widget-category-posts-grid.php:301
 msgid "Please chose an even number (2, 4, 6, 8)."
 msgstr "Scegli un numero pari (2, 4, 6, 8)."
-
-#~ msgid "Please specify a category on the Category Posts Widget settings."
-#~ msgstr ""
-#~ "Specifica una categoria nelle impostazioni del widget \"Categoria articoli"
-#~ "\"."
-
-#~ msgid "Please specify two categories on the Category Posts Widget settings."
-#~ msgstr ""
-#~ "Specifica due categorie nelle impostazioni del widget \"Categoria articoli"
-#~ "\"."
-
-#~ msgid "Install additional Fonts"
-#~ msgstr "Installa Fonts addizionali"
-
-#~ msgid ""
-#~ "You can install additional fonts from the <a target=\"_blank\" href="
-#~ "\"http://www.google.com/webfonts/\">Google Font API</a> by inserting a "
-#~ "list of fonts separated by Semicolon here (e.g. Cantora One; Galindo; "
-#~ "Open Sans; ...). Please save your changes and RELOAD(F5) the Customizer "
-#~ "then."
-#~ msgstr ""
-#~ "Puoi installare fonts addizionali da  <a target=\"_blank\" href=\"http://"
-#~ "www.google.com/webfonts/\">Google Font API</a> inserendo qui una lista "
-#~ "dei fonts separati da punto e virgola (es. Cantora One; Gallindo; Open "
-#~ "Sans; ...). Salva i tuoi cambianti e ricarica (F5) la pagina di "
-#~ "personalizzazione."
-
-#~ msgid "Footer Text"
-#~ msgstr "Testo del Footer"
-
-#~ msgid "Remove spacing on header area for fullwidth logo images."
-#~ msgstr ""
-#~ "Rimuovi gli spazi dall'intestazione per i loghi a piena larghezza pagina."
-
-#~ msgid "Footer Left"
-#~ msgstr "Footer Sinistro"
-
-#~ msgid "Appears on footer on the left hand side."
-#~ msgstr "Compare nel footer sulla parte sinistra del sito."
-
-#~ msgid "Footer Center Left"
-#~ msgstr "Footer Centrale Sinistro"
-
-#~ msgid "Appears on footer on center left position."
-#~ msgstr "Compare nel footer sulla parte centrale sinistra del sito."
-
-#~ msgid "Footer Center Right"
-#~ msgstr "Footer Centrale Destro"
-
-#~ msgid "Appears on footer on center right position."
-#~ msgstr "Compare nel footer sulla parte centrale destra del sito."
-
-#~ msgid "Footer Right"
-#~ msgstr "Footer Destro"
-
-#~ msgid "Appears on footer on the right hand side."
-#~ msgstr "Appare a piè di pagina sul lato destro"
-
-#~ msgid "Theme Colors"
-#~ msgstr "Colori del tema"
-
-#~ msgid "Header & Menu Color (primary)"
-#~ msgstr "Colore dell'instestazione e del menù (principale)"
-
-#~ msgid "Header & Menu Color (secondary)"
-#~ msgstr "Colore dell'intestazione e del menù (secondario)"
-
-#~ msgid "Post Area Color (primary)"
-#~ msgstr "Colore dell'area articoli (principale)"
-
-#~ msgid "Post Area Color (secondary)"
-#~ msgstr "Colore dell'area articoli (secondario)"
-
-#~ msgid "Widget Title Color"
-#~ msgstr "Colore del titolo dei widget"
-
-#~ msgid "Widget Link Color"
-#~ msgstr "Colore del link dei widget"
-
-#~ msgid "Slider Color (primary)"
-#~ msgstr "Colore dello slider (principale)"
-
-#~ msgid "Slider Color (secondary)"
-#~ msgstr "Colore dello slider (secondario)"
-
-#~ msgid "Footer Area Color"
-#~ msgstr "Colore del footer"
-
-#~ msgid "Theme Fonts"
-#~ msgstr "Caratteri del tema"
-
-#~ msgid "Default Text Font"
-#~ msgstr "Carattere del testo di default"
-
-#~ msgid "Title Font"
-#~ msgstr "Carattere del titolo"
-
-#~ msgid "Navigation Font"
-#~ msgstr "Carattere di navigazione"
-
-#~ msgid "Widget Title Font"
-#~ msgstr "Carattere del titolo del widget"
-
-#~ msgid "Logo Image (replaces Site Title)"
-#~ msgstr "Logo (sostituisce il titolo del sito)"
-
-#~ msgid "Display Credit Link to ThemeZee on footer line."
-#~ msgstr "Visualizza link Credit a ThemeZee nel footer."
-
-#~ msgid "Show popular posts with post thumbnails."
-#~ msgstr "Visualizza gli articoli più visti con le miniature."
-
-#~ msgid "No comments"
-#~ msgstr "Nessun commento"
-
-#~ msgid "Number of posts to show:"
-#~ msgstr "Numero di articoli da visualizzare:"
-
-#~ msgid "Show Post Thumbnails?"
-#~ msgstr "Visualizzare le miniature degli articoli?"
-
-#~ msgid "Excerpt length in number of words:"
-#~ msgstr "Numero di parole di lunghezza dell'estratto:"
-
-#~ msgid "Show Postmeta(Date, Comments)?"
-#~ msgstr "Visualizzare i dettagli dell'articolo (data e commenti)?"
-
-#~ msgid "Show recent comments with gravatar."
-#~ msgstr "Visualizza i commenti recenti con gravatar."
-
-#~ msgid " said:"
-#~ msgstr "ha detto:"
-
-#~ msgid "Number of comments to show:"
-#~ msgstr "Numero di commenti da visualizzare:"
-
-#~ msgid "Show avatar of comment author?"
-#~ msgstr "Visualizzare l'avatar dell'autore del commento?"
-
-#~ msgid "Show post title of commented post?"
-#~ msgstr "Visualizzare il titolo degli articoli commentati?"
-
-#~ msgid "Show excerpt of comment?"
-#~ msgstr "Visualizzare un estratto dei commenti?"
-
-#~ msgid "Excerpt length in number of characters:"
-#~ msgstr "Lunghezza in caratteri dell'estratto:"
-
-#~ msgid "Show date of comment?"
-#~ msgstr "Visualizzare la data del commento?"
-
-#~ msgid "Show recent posts with post thumbnails."
-#~ msgstr "Visualizza gli articoli recenti con le miniature."
-
-#~ msgid "Displays your Social Icons"
-#~ msgstr "Visualizza le tue Social Icons"
-
-#~ msgid "Syndicate this site using RSS 2.0"
-#~ msgstr "Esponi questo sito utilizzando RSS 2.0"
-
-#~ msgid "Entries <abbr title=\"Really Simple Syndication\">RSS</abbr>"
-#~ msgstr "Voci <abbr title=\"Really Simple Syndication\">RSS</abbr>"
-
-#~ msgid "The latest comments to all posts in RSS"
-#~ msgstr "Gli ultimi commenti a tutti gli articoli in RSS"
-
-#~ msgid "Comments <abbr title=\"Really Simple Syndication\">RSS</abbr>"
-#~ msgstr "Commenti <abbr title=\"Really Simple Syndication\">RSS</abbr>"
-
-#~ msgid ""
-#~ "Powered by WordPress, state-of-the-art semantic personal publishing "
-#~ "platform."
-#~ msgstr ""
-#~ "Powered by WordPress, lo stato dell'arte delle piattaforme di "
-#~ "pubblicazione personali."
-
-#~ msgid "WordPress.org"
-#~ msgstr "WordPress.org"
-
-#~ msgid "%1$s on %2$s"
-#~ msgstr "%1$s su %2$s"
-
-#~ msgid "Links"
-#~ msgstr "Collegamenti"
-
-#~ msgid "Meta"
-#~ msgstr "Meta"
-
-#~ msgid "Popular Posts"
-#~ msgstr "Articoli più visti"
-
-#~ msgid "Recent Comments"
-#~ msgstr "Commenti recenti"
-
-#~ msgid "Tag Cloud"
-#~ msgstr "Tag Cloud"
-
-#~ msgid "Tab 1:"
-#~ msgstr "Tab 1:"
-
-#~ msgid "Tab 2:"
-#~ msgstr "Tab 2:"
-
-#~ msgid "Tab 3:"
-#~ msgstr "Tab 3:"
-
-#~ msgid "Tab 4:"
-#~ msgstr "Tab 4:"
-
-#~ msgid "Settings for Recent/Popular Posts and Recent Comments"
-#~ msgstr ""
-#~ "Impostazioni per gli Articoli recenti/Più visti e per i Commenti recenti"
-
-#~ msgid "Number of entries:"
-#~ msgstr "Numero di voci:"
-
-#~ msgid "Show Thumbnails?"
-#~ msgstr "Visualizzare miniature?"

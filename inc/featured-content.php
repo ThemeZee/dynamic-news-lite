@@ -2,52 +2,37 @@
 /**
  * Dynamic News Featured Content
  *
- * This module allows you to define a subset of posts to be displayed
- * in the theme's Featured Content area.
+ * This module will allow users to define a subset of posts to be displayed in a
+ * theme-designated featured content area.
  *
- * For maximum compatibility with different methods of posting users
- * will designate a featured post tag to associate posts with. Since
- * this tag now has special meaning beyond that of a normal tags, users
- * will have the ability to hide it from the front-end of their site.
+ * For maximum compatibility with different methods of posting users will
+ * designate a featured post tag to associate posts with. Since this tag now has
+ * special meaning beyond that of a normal tags, users will have the ability to
+ * hide it from the front-end of their site.
  *
  *
  *
  * Original Code: Twenty Fourteen http://wordpress.org/themes/twentyfourteen
  * Original Copyright: the WordPress team and contributors.
  * 
- * The following code is a derivative work of the code from the  Twenty Fourteen theme, 
+ * The following code is a derivative work of the code from the Twenty Fourteen theme, 
  * which is licensed GPLv2. This code therefore is also licensed under the terms 
  * of the GNU Public License, version 2.
- *
  */
  
 class Dynamic_News_Featured_Content {
 
 	/**
-	 * The maximum number of posts a Featured Content area can contain.
-	 *
-	 * We define a default value here but themes can override
-	 * this by defining a "max_posts" entry in the second parameter
-	 * passed in the call to add_theme_support( 'featured-content' ).
+	 * The maximum number of posts that a Featured Content area can contain.
 	 *
 	 * @see Dynamic_News_Featured_Content::init()
-	 *
-	 * @since Dynamic News 1.0
-	 *
-	 * @static
-	 * @access public
-	 * @var int
 	 */
-	public static $max_posts = 15;
+	public static $max_posts = 20;
 
 	/**
 	 * Instantiate.
 	 *
 	 * All custom functionality will be hooked into the "init" action.
-	 *
-	 * @static
-	 * @access public
-	 * @since Dynamic News 1.0
 	 */
 	public static function setup() {
 		add_action( 'init', array( __CLASS__, 'init' ), 30 );
@@ -56,53 +41,22 @@ class Dynamic_News_Featured_Content {
 	/**
 	 * Conditionally hook into WordPress.
 	 *
-	 * Theme must declare that they support this module by adding
-	 * add_theme_support( 'featured-content' ); during after_setup_theme.
-	 *
-	 * If no theme support is found there is no need to hook into WordPress.
-	 * We'll just return early instead.
-	 *
-	 * @static
-	 * @access public
-	 * @since Dynamic News 1.0
+	 * @uses Dynamic_News_Featured_Content::$max_posts
 	 */
 	public static function init() {
-		$theme_support = get_theme_support( 'featured-content' );
 
-		// Return early if theme does not support Featured Content.
-		if ( ! $theme_support ) {
-			return;
-		}
-
-		/*
-		 * An array of named arguments must be passed as the second parameter
-		 * of add_theme_support().
-		 */
-		if ( ! isset( $theme_support[0] ) ) {
-			return;
-		}
-
-		// Return early if "featured_content_filter" has not been defined.
-		if ( ! isset( $theme_support[0]['featured_content_filter'] ) ) {
-			return;
-		}
-
-		$filter = $theme_support[0]['featured_content_filter'];
-
-		// Theme can override the number of max posts.
-		if ( isset( $theme_support[0]['max_posts'] ) ) {
-			self::$max_posts = absint( $theme_support[0]['max_posts'] );
-		}
-
-		add_filter( $filter,                              array( __CLASS__, 'get_featured_posts' )    );
+		// Get Number of Posts from Theme settings
+		
+		add_filter( 'dynamicnews_get_featured_content',   array( __CLASS__, 'get_featured_posts' )    );
 		add_action( 'customize_register',                 array( __CLASS__, 'customize_register' ), 9 );
 		add_action( 'admin_init',                         array( __CLASS__, 'register_setting'   )    );
-		add_action( 'switch_theme',                       array( __CLASS__, 'delete_transient'   )    );
 		add_action( 'save_post',                          array( __CLASS__, 'delete_transient'   )    );
 		add_action( 'delete_post_tag',                    array( __CLASS__, 'delete_post_tag'    )    );
 		add_action( 'customize_controls_enqueue_scripts', array( __CLASS__, 'enqueue_scripts'    )    );
 		add_action( 'pre_get_posts',                      array( __CLASS__, 'pre_get_posts'      )    );
+		add_action( 'switch_theme',                       array( __CLASS__, 'delete_transient'   )    );
 		add_action( 'wp_loaded',                          array( __CLASS__, 'wp_loaded'          )    );
+
 	}
 
 	/**
@@ -110,26 +64,20 @@ class Dynamic_News_Featured_Content {
 	 *
 	 * Has to run on wp_loaded so that the preview filters of the customizer
 	 * have a chance to alter the value.
-	 *
-	 * @static
-	 * @access public
-	 * @since Dynamic News 1.0
 	 */
 	public static function wp_loaded() {
 		if ( self::get_setting( 'hide-tag' ) ) {
-			add_filter( 'get_terms',     array( __CLASS__, 'hide_featured_term'     ), 10, 2 );
+			add_filter( 'get_terms',     array( __CLASS__, 'hide_featured_term'     ), 10, 3 );
 			add_filter( 'get_the_terms', array( __CLASS__, 'hide_the_featured_term' ), 10, 3 );
 		}
 	}
 
 	/**
-	 * Get featured posts.
+	 * Get featured posts
 	 *
-	 * @static
-	 * @access public
-	 * @since Dynamic News 1.0
+	 * @uses Dynamic_News_Featured_Content::get_featured_post_ids()
 	 *
-	 * @return array Array of featured posts.
+	 * @return array
 	 */
 	public static function get_featured_posts() {
 		$post_ids = self::get_featured_post_ids();
@@ -141,7 +89,7 @@ class Dynamic_News_Featured_Content {
 
 		$featured_posts = get_posts( array(
 			'include'        => $post_ids,
-			'posts_per_page' => count( $post_ids ),
+			'posts_per_page' => count( $post_ids )
 		) );
 
 		return $featured_posts;
@@ -150,14 +98,10 @@ class Dynamic_News_Featured_Content {
 	/**
 	 * Get featured post IDs
 	 *
-	 * This function will return the an array containing the
-	 * post IDs of all featured posts.
+	 * This function will return the an array containing the post IDs of all
+	 * featured posts.
 	 *
 	 * Sets the "featured_content_ids" transient.
-	 *
-	 * @static
-	 * @access public
-	 * @since Dynamic News 1.0
 	 *
 	 * @return array Array of post IDs.
 	 */
@@ -165,17 +109,20 @@ class Dynamic_News_Featured_Content {
 		// Return array of cached results if they exist.
 		$featured_ids = get_transient( 'featured_content_ids' );
 		if ( ! empty( $featured_ids ) ) {
-			return array_map( 'absint', (array) $featured_ids );
+			return array_map( 'absint', apply_filters( 'dynamicnews_featured_content_post_ids', (array) $featured_ids ) );
 		}
 
 		$settings = self::get_setting();
 
-		// Return sticky post ids if no tag name is set.
+		// Return empty array if no tag name is set.
 		$term = get_term_by( 'name', $settings['tag-name'], 'post_tag' );
+		if ( ! $term ) {
+			$term = get_term_by( 'id', $settings['tag-id'], 'post_tag' );
+		}
 		if ( $term ) {
 			$tag = $term->term_id;
 		} else {
-			return self::get_sticky_posts();
+			return apply_filters( 'dynamicnews_featured_content_post_ids', array() );
 		}
 
 		// Query for featured posts.
@@ -190,10 +137,9 @@ class Dynamic_News_Featured_Content {
 			),
 		) );
 
-		// Return array with sticky posts if no Featured Content exists.
-		if ( ! $featured ) {
-			return self::get_sticky_posts();
-		}
+		// Return empty array if no featured content exists.
+		if ( ! $featured )
+			return apply_filters( 'dynamicnews_featured_content_post_ids', array() );
 
 		// Ensure correct format before save/return.
 		$featured_ids = wp_list_pluck( (array) $featured, 'ID' );
@@ -201,51 +147,31 @@ class Dynamic_News_Featured_Content {
 
 		set_transient( 'featured_content_ids', $featured_ids );
 
-		return $featured_ids;
+		return apply_filters( 'dynamicnews_featured_content_post_ids', $featured_ids );
 	}
 
 	/**
-	 * Return an array with IDs of posts maked as sticky.
-	 *
-	 * @static
-	 * @access public
-	 * @since Dynamic News 1.0
-	 *
-	 * @return array Array of sticky posts.
-	 */
-	public static function get_sticky_posts() {
-		$settings = self::get_setting();
-		return array_slice( get_option( 'sticky_posts', array() ), 0, self::$max_posts );
-	}
-
-	/**
-	 * Delete featured content ids transient.
+	 * Delete Transient.
 	 *
 	 * Hooks in the "save_post" action.
-	 *
 	 * @see Dynamic_News_Featured_Content::validate_settings().
-	 *
-	 * @static
-	 * @access public
-	 * @since Dynamic News 1.0
 	 */
 	public static function delete_transient() {
 		delete_transient( 'featured_content_ids' );
 	}
 
 	/**
-	 * Exclude featured posts from the home page blog query.
+	 * Exclude featured posts from the blog query when the blog is the front-page,
+	 * and user has not checked the "Display tag content in all listings" checkbox.
 	 *
 	 * Filter the home page posts, and remove any featured post ID's from it.
-	 * Hooked onto the 'pre_get_posts' action, this changes the parameters of
-	 * the query before it gets any posts.
+	 * Hooked onto the 'pre_get_posts' action, this changes the parameters of the
+	 * query before it gets any posts.
 	 *
-	 * @static
-	 * @access public
-	 * @since Dynamic News 1.0
-	 *
-	 * @param WP_Query $query WP_Query object.
-	 * @return WP_Query Possibly-modified WP_Query.
+	 * @uses Dynamic_News_Featured_Content::get_featured_post_ids();
+	 * @uses Dynamic_News_Featured_Content::get_setting();
+	 * @param WP_Query $query
+	 * @return WP_Query Possibly modified WP_Query
 	 */
 	public static function pre_get_posts( $query ) {
 
@@ -254,10 +180,8 @@ class Dynamic_News_Featured_Content {
 			return;
 		}
 
-		$page_on_front = get_option( 'page_on_front' );
-
 		// Bail if the blog page is not the front page.
-		if ( ! empty( $page_on_front ) ) {
+		if ( 'posts' !== get_option( 'show_on_front' ) ) {
 			return;
 		}
 
@@ -265,6 +189,13 @@ class Dynamic_News_Featured_Content {
 
 		// Bail if no featured posts.
 		if ( ! $featured ) {
+			return;
+		}
+
+		$settings = self::get_setting();
+
+		// Bail if the user wants featured posts always displayed.
+		if ( true == $settings['show-all'] ) {
 			return;
 		}
 
@@ -282,19 +213,15 @@ class Dynamic_News_Featured_Content {
 	/**
 	 * Reset tag option when the saved tag is deleted.
 	 *
-	 * It's important to mention that the transient needs to be deleted,
-	 * too. While it may not be obvious by looking at the function alone,
-	 * the transient is deleted by Dynamic_News_Featured_Content::validate_settings().
+	 * It's important to mention that the transient needs to be deleted, too.
+	 * While it may not be obvious by looking at the function alone, the transient
+	 * is deleted by Dynamic_News_Featured_Content::validate_settings().
 	 *
 	 * Hooks in the "delete_post_tag" action.
-	 *
 	 * @see Dynamic_News_Featured_Content::validate_settings().
 	 *
-	 * @static
-	 * @access public
-	 * @since Dynamic News 1.0
-	 *
 	 * @param int $tag_id The term_id of the tag that has been deleted.
+	 * @return void
 	 */
 	public static function delete_post_tag( $tag_id ) {
 		$settings = self::get_setting();
@@ -309,21 +236,18 @@ class Dynamic_News_Featured_Content {
 	}
 
 	/**
-	 * Hide featured tag from displaying when global terms are queried from the front-end.
+	 * Hide featured tag from displaying when global terms are queried from
+	 * the front-end.
 	 *
 	 * Hooks into the "get_terms" filter.
 	 *
-	 * @static
-	 * @access public
-	 * @since Dynamic News 1.0
-	 *
-	 * @param array $terms      List of term objects. This is the return value of get_terms().
-	 * @param array $taxonomies An array of taxonomy slugs.
-	 * @return array A filtered array of terms.
-	 *
 	 * @uses Dynamic_News_Featured_Content::get_setting()
+	 *
+	 * @param array $terms A list of term objects. This is the return value of get_terms().
+	 * @param array $taxonomies An array of taxonomy slugs.
+	 * @return array $terms
 	 */
-	public static function hide_featured_term( $terms, $taxonomies ) {
+	public static function hide_featured_term( $terms, $taxonomies, $args ) {
 
 		// This filter is only appropriate on the front-end.
 		if ( is_admin() ) {
@@ -340,10 +264,19 @@ class Dynamic_News_Featured_Content {
 			return $terms;
 		}
 
+		// Bail if term objects are unavailable.
+		if ( 'all' != $args['fields'] ) {
+			return $terms;
+		}
+
 		$settings = self::get_setting();
-		foreach( $terms as $order => $term ) {
-			if ( ( $settings['tag-id'] === $term->term_id || $settings['tag-name'] === $term->name ) && 'post_tag' === $term->taxonomy ) {
-				unset( $terms[ $order ] );
+		$tag = get_term_by( 'name', $settings['tag-name'], 'post_tag' );
+
+		if ( false !== $tag ) {
+			foreach ( $terms as $order => $term ) {
+				if ( is_object( $term ) && ( $settings['tag-id'] === $term->term_id || $settings['tag-name'] === $term->name ) ) {
+					unset( $terms[ $order ] );
+				}
 			}
 		}
 
@@ -351,21 +284,17 @@ class Dynamic_News_Featured_Content {
 	}
 
 	/**
-	 * Hide featured tag from display when terms associated with a post object
+	 * Hide featured tag from displaying when terms associated with a post object
 	 * are queried from the front-end.
 	 *
 	 * Hooks into the "get_the_terms" filter.
 	 *
-	 * @static
-	 * @access public
-	 * @since Dynamic News 1.0
-	 *
-	 * @param array $terms    A list of term objects. This is the return value of get_the_terms().
-	 * @param int   $id       The ID field for the post object that terms are associated with.
-	 * @param array $taxonomy An array of taxonomy slugs.
-	 * @return array Filtered array of terms.
-	 *
 	 * @uses Dynamic_News_Featured_Content::get_setting()
+	 *
+	 * @param array $terms A list of term objects. This is the return value of get_the_terms().
+	 * @param int $id The ID field for the post object that terms are associated with.
+	 * @param array $taxonomy An array of taxonomy slugs.
+	 * @return array $terms
 	 */
 	public static function hide_the_featured_term( $terms, $id, $taxonomy ) {
 
@@ -385,9 +314,13 @@ class Dynamic_News_Featured_Content {
 		}
 
 		$settings = self::get_setting();
-		foreach( $terms as $order => $term ) {
-			if ( ( $settings['tag-id'] === $term->term_id || $settings['tag-name'] === $term->name ) && 'post_tag' === $term->taxonomy ) {
-				unset( $terms[ $term->term_id ] );
+		$tag = get_term_by( 'name', $settings['tag-name'], 'post_tag' );
+
+		if ( false !== $tag ) {
+			foreach ( $terms as $order => $term ) {
+				if ( $settings['tag-id'] === $term->term_id || $settings['tag-name'] === $term->name ) {
+					unset( $terms[ $order ] );
+				}
 			}
 		}
 
@@ -397,41 +330,35 @@ class Dynamic_News_Featured_Content {
 	/**
 	 * Register custom setting on the Settings -> Reading screen.
 	 *
-	 * @static
-	 * @access public
-	 * @since Dynamic News 1.0
+	 * @uses Dynamic_News_Featured_Content::validate_settings()
+	 *
+	 * @return void
 	 */
 	public static function register_setting() {
-		register_setting( 'featured-content', 'featured-content', array( __CLASS__, 'validate_settings' ) );
+
+		// Register sanitization callback for the Customizer.
+		register_setting( 'featured-content', 'featured-content', array( __class__, 'validate_settings' ) );
 	}
 
 	/**
 	 * Add settings to the Customizer.
 	 *
-	 * @static
-	 * @access public
-	 * @since Dynamic News 1.0
-	 *
 	 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 	 */
 	public static function customize_register( $wp_customize ) {
-		$wp_customize->add_section( 'featured_content', array(
+		$wp_customize->add_section( 'dynamicnews_featured_content', array(
 			'title'          => __( 'Featured Content', 'dynamicnewslite' ),
-			'description'    => sprintf( __( 'Use a <a href="%1$s">tag</a> to feature your posts. If no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'dynamicnewslite' ),
-				esc_url( add_query_arg( 'tag', _x( 'featured', 'featured content default tag slug', 'dynamicnewslite' ), admin_url( 'edit.php' ) ) ),
-				admin_url( 'edit.php?show_sticky=1' )
-			),
-			'priority'       => 130,
-			'theme_supports' => 'featured-content',
+			'description'    => sprintf( __( 'Easily feature all posts with the <a href="%1$s">"featured" tag</a> or a tag of your choice. Your theme supports up to %2$s posts in its featured content area.', 'dynamicnewslite' ), admin_url( '/edit.php?tag=featured' ), absint( self::$max_posts ) ),
+			'priority'       => 40,
+			'panel'			 => 'dynamicnews_options_panel'
 		) );
 
 		/* Add Featured Content settings.
 		 *
-		 * Sanitization callback registered in Featured_Content::validate_settings().
+		 * Sanitization callback registered in Dynamic_News_Featured_Content::validate_settings().
 		 * See http://themeshaper.com/2013/04/29/validation-sanitization-in-customizer/comment-page-1/#comment-12374
 		 */
 		$wp_customize->add_setting( 'featured-content[tag-name]', array(
-			'default'              => _x( 'featured', 'featured content default tag slug', 'dynamicnewslite' ),
 			'type'                 => 'option',
 			'sanitize_js_callback' => array( __CLASS__, 'delete_transient' ),
 		) );
@@ -440,47 +367,48 @@ class Dynamic_News_Featured_Content {
 			'type'                 => 'option',
 			'sanitize_js_callback' => array( __CLASS__, 'delete_transient' ),
 		) );
+		$wp_customize->add_setting( 'featured-content[show-all]', array(
+			'default'              => false,
+			'type'                 => 'option',
+			'sanitize_js_callback' => array( __CLASS__, 'delete_transient' ),
+		) );
 
 		// Add Featured Content controls.
 		$wp_customize->add_control( 'featured-content[tag-name]', array(
-			'label'    => __( 'Tag Name', 'dynamicnewslite' ),
-			'section'  => 'featured_content',
-			'priority' => 20,
+			'label'          => __( 'Tag name', 'dynamicnewslite' ),
+			'section'        => 'dynamicnews_featured_content',
+			'priority'       => 20,
 		) );
 		$wp_customize->add_control( 'featured-content[hide-tag]', array(
-			'label'    => __( 'Don&rsquo;t display tag on front end.', 'dynamicnewslite' ),
-			'section'  => 'featured_content',
-			'type'     => 'checkbox',
-			'priority' => 30,
+			'label'          => __( 'Hide tag from displaying in post meta and tag clouds.', 'dynamicnewslite' ),
+			'section'        => 'dynamicnews_featured_content',
+			'type'           => 'checkbox',
+			'priority'       => 30,
+		) );
+		$wp_customize->add_control( 'featured-content[show-all]', array(
+			'label'          => __( 'Display featured posts in latest blog post listing.', 'dynamicnewslite' ),
+			'section'        => 'dynamicnews_featured_content',
+			'type'           => 'checkbox',
+			'priority'       => 40,
 		) );
 	}
 
 	/**
 	 * Enqueue the tag suggestion script.
-	 *
-	 * @static
-	 * @access public
-	 * @since Dynamic News 1.0
 	 */
 	public static function enqueue_scripts() {
-		wp_enqueue_script( 'featured-content-suggest', get_template_directory_uri() . '/js/featured-content-admin.js', array( 'jquery', 'suggest' ), '20131022', true );
+		wp_enqueue_script( 'dynamicnews-featured-content-suggest', get_template_directory_uri() . '/js/featured-content-admin.js', array( 'jquery', 'suggest' ), '20150401', true );
 	}
 
 	/**
-	 * Get featured content settings.
+	 * Get settings
 	 *
-	 * Get all settings recognized by this module. This function
-	 * will return all settings whether or not they have been stored
-	 * in the database yet. This ensures that all keys are available
-	 * at all times.
+	 * Get all settings recognized by this module. This function will return all
+	 * settings whether or not they have been stored in the database yet. This
+	 * ensures that all keys are available at all times.
 	 *
-	 * In the event that you only require one setting, you may pass
-	 * its name as the first parameter to the function and only that
-	 * value will be returned.
-	 *
-	 * @static
-	 * @access public
-	 * @since Dynamic News 1.0
+	 * In the event that you only require one setting, you may pass its name as the
+	 * first parameter to the function and only that value will be returned.
 	 *
 	 * @param string $key The key of a recognized setting.
 	 * @return mixed Array of all settings by default. A single value if passed as first parameter.
@@ -491,7 +419,8 @@ class Dynamic_News_Featured_Content {
 		$defaults = array(
 			'hide-tag' => 1,
 			'tag-id'   => 0,
-			'tag-name' => _x( 'featured', 'featured content default tag slug', 'dynamicnewslite' ),
+			'tag-name' => '',
+			'show-all' => 0,
 		);
 
 		$options = wp_parse_args( $saved, $defaults );
@@ -505,18 +434,16 @@ class Dynamic_News_Featured_Content {
 	}
 
 	/**
-	 * Validate featured content settings.
+	 * Validate settings
 	 *
-	 * Make sure that all user supplied content is in an expected
-	 * format before saving to the database. This function will also
-	 * delete the transient set in Dynamic_News_Featured_Content::get_featured_content().
+	 * Make sure that all user supplied content is in an expected format before
+	 * saving to the database. This function will also delete the transient set in
+	 * Dynamic_News_Featured_Content::get_featured_content().
 	 *
-	 * @static
-	 * @access public
-	 * @since Dynamic News 1.0
+	 * @uses Dynamic_News_Featured_Content::delete_transient()
 	 *
-	 * @param array $input Array of settings input.
-	 * @return array Validated settings output.
+	 * @param array $input
+	 * @return array $output
 	 */
 	public static function validate_settings( $input ) {
 		$output = array();
@@ -541,11 +468,15 @@ class Dynamic_News_Featured_Content {
 
 		$output['hide-tag'] = isset( $input['hide-tag'] ) && $input['hide-tag'] ? 1 : 0;
 
-		// Delete the featured post ids transient.
+		$output['show-all'] = isset( $input['show-all'] ) && $input['show-all'] ? 1 : 0;
+
 		self::delete_transient();
 
 		return $output;
 	}
-} // Dynamic_News_Featured_Content
+}
 
 Dynamic_News_Featured_Content::setup();
+
+
+?>

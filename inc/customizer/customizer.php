@@ -38,10 +38,6 @@ function dynamicnews_customize_register_options( $wp_customize ) {
 	$wp_customize->get_control( 'background_color'  )->section   = 'background_image';
 	$wp_customize->get_section( 'background_image'  )->title     = 'Background';
 	
-	// Change Featured Content Section
-	$wp_customize->get_section( 'featured_content'  )->panel = 'dynamicnews_options_panel';
-	$wp_customize->get_section( 'featured_content'  )->priority = 40;
-	
 	// Add Header Tagline option
 	$wp_customize->add_setting( 'dynamicnews_theme_options[header_tagline]', array(
         'default'           => false,

@@ -2,6 +2,13 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.1.4
+-----------------------------------
+[updated] Italian language files
+[updated] Featured Content class to new version with many code improvements
+[added] new setting to display featured posts in latest blog post listing
+[removed] unnecessary HTML markup and Genericons in theme-info.php
+
 Version 1.1.3
 -----------------------------------
 [added] new Category Posts Single widget for Magazine Front Page template
