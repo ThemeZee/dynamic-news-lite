@@ -26,6 +26,8 @@ Template Name: Fullwidth
 
 		<?php endif; ?>
 		
+		<?php comments_template(); ?>
+		
 		</section>
 
 	</div>

@@ -2,6 +2,11 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.1.5
+-----------------------------------
+[added] new classes entry-title, updated and author for google microformats structure
+[added] comments section to fullwidth page template (of course you can still deactivate comments if you want)
+
 Version 1.1.4
 -----------------------------------
 [updated] Italian language files

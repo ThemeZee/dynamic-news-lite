@@ -2,7 +2,7 @@
 Theme Name: Dynamic News Lite
 Theme URI: http://themezee.com/themes/dynamicnews/
 Description: A responsive, multipurpose blogging and magazine theme with bold colors and fonts. It comes with a featured content slider and a magazine page template. Dynamic News is a trending theme on wordpress.com and we are sure you will like the WordPress.org version as well.
-Version: 1.1.4
+Version: 1.1.5
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, red, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, blue, silver, white, green, gray
@@ -504,7 +504,8 @@ input, textarea, select {
 	padding: 0.7em 1em;
 	background: #eee;
 }
-.postmeta span, .postmeta .post-edit-link {
+.postmeta .meta-date, .postmeta .meta-author, 
+.postmeta .meta-comments, .postmeta .post-edit-link {
 	font-size: 0.9em;
 	line-height: 1.5em;
 }
@@ -1670,7 +1671,7 @@ embed, iframe, object, video {
 
 /* Smartphones | <320px */
 @media only screen and (max-width: 20em) {
-	.postmeta span, .postinfo span {
+	.postmeta .meta-date, .postmeta .meta-author, .postmeta .meta-comments, .postinfo span {
 		display: block;
 	}
 	.postmeta .sep, .postinfo .sep, .postmeta .post-edit-link {
