@@ -53,7 +53,7 @@ if ( ! function_exists( 'dynamicnews_display_postmeta' ) ):
 	function dynamicnews_display_postmeta() { ?>
 		
 		<span class="meta-date">
-		<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>', 'dynamicnewslite'), 
+		<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 'dynamicnewslite'), 
 				esc_url( get_permalink() ),
 				esc_attr( get_the_time() ),
 				esc_attr( get_the_date( 'c' ) ),
@@ -63,7 +63,7 @@ if ( ! function_exists( 'dynamicnews_display_postmeta' ) ):
 		</span>
 		
 		<span class="meta-author sep">
-		<?php printf(__('<a href="%1$s" title="%2$s" rel="author">%3$s</a>', 'dynamicnewslite'), 
+		<?php printf(__('<span class="author vcard"><a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 'dynamicnewslite'), 
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				esc_attr( sprintf( __( 'View all posts by %s', 'dynamicnewslite' ), get_the_author() ) ),
 				get_the_author()

@@ -1,7 +1,7 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
-		<h2 class="post-title"><?php the_title(); ?></h2>
+		<h2 class="post-title entry-title"><?php the_title(); ?></h2>
 		
 		<div class="postmeta"><?php dynamicnews_display_postmeta(); ?></div>
 		
