@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dynamic News Lite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-18 11:17+0100\n"
-"PO-Revision-Date: 2015-03-18 11:18+0100\n"
+"POT-Creation-Date: 2015-04-30 10:21+0100\n"
+"PO-Revision-Date: 2015-04-30 10:21+0100\n"
 "Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
 "Language-Team: ThemeZee <contact@themezee.com>\n"
 "MIME-Version: 1.0\n"
@@ -13,6 +13,7 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:9
 msgid "404 Error: Not found"
@@ -95,45 +96,45 @@ msgstr ""
 msgid "Read more &raquo;"
 msgstr ""
 
-#: functions.php:139
+#: functions.php:132
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:140
+#: functions.php:133
 msgid "Footer Navigation"
 msgstr ""
 
-#: functions.php:143
+#: functions.php:136
 msgid "Social Icons"
 msgstr ""
 
-#: functions.php:183 inc/customizer/sections/customizer-general.php:49
+#: functions.php:176 inc/customizer/sections/customizer-general.php:49
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:185
+#: functions.php:178
 msgid "Appears on posts and pages except front page and fullwidth template."
 msgstr ""
 
-#: functions.php:192
+#: functions.php:185
 msgid "Magazine Front Page"
 msgstr ""
 
-#: functions.php:194
+#: functions.php:187
 msgid ""
 "Appears on Magazine Front Page page template only. You can use the Category "
 "Posts widgets here."
 msgstr ""
 
-#: functions.php:274
+#: functions.php:267
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:275 functions.php:291
+#: functions.php:268 functions.php:284
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:301
+#: functions.php:294
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
@@ -195,40 +196,42 @@ msgid ""
 "website."
 msgstr ""
 
-#: inc/featured-content.php:419
+#: inc/featured-content.php:350
 msgid "Featured Content"
 msgstr ""
 
-#: inc/featured-content.php:420
+#: inc/featured-content.php:351
 #, php-format
 msgid ""
-"Use a <a href=\"%1$s\">tag</a> to feature your posts. If no posts match the "
-"tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
+"Easily feature all posts with the <a href=\"%1$s\">\"featured\" tag</a> or a "
+"tag of your choice. Your theme supports up to %2$s posts in its featured "
+"content area."
 msgstr ""
 
-#: inc/featured-content.php:421 inc/featured-content.php:434
-#: inc/featured-content.php:494
-msgid "featured"
+#: inc/featured-content.php:378
+msgid "Tag name"
 msgstr ""
 
-#: inc/featured-content.php:446
-msgid "Tag Name"
+#: inc/featured-content.php:383
+msgid "Hide tag from displaying in post meta and tag clouds."
 msgstr ""
 
-#: inc/featured-content.php:451
-msgid "Don&rsquo;t display tag on front end."
+#: inc/featured-content.php:389
+msgid "Display featured posts in latest blog post listing."
 msgstr ""
 
 #: inc/template-tags.php:56
 #, php-format
 msgid ""
-"<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time datetime=\"%3$s\">"
-"%4$s</time></a>"
+"<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date "
+"published updated\" datetime=\"%3$s\">%4$s</time></a>"
 msgstr ""
 
 #: inc/template-tags.php:66
 #, php-format
-msgid "<a href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
+msgid ""
+"<span class=\"author vcard\"><a class=\"fn\" href=\"%1$s\" title=\"%2$s\" "
+"rel=\"author\">%3$s</a></span>"
 msgstr ""
 
 #: inc/template-tags.php:68
@@ -300,7 +303,7 @@ msgstr ""
 msgid "Theme Demo"
 msgstr ""
 
-#: inc/theme-info.php:45 inc/theme-info.php:66
+#: inc/theme-info.php:45 inc/theme-info.php:60
 msgid "Theme Documentation"
 msgstr ""
 
@@ -308,61 +311,61 @@ msgstr ""
 msgid "Rate this theme"
 msgstr ""
 
-#: inc/theme-info.php:63
+#: inc/theme-info.php:57
 #, php-format
 msgid "Getting Started with %s"
 msgstr ""
 
-#: inc/theme-info.php:68
+#: inc/theme-info.php:62
 msgid ""
 "Need any help to setup and configure this theme? We got you covered with an "
 "extensive theme documentation on our website."
 msgstr ""
 
-#: inc/theme-info.php:70
+#: inc/theme-info.php:64
 msgid "Visit Dynamic News Documentation"
 msgstr ""
 
-#: inc/theme-info.php:75 inc/customizer/customizer.php:29
+#: inc/theme-info.php:69 inc/customizer/customizer.php:29
 msgid "Theme Options"
 msgstr ""
 
-#: inc/theme-info.php:77
+#: inc/theme-info.php:71
 msgid ""
 "Dynamic News supports the awesome Theme Customizer for all theme settings. "
 "Click \"Customize Theme\" to open the Customizer now."
 msgstr ""
 
-#: inc/theme-info.php:79
+#: inc/theme-info.php:73
 msgid "Customize Theme"
 msgstr ""
 
-#: inc/theme-info.php:84 inc/customizer/sections/customizer-upgrade.php:14
+#: inc/theme-info.php:78 inc/customizer/sections/customizer-upgrade.php:14
 msgid "PRO Version"
 msgstr ""
 
-#: inc/theme-info.php:86
+#: inc/theme-info.php:80
 msgid ""
 "Need more features? Check out the PRO version which comes with additional "
 "features and advanced customization options."
 msgstr ""
 
-#: inc/theme-info.php:88
+#: inc/theme-info.php:82
 msgid "Learn more about the PRO Version of Dynamic News"
 msgstr ""
 
-#: inc/theme-info.php:108
+#: inc/theme-info.php:102
 #, php-format
 msgid ""
 "Dynamic News is proudly brought to you by %1s. If you like this theme, "
 "%2s :) "
 msgstr ""
 
-#: inc/theme-info.php:110
+#: inc/theme-info.php:104
 msgid "rate it"
 msgstr ""
 
-#: inc/customizer/customizer.php:54
+#: inc/customizer/customizer.php:50
 msgid "Display Tagline below site title."
 msgstr ""
 

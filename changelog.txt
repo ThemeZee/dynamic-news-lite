@@ -2,6 +2,12 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.1.6
+-----------------------------------
+[added] new translation files for German, Greek and Portuguese (Brazil)
+[updated] language files for Spanish, Dutch and Italian
+[fixed] open div bug in Category Posts Grid widget when an uneven number of posts is displayed
+
 Version 1.1.5
 -----------------------------------
 [added] new classes entry-title, updated and author for google microformats structure
