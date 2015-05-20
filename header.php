@@ -43,7 +43,6 @@
 	
 	<div id="navi-wrap">
 		<nav id="mainnav" class="container clearfix" role="navigation">
-			<h4 id="mainnav-icon"><?php _e('Menu', 'dynamicnewslite'); ?></h4>
 			<?php 
 				// Get Navigation out of Theme Options
 				wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_id' => 'mainnav-menu', 'echo' => true, 'fallback_cb' => 'dynamicnews_default_menu', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'depth' => 0));

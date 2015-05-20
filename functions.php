@@ -35,6 +35,9 @@ function dynamicnews_enqueue_scripts() {
 	// Register and enqueue navigation.js
 	wp_enqueue_script('dynamicnewslite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
 	
+	// Passing Parameters to Navigation.js Javascript
+	wp_localize_script( 'dynamicnewslite-jquery-navigation', 'dynamicnews_menu_title', __('Menu', 'dynamicnewslite') );
+	
 	// Register and Enqueue Font
 	wp_enqueue_style('dynamicnewslite-default-fonts', dynamicnews_fonts_url(), array(), null );
 

@@ -2,6 +2,11 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.1.7
+-----------------------------------
+[changed] navigation.js to use our new developed responsiveMenu function
+[added] dropdown icons and animations for nested submenus on mobile navigation
+
 Version 1.1.6
 -----------------------------------
 [added] new translation files for German, Greek and Portuguese (Brazil)

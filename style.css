@@ -2,7 +2,7 @@
 Theme Name: Dynamic News Lite
 Theme URI: http://themezee.com/themes/dynamicnews/
 Description: A responsive, multipurpose blogging and magazine theme with bold colors and fonts. It comes with a featured content slider and a magazine page template. Dynamic News is a trending theme on wordpress.com and we are sure you will like the WordPress.org version as well.
-Version: 1.1.6
+Version: 1.1.7
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, red, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, blue, silver, white, green, gray
@@ -205,7 +205,7 @@ input, textarea, select {
 }
 /* Navigation Menu
 -------------------------------------------------------------- */
-#mainnav-icon {
+#mainnav-toggle, #mainnav-icon {
 	display: none;
 }
 #navi-wrap {
@@ -1415,28 +1415,32 @@ embed, iframe, object, video {
 		margin: 1.5em 0;
 		float: none;
 	}
-	#mainnav-icon {
+	#mainnav-toggle {
 		display: block;
-		padding: 1.5em;
+		width: 100%;
+		margin: 0;
+		padding: 1.2em;
+		text-align: left;
 		text-transform: uppercase;
 		text-decoration: none;
 		font-size: 1.0em;
 		font-family: 'Francois One', Tahoma, Arial;
 		color: #fff;
 		background: rgba(255, 255, 255, 0.1);
+		border: none;
 		-webkit-transition: all 0.1s ease-out;
 		-moz-transition: all 0.1s ease-out;
 		-ms-transition: all 0.1s ease-out;
 		-o-transition: all 0.1s ease-out;
 		transition: all 0.1s ease-out;
 	}
-	#mainnav-icon:hover {
+	#mainnav-toggle:hover {
 		cursor: pointer;
 		background: #e84747;
 	}
-	#mainnav-icon:after {
+	#mainnav-toggle:after {
 		float: right;
-		margin: -0.15em 0 0;
+		margin: 0;
 		-webkit-font-smoothing: antialiased;
 		display: inline-block;
 		content: '\f419';
@@ -1492,6 +1496,41 @@ embed, iframe, object, video {
 	}
 	#mainnav-menu ul li.current_page_item a, #mainnav-menu ul li.current-menu-item a {
 		text-decoration: underline;
+	}
+	
+	#mainnav-menu .submenu-dropdown-toggle {
+		float: right;
+		display: block;
+		margin: 0;
+		padding: 1.1em 1.5em;
+	}
+	#mainnav-menu .submenu-dropdown-toggle:hover {
+		cursor: pointer;
+		background: #e84747;
+	}
+	#mainnav-menu .submenu-dropdown-toggle:before {
+		font-size: 28px;
+		line-height: 1;
+		font-family: 'Genericons';
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-decoration: inherit;
+		vertical-align: middle;
+		content: '\f431';
+		color: #fff;
+	}
+	#mainnav-menu .submenu-dropdown-toggle.active:before {
+		content: '\f432';
+	}
+	#mainnav-menu ul .submenu-dropdown-toggle {
+		padding: 0.6em 1em;
+	}
+	#mainnav-menu ul .submenu-dropdown-toggle:before {
+		font-size: 24px;
+		color: #222;
+	}
+	#mainnav-menu ul .submenu-dropdown-toggle:hover:before {
+		color: #fff;
 	}
 }
 
