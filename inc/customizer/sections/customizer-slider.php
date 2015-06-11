@@ -12,7 +12,6 @@ function dynamicnews_customize_register_slider_settings( $wp_customize ) {
 	// Add Sections for Slider Settings
 	$wp_customize->add_section( 'dynamicnews_section_slider', array(
         'title'    => __( 'Post Slider', 'dynamicnewslite' ),
-		'description' => __( 'The slideshow displays your featured posts, which you can configure on the "Featured Content" section above.', 'dynamicnewslite' ),
         'priority' => 50,
 		'panel' => 'dynamicnews_options_panel' 
 		)
@@ -66,6 +65,43 @@ function dynamicnews_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
 
+	// Select Featured Posts
+	$wp_customize->add_setting( 'dynamicnews_theme_options[featured_posts_header]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Dynamic_News_Customize_Header_Control(
+        $wp_customize, 'dynamicnews_control_featured_posts_header', array(
+            'label' => __( 'Select Featured Posts', 'dynamicnewslite' ),
+            'section' => 'dynamicnews_section_slider',
+            'settings' => 'dynamicnews_theme_options[featured_posts_header]',
+            'priority' => 3,
+			'active_callback' => 'dynamicnews_slider_activated_callback'
+            )
+        )
+    );
+	$wp_customize->add_setting( 'dynamicnews_theme_options[featured_posts_description]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Dynamic_News_Customize_Description_Control(
+        $wp_customize, 'dynamicnews_control_featured_posts_description', array(
+			'label'    => __( 'The slideshow displays all your featured posts. You can easily feature posts by a tag of your choice.', 'dynamicnewslite' ),
+            'section' => 'dynamicnews_section_slider',
+            'settings' => 'dynamicnews_theme_options[featured_posts_description]',
+            'priority' => 4,
+			'active_callback' => 'dynamicnews_slider_activated_callback'
+            )
+        )
+    );
+	
+	// Add Slider Animation Setting
 	$wp_customize->add_setting( 'dynamicnews_theme_options[slider_animation]', array(
         'default'           => 'horizontal',
 		'type'           	=> 'option',
@@ -78,7 +114,8 @@ function dynamicnews_customize_register_slider_settings( $wp_customize ) {
         'section'  => 'dynamicnews_section_slider',
         'settings' => 'dynamicnews_theme_options[slider_animation]',
         'type'     => 'radio',
-		'priority' => 4,
+		'priority' => 8,
+		'active_callback' => 'dynamicnews_slider_activated_callback',
         'choices'  => array(
             'horizontal' => __( 'Horizontal Slider', 'dynamicnewslite' ),
             'fade' => __( 'Fade Slider', 'dynamicnewslite' )

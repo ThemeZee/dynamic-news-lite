@@ -6,9 +6,10 @@
 
 /*========================== CUSTOMIZER CONTROLS FUNCTIONS ==========================*/
 
-// Add simple heading option to the theme customizer
-if ( class_exists( 'WP_Customize_Control' ) ) :
 
+if ( class_exists( 'WP_Customize_Control' ) ) :
+	
+	// Add simple heading control to the theme customizer
     class Dynamic_News_Customize_Header_Control extends WP_Customize_Control {
 
         public function render_content() {  ?>
@@ -21,6 +22,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
         }
     }
 	
+	// Add simple description control to the theme customizer
 	class Dynamic_News_Customize_Description_Control extends WP_Customize_Control {
 
         public function render_content() {  ?>
@@ -31,6 +33,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
         }
     }
 	
+	// Add simple textfield control to the theme customizer
 	class Dynamic_News_Customize_Text_Control extends WP_Customize_Control {
 
         public function render_content() {  ?>
@@ -41,6 +44,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
         }
     }
 	
+	// Add simple upgrade button control to the theme customizer	
 	class Dynamic_News_Customize_Button_Control extends WP_Customize_Control {
 
         public function render_content() {  ?>
@@ -56,6 +60,21 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
     }
 	
 endif;
+
+
+// Add a callback function to retrieve wether slider is activated or not
+function dynamicnews_slider_activated_callback( $control ) {
+	
+	// Check if Slider is turned on
+	if ( $control->manager->get_setting('dynamicnews_theme_options[slider_activated_front_page]')->value() == 1 ) :
+		return true;
+	elseif ( $control->manager->get_setting('dynamicnews_theme_options[slider_activated_blog]')->value() == 1 ) :
+		return true;
+	else :
+		return false;
+	endif;
+	
+}
 
 
 ?>
