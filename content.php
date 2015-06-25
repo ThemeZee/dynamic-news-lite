@@ -3,7 +3,7 @@
 		
 		<h2 class="post-title entry-title"><a href="<?php esc_url(the_permalink()) ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 		
-		<div class="postmeta"><?php dynamicnews_display_postmeta(); ?></div>
+		<div class="postmeta clearfix"><?php dynamicnews_display_postmeta(); ?></div>
 	
 		<?php dynamicnews_display_thumbnail_index(); ?>
 		

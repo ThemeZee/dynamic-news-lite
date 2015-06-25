@@ -37,8 +37,6 @@ class Dynamic_News_Featured_Content {
 	 */
 	public static function init() {
 
-		// Get Number of Posts from Theme settings
-		
 		add_filter( 'dynamicnews_get_featured_content',   array( __CLASS__, 'get_featured_posts' )    );
 		add_action( 'customize_register',                 array( __CLASS__, 'customize_register' ), 9 );
 		add_action( 'admin_init',                         array( __CLASS__, 'register_setting'   )    );

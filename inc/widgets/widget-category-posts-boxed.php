@@ -175,7 +175,7 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 	// Display Postmeta
 	function display_postmeta($instance) { ?>
 
-		<span class="meta-date">
+		<span class="meta-date sep">
 		<?php printf('<a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>',
 				esc_url( get_permalink() ),
 				esc_attr( get_the_time() ),
@@ -186,7 +186,7 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 		</span>
 
 	<?php if ( comments_open() ) : ?>
-		<span class="meta-comments sep">
+		<span class="meta-comments">
 			<?php comments_popup_link( __('Leave a comment', 'dynamicnewslite'),__('One comment','dynamicnewslite'),__('% comments','dynamicnewslite') ); ?>
 		</span>
 	<?php endif;

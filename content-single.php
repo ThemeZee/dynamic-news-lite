@@ -3,7 +3,7 @@
 	
 		<h2 class="post-title entry-title"><?php the_title(); ?></h2>
 		
-		<div class="postmeta"><?php dynamicnews_display_postmeta(); ?></div>
+		<div class="postmeta clearfix"><?php dynamicnews_display_postmeta(); ?></div>
 		
 		<?php dynamicnews_display_thumbnail_single(); ?>
 		

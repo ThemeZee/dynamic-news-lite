@@ -2,6 +2,13 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.1.9
+-----------------------------------
+[added] setting to display or hide post date
+[added] setting to display or hide post author
+[added] setting to display or hide post categories
+[added] setting to display or hide post tags
+
 Version 1.1.8
 -----------------------------------
 [moved] featured content settings to post slider section in Customizer

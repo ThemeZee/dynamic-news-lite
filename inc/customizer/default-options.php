@@ -41,6 +41,10 @@ function dynamicnews_default_options() {
 		'post_thumbnails_index'				=> true,
 		'post_thumbnails_single' 			=> true,
 		'excerpt_text' 						=> '',
+		'meta_date'							=> true,
+		'meta_author'						=> true,
+		'meta_category'						=> true,
+		'meta_tags'							=> true,
 		'slider_activated_front_page' 		=> false,
 		'slider_activated_blog' 			=> false,
 		'slider_animation' 					=> 'horizontal'
