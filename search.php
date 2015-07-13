@@ -8,12 +8,13 @@
 		
 		<section id="content" class="primary" role="main">
 		
-		<?php if (have_posts()) : ?>
-			<h2 id="search-title" class="archive-title">
-				<?php printf( __( 'Search Results for: %s', 'dynamicnewslite' ), '<span>' . get_search_query() . '</span>' ); ?>
-			</h2>
-		
-		<?php while (have_posts()) : the_post();
+			<header class="page-header">
+				<h2 id="search-title" class="archive-title">
+					<?php printf( __( 'Search Results for: %s', 'dynamicnewslite' ), '<span>' . get_search_query() . '</span>' ); ?>
+				</h2>
+			</header>
+			
+		<?php if (have_posts()) : while (have_posts()) : the_post();
 		
 				if ( 'post' == get_post_type() ) :
 		
@@ -30,10 +31,6 @@
 			dynamicnews_display_pagination();
 
 		else : ?>
-
-			<h2 id="search-title" class="archive-title">
-				<?php printf( __( 'Search Results for: %s', 'dynamicnewslite' ), '<span>' . get_search_query() . '</span>' ); ?>
-			</h2>
 			
 			<div class="post">
 				

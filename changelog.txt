@@ -2,6 +2,12 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.2
+-----------------------------------
+[changed] search title HTML markup in search.php
+[changed] archive titles to use the new the_archive_title() function
+[removed] unnecessary template files tag.php, category.php and author.php
+
 Version 1.1.9
 -----------------------------------
 [added] setting to display or hide post date

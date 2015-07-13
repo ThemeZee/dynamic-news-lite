@@ -7,26 +7,20 @@
 	<div id="wrap" class="container clearfix">
 		
 		<section id="content" class="primary" role="main">
-
-		<h2 id="date-title" class="archive-title">
-			<?php // Display Archive Title
-			if ( is_date() ) :
-				printf( __( 'Monthly Archives: %s', 'dynamicnewslite' ), '<span>' . get_the_date( _x( 'F Y', 'date format of monthly archives', 'dynamicnewslite' ) ) . '</span>' );
-			else :
-				_e( 'Archives', 'dynamicnewslite' );
-			endif;
-			?>
-		</h2>
 		
-		<?php if (have_posts()) : while (have_posts()) : the_post();
-		
-			get_template_part( 'content', $theme_options['posts_length'] );
-		
-			endwhile;
+			<header class="page-header">
+				<?php the_archive_title( '<h2 class="archive-title">', '</h2>' ); ?>
+			</header>
 			
-		dynamicnews_display_pagination();
+			<?php if (have_posts()) : while (have_posts()) : the_post();
+			
+				get_template_part( 'content', $theme_options['posts_length'] );
+			
+				endwhile;
+				
+			dynamicnews_display_pagination();
 
-		endif; ?>
+			endif; ?>
 			
 		</section>
 		
