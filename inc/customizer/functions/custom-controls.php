@@ -62,6 +62,18 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 endif;
 
 
+// Add a callback function to retrieve wether posts length setting is set to excerpt or not
+function dynamicnews_control_posts_length_callback( $control ) {
+	
+	// Check if excerpt mode is selected
+	if ( $control->manager->get_setting('dynamicnews_theme_options[posts_length]')->value() == 'excerpt' ) :
+		return true;
+	else :
+		return false;
+	endif;
+	
+}
+
 // Add a callback function to retrieve wether slider is activated or not
 function dynamicnews_slider_activated_callback( $control ) {
 	
@@ -75,6 +87,3 @@ function dynamicnews_slider_activated_callback( $control ) {
 	endif;
 	
 }
-
-
-?>

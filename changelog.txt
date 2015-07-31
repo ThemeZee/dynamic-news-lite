@@ -2,6 +2,12 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.2.1
+-----------------------------------
+[added] setting to configure length of excerpts
+[changed] order of settings in post settings section
+[added] translation files for French
+
 Version 1.2
 -----------------------------------
 [changed] search title HTML markup in search.php

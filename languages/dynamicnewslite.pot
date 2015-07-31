@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dynamic News Lite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-30 10:21+0100\n"
-"PO-Revision-Date: 2015-04-30 10:21+0100\n"
+"POT-Creation-Date: 2015-07-31 10:43+0100\n"
+"PO-Revision-Date: 2015-07-31 10:43+0100\n"
 "Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
 "Language-Team: ThemeZee <contact@themezee.com>\n"
 "MIME-Version: 1.0\n"
@@ -37,44 +37,21 @@ msgstr ""
 msgid "Pages"
 msgstr ""
 
-#: archive.php:14
-#, php-format
-msgid "Monthly Archives: %s"
-msgstr ""
-
-#: archive.php:14
-msgid "F Y"
-msgstr ""
-
-#: archive.php:16
-msgid "Archives"
-msgstr ""
-
-#: author.php:16
-#, php-format
-msgid "Author Archives: %s"
-msgstr ""
-
-#: category.php:12
-#, php-format
-msgid "Category Archives: %s"
-msgstr ""
-
 #: comments.php:11
 msgid "Enter password to view comments."
 msgstr ""
 
-#: comments.php:21 inc/template-tags.php:77
+#: comments.php:21 inc/template-tags.php:90
 #: inc/widgets/widget-category-posts-boxed.php:190
 #: inc/widgets/widget-category-posts-columns.php:221
-#: inc/widgets/widget-category-posts-grid.php:213
+#: inc/widgets/widget-category-posts-grid.php:218
 msgid "One comment"
 msgstr ""
 
-#: comments.php:21 inc/template-tags.php:77
+#: comments.php:21 inc/template-tags.php:90
 #: inc/widgets/widget-category-posts-boxed.php:190
 #: inc/widgets/widget-category-posts-columns.php:221
-#: inc/widgets/widget-category-posts-grid.php:213
+#: inc/widgets/widget-category-posts-grid.php:218
 #, php-format
 msgid "% comments"
 msgstr ""
@@ -96,50 +73,50 @@ msgstr ""
 msgid "Read more &raquo;"
 msgstr ""
 
-#: functions.php:132
+#: functions.php:39
+msgid "Menu"
+msgstr ""
+
+#: functions.php:135
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:133
+#: functions.php:136
 msgid "Footer Navigation"
 msgstr ""
 
-#: functions.php:136
+#: functions.php:139
 msgid "Social Icons"
 msgstr ""
 
-#: functions.php:176 inc/customizer/sections/customizer-general.php:49
+#: functions.php:179 inc/customizer/sections/customizer-general.php:49
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:178
+#: functions.php:181
 msgid "Appears on posts and pages except front page and fullwidth template."
 msgstr ""
 
-#: functions.php:185
+#: functions.php:188
 msgid "Magazine Front Page"
 msgstr ""
 
-#: functions.php:187
+#: functions.php:190
 msgid ""
 "Appears on Magazine Front Page page template only. You can use the Category "
 "Posts widgets here."
 msgstr ""
 
-#: functions.php:267
+#: functions.php:280
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:268 functions.php:284
+#: functions.php:281 functions.php:297
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:294
+#: functions.php:307
 msgid "Your comment is awaiting moderation."
-msgstr ""
-
-#: header.php:46
-msgid "Menu"
 msgstr ""
 
 #: image.php:19
@@ -158,12 +135,12 @@ msgstr ""
 msgid "Return to"
 msgstr ""
 
-#: search.php:13 search.php:35
+#: search.php:13
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
-#: search.php:41
+#: search.php:38
 msgid ""
 "No matches. Please try again, or use the navigation menus to find what you "
 "search for."
@@ -183,11 +160,6 @@ msgid ""
 "Widgets to setup your sidebar."
 msgstr ""
 
-#: tag.php:12
-#, php-format
-msgid "Tag Archives: %s"
-msgstr ""
-
 #: template-frontpage.php:39
 msgid ""
 "There are no widgets to be displayed. Please go to Appearance -> Widgets and "
@@ -196,78 +168,70 @@ msgid ""
 "website."
 msgstr ""
 
-#: inc/featured-content.php:350
-msgid "Featured Content"
-msgstr ""
-
-#: inc/featured-content.php:351
-#, php-format
-msgid ""
-"Easily feature all posts with the <a href=\"%1$s\">\"featured\" tag</a> or a "
-"tag of your choice. Your theme supports up to %2$s posts in its featured "
-"content area."
-msgstr ""
-
-#: inc/featured-content.php:378
+#: inc/featured-content.php:368
 msgid "Tag name"
 msgstr ""
 
-#: inc/featured-content.php:383
+#: inc/featured-content.php:374
 msgid "Hide tag from displaying in post meta and tag clouds."
 msgstr ""
 
-#: inc/featured-content.php:389
+#: inc/featured-content.php:381
 msgid "Display featured posts in latest blog post listing."
 msgstr ""
 
-#: inc/template-tags.php:56
+#: inc/featured-content.php:388
+msgid "Number of Posts"
+msgstr ""
+
+#: inc/template-tags.php:62
 #, php-format
 msgid ""
 "<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date "
 "published updated\" datetime=\"%3$s\">%4$s</time></a>"
 msgstr ""
 
-#: inc/template-tags.php:66
+#: inc/template-tags.php:77
 #, php-format
 msgid ""
 "<span class=\"author vcard\"><a class=\"fn\" href=\"%1$s\" title=\"%2$s\" "
 "rel=\"author\">%3$s</a></span>"
 msgstr ""
 
-#: inc/template-tags.php:68
+#: inc/template-tags.php:79
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:77 inc/widgets/widget-category-posts-boxed.php:190
+#: inc/template-tags.php:90 inc/widgets/widget-category-posts-boxed.php:190
 #: inc/widgets/widget-category-posts-columns.php:221
-#: inc/widgets/widget-category-posts-grid.php:213
+#: inc/widgets/widget-category-posts-grid.php:218
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:83
+#: inc/template-tags.php:96
 msgid "Edit Post"
 msgstr ""
 
-#: inc/template-tags.php:147
+#: inc/template-tags.php:174
 #, php-format
 msgid "tagged with %1$s"
 msgstr ""
 
-#: inc/template-tags.php:205
+#: inc/template-tags.php:230
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
 
-#: inc/template-tags.php:206
+#: inc/template-tags.php:231
 msgid "WordPress"
 msgstr ""
 
-#: inc/template-tags.php:207
+#: inc/template-tags.php:232
 msgid "Dynamic News"
 msgstr ""
 
-#: inc/template-tags.php:239
+#: inc/template-tags.php:264
 msgid ""
 "Please go to WP-Admin-> Appearance-> Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
@@ -440,57 +404,85 @@ msgstr ""
 msgid "Show post summaries (excerpt)"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:51
-msgid "Post Images"
+#: inc/customizer/sections/customizer-post.php:50
+msgid "Excerpt Length"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:66
-msgid "Display featured images on archive pages"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:82
-msgid "Display featured images on single posts"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:100
+#: inc/customizer/sections/customizer-post.php:69
 msgid "Excerpt More Text"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:115
+#: inc/customizer/sections/customizer-post.php:84
 msgid "Display [...] after text excerpts."
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:102
+msgid "Post Images"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:117
+msgid "Display featured images on archive pages"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:133
+msgid "Display featured images on single posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:151
+msgid "Postmeta"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:166
+msgid "Display date on posts."
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:181
+msgid "Display author on posts."
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:196
+msgid "Display categories on posts."
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:211
+msgid "Display tags on posts."
 msgstr ""
 
 #: inc/customizer/sections/customizer-slider.php:14
 msgid "Post Slider"
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:15
-msgid ""
-"The slideshow displays your featured posts, which you can configure on the "
-"\"Featured Content\" section above."
-msgstr ""
-
-#: inc/customizer/sections/customizer-slider.php:31
+#: inc/customizer/sections/customizer-slider.php:30
 msgid "Activate Featured Post Slider"
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:46
+#: inc/customizer/sections/customizer-slider.php:45
 msgid "Display Slider on Magazine Front Page template."
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:61
+#: inc/customizer/sections/customizer-slider.php:60
 msgid "Display Slider on normal blog index."
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:77
+#: inc/customizer/sections/customizer-slider.php:78
+msgid "Select Featured Posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:95
+msgid ""
+"The slideshow displays all your featured posts. You can easily feature posts "
+"by a tag of your choice."
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:113
 msgid "Slider Animation"
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:83
+#: inc/customizer/sections/customizer-slider.php:120
 msgid "Horizontal Slider"
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:84
+#: inc/customizer/sections/customizer-slider.php:121
 msgid "Fade Slider"
 msgstr ""
 
@@ -520,14 +512,14 @@ msgstr ""
 
 #: inc/widgets/widget-category-posts-boxed.php:219
 #: inc/widgets/widget-category-posts-columns.php:245
-#: inc/widgets/widget-category-posts-grid.php:242
+#: inc/widgets/widget-category-posts-grid.php:247
 #: inc/widgets/widget-category-posts-single.php:167
 msgid "View all posts"
 msgstr ""
 
 #: inc/widgets/widget-category-posts-boxed.php:231
 #: inc/widgets/widget-category-posts-columns.php:259
-#: inc/widgets/widget-category-posts-grid.php:254
+#: inc/widgets/widget-category-posts-grid.php:259
 #: inc/widgets/widget-category-posts-single.php:179
 #, php-format
 msgid "View all posts from category %s"
@@ -535,13 +527,13 @@ msgstr ""
 
 #: inc/widgets/widget-category-posts-boxed.php:272
 #: inc/widgets/widget-category-posts-columns.php:297
-#: inc/widgets/widget-category-posts-grid.php:297
+#: inc/widgets/widget-category-posts-grid.php:302
 #: inc/widgets/widget-category-posts-single.php:221
 msgid "Title:"
 msgstr ""
 
 #: inc/widgets/widget-category-posts-boxed.php:278
-#: inc/widgets/widget-category-posts-grid.php:303
+#: inc/widgets/widget-category-posts-grid.php:308
 #: inc/widgets/widget-category-posts-single.php:227
 msgid "Category:"
 msgstr ""
@@ -549,13 +541,13 @@ msgstr ""
 #: inc/widgets/widget-category-posts-boxed.php:281
 #: inc/widgets/widget-category-posts-columns.php:306
 #: inc/widgets/widget-category-posts-columns.php:321
-#: inc/widgets/widget-category-posts-grid.php:306
+#: inc/widgets/widget-category-posts-grid.php:311
 #: inc/widgets/widget-category-posts-single.php:230
 msgid "All Categories"
 msgstr ""
 
 #: inc/widgets/widget-category-posts-boxed.php:295
-#: inc/widgets/widget-category-posts-grid.php:334
+#: inc/widgets/widget-category-posts-grid.php:339
 #: inc/widgets/widget-category-posts-single.php:250
 msgid "Link Widget Title to Category Archive page"
 msgstr ""
@@ -583,7 +575,7 @@ msgid "Right Category:"
 msgstr ""
 
 #: inc/widgets/widget-category-posts-columns.php:333
-#: inc/widgets/widget-category-posts-grid.php:318
+#: inc/widgets/widget-category-posts-grid.php:323
 #: inc/widgets/widget-category-posts-single.php:242
 msgid "Number of posts:"
 msgstr ""
@@ -606,11 +598,11 @@ msgstr ""
 msgid "Category Posts Grid (Dynamic News)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:320
+#: inc/widgets/widget-category-posts-grid.php:325
 msgid "Please chose an even number (2, 4, 6, 8)."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:327
+#: inc/widgets/widget-category-posts-grid.php:332
 msgid "Display as small posts grid with thumbnails"
 msgstr ""
 

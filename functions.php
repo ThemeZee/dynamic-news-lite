@@ -227,7 +227,17 @@ function dynamicnews_get_featured_content() {
 // Change Excerpt Length
 add_filter('excerpt_length', 'dynamicnews_excerpt_length');
 function dynamicnews_excerpt_length($length) {
-    return 60;
+
+	// Get Theme Options from Database
+	$theme_options = dynamicnews_theme_options();
+
+	// Return Excerpt Length
+	if ( isset($theme_options['excerpt_length']) and $theme_options['excerpt_length'] >= 0 ) :
+		return absint( $theme_options['excerpt_length'] );
+	else :
+		return 60; // number of words
+	endif;
+
 }
 
 
