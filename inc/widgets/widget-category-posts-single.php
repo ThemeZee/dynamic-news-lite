@@ -10,7 +10,7 @@ class Dynamic_News_Category_Posts_Single_Widget extends WP_Widget {
 			'classname' => 'dynamicnews_category_posts_single', 
 			'description' => __('Displays a single post from a selected category. Please use this widget ONLY in the Frontpage Magazine widget area.', 'dynamicnewslite')
 		);
-		$this->WP_Widget('dynamicnews_category_posts_single', __('Category Posts Single (Dynamic News)', 'dynamicnewslite'), $widget_ops);
+		parent::__construct('dynamicnews_category_posts_single', __('Category Posts Single (Dynamic News)', 'dynamicnewslite'), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );

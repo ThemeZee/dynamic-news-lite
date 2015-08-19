@@ -10,7 +10,7 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 			'classname' => 'dynamicnews_category_posts_boxed', 
 			'description' => __('Display latest posts from category in boxed layout. Please use this widget ONLY on Frontpage Magazine widget area.', 'dynamicnewslite')
 		);
-		$this->WP_Widget('dynamicnews_category_posts_boxed', __('Category Posts Boxed (Dynamic News)', 'dynamicnewslite'), $widget_ops);
+		parent::__construct('dynamicnews_category_posts_boxed', __('Category Posts Boxed (Dynamic News)', 'dynamicnewslite'), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );

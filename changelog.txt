@@ -2,6 +2,10 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.2.2
+-----------------------------------
+[fixed] deprecating PHP4 style constructors notices in WordPress 4.3
+
 Version 1.2.1
 -----------------------------------
 [added] setting to configure length of excerpts
