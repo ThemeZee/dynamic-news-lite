@@ -10,7 +10,7 @@
 		
 			<header class="page-header">
 				<h2 id="search-title" class="archive-title">
-					<?php printf( __( 'Search Results for: %s', 'dynamicnewslite' ), '<span>' . get_search_query() . '</span>' ); ?>
+					<?php printf( __( 'Search Results for: %s', 'dynamic-news-lite' ), '<span>' . get_search_query() . '</span>' ); ?>
 				</h2>
 			</header>
 			
@@ -35,7 +35,7 @@
 			<div class="post">
 				
 				<div class="entry">
-					<p><?php _e('No matches. Please try again, or use the navigation menus to find what you search for.', 'dynamicnewslite'); ?></p>
+					<p><?php _e('No matches. Please try again, or use the navigation menus to find what you search for.', 'dynamic-news-lite'); ?></p>
 				</div>
 				
 			</div>

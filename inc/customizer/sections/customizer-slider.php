@@ -11,7 +11,7 @@ function dynamicnews_customize_register_slider_settings( $wp_customize ) {
 
 	// Add Sections for Slider Settings
 	$wp_customize->add_section( 'dynamicnews_section_slider', array(
-        'title'    => __( 'Post Slider', 'dynamicnewslite' ),
+        'title'    => __( 'Post Slider', 'dynamic-news-lite' ),
         'priority' => 50,
 		'panel' => 'dynamicnews_options_panel' 
 		)
@@ -27,7 +27,7 @@ function dynamicnews_customize_register_slider_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Dynamic_News_Customize_Header_Control(
         $wp_customize, 'dynamicnews_control_slider_activated', array(
-            'label' => __( 'Activate Featured Post Slider', 'dynamicnewslite' ),
+            'label' => __( 'Activate Featured Post Slider', 'dynamic-news-lite' ),
             'section' => 'dynamicnews_section_slider',
             'settings' => 'dynamicnews_theme_options[slider_activated]',
             'priority' => 1
@@ -42,7 +42,7 @@ function dynamicnews_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_slider_activated_frontpage', array(
-        'label'    => __( 'Display Slider on Magazine Front Page template.', 'dynamicnewslite' ),
+        'label'    => __( 'Display Slider on Magazine Front Page template.', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_slider',
         'settings' => 'dynamicnews_theme_options[slider_activated_front_page]',
         'type'     => 'checkbox',
@@ -57,7 +57,7 @@ function dynamicnews_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_slider_activated_blog', array(
-        'label'    => __( 'Display Slider on normal blog index.', 'dynamicnewslite' ),
+        'label'    => __( 'Display Slider on normal blog index.', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_slider',
         'settings' => 'dynamicnews_theme_options[slider_activated_blog]',
         'type'     => 'checkbox',
@@ -75,7 +75,7 @@ function dynamicnews_customize_register_slider_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Dynamic_News_Customize_Header_Control(
         $wp_customize, 'dynamicnews_control_featured_posts_header', array(
-            'label' => __( 'Select Featured Posts', 'dynamicnewslite' ),
+            'label' => __( 'Select Featured Posts', 'dynamic-news-lite' ),
             'section' => 'dynamicnews_section_slider',
             'settings' => 'dynamicnews_theme_options[featured_posts_header]',
             'priority' => 3,
@@ -92,7 +92,7 @@ function dynamicnews_customize_register_slider_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Dynamic_News_Customize_Description_Control(
         $wp_customize, 'dynamicnews_control_featured_posts_description', array(
-			'label'    => __( 'The slideshow displays all your featured posts. You can easily feature posts by a tag of your choice.', 'dynamicnewslite' ),
+			'label'    => __( 'The slideshow displays all your featured posts. You can easily feature posts by a tag of your choice.', 'dynamic-news-lite' ),
             'section' => 'dynamicnews_section_slider',
             'settings' => 'dynamicnews_theme_options[featured_posts_description]',
             'priority' => 4,
@@ -110,15 +110,15 @@ function dynamicnews_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_slider_animation', array(
-        'label'    => __( 'Slider Animation', 'dynamicnewslite' ),
+        'label'    => __( 'Slider Animation', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_slider',
         'settings' => 'dynamicnews_theme_options[slider_animation]',
         'type'     => 'radio',
 		'priority' => 8,
 		'active_callback' => 'dynamicnews_slider_activated_callback',
         'choices'  => array(
-            'horizontal' => __( 'Horizontal Slider', 'dynamicnewslite' ),
-            'fade' => __( 'Fade Slider', 'dynamicnewslite' )
+            'horizontal' => __( 'Horizontal Slider', 'dynamic-news-lite' ),
+            'fade' => __( 'Fade Slider', 'dynamic-news-lite' )
 			)
 		)
 	);

@@ -36,7 +36,7 @@ function dynamicnews_enqueue_scripts() {
 	wp_enqueue_script('dynamicnewslite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
 	
 	// Passing Parameters to Navigation.js Javascript
-	wp_localize_script( 'dynamicnewslite-jquery-navigation', 'dynamicnews_menu_title', __('Menu', 'dynamicnewslite') );
+	wp_localize_script( 'dynamicnewslite-jquery-navigation', 'dynamicnews_menu_title', __('Menu', 'dynamic-news-lite') );
 	
 	// Register and Enqueue Font
 	wp_enqueue_style('dynamicnewslite-default-fonts', dynamicnews_fonts_url(), array(), null );
@@ -110,7 +110,7 @@ function dynamicnews_setup() {
 		$content_width = 860;
 		
 	// init Localization
-	load_theme_textdomain('dynamicnewslite', get_template_directory() . '/languages' );
+	load_theme_textdomain('dynamic-news-lite', get_template_directory() . '/languages' );
 
 	// Add Theme Support
 	add_theme_support('post-thumbnails');
@@ -132,11 +132,11 @@ function dynamicnews_setup() {
 	add_theme_support( 'dynamicnews-pro' );
 
 	// Register Navigation Menus
-	register_nav_menu( 'primary', __('Main Navigation', 'dynamicnewslite') );
-	register_nav_menu( 'footer', __('Footer Navigation', 'dynamicnewslite') );
+	register_nav_menu( 'primary', __('Main Navigation', 'dynamic-news-lite') );
+	register_nav_menu( 'footer', __('Footer Navigation', 'dynamic-news-lite') );
 	
 	// Register Social Icons Menu
-	register_nav_menu( 'social', __('Social Icons', 'dynamicnewslite') );
+	register_nav_menu( 'social', __('Social Icons', 'dynamic-news-lite') );
 
 }
 endif;
@@ -176,18 +176,18 @@ function dynamicnews_register_sidebars() {
 
 	// Register Sidebars
 	register_sidebar( array(
-		'name' => __( 'Sidebar', 'dynamicnewslite' ),
+		'name' => __( 'Sidebar', 'dynamic-news-lite' ),
 		'id' => 'sidebar',
-		'description' => __( 'Appears on posts and pages except front page and fullwidth template.', 'dynamicnewslite' ),
+		'description' => __( 'Appears on posts and pages except front page and fullwidth template.', 'dynamic-news-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widgettitle"><span>',
 		'after_title' => '</span></h3>',
 	));
 	register_sidebar( array(
-		'name' => __( 'Magazine Front Page', 'dynamicnewslite' ),
+		'name' => __( 'Magazine Front Page', 'dynamic-news-lite' ),
 		'id' => 'frontpage-magazine',
-		'description' => __( 'Appears on Magazine Front Page page template only. You can use the Category Posts widgets here.', 'dynamicnewslite' ),
+		'description' => __( 'Appears on Magazine Front Page page template only. You can use the Category Posts widgets here.', 'dynamic-news-lite' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widgettitle">',
@@ -277,8 +277,8 @@ function dynamicnews_list_comments($comment, $args, $depth) {
 	if( $comment->comment_type == 'pingback' or $comment->comment_type == 'trackback' ) : ?>
 
 		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-			<p><?php _e( 'Pingback:', 'dynamicnewslite' ); ?> <?php comment_author_link(); ?>
-			<?php edit_comment_link( __( '(Edit)', 'dynamicnewslite' ), '<span class="edit-link">', '</span>' ); ?>
+			<p><?php _e( 'Pingback:', 'dynamic-news-lite' ); ?> <?php comment_author_link(); ?>
+			<?php edit_comment_link( __( '(Edit)', 'dynamic-news-lite' ), '<span class="edit-link">', '</span>' ); ?>
 			</p>
 
 	<?php else : ?>
@@ -294,7 +294,7 @@ function dynamicnews_list_comments($comment, $args, $depth) {
 							<?php echo get_comment_date(); ?>
 							<?php echo get_comment_time(); ?>
 						</a>
-						<?php edit_comment_link(__('(Edit)', 'dynamicnewslite'),'  ','') ?>
+						<?php edit_comment_link(__('(Edit)', 'dynamic-news-lite'),'  ','') ?>
 					</div>
 
 				</div>
@@ -304,7 +304,7 @@ function dynamicnews_list_comments($comment, $args, $depth) {
 					<?php echo get_avatar( $comment, 72 ); ?>
 
 					<?php if ($comment->comment_approved == '0') : ?>
-						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'dynamicnewslite' ); ?></p>
+						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'dynamic-news-lite' ); ?></p>
 					<?php endif; ?>
 
 					<?php comment_text(); ?>

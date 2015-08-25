@@ -26,7 +26,7 @@ function dynamicnews_customize_register_options( $wp_customize ) {
 		'priority'       => 180,
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
-		'title'          => __( 'Theme Options', 'dynamicnewslite' ),
+		'title'          => __( 'Theme Options', 'dynamic-news-lite' ),
 		'description'    => '',
 	) );
 
@@ -47,7 +47,7 @@ function dynamicnews_customize_register_options( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_header_tagline', array(
-        'label'    => __( 'Display Tagline below site title.', 'dynamicnewslite' ),
+        'label'    => __( 'Display Tagline below site title.', 'dynamic-news-lite' ),
         'section'  => 'title_tagline',
         'settings' => 'dynamicnews_theme_options[header_tagline]',
         'type'     => 'checkbox',

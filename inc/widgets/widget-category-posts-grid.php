@@ -8,9 +8,9 @@ class Dynamic_News_Category_Posts_Grid_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'dynamicnews_category_posts_grid', 
-			'description' => __('Display latest posts from category in a grid layout. Please use this widget ONLY on Frontpage Magazine widget area.', 'dynamicnewslite')
+			'description' => __('Display latest posts from category in a grid layout. Please use this widget ONLY on Frontpage Magazine widget area.', 'dynamic-news-lite')
 		);
-		parent::__construct('dynamicnews_category_posts_grid', __('Category Posts Grid (Dynamic News)', 'dynamicnewslite'), $widget_ops);
+		parent::__construct('dynamicnews_category_posts_grid', __('Category Posts Grid (Dynamic News)', 'dynamic-news-lite'), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
@@ -215,7 +215,7 @@ class Dynamic_News_Category_Posts_Grid_Widget extends WP_Widget {
 
 	<?php if ( comments_open() ) : ?>
 		<span class="meta-comments">
-			<?php comments_popup_link( __('Leave a comment', 'dynamicnewslite'),__('One comment','dynamicnewslite'),__('% comments','dynamicnewslite') ); ?>
+			<?php comments_popup_link( __('Leave a comment', 'dynamic-news-lite'),__('One comment','dynamic-news-lite'),__('% comments','dynamic-news-lite') ); ?>
 		</span>
 	<?php endif;
 
@@ -244,7 +244,7 @@ class Dynamic_News_Category_Posts_Grid_Widget extends WP_Widget {
 				// Check if "All Categories" is selected
 				if( $category == 0 ) :
 				
-					$link_title = __('View all posts', 'dynamicnewslite');
+					$link_title = __('View all posts', 'dynamic-news-lite');
 					
 					// Set Link URL to always point to latest posts page
 					if ( get_option( 'show_on_front' ) == 'page' ) :
@@ -256,7 +256,7 @@ class Dynamic_News_Category_Posts_Grid_Widget extends WP_Widget {
 				else :
 					
 					// Set Link URL and Title for Category
-					$link_title = sprintf( __('View all posts from category %s', 'dynamicnewslite'), get_cat_name( $category ) );
+					$link_title = sprintf( __('View all posts from category %s', 'dynamic-news-lite'), get_cat_name( $category ) );
 					$link_url = esc_url( get_category_link( $category ) );
 					
 				endif;
@@ -299,16 +299,16 @@ class Dynamic_News_Category_Posts_Grid_Widget extends WP_Widget {
 
 ?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'dynamicnewslite'); ?>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'dynamic-news-lite'); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</label>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Category:', 'dynamicnewslite'); ?></label><br/>
+			<label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Category:', 'dynamic-news-lite'); ?></label><br/>
 			<?php // Display Category Select
 				$args = array(
-					'show_option_all'    => __('All Categories', 'dynamicnewslite'),
+					'show_option_all'    => __('All Categories', 'dynamic-news-lite'),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $category,
@@ -320,23 +320,23 @@ class Dynamic_News_Category_Posts_Grid_Widget extends WP_Widget {
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts:', 'dynamicnewslite'); ?>
+			<label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts:', 'dynamic-news-lite'); ?>
 				<input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" size="3" />
-				<br/><span class="description"><?php _e('Please chose an even number (2, 4, 6, 8).', 'dynamicnewslite'); ?></span>
+				<br/><span class="description"><?php _e('Please chose an even number (2, 4, 6, 8).', 'dynamic-news-lite'); ?></span>
 			</label>
 		</p>
 		
 		<p>
 			<label for="<?php echo $this->get_field_id('thumbnails'); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $thumbnails ) ; ?> id="<?php echo $this->get_field_id('thumbnails'); ?>" name="<?php echo $this->get_field_name('thumbnails'); ?>" />
-				<?php _e('Display as small posts grid with thumbnails', 'dynamicnewslite'); ?>
+				<?php _e('Display as small posts grid with thumbnails', 'dynamic-news-lite'); ?>
 			</label>
 		</p>
 		
 		<p>
 			<label for="<?php echo $this->get_field_id('category_link'); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $category_link ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
-				<?php _e('Link Widget Title to Category Archive page', 'dynamicnewslite'); ?>
+				<?php _e('Link Widget Title to Category Archive page', 'dynamic-news-lite'); ?>
 			</label>
 		</p>
 <?php

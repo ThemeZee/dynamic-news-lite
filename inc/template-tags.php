@@ -59,7 +59,7 @@ if ( ! function_exists( 'dynamicnews_display_postmeta' ) ):
 		if ( isset($theme_options['meta_date']) and $theme_options['meta_date'] == true ) : ?>
 		
 			<span class="meta-date sep">
-			<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 'dynamicnewslite'), 
+			<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 'dynamic-news-lite'), 
 					esc_url( get_permalink() ),
 					esc_attr( get_the_time() ),
 					esc_attr( get_the_date( 'c' ) ),
@@ -74,9 +74,9 @@ if ( ! function_exists( 'dynamicnews_display_postmeta' ) ):
 		if ( isset($theme_options['meta_author']) and $theme_options['meta_author'] == true ) : ?>		
 		
 			<span class="meta-author sep">
-			<?php printf(__('<span class="author vcard"><a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 'dynamicnewslite'), 
+			<?php printf(__('<span class="author vcard"><a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 'dynamic-news-lite'), 
 					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-					esc_attr( sprintf( __( 'View all posts by %s', 'dynamicnewslite' ), get_the_author() ) ),
+					esc_attr( sprintf( __( 'View all posts by %s', 'dynamic-news-lite' ), get_the_author() ) ),
 					get_the_author()
 				);
 			?>
@@ -87,13 +87,13 @@ if ( ! function_exists( 'dynamicnews_display_postmeta' ) ):
 		if ( comments_open() ) : ?>
 		
 			<span class="meta-comments">
-				<?php comments_popup_link( __('Leave a comment', 'dynamicnewslite'),__('One comment','dynamicnewslite'),__('% comments','dynamicnewslite') ); ?>
+				<?php comments_popup_link( __('Leave a comment', 'dynamic-news-lite'),__('One comment','dynamic-news-lite'),__('% comments','dynamic-news-lite') ); ?>
 			</span>
 		
 		<?php endif; ?>
 	
 		<?php
-		edit_post_link(__( 'Edit Post', 'dynamicnewslite' ));
+		edit_post_link(__( 'Edit Post', 'dynamic-news-lite' ));
 	}
 	
 endif;
@@ -171,7 +171,7 @@ if ( ! function_exists( 'dynamicnews_display_postinfo_single' ) ):
 			if ( $tag_list ) : ?>
 				
 				<span class="meta-tags">
-					<?php printf(__('tagged with %1$s', 'dynamicnewslite'), $tag_list); ?>
+					<?php printf(__('tagged with %1$s', 'dynamic-news-lite'), $tag_list); ?>
 				</span>
 		
 			<?php endif;
@@ -227,9 +227,9 @@ add_action( 'dynamicnews_footer_text', 'dynamicnews_display_footer_text' );
 function dynamicnews_display_footer_text() { ?>
 
 	<span class="credit-link">
-		<?php printf(__( 'Powered by %1$s and %2$s.', 'dynamicnewslite' ), 
-			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'dynamicnewslite' ) ),
-			sprintf( '<a href="http://themezee.com/themes/dynamicnews/" title="Dynamic News WordPress Theme">%s</a>', __( 'Dynamic News', 'dynamicnewslite' ) )
+		<?php printf(__( 'Powered by %1$s and %2$s.', 'dynamic-news-lite' ), 
+			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'dynamic-news-lite' ) ),
+			sprintf( '<a href="http://themezee.com/themes/dynamicnews/" title="Dynamic News WordPress Theme">%s</a>', __( 'Dynamic News', 'dynamic-news-lite' ) )
 		); ?>
 	</span>
 
@@ -261,7 +261,7 @@ function dynamicnews_display_social_icons() {
 	else: // Display Hint how to configure Social Icons ?>
 
 		<p class="social-icons-hint">
-			<?php _e('Please go to WP-Admin-> Appearance-> Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" theme location.', 'dynamicnewslite'); ?>
+			<?php _e('Please go to WP-Admin-> Appearance-> Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" theme location.', 'dynamic-news-lite'); ?>
 		</p>
 <?php
 	endif;
