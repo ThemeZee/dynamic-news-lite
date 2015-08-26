@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Magazine Front Page
+Template Name: Magazine Homepage
 */
 ?>
 <?php get_header(); ?>

@@ -8,9 +8,9 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'dynamicnews_category_posts_columns', 
-			'description' => __('Display latest posts from two specified categories. Please use this widget ONLY on Frontpage Magazine widget area.', 'dynamic-news-lite')
+			'description' => __('Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'dynamic-news-lite')
 		);
-		parent::__construct('dynamicnews_category_posts_columns', __('Category Posts Columns (Dynamic News)', 'dynamic-news-lite'), $widget_ops);
+		parent::__construct('dynamicnews_category_posts_columns', sprintf( __('Category Posts: 2 Columns (%s)', 'dynamic-news-lite'), 'Dynamic News' ), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
@@ -338,7 +338,7 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id('highlight_post'); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $highlight_post ) ; ?> id="<?php echo $this->get_field_id('highlight_post'); ?>" name="<?php echo $this->get_field_name('highlight_post'); ?>" />
-				<?php _e('Highlight First Post (Big Image + Excerpt)', 'dynamic-news-lite'); ?>
+				<?php _e('Highlight first post (big image + excerpt)', 'dynamic-news-lite'); ?>
 			</label>
 		</p>
 		

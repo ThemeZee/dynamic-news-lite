@@ -42,7 +42,7 @@ function dynamicnews_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_slider_activated_frontpage', array(
-        'label'    => __( 'Display Slider on Magazine Front Page template.', 'dynamic-news-lite' ),
+        'label'    => __( 'Display Slider on Magazine Homepage template.', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_slider',
         'settings' => 'dynamicnews_theme_options[slider_activated_front_page]',
         'type'     => 'checkbox',
