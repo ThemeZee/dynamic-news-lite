@@ -11,7 +11,7 @@ $slider_posts = dynamicnews_get_featured_content();
 if ( empty( $slider_posts ) and current_user_can( 'edit_theme_options' ) ) : ?>
 
 	<p class="frontpage-slider-empty-posts">
-		<?php _e('There is no featured content to be displayed in the slider. To set up the slider, go to Appearance -> Customize, and add a tag under Tag Name in the Featured Content section. The slideshow will then display all posts which are tagged with that keyword.', 'dynamic-news-lite'); ?>
+		<?php _e('There is no featured content to be displayed in the slider. To set up the slider, go to Appearance &#8594; Customize &#8594; Theme Options, and add a featured tag in the Post Slider section. The slideshow displays all your posts which are tagged with that keyword.', 'dynamic-news-lite'); ?>
 	</p>
 	
 <?php

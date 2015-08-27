@@ -32,7 +32,7 @@ function dynamicnews_customize_register_general_settings( $wp_customize ) {
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(
-            'boxed' => __( 'Boxed Layout Width', 'dynamic-news-lite' ),
+            'boxed' => __( 'Boxed Layout', 'dynamic-news-lite' ),
             'wide' => __( 'Wide Layout (Fullwidth)', 'dynamic-news-lite' )
 			)
 		)

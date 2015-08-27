@@ -227,9 +227,9 @@ add_action( 'dynamicnews_footer_text', 'dynamicnews_display_footer_text' );
 function dynamicnews_display_footer_text() { ?>
 
 	<span class="credit-link">
-		<?php printf(__( 'Powered by %1$s and %2$s.', 'dynamic-news-lite' ), 
-			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'dynamic-news-lite' ) ),
-			sprintf( '<a href="http://themezee.com/themes/dynamicnews/" title="Dynamic News WordPress Theme">%s</a>', __( 'Dynamic News', 'dynamic-news-lite' ) )
+		<?php printf( __( 'Powered by %1$s and %2$s.', 'dynamic-news-lite' ), 
+			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
+			'<a href="http://themezee.com/themes/dynamicnews/" title="Dynamic News WordPress Theme">Dynamic News</a>'
 		); ?>
 	</span>
 

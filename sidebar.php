@@ -11,9 +11,9 @@
 			else : ?>
 
 			<aside class="widget">
-				<h3 class="widgettitle"><?php _e('Widget Area', 'dynamic-news-lite'); ?></h3>
+				<h3 class="widgettitle"><?php _e('Sidebar', 'dynamic-news-lite'); ?></h3>
 				<div class="textwidget">
-					<p><?php _e('There are no active widgets to be displayed. Please go to Appearance -> Widgets to setup your sidebar.', 'dynamic-news-lite'); ?></p>
+					<p><?php _e('Please go to Appearance &#8594; Widgets to set up your widgets in the sidebar.', 'dynamic-news-lite'); ?></p>
 				</div>
 			</aside>
 		

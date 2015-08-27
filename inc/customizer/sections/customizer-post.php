@@ -26,14 +26,14 @@ function dynamicnews_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_posts_length', array(
-        'label'    => __( 'Post Length on archives', 'dynamic-news-lite' ),
+        'label'    => __( 'Post length on archives', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_post',
         'settings' => 'dynamicnews_theme_options[posts_length]',
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(
             'index' => __( 'Show full posts', 'dynamic-news-lite' ),
-            'excerpt' => __( 'Show post summaries (excerpt)', 'dynamic-news-lite' )
+            'excerpt' => __( 'Show post excerpts', 'dynamic-news-lite' )
 			)
 		)
 	);

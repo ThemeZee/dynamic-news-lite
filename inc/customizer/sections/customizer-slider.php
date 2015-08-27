@@ -27,7 +27,7 @@ function dynamicnews_customize_register_slider_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Dynamic_News_Customize_Header_Control(
         $wp_customize, 'dynamicnews_control_slider_activated', array(
-            'label' => __( 'Activate Featured Post Slider', 'dynamic-news-lite' ),
+            'label' => __( 'Activate Post Slider', 'dynamic-news-lite' ),
             'section' => 'dynamicnews_section_slider',
             'settings' => 'dynamicnews_theme_options[slider_activated]',
             'priority' => 1
@@ -42,7 +42,7 @@ function dynamicnews_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_slider_activated_frontpage', array(
-        'label'    => __( 'Display Slider on Magazine Homepage template.', 'dynamic-news-lite' ),
+        'label'    => __( 'Show Slider on Magazine Homepage', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_slider',
         'settings' => 'dynamicnews_theme_options[slider_activated_front_page]',
         'type'     => 'checkbox',
@@ -57,7 +57,7 @@ function dynamicnews_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_slider_activated_blog', array(
-        'label'    => __( 'Display Slider on normal blog index.', 'dynamic-news-lite' ),
+        'label'    => __( 'Show Slider on posts page', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_slider',
         'settings' => 'dynamicnews_theme_options[slider_activated_blog]',
         'type'     => 'checkbox',
@@ -117,8 +117,8 @@ function dynamicnews_customize_register_slider_settings( $wp_customize ) {
 		'priority' => 8,
 		'active_callback' => 'dynamicnews_slider_activated_callback',
         'choices'  => array(
-            'horizontal' => __( 'Horizontal Slider', 'dynamic-news-lite' ),
-            'fade' => __( 'Fade Slider', 'dynamic-news-lite' )
+            'horizontal' => __( 'Slide Effect', 'dynamic-news-lite' ),
+            'fade' => __( 'Fade Effect', 'dynamic-news-lite' )
 			)
 		)
 	);
