@@ -66,7 +66,7 @@ function dynamicnews_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Dynamic_News_Customize_Header_Control(
         $wp_customize, 'dynamicnews_control_excerpt_text_headline', array(
-            'label' => __( 'Excerpt More Text', 'dynamic-news-lite' ),
+            'label' => __( 'Text after Excerpts', 'dynamic-news-lite' ),
             'section' => 'dynamicnews_section_post',
             'settings' => 'dynamicnews_theme_options[excerpt_text_headline]',
             'priority' => 3
@@ -81,7 +81,7 @@ function dynamicnews_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_excerpt_text', array(
-        'label'    => __( 'Display [...] after text excerpts.', 'dynamic-news-lite' ),
+        'label'    => __( 'Display [...] after excerpts', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_post',
         'settings' => 'dynamicnews_theme_options[excerpt_text]',
         'type'     => 'checkbox',
@@ -138,7 +138,7 @@ function dynamicnews_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	
-	// Add Postmeta Settings
+	// Add Post Meta Settings
 	$wp_customize->add_setting( 'dynamicnews_theme_options[postmeta_headline]', array(
         'default'           => '',
 		'type'           	=> 'option',
@@ -148,7 +148,7 @@ function dynamicnews_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Dynamic_News_Customize_Header_Control(
         $wp_customize, 'dynamicnews_control_postmeta_headline', array(
-            'label' => __( 'Postmeta', 'dynamic-news-lite' ),
+            'label' => __( 'Post Meta', 'dynamic-news-lite' ),
             'section' => 'dynamicnews_section_post',
             'settings' => 'dynamicnews_theme_options[postmeta_headline]',
             'priority' => 8
@@ -163,7 +163,7 @@ function dynamicnews_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_meta_date', array(
-        'label'    => __( 'Display date on posts.', 'dynamic-news-lite' ),
+        'label'    => __( 'Display post date', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_post',
         'settings' => 'dynamicnews_theme_options[meta_date]',
         'type'     => 'checkbox',
@@ -178,7 +178,7 @@ function dynamicnews_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_meta_author', array(
-        'label'    => __( 'Display author on posts.', 'dynamic-news-lite' ),
+        'label'    => __( 'Display post author', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_post',
         'settings' => 'dynamicnews_theme_options[meta_author]',
         'type'     => 'checkbox',
@@ -193,7 +193,7 @@ function dynamicnews_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_meta_category', array(
-        'label'    => __( 'Display categories on posts.', 'dynamic-news-lite' ),
+        'label'    => __( 'Display post categories', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_post',
         'settings' => 'dynamicnews_theme_options[meta_category]',
         'type'     => 'checkbox',
@@ -208,7 +208,7 @@ function dynamicnews_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_meta_tags', array(
-        'label'    => __( 'Display tags on posts.', 'dynamic-news-lite' ),
+        'label'    => __( 'Display post tags', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_post',
         'settings' => 'dynamicnews_theme_options[meta_tags]',
         'type'     => 'checkbox',

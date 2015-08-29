@@ -1,234 +1,46 @@
-# Translation of Dynamic News in German
-# This file is distributed under the same license as the Dynamic News package.
+# Translation of Everything in German
+# This file is distributed under the same license as the Everything package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-04-30 10:35+0100\n"
+"Project-Id-Version: Everything\n"
+"Report-Msgid-Bugs-To: http://themezee.com/\n"
+"POT-Creation-Date: 2015-08-29 14:26+0100\n"
+"PO-Revision-Date: 2015-08-29 14:27+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 1.5.7\n"
-"Project-Id-Version: Dynamic News\n"
-"POT-Creation-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-
-#: inc/featured-content.php:351
-msgid ""
-"Easily feature all posts with the <a href=\"%1$s\">\"featured\" tag</a> or a "
-"tag of your choice. Your theme supports up to %2$s posts in its featured "
-"content area."
-msgstr ""
-
-#: inc/featured-content.php:378
-msgid "Tag name"
-msgstr ""
-
-#: inc/featured-content.php:383
-msgid "Hide tag from displaying in post meta and tag clouds."
-msgstr ""
-
-#: inc/featured-content.php:389
-msgid "Display featured posts in latest blog post listing."
-msgstr ""
-
-#: inc/template-tags.php:56
-msgid ""
-"<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date "
-"published updated\" datetime=\"%3$s\">%4$s</time></a>"
-msgstr ""
-
-#: inc/template-tags.php:66
-msgid ""
-"<span class=\"author vcard\"><a class=\"fn\" href=\"%1$s\" title=\"%2$s\" "
-"rel=\"author\">%3$s</a></span>"
-msgstr ""
-
-#: template-frontpage.php:39
-msgid ""
-"There are no widgets to be displayed. Please go to Appearance -> Widgets and "
-"add at least one widget to the \"Magazine Front Page\" widget area. You can "
-"use the three Category Posts widgets to set up the theme like the demo "
-"website."
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:71
-msgid "Default Fonts"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:88
-msgid "Deactivate Google Fonts in case your language is not compatible."
-msgstr ""
-
-#: inc/widgets/widget-category-posts-boxed.php:219
-#: inc/widgets/widget-category-posts-columns.php:245
-#: inc/widgets/widget-category-posts-grid.php:242
-#: inc/widgets/widget-category-posts-single.php:167
-msgid "View all posts"
-msgstr ""
-
-#: inc/widgets/widget-category-posts-columns.php:246
-msgid "Latest Posts"
-msgstr ""
-
-#: inc/widgets/widget-category-posts-single.php:11
-msgid ""
-"Displays a single post from a selected category. Please use this widget ONLY "
-"in the Frontpage Magazine widget area."
-msgstr ""
-
-#: inc/widgets/widget-category-posts-single.php:13
-msgid "Category Posts Single (Dynamic News)"
-msgstr ""
-
-#: featured-content-slider.php:14
-msgid ""
-"There is no featured content to be displayed in the slider. To set up the "
-"slider, go to Appearance -> Customize, and add a tag under Tag Name in the "
-"Featured Content section. The slideshow will then display all posts which "
-"are tagged with that keyword."
-msgstr ""
-
-#: inc/widgets/widget-category-posts-boxed.php:231
-#: inc/widgets/widget-category-posts-columns.php:259
-#: inc/widgets/widget-category-posts-grid.php:254
-#: inc/widgets/widget-category-posts-single.php:179
-msgid "View all posts from category %s"
-msgstr "Zeige alle Beiträge der Kategorie %s"
-
-#: inc/widgets/widget-category-posts-boxed.php:295
-#: inc/widgets/widget-category-posts-grid.php:334
-#: inc/widgets/widget-category-posts-single.php:250
-msgid "Link Widget Title to Category Archive page"
-msgstr "Verlinke den Widget Titel mit dem Kategorie Archiv"
-
-#: inc/widgets/widget-category-posts-columns.php:341
-msgid "Highlight First Post (Big Image + Excerpt)"
-msgstr "Heben den ersten Beitrag hervor (Großes Thumbnail + Textauszug)"
-
-#: inc/widgets/widget-category-posts-columns.php:348
-msgid "Display Category Titles"
-msgstr "Zeige Kategorie Namen als Titel an"
-
-#: inc/widgets/widget-category-posts-grid.php:327
-msgid "Display as small posts grid with thumbnails"
-msgstr "Verwende ein Raster mit kleinen Thumbnails"
-
-#: inc/theme-info.php:73
-msgid "Customize Theme"
-msgstr "Design anpassen"
-
-#: inc/widgets/widget-category-posts-boxed.php:13
-msgid "Category Posts Boxed (Dynamic News)"
-msgstr "Kategorie-Beiträge Box-Layout (Dynamic News)"
-
-#: inc/widgets/widget-category-posts-boxed.php:281
-#: inc/widgets/widget-category-posts-columns.php:306
-#: inc/widgets/widget-category-posts-columns.php:321
-#: inc/widgets/widget-category-posts-grid.php:306
-#: inc/widgets/widget-category-posts-single.php:230
-msgid "All Categories"
-msgstr "Alle Kategorien"
-
-#: inc/widgets/widget-category-posts-columns.php:13
-msgid "Category Posts Columns (Dynamic News)"
-msgstr "Kategorie-Beiträge Spaltenanzahl (Dynamic News)"
-
-#: inc/widgets/widget-category-posts-grid.php:13
-msgid "Category Posts Grid (Dynamic News)"
-msgstr "Kategorie-Beiträge Tabelle (Dynamic News)"
-
-#: inc/customizer/sections/customizer-general.php:14
-msgid "General Settings"
-msgstr "Grundeinstellungen"
-
-#: inc/customizer/sections/customizer-post.php:14
-msgid "Post Settings"
-msgstr "Einstellungen für Beiträge"
-
-#: inc/customizer/sections/customizer-post.php:51
-msgid "Post Images"
-msgstr "Beitragsbilder"
-
-#: inc/customizer/sections/customizer-post.php:100
-msgid "Excerpt More Text"
-msgstr "Auszug mehr Text"
-
-#: inc/customizer/sections/customizer-post.php:115
-msgid "Display [...] after text excerpts."
-msgstr "Zeige [...] nach Auszug."
-
-#: inc/customizer/sections/customizer-slider.php:14
-msgid "Post Slider"
-msgstr "Beitrag-Diashow"
-
-#: inc/customizer/sections/customizer-slider.php:15
-msgid ""
-"The slideshow displays your featured posts, which you can configure on the "
-"\"Featured Content\" section above."
-msgstr ""
-"Die Diashow zeigt Ihre empfohlenen Beiträge, die Sie unter \"Featured Content"
-"\" konfigurieren können weiter oben."
 
 #: 404.php:9
-msgid "404 Error: Not found"
-msgstr "404 Error: Seite konnte nicht gefunden werden."
+msgid "404: Page not found"
+msgstr "404: Seite nicht gefunden"
 
 #: 404.php:12
 msgid ""
-"The page you trying to reach does not exist, or has been moved. Please use "
-"the menus or the search box to find what you are looking for"
+"It looks like nothing was found at this location. Maybe try a search or one "
+"of the links below?"
 msgstr ""
-"Die gewünschte Seite existiert nicht oder wurde verschoben. Bitte verwenden "
-"Sie die Menüs oder das Suchfeld um zu finden, was Sie suchen."
-
-#: 404.php:14
-msgid "Search"
-msgstr "Suche"
-
-#: 404.php:17
-msgid "Recent Posts"
-msgstr "Aktuelle Beiträge"
-
-#: 404.php:27
-msgid "Pages"
-msgstr "Seiten"
-
-#: archive.php:14
-msgid "Monthly Archives: %s"
-msgstr "Monatliches Archiv: %s"
-
-#: archive.php:14
-msgid "F Y"
-msgstr "F Y"
-
-#: archive.php:16
-msgid "Archives"
-msgstr "Archive"
-
-#: author.php:16
-msgid "Author Archives: %s"
-msgstr "Autor Archive: %s"
-
-#: category.php:12
-msgid "Category Archives: %s"
-msgstr "Kategorie Archive: %s"
+"Unter dieser Adresse wurde nichts gefunden. Möglicherweise hilft eine Suche "
+"oder einer der Links unterhalb?"
 
 #: comments.php:11
 msgid "Enter password to view comments."
-msgstr "Sie müssen angemeldet sein um Kommentare zu sehen."
+msgstr "Passwort eingeben, um Kommentare zu sehen."
 
-#: comments.php:21 inc/template-tags.php:77
+#: comments.php:21 inc/template-tags.php:90
 #: inc/widgets/widget-category-posts-boxed.php:190
 #: inc/widgets/widget-category-posts-columns.php:221
-#: inc/widgets/widget-category-posts-grid.php:213
+#: inc/widgets/widget-category-posts-grid.php:218
 msgid "One comment"
-msgstr "ein Kommentar"
+msgstr "Ein Kommentar"
 
-#: comments.php:21 inc/template-tags.php:77
+#: comments.php:21 inc/template-tags.php:90
 #: inc/widgets/widget-category-posts-boxed.php:190
 #: inc/widgets/widget-category-posts-columns.php:221
-#: inc/widgets/widget-category-posts-grid.php:213
+#: inc/widgets/widget-category-posts-grid.php:218
 msgid "% comments"
 msgstr "% Kommentare"
 
@@ -237,399 +49,1076 @@ msgstr "% Kommentare"
 msgid "Read more"
 msgstr "Weiterlesen"
 
+#: featured-content-slider.php:14
+msgid ""
+"There is no featured content to be displayed in the slider. To set up the "
+"slider, go to Appearance &#8594; Customize &#8594; Theme Options, and add a "
+"featured tag in the Post Slider section. The slideshow displays all your "
+"posts which are tagged with that keyword."
+msgstr ""
+"Es gibt keine hervorgehobene Beiträge, die im Slider angezeigt werden "
+"können. Um den Slider einzurichten, gehe zu Design &#8594; Anpassen &#8594; "
+"Theme Optionen, und füge ein Schlagwort in der Sektion Beitrags-Slider "
+"hinzu. Die Slideshow zeigt alle Beiträge, die mit diesem Schlagwort getaggt "
+"sind."
+
 #: featured-content-slider.php:48
 msgid "Read more &raquo;"
 msgstr "Weiterlesen &raquo;"
 
-#: functions.php:132
-msgid "Main Navigation"
-msgstr "Hauptnavigation"
-
-#: functions.php:133
-msgid "Footer Navigation"
-msgstr "Fußnavigation"
-
-#: functions.php:136
-msgid "Social Icons"
-msgstr "Social-Media-Symbole"
-
-#: functions.php:176 inc/customizer/sections/customizer-general.php:49
-msgid "Sidebar"
-msgstr "Seitenleiste"
-
-#: functions.php:178
-msgid "Appears on posts and pages except front page and fullwidth template."
-msgstr ""
-"Erscheint in Beiträgen und Seiten außer Startseite und Vollbild-Vorlage"
-
-#: functions.php:185
-msgid "Magazine Front Page"
-msgstr "Magazin Startseite"
-
-#: functions.php:187
-msgid ""
-"Appears on Magazine Front Page page template only. You can use the Category "
-"Posts widgets here."
-msgstr ""
-"Erscheint nur auf der Magazin-Startseiten-Vorlage. Sie können das Kategorie-"
-"Beiträge-Widget hier verwenden."
-
-#: inc/template-tags.php:205
-msgid "Powered by %1$s and %2$s."
-msgstr "Präsentiert von %1$s und %2$s."
-
-#: inc/template-tags.php:206
-msgid "WordPress"
-msgstr "WordPress"
-
-#: inc/template-tags.php:207
-msgid "Dynamic News"
-msgstr "Dynamic News"
-
-#: functions.php:267
-msgid "Pingback:"
-msgstr "Pingback:"
-
-#: functions.php:268 functions.php:284
-msgid "(Edit)"
-msgstr "(Bearbeiten)"
-
-#: functions.php:294
-msgid "Your comment is awaiting moderation."
-msgstr "Ihr Kommentar wurde noch nicht genehmigt."
-
-#: image.php:19
-msgid "Previous"
-msgstr "vorherige"
-
-#: image.php:20
-msgid "Next"
-msgstr "nächste"
-
-#: image.php:26
-msgid "Return to Gallery"
-msgstr "Zurück zur Galerie"
-
-#: image.php:27
-msgid "Return to"
-msgstr "Zurück zu"
-
-#: search.php:13 search.php:35
-msgid "Search Results for: %s"
-msgstr "Suchergebnisse für %s"
-
-#: search.php:41
-msgid ""
-"No matches. Please try again, or use the navigation menus to find what you "
-"search for."
-msgstr ""
-"Keine Übereinstimmungen gefunden: Bitte versuchen Sie es erneut oder nutzen "
-"Sie die Navigation um zu finden, wonach Sie suchen."
-
-#: searchform.php:4
-msgid "Search for:"
-msgstr "Suche nach:"
-
-#: sidebar.php:14
-msgid "Widget Area"
-msgstr "Widget-Bereich"
-
-#: sidebar.php:16
-msgid ""
-"There are no active widgets to be displayed. Please go to Appearance -> "
-"Widgets to setup your sidebar."
-msgstr ""
-"Es gibt keine aktiven Widgets die angzeigt werden können. Bitte Gehen zum "
-"Menüpunkt Design ->Widgets auf dem Dashboard um die Seitenleiste "
-"einzurichten."
-
-#: tag.php:12
-msgid "Tag Archives: %s"
-msgstr "Tag Archive: %s"
-
-#: inc/featured-content.php:350
-msgid "Featured Content"
-msgstr "Empfohlener Inhalt"
-
-#: inc/template-tags.php:77 inc/widgets/widget-category-posts-boxed.php:190
-#: inc/widgets/widget-category-posts-columns.php:221
-#: inc/widgets/widget-category-posts-grid.php:213
-msgid "Leave a comment"
-msgstr "Hinterlasse einen Kommentar"
-
-#: inc/template-tags.php:68
-msgid "View all posts by %s"
-msgstr "Zeige alle Beiträge von %s"
-
-#: inc/template-tags.php:83
-msgid "Edit Post"
-msgstr "(Bearbeiten)"
-
-#: inc/template-tags.php:147
-msgid "tagged with %1$s"
-msgstr "mit %1$s getaggt"
-
-#: inc/template-tags.php:239
-msgid ""
-"Please go to WP-Admin-> Appearance-> Menus and create a new custom menu with "
-"custom links to all your social networks. Then click on \"Manage Locations\" "
-"tab and assign your created menu to the \"Social Icons\" theme location."
-msgstr ""
-"Bitte gehen Sie im Dashboard auf Design-> Menüs und erstellen Sie ein "
-"benutzerdefiniertes Menü mit Links zu ihren Seiten in sozialen Netzwerken. "
-"Dann klicken Sie unter \"Position im Theme\" auf \"Social Icons\" um ihr "
-"gerade erstelltes Menü diesem Bereich zuzuweisen."
-
-#: inc/theme-info.php:15
-msgid "Welcome to Dynamic News Lite"
-msgstr ""
-
-#: inc/theme-info.php:16
-msgid "Theme Info"
-msgstr "Design-Info"
-
-#: inc/theme-info.php:35
-msgid "Welcome to %1s %2s"
-msgstr "Willkommen bei %1s %2s"
-
-#: inc/theme-info.php:41
-msgid "Important Links:"
-msgstr "wichtige Links:"
-
-#: inc/theme-info.php:42
-msgid "Theme Info Page"
-msgstr "Design-Infoseite"
-
-#: inc/theme-info.php:43
-msgid "Changelog"
-msgstr "Änderungsprotokoll"
-
-#: inc/theme-info.php:44
-msgid "Theme Demo"
-msgstr "Design-Demo"
-
-#: inc/theme-info.php:45 inc/theme-info.php:60
-msgid "Theme Documentation"
-msgstr "Designdokumentation"
-
-#: inc/theme-info.php:46
-msgid "Rate this theme"
-msgstr ""
-
-#: inc/theme-info.php:57
-msgid "Getting Started with %s"
-msgstr "Erste Schritte mit %s"
-
-#: inc/theme-info.php:62
-msgid ""
-"Need any help to setup and configure this theme? We got you covered with an "
-"extensive theme documentation on our website."
-msgstr ""
-"Benötigen Sie Hilfe zur Einrichtung und Konfiguration dieser Vorlage? Eine "
-"ausführliche Vorlagendokumentation finden Sie auf unserer Internetseite."
-
-#: inc/theme-info.php:64
-msgid "Visit Dynamic News Documentation"
-msgstr "Dynamic News Dokumentation ansehen"
-
-#: inc/theme-info.php:69 inc/customizer/customizer.php:29
-msgid "Theme Options"
-msgstr "Designoptionen"
-
-#: inc/theme-info.php:71
-msgid ""
-"Dynamic News supports the awesome Theme Customizer for all theme settings. "
-"Click \"Customize Theme\" to open the Customizer now."
-msgstr ""
-"Dynamic News bietet umfangreiche Anpassungsmöglichkeiten. Klicken Sie auf "
-"\"Anpassen\" um die Vorlage einzurichten."
-
-#: inc/theme-info.php:78 inc/customizer/sections/customizer-upgrade.php:14
-msgid "PRO Version"
-msgstr ""
-
-#: inc/theme-info.php:80
-msgid ""
-"Need more features? Check out the PRO version which comes with additional "
-"features and advanced customization options."
-msgstr ""
-
-#: inc/theme-info.php:82
-msgid "Learn more about the PRO Version of Dynamic News"
-msgstr ""
-
-#: inc/theme-info.php:102
-msgid ""
-"Dynamic News is proudly brought to you by %1s. If you like this theme, "
-"%2s :) "
-msgstr ""
-
-#: inc/theme-info.php:104
-msgid "rate it"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:29
-msgid "Site Layout"
-msgstr "Seiten Layout"
-
-#: inc/customizer/sections/customizer-general.php:35
-msgid "Boxed Layout Width"
-msgstr "Boxed Layout-Breite"
-
-#: inc/customizer/sections/customizer-general.php:36
-msgid "Wide Layout (Fullwidth)"
-msgstr "breites Layout (voll Breite)"
-
-#: inc/customizer/sections/customizer-general.php:55
-msgid "Left Sidebar"
-msgstr "Seitenleiste Links"
-
-#: inc/customizer/sections/customizer-general.php:56
-msgid "Right Sidebar"
-msgstr "Seitenleiste rechts"
-
-#: inc/customizer/sections/customizer-header.php:14
-#: inc/customizer/sections/customizer-header.php:30
-msgid "Header Content"
-msgstr "Kopfzeileninhalt"
-
-#: inc/customizer/sections/customizer-header.php:46
-msgid ""
-"The Header Content configured below will be displayed on the right hand side "
-"of the header area."
-msgstr ""
-"Der unten eingerichtete Kopfzeileninhalt wird auf der rechten Seite im "
-"Kopfzeilenbereich angezeigt."
-
-#: inc/customizer/sections/customizer-header.php:63
-msgid "Display search field on header area"
-msgstr "Suchfeld im Kopfzeilenbereich anzeigen"
-
-#: inc/customizer/sections/customizer-header.php:79
-msgid "Display Social Icons on header area"
-msgstr "Social-Media-Symbole im Kopfzeilenbereich anzeigen"
-
-#: inc/customizer/sections/customizer-header.php:95
-msgid "Header Text Line"
-msgstr "Kopfzeilentext"
-
-#: inc/customizer/sections/customizer-post.php:29
-msgid "Post Length on archives"
-msgstr "Beitragslänge in Archiven"
-
-#: inc/customizer/sections/customizer-post.php:35
-msgid "Show full posts"
-msgstr "Beiträge vollständig anzeigen"
-
-#: inc/customizer/sections/customizer-post.php:36
-msgid "Show post summaries (excerpt)"
-msgstr "Beitragsauszug anzeigen"
-
-#: inc/customizer/sections/customizer-post.php:66
-msgid "Display featured images on archive pages"
-msgstr "Zeige empfohlene Bilder auf Archiv-Seiten"
-
-#: inc/customizer/sections/customizer-post.php:82
-msgid "Display featured images on single posts"
-msgstr "Zeige empfohlene Bilder auf einzelnen Beiträgen"
-
-#: inc/customizer/sections/customizer-slider.php:31
-msgid "Activate Featured Post Slider"
-msgstr "Beitrag-Diashow aktivieren"
-
-#: inc/customizer/sections/customizer-slider.php:46
-msgid "Display Slider on Magazine Front Page template."
-msgstr "Diashow auf der Magazin-Startseiten-Vorlage anzeigen."
-
-#: inc/customizer/sections/customizer-slider.php:61
-msgid "Display Slider on normal blog index."
-msgstr "Diashow auf Blog-Übersicht anzeigen."
-
-#: inc/customizer/sections/customizer-slider.php:77
-msgid "Slider Animation"
-msgstr "Diashow Animation"
-
-#: inc/customizer/sections/customizer-slider.php:83
-msgid "Horizontal Slider"
-msgstr "Diashow horizontal"
-
-#: inc/customizer/sections/customizer-slider.php:84
-msgid "Fade Slider"
-msgstr "Diashow Einblenden"
-
-#: inc/customizer/sections/customizer-upgrade.php:30
-msgid "Need more features?"
-msgstr ""
-
-#: inc/customizer/sections/customizer-upgrade.php:46
-msgid ""
-"Check out the PRO version which comes with additional features and advanced "
-"customization options."
-msgstr ""
-
-#: inc/customizer/sections/customizer-upgrade.php:62
-msgid "Learn more about the PRO Version"
-msgstr ""
-
-#: inc/customizer/customizer.php:50
-msgid "Display Tagline below site title."
-msgstr "Zeige Untertitel unterhalb Seitentitel."
-
-#: header.php:46
+#: functions.php:39
 msgid "Menu"
 msgstr "Menü"
 
+#: functions.php:135
+msgid "Main Navigation"
+msgstr "Hauptnavigation"
+
+#: functions.php:136
+msgid "Footer Navigation"
+msgstr "Footer Navigation"
+
+#: functions.php:139
+msgid "Social Icons"
+msgstr "Social Icons"
+
+#: functions.php:179 sidebar.php:14
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: functions.php:181
+msgid ""
+"Appears on posts and pages except Magazine Homepage and Fullwidth template."
+msgstr ""
+"Erscheint auf allen Beiträgen und Seiten mit Ausnahme der Magazine Homepage "
+"und Fullwidth Templates."
+
+#: functions.php:188
+msgid "Magazine Homepage"
+msgstr "Magazin Startseite"
+
+#: functions.php:190
+msgid ""
+"Appears on Magazine Homepage template only. You can use the Category Posts "
+"widgets here."
+msgstr ""
+"Erscheint nur auf dem Magazine Homepage Template. Du kannst hier die "
+"Kategorie Beiträge Widgets verwenden."
+
+#: functions.php:280
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: functions.php:281 functions.php:297
+msgid "(Edit)"
+msgstr "(Bearbeiten)"
+
+#: functions.php:307
+msgid "Your comment is awaiting moderation."
+msgstr "Dein Kommentar wird überprüft."
+
+#: search.php:13
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Suchergebnisse für: %s"
+
+#: search.php:37
+msgid "No matches"
+msgstr "Keine Treffer"
+
+#: search.php:41
+msgid ""
+"Please try again, or use the navigation menus to find what you search for."
+msgstr ""
+"Bitte versuche es erneut oder verwende die Navigationsmenüs, um dein Ziel zu "
+"finden."
+
+#: searchform.php:4
+msgctxt "label"
+msgid "Search for:"
+msgstr "Suche nach:"
+
+#: searchform.php:5
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Suchen &hellip;"
+
+#: sidebar.php:16
+msgid ""
+"Please go to Appearance &#8594; Widgets and add some widgets to your sidebar."
+msgstr ""
+"Bitte gehe zu Design &#8594; Widgets, um Widgets in der Sidebar hinzuzufügen."
+
+#: template-frontpage.php:39
+msgid ""
+"Please go to Appearance &#8594; Widgets and add at least one widget to the "
+"\"Magazine Homepage\" widget area. You can use the Category Posts widgets to "
+"set up the theme like the demo website."
+msgstr ""
+"Bitte gehe zu Design &#8594; Widgets und füge mindestens ein Widget dem "
+"\"Magazin Startseite\" Widget Bereich hinzu. Du kannst die Kategorie "
+"Beiträge Widgets verwenden, um das Theme wie die Demo Webseite einzurichten."
+
+#: inc/featured-content.php:368
+msgid "Tag name"
+msgstr "Schlagwort"
+
+#: inc/featured-content.php:374
+msgid "Hide tag from displaying in post meta and tag clouds."
+msgstr ""
+"Verberge das Schlagwort in den Beitrags-Metadaten und der Schlagwort-Wolke."
+
+#: inc/featured-content.php:381
+msgid "Display featured posts in latest blog post listing."
+msgstr "Zeige hervorgehobene Beiträge in der Liste der letzten Beiträge."
+
+#: inc/featured-content.php:388
+msgid "Number of Posts"
+msgstr "Anzahl der Beiträge"
+
+#: inc/template-tags.php:79
+#, php-format
+msgid "View all posts by %s"
+msgstr "Alle Beiträge von %s ansehen"
+
+#: inc/template-tags.php:90 inc/widgets/widget-category-posts-boxed.php:190
+#: inc/widgets/widget-category-posts-columns.php:221
+#: inc/widgets/widget-category-posts-grid.php:218
+msgid "Leave a comment"
+msgstr "Kommentar hinterlassen"
+
+#: inc/template-tags.php:96
+msgid "Edit Post"
+msgstr "Beitrag bearbeiten"
+
+#: inc/template-tags.php:174
+#, php-format
+msgid "tagged with %1$s"
+msgstr "Schlagworte %1$s"
+
+#: inc/template-tags.php:230
+#, php-format
+msgid "Powered by %1$s and %2$s."
+msgstr "Erstellt mit %1$s und %2$s."
+
+#: inc/template-tags.php:264
+msgid ""
+"Please go to Appearance &#8594; Menus and create a new custom menu with "
+"custom links to all your social networks. Then click on \"Manage Locations\" "
+"tab and assign your created menu to the \"Social Icons\" location."
+msgstr ""
+"Bitte gehe zu Design &#8594;  Menüs und erstelle ein neues Menü mit Links zu "
+"all deinen sozialen Netzwerken. Klicke danach auf den Tab 'Positionen "
+"verwalten' und weise deinem erstelltes Menü die \"Social Icons\" Position zu."
+
+#: inc/theme-info.php:18 inc/theme-info.php:38
+#, php-format
+msgid "Welcome to %1$s %2$s"
+msgstr "Willkommen bei %1$s %2$s"
+
+#: inc/theme-info.php:19
+msgid "Theme Info"
+msgstr "Theme Info"
+
+#: inc/theme-info.php:44
+msgid "Important Links:"
+msgstr "Wichtige Links:"
+
+#: inc/theme-info.php:45
+msgid "Theme Page"
+msgstr "Theme Seite"
+
+#: inc/theme-info.php:46
+msgid "Changelog"
+msgstr "Changelog"
+
+#: inc/theme-info.php:47
+msgid "Theme Demo"
+msgstr "Theme Demo"
+
+#: inc/theme-info.php:48 inc/theme-info.php:63
+msgid "Theme Documentation"
+msgstr "Theme Dokumentation"
+
+#: inc/theme-info.php:49
+msgid "Rate this theme"
+msgstr "Theme bewerten"
+
+#: inc/theme-info.php:60
+#, php-format
+msgid "Getting Started with %s"
+msgstr "Erste Schritte mit %s"
+
+#: inc/theme-info.php:66
+msgid ""
+"You need help to setup and configure this theme? We got you covered with an "
+"extensive theme documentation on our website."
+msgstr ""
+"Du brauchst Hilfe bei der Einrichtung und Konfiguration dieses Themes? Wir "
+"haben eine ausführliche Dokumentation auf unserer Webseite."
+
+#: inc/theme-info.php:70
+#, php-format
+msgid "View %s Documentation"
+msgstr "%s Dokumentation ansehen"
+
+#: inc/theme-info.php:76 inc/customizer/customizer.php:29
+msgid "Theme Options"
+msgstr "Theme Optionen"
+
+#: inc/theme-info.php:79
+#, php-format
+msgid ""
+"%s makes use of the Customizer for all theme settings. Click on \"Customize "
+"Theme\" to open the Customizer now."
+msgstr ""
+"%s verwendet den Anpassen-Dialog (Customizer) für alle Theme Einstellungen. "
+"Klicke auf \"Theme anpassen\", um den Customizer zu öffnen."
+
+#: inc/theme-info.php:82
+msgid "Customize Theme"
+msgstr "Theme anpassen"
+
+#: inc/theme-info.php:87 inc/customizer/sections/customizer-upgrade.php:14
+msgid "Pro Version"
+msgstr "Pro Version"
+
+#: inc/theme-info.php:90
+msgid ""
+"You need more features? Purchase the Pro Version to get additional features "
+"and advanced customization options."
+msgstr ""
+"Du brauchst mehr Features? Erwirb die Pro Version, um zusätzliche Features "
+"und erweiterte Anpassungsmöglichkeiten freizuschalten. "
+
+#: inc/theme-info.php:94 inc/customizer/sections/customizer-upgrade.php:62
+#, php-format
+msgid "Learn more about %s Pro"
+msgstr "Erfahre mehr über %s Pro"
+
+#: inc/theme-info.php:115
+#, php-format
+msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
+msgstr ""
+"%1$s wird stolz präsentiert von %2$s. Falls dir dieses Theme gefällt, %3$s :)"
+
+#: inc/theme-info.php:118
+msgid "rate it"
+msgstr "bewerte es"
+
+#: inc/customizer/customizer.php:46
+msgid "Display Tagline below site title."
+msgstr "Zeige den Untertitel unter dem Seitentitel."
+
+#: inc/customizer/sections/customizer-general.php:14
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: inc/customizer/sections/customizer-general.php:29
+msgid "Theme Width"
+msgstr "Theme Breite"
+
+#: inc/customizer/sections/customizer-general.php:35
+msgid "Boxed Layout"
+msgstr "Box Layout"
+
+#: inc/customizer/sections/customizer-general.php:36
+msgid "Wide Layout (Fullwidth)"
+msgstr "Volle Breite (Fullwidth)"
+
+#: inc/customizer/sections/customizer-general.php:49
+msgid "Theme Layout"
+msgstr "Theme Layout"
+
+#: inc/customizer/sections/customizer-general.php:55
+msgid "Left Sidebar"
+msgstr "Sidebar links"
+
+#: inc/customizer/sections/customizer-general.php:56
+msgid "Right Sidebar"
+msgstr "Sidebar rechts"
+
+#: inc/customizer/sections/customizer-general.php:71
+msgid "Default Fonts"
+msgstr "Standard Schriftarten"
+
+#: inc/customizer/sections/customizer-general.php:88
+msgid "Deactivate Google Fonts in case your language is not compatible."
+msgstr ""
+"Deaktiviere die Google Schriftarten, falls sie mit deiner Sprache nicht "
+"kompatibel sind."
+
+#: inc/customizer/sections/customizer-header.php:14
+msgid "Header Settings"
+msgstr "Header Einstellungen"
+
+#: inc/customizer/sections/customizer-header.php:30
+msgid "Header Content"
+msgstr "Header Inhalt"
+
+#: inc/customizer/sections/customizer-header.php:46
+msgid ""
+"The Header Content will be displayed on the right hand side of the header "
+"area."
+msgstr "Die Header Inhalte werden auf der rechten Seite im Header angezeigt."
+
+#: inc/customizer/sections/customizer-header.php:63
+msgid "Display search field on header area"
+msgstr "Suchfeld im Header Bereich anzeigen"
+
+#: inc/customizer/sections/customizer-header.php:79
+msgid "Display Social Icons on header area"
+msgstr "Social Icons im Header anzeigen"
+
+#: inc/customizer/sections/customizer-header.php:95
+msgid "Header Text Line"
+msgstr "Header Textzeile"
+
+#: inc/customizer/sections/customizer-post.php:14
+msgid "Post Settings"
+msgstr "Beitrags-Einstellungen"
+
+#: inc/customizer/sections/customizer-post.php:29
+msgid "Post length on archives"
+msgstr "Beitragslänge in Archivseiten"
+
+#: inc/customizer/sections/customizer-post.php:35
+msgid "Show full posts"
+msgstr "Zeige ganze Beiträge"
+
+#: inc/customizer/sections/customizer-post.php:36
+msgid "Show post excerpts"
+msgstr "Zeige Beitragsauszüge"
+
+#: inc/customizer/sections/customizer-post.php:50
+msgid "Excerpt Length"
+msgstr "Länge des Textauszugs"
+
+#: inc/customizer/sections/customizer-post.php:69
+msgid "Text after Excerpts"
+msgstr "Text nach Beitragsauszug"
+
+#: inc/customizer/sections/customizer-post.php:84
+msgid "Display [...] after excerpts"
+msgstr "Zeige [...] nach dem Textauszug"
+
+#: inc/customizer/sections/customizer-post.php:102
+msgid "Post Images"
+msgstr "Beitragsbilder"
+
+#: inc/customizer/sections/customizer-post.php:117
+msgid "Display featured images on archive pages"
+msgstr "Zeige Beitragsbilder auf Archivseiten"
+
+#: inc/customizer/sections/customizer-post.php:133
+msgid "Display featured images on single posts"
+msgstr "Zeige Beitragsbilder in einzelnen Beiträgen"
+
+#: inc/customizer/sections/customizer-post.php:151
+msgid "Post Meta"
+msgstr "Beitrags-Metadaten"
+
+#: inc/customizer/sections/customizer-post.php:166
+msgid "Display post date"
+msgstr "Zeige das Datum des Beitrags"
+
+#: inc/customizer/sections/customizer-post.php:181
+msgid "Display post author"
+msgstr "Zeige den Author des Beitrags"
+
+#: inc/customizer/sections/customizer-post.php:196
+msgid "Display post categories"
+msgstr "Zeige die Kategorien des Beitrags"
+
+#: inc/customizer/sections/customizer-post.php:211
+msgid "Display post tags"
+msgstr "Zeige die Schlagwörter des Beitrags"
+
+#: inc/customizer/sections/customizer-slider.php:14
+msgid "Post Slider"
+msgstr "Beitrags-Slider"
+
+#: inc/customizer/sections/customizer-slider.php:30
+msgid "Activate Post Slider"
+msgstr "Beitrags-Slider aktivieren"
+
+#: inc/customizer/sections/customizer-slider.php:45
+msgid "Show Slider on Magazine Homepage"
+msgstr "Zeige Slider auf Magazin Startseite"
+
+#: inc/customizer/sections/customizer-slider.php:60
+msgid "Show Slider on posts page"
+msgstr "Zeige Slider auf Beitragsseite"
+
+#: inc/customizer/sections/customizer-slider.php:78
+msgid "Select Featured Posts"
+msgstr "Hervorgehobene Beiträge wählen"
+
+#: inc/customizer/sections/customizer-slider.php:95
+msgid ""
+"The slideshow displays all your featured posts. You can easily feature posts "
+"by a tag of your choice."
+msgstr ""
+"Die Slideshow zeigt alle hervorgehobenen Beiträge. Du kannst deine Beiträge "
+"ganz leicht mit einem Schlagwort deiner Wahl hervorheben."
+
+#: inc/customizer/sections/customizer-slider.php:113
+msgid "Slider Animation"
+msgstr "Slider Animation"
+
+#: inc/customizer/sections/customizer-slider.php:120
+msgid "Slide Effect"
+msgstr "Slide Effekt"
+
+#: inc/customizer/sections/customizer-slider.php:121
+msgid "Fade Effect"
+msgstr "Fade Effekt"
+
+#: inc/customizer/sections/customizer-upgrade.php:30
+msgid "You need more features?"
+msgstr "Du brauchst mehr Features?"
+
+#: inc/customizer/sections/customizer-upgrade.php:46
+msgid ""
+"Purchase the Pro Version to get additional features and advanced "
+"customization options."
+msgstr ""
+"Erwirb die Pro Version, um zusätzliche Features und erweiterte "
+"Anpassungsmöglichkeiten freizuschalten."
+
 #: inc/widgets/widget-category-posts-boxed.php:11
 msgid ""
-"Display latest posts from category in boxed layout. Please use this widget "
-"ONLY on Frontpage Magazine widget area."
+"Displays your posts from a selected category in a boxed layout. Please use "
+"this widget ONLY in the Magazine Homepage widget area."
 msgstr ""
-"Letzte Beiträge aus Kategorie in Box-Layout anzeigen. Bitte nur für den "
-"Magazin-Startseiten-Widget-Bereich nutzen."
+"Zeigt die Beiträge einer gewählten Kategorie in einem Box Layout. Bitte "
+"verwende dieses Widget NUR in dem Magazin Startseite Widgetbereich."
+
+#: inc/widgets/widget-category-posts-boxed.php:13
+#, php-format
+msgid "Category Posts: Boxed (%s)"
+msgstr "Kategorie Beiträge: Box (%s)"
+
+#: inc/widgets/widget-category-posts-boxed.php:219
+#: inc/widgets/widget-category-posts-columns.php:245
+#: inc/widgets/widget-category-posts-grid.php:247
+#: inc/widgets/widget-category-posts-single.php:167
+msgid "View all posts"
+msgstr "Alle Beiträge ansehen"
+
+#: inc/widgets/widget-category-posts-boxed.php:231
+#: inc/widgets/widget-category-posts-columns.php:259
+#: inc/widgets/widget-category-posts-grid.php:259
+#: inc/widgets/widget-category-posts-single.php:179
+#, php-format
+msgid "View all posts from category %s"
+msgstr "Alle Beiträge in der Kategorie %s ansehen"
 
 #: inc/widgets/widget-category-posts-boxed.php:272
 #: inc/widgets/widget-category-posts-columns.php:297
-#: inc/widgets/widget-category-posts-grid.php:297
+#: inc/widgets/widget-category-posts-grid.php:302
 #: inc/widgets/widget-category-posts-single.php:221
 msgid "Title:"
 msgstr "Titel:"
 
 #: inc/widgets/widget-category-posts-boxed.php:278
-#: inc/widgets/widget-category-posts-grid.php:303
+#: inc/widgets/widget-category-posts-grid.php:308
 #: inc/widgets/widget-category-posts-single.php:227
 msgid "Category:"
-msgstr "﻿Kategorie:"
+msgstr "Kategorie:"
+
+#: inc/widgets/widget-category-posts-boxed.php:281
+#: inc/widgets/widget-category-posts-columns.php:306
+#: inc/widgets/widget-category-posts-columns.php:321
+#: inc/widgets/widget-category-posts-grid.php:311
+#: inc/widgets/widget-category-posts-single.php:230
+msgid "All Categories"
+msgstr "Alle Kategorien"
+
+#: inc/widgets/widget-category-posts-boxed.php:295
+#: inc/widgets/widget-category-posts-grid.php:339
+#: inc/widgets/widget-category-posts-single.php:250
+msgid "Link Widget Title to Category Archive page"
+msgstr "Verlinke den Widget Titel zur Kategorie Archiv Seite"
 
 #: inc/widgets/widget-category-posts-columns.php:11
 msgid ""
-"Display latest posts from two specified categories. Please use this widget "
-"ONLY on Frontpage Magazine widget area."
+"Displays your posts from two selected categories. Please use this widget "
+"ONLY in the Magazine Homepage widget area."
 msgstr ""
-"Letzte Beiträge aus 2 gewählten Kategorien in Box-Layout anzeigen. Bitte nur "
-"für den Magazin-Startseiten-Widget-Bereich nutzen."
+"Zeigt die Beiträge von zwei gewählten Kategorien in zwei Spalten. Bitte "
+"verwende dieses Widget NUR in dem Magazin Startseite Widgetbereich."
+
+#: inc/widgets/widget-category-posts-columns.php:13
+#, php-format
+msgid "Category Posts: 2 Columns (%s)"
+msgstr "Kategorie Beiträge: 2 Spalten (%s)"
+
+#: inc/widgets/widget-category-posts-columns.php:246
+msgid "Latest Posts"
+msgstr "Letzte Beiträge"
 
 #: inc/widgets/widget-category-posts-columns.php:303
 msgid "Left Category:"
-msgstr "linke Kategorie:"
+msgstr "Linke Kategorie:"
 
 #: inc/widgets/widget-category-posts-columns.php:318
 msgid "Right Category:"
-msgstr "rechte Kategorie:"
+msgstr "Rechte Kategorie:"
+
+#: inc/widgets/widget-category-posts-columns.php:333
+#: inc/widgets/widget-category-posts-grid.php:323
+#: inc/widgets/widget-category-posts-single.php:242
+msgid "Number of posts:"
+msgstr "Anzahl der Beiträge:"
+
+#: inc/widgets/widget-category-posts-columns.php:341
+msgid "Highlight first post (big image + excerpt)"
+msgstr "Ersten Beitrag hervorheben (großes Bild + Textauszug)"
+
+#: inc/widgets/widget-category-posts-columns.php:348
+msgid "Display Category Titles"
+msgstr "Zeige Kategorien als Titel"
 
 #: inc/widgets/widget-category-posts-grid.php:11
 msgid ""
-"Display latest posts from category in a grid layout. Please use this widget "
-"ONLY on Frontpage Magazine widget area."
+"Displays your posts from a selected category in a grid layout. Please use "
+"this widget ONLY in the Magazine Homepage widget area."
 msgstr ""
-"Letzte Beiträge aus der Kategorie im Tabellen-Layout anzeigen. Bitte nur für "
-"den Magazin-Startseiten-Widget-Bereich nutzen."
+"Zeigt die Beiträge einer gewählten Kategorie in einem Raster Layout. Bitte "
+"verwende dieses Widget NUR in dem Magazin Startseite Widgetbereich."
 
-#: inc/widgets/widget-category-posts-columns.php:333
-#: inc/widgets/widget-category-posts-grid.php:318
-#: inc/widgets/widget-category-posts-single.php:242
-msgid "Number of posts:"
-msgstr "Anzahl Beiträge:"
+#: inc/widgets/widget-category-posts-grid.php:13
+#, php-format
+msgid "Category Posts: Grid (%s)"
+msgstr "Kategorie Beiträge: Raster (%s)"
 
-#: inc/widgets/widget-category-posts-grid.php:320
+#: inc/widgets/widget-category-posts-grid.php:325
 msgid "Please chose an even number (2, 4, 6, 8)."
-msgstr "Bitte wählen Sie eine gerade Anzahl (2, 4, 6, 8)."
+msgstr "Bitte wähle eine gerade Anzahl (2, 4, 6, 8)."
+
+#: inc/widgets/widget-category-posts-grid.php:332
+msgid "Display as small posts grid with thumbnails"
+msgstr "Zeige Beiträge in kleinem Raster mit Thumbnails"
+
+#: inc/widgets/widget-category-posts-single.php:11
+msgid ""
+"Displays a single post from a selected category. Please use this widget ONLY "
+"in the Magazine Homepage widget area."
+msgstr ""
+"Zeigt einen einzelnen Beitrag einer gewählten Kategorie. Bitte verwende "
+"dieses Widget NUR in dem Magazin Startseite Widgetbereich."
+
+#: inc/widgets/widget-category-posts-single.php:13
+#, php-format
+msgid "Category Posts: Single (%s)"
+msgstr "Kategorie Beiträge: Single (%s)"
+
+#~ msgid "&raquo; Read more"
+#~ msgstr "&raquo; Weiterlesen"
+
+#~ msgid "Top Navigation"
+#~ msgstr "Obere Navigation"
+
+#~ msgid "%1$s at %2$s"
+#~ msgstr "%1$s am %2$s"
+
+#~ msgid ""
+#~ "Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class="
+#~ "\"entry-date published updated\" datetime=\"%3$s\">%4$s</time></a>"
+#~ msgstr ""
+#~ "Veröffentlicht am <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time "
+#~ "class=\"entry-date published updated\" datetime=\"%3$s\">%4$s</time></a>"
+
+#~ msgid ""
+#~ "by <span class=\"author vcard\"><a class=\"fn\" href=\"%1$s\" title=\"%2$s"
+#~ "\" rel=\"author\">%3$s</a></span>"
+#~ msgstr ""
+#~ "von <span class=\"author vcard\"><a class=\"fn\" href=\"%1$s\" title="
+#~ "\"%2$s\" rel=\"author\">%3$s</a></span>"
+
+#~ msgid "Image Grayscale"
+#~ msgstr "Graustufen Bilder"
+
+#~ msgid "Enable grayscale filter for featured images"
+#~ msgstr "Aktiviere den Graustufen Filter für Beitragsbilder"
+
+#~ msgid "Ad Banner Code (768x90)"
+#~ msgstr "Werbebanner Code (768x90)"
+
+#~ msgid "Left Category Title:"
+#~ msgstr "Titel der linken Kategorie:"
+
+#~ msgid "Right Category Title:"
+#~ msgstr "Titel der rechten Kategorie:"
+
+#~ msgid "Link Category Titles to Category Archive pages"
+#~ msgstr "Verlinke die Kategorie Titel zu den Kategorie Archiv Seiten"
+
+#~ msgid ""
+#~ "Displays your posts from a selected category in a horizontal arrangement. "
+#~ "Please use this widget ONLY in the Magazine Homepage widget area."
+#~ msgstr ""
+#~ "Zeigt die Beiträge einer gewählten Kategorie in horizontaler Anordnung. "
+#~ "Bitte verwende dieses Widget NUR in dem Magazin Startseite Widgetbereich."
+
+#~ msgid "Category Posts: Horizontal (%s)"
+#~ msgstr "Kategorie Beiträge: Horizontal (%s)"
+
+#~ msgid "Continue reading &raquo;"
+#~ msgstr "Weiterlesen &raquo;"
+
+#~ msgid "Featured Content"
+#~ msgstr "Hervorgehobene Beiträge"
+
+#~ msgid ""
+#~ "Easily feature all posts with the <a href=\"%1$s\">\"featured\" tag</a> "
+#~ "or a tag of your choice. Your theme supports up to %2$s posts in its "
+#~ "featured content area."
+#~ msgstr ""
+#~ "Du kannst deine Beiträge ganz einfach mit dem <a href=\"%1$s\">\"featured"
+#~ "\" Schlagwort</a> oder einem Schlagwort deiner Wahl hervorheben. Dein "
+#~ "Theme unterstützt %2$s Beiträge im Featured Content Bereich."
+
+#~ msgid "Footer Text"
+#~ msgstr "Footer Text"
+
+#~ msgid "Display Social Icons on top navigation"
+#~ msgstr "Social Icons in der oberen Navigation anzeigen"
+
+#~ msgid "Post Layout:"
+#~ msgstr "Beitrags-Layout:"
+
+#~ msgid "Horizontal Arrangement"
+#~ msgstr "Horizontale Anordnung"
+
+#~ msgid "Vertical Arrangement"
+#~ msgstr "Vertikale Anordnung"
+
+#~ msgid "Grid Layout:"
+#~ msgstr "Raster Layout:"
+
+#~ msgid "Two Columns Grid"
+#~ msgstr "Zweispaltiges Raster"
+
+#~ msgid "Three Columns Grid"
+#~ msgstr "Dreispaltiges Raster"
+
+#~ msgid "Category: %s"
+#~ msgstr "Kategorie: %s"
+
+#~ msgid "Tags: %1$s"
+#~ msgstr "Schlagworte: %1$s"
+
+#~ msgid "Comment navigation"
+#~ msgstr "Kommentar Navigation"
+
+#~ msgid "Older Comments"
+#~ msgstr "Ältere Kommentare"
+
+#~ msgid "Newer Comments"
+#~ msgstr "Neuere Kommentare"
+
+#~ msgid "Comments are closed."
+#~ msgstr "Kommentare sind geschlossen."
+
+#~ msgid "Leave a Reply"
+#~ msgstr "Kommentar hinterlassen"
+
+#~ msgid "Header"
+#~ msgstr "Header"
+
+#~ msgid "Appears on header area. You can use a search or ad widget here."
+#~ msgstr ""
+#~ "Erscheint im Header Bereich. Du kannst hier Widgets für ein Suchfeld oder "
+#~ "Werbung verwenden."
+
+#~ msgid "Skip to content"
+#~ msgstr "Zum Inhalt springen"
+
+#~ msgid ""
+#~ "%$1s requires at least WordPress version 4.2. You are running version %"
+#~ "$2s. Please upgrade and try again."
+#~ msgstr ""
+#~ "%$1s benötigt mindestens WordPress Version 4.2. Du verwendest Version %"
+#~ "$2s. Bitte aktualisiere und versuche es erneut."
+
+#~ msgid ""
+#~ "Merlin requires at least WordPress version 4.2. You are running version "
+#~ "%s. Please upgrade and try again."
+#~ msgstr ""
+#~ "Merlin benötigt mindestens WordPress Version 4.2. Du verwendest Version "
+#~ "%s. Bitte führe ein Update durch und versuche es erneut."
+
+#~ msgid "Sticky Navigation"
+#~ msgstr "Sticky Navigation"
+
+#~ msgid "Enable sticky menu on large screens"
+#~ msgstr "Aktiviere das Sticky Menü auf großen Bildschirmen"
+
+#~ msgid "Post Images (archive pages)"
+#~ msgstr "Beitragsbilder (Archivseiten)"
+
+#~ msgid "Show featured image beside content."
+#~ msgstr "Zeige Beitragsbild neben dem Inhalt."
+
+#~ msgid "Show featured image above content."
+#~ msgstr "Zeige Beitragsbild über dem Inhalt."
+
+#~ msgid "Hide featured image."
+#~ msgstr "Beitragsbild verbergen"
+
+#~ msgid "Post Image (single posts)"
+#~ msgstr "Beitragsbild (einzelne Beiträge)"
+
+#~ msgid "Show featured image on single posts."
+#~ msgstr "Zeige Beitragsbild in einzelnen Beiträgen."
+
+#~ msgid "Title above Latest Posts"
+#~ msgstr "Titel über den letzten Beiträgen"
+
+#~ msgid "Post Footer"
+#~ msgstr "Beitrags-Footer"
+
+#~ msgid "Display post categories and comments on archive pages"
+#~ msgstr "Zeige die Kategorien und Kommentare des Beitrags auf Archiv Seiten"
+
+#~ msgid "Display post categories and comments on single posts"
+#~ msgstr "Zeige die Kategorien und Kommentare auf einzelnen Beitragsseiten"
+
+#~ msgid "Display post tags on single posts"
+#~ msgstr "Zeige die Schlagwörter in einzelnen Beiträgen"
+
+#~ msgid "Slider Category"
+#~ msgstr "Slider Kategorie"
+
+#~ msgid "Display post excerpt and read more button"
+#~ msgstr "Textauszug und Weiterlesen Button anzeigen"
+
+#~ msgctxt "placeholder"
+#~ msgid "To search, type and hit enter &hellip;"
+#~ msgstr "Gebe dein Suchwort ein und drücke Enter &hellip;"
+
+#~ msgid "Activate dropdown search field on header area"
+#~ msgstr "Dropdown Suchfeld im Header aktivieren"
+
+#~ msgid "Display Social Icons on main navigation"
+#~ msgstr "Social Icons in der Hauptnavigation anzeigen"
+
+#~ msgid "Post Layout"
+#~ msgstr "Beitrags-Layout"
+
+#~ msgid "One Column"
+#~ msgstr "Eine Spalte"
+
+#~ msgid "Two Columns"
+#~ msgstr "Zwei Spalten"
+
+#~ msgid "Footer Icons"
+#~ msgstr "Footer Icons"
+
+#~ msgid "Display Social Icons in footer"
+#~ msgstr "Social Icons im Footer anzeigen"
+
+#~ msgid "Header Area"
+#~ msgstr "Header Bereich"
+
+#~ msgid "Display Tagline beside site title."
+#~ msgstr "Zeige den Untertitel neben dem Seitentitel."
+
+#~ msgid "Footer Left"
+#~ msgstr "Footer Links"
+
+#~ msgid "Appears on footer on the left hand side."
+#~ msgstr "Erscheint im Footer auf der linken Seite."
+
+#~ msgid "Footer Center Left"
+#~ msgstr "Footer Mitte Links"
+
+#~ msgid "Appears on footer on center left position."
+#~ msgstr "Erscheint im Footer auf der mittleren linken Seite."
+
+#~ msgid "Footer Center Right"
+#~ msgstr "Footer Mitte Rechts"
+
+#~ msgid "Appears on footer on center right position."
+#~ msgstr "Erscheint im Footer auf der mittleren rechten Seite."
+
+#~ msgid "Footer Right"
+#~ msgstr "Footer Rechts"
+
+#~ msgid "Appears on footer on the right hand side."
+#~ msgstr "Erscheint im Footer auf der rechten Seite."
+
+#~ msgid ""
+#~ "The %1$s Plugin needs the %2$s Theme activated in order to work. You "
+#~ "should deactivate %1$s if you have switched to another theme permanently."
+#~ msgstr ""
+#~ "Das %1$s Plugin benötigt ein aktives %2$s Theme für die korrekte "
+#~ "Funktionsweise. Du solltest %1$s deaktivieren, wenn du dauerhaft zu einem "
+#~ "anderen Theme gewechselt hast."
+
+#~ msgid ""
+#~ "Please enter your license key for %1$s in order to receive updates and "
+#~ "support. <a href=\"%2$s\">Enter License Key</a>"
+#~ msgstr ""
+#~ "Bitte aktiviere deine Lizenz für %1$s, um Updates und Support zu "
+#~ "erhalten. <a href=\"%2$s\">Lizenzschlüssel eingeben</a>"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+#~ msgstr ""
+#~ "Es gibt eine neue Version von %1$s. <a target=\"_blank\" class=\"thickbox"
+#~ "\" href=\"%2$s\">Details zu Version %3$s ansehen</a>."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+#~ "\">update now</a>."
+#~ msgstr ""
+#~ "Es gibt eine neue Version von %1$s. <a target=\"_blank\" class=\"thickbox"
+#~ "\" href=\"%2$s\">Details zu Version %3$s ansehen</a> oder <a href=\"%4$s"
+#~ "\">jetzt aktualisieren</a>."
+
+#~ msgid "You do not have permission to install plugin updates"
+#~ msgstr "Du hast keine Berechtigung zur Installation von Plugin Updates"
+
+#~ msgid "Error"
+#~ msgstr "Fehler"
+
+#~ msgid "Welcome to %s"
+#~ msgstr "Willkommen bei %s"
+
+#~ msgid "Pro Version License"
+#~ msgstr "Pro Version Lizenz"
+
+#~ msgid "License Key"
+#~ msgstr "Lizenzschlüssel"
+
+#~ msgid "Enter your license key"
+#~ msgstr "Lizenzschlüssel eingeben"
+
+#~ msgid "Activate License"
+#~ msgstr "Lizenz aktivieren"
+
+#~ msgid "Invalid License Key"
+#~ msgstr "Ungültiger Lizenzschlüssel"
+
+#~ msgid "Active"
+#~ msgstr "Aktiv"
+
+#~ msgid "Deactivate License"
+#~ msgstr "Lizenz deaktivieren"
+
+#~ msgid "Update Fonts"
+#~ msgstr "Schriftarten aktualisieren"
+
+#~ msgid "Previous Font"
+#~ msgstr "Vorherige Schriftart"
+
+#~ msgid "Next Font"
+#~ msgstr "Nächste Schriftart"
+
+#~ msgctxt "default font button"
+#~ msgid "Default"
+#~ msgstr "Standard"
+
+#~ msgid "Theme Colors"
+#~ msgstr "Theme Farben"
+
+#~ msgctxt "color setting"
+#~ msgid "Links & Buttons"
+#~ msgstr "Links & Buttons"
+
+#~ msgctxt "color setting"
+#~ msgid "Navigation"
+#~ msgstr "Navigation"
+
+#~ msgctxt "color setting"
+#~ msgid "Post Titles"
+#~ msgstr "Beitrags-Titel"
+
+#~ msgctxt "color setting"
+#~ msgid "Widget Titles"
+#~ msgstr "Widget Titel"
+
+#~ msgctxt "color setting"
+#~ msgid "Widget Links"
+#~ msgstr "Widget Links"
+
+#~ msgid "Theme Fonts"
+#~ msgstr "Theme Schriftarten"
+
+#~ msgid "Base Font"
+#~ msgstr "Basis Schriftart"
+
+#~ msgctxt "font setting"
+#~ msgid "Headings"
+#~ msgstr "Überschriften"
+
+#~ msgctxt "font setting"
+#~ msgid "Navigation"
+#~ msgstr "Navigation"
+
+#~ msgctxt "font setting"
+#~ msgid "Widget Titles"
+#~ msgstr "Widget Titel"
+
+#~ msgid "Choose available Fonts"
+#~ msgstr "Verfügbare Schriftarten wählen"
+
+#~ msgid "Default Browser Fonts (12)"
+#~ msgstr "Standard Browser Schriftarten (12)"
+
+#~ msgid "ThemeZee Favorite Fonts (35)"
+#~ msgstr "Favoriten von ThemeZee (35)"
+
+#~ msgid "Most Popular Google Fonts (100)"
+#~ msgstr "Beliebteste Google Schriftarten (100)"
+
+#~ msgid "All Google Fonts (650)"
+#~ msgstr "Alle Google Schriftarten (650)"
+
+#~ msgid "Display Credit Link to ThemeZee on footer line."
+#~ msgstr "Zeige Link zu ThemeZee im Footer"
+
+#~ msgid "Logo Image (replaces Site Title)"
+#~ msgstr "Logo Bild (ersetzt Titel der Website)"
+
+#~ msgctxt "color setting"
+#~ msgid "Links"
+#~ msgstr "Links"
+
+#~ msgctxt "color setting"
+#~ msgid "Footer"
+#~ msgstr "Footer"
+
+#~ msgctxt "color setting"
+#~ msgid "Header & Menu (primary)"
+#~ msgstr "Header & Menü (primär)"
+
+#~ msgctxt "color setting"
+#~ msgid "Header & Menu (secondary)"
+#~ msgstr "Header & Menü (sekundär)"
+
+#~ msgctxt "color setting"
+#~ msgid "Post Area (primary)"
+#~ msgstr "Content Bereich (primär)"
+
+#~ msgctxt "color setting"
+#~ msgid "Post Area (secondary)"
+#~ msgstr "Content Bereich (sekundär)"
+
+#~ msgctxt "color setting"
+#~ msgid "Slider (primary)"
+#~ msgstr "Slider (primär)"
+
+#~ msgctxt "color setting"
+#~ msgid "Slider (secondary)"
+#~ msgstr "Slider (sekundär)"
+
+#~ msgid "Remove spacing on header area for fullwidth logo images."
+#~ msgstr "Entferne Abstände im Header für Fullwidth Logo Bilder."
+
+#~ msgctxt "color setting"
+#~ msgid "Top Navigation"
+#~ msgstr "Obere Navigation"
+
+#~ msgctxt "color setting"
+#~ msgid "Header"
+#~ msgstr "Header"
+
+#~ msgctxt "color setting"
+#~ msgid "Footer Widgets"
+#~ msgstr "Footer Widgets"
+
+#~ msgctxt "color setting"
+#~ msgid "Footer Border"
+#~ msgstr "Footer Rahmen"
+
+#~ msgctxt "color setting"
+#~ msgid "Navigation (primary)"
+#~ msgstr "Navigation (primär)"
+
+#~ msgctxt "color setting"
+#~ msgid "Navigation (secondary)"
+#~ msgstr "Navigation (sekundär)"
+
+#~ msgctxt "color setting"
+#~ msgid "Post Slider"
+#~ msgstr "Beitrags-Slider"
+
+#~ msgid "Site Logo"
+#~ msgstr "Logo Bild"
+
+#~ msgid "Logo Spacing (default: 15)"
+#~ msgstr "Logo Abstand (Standard: 15)"
+
+#~ msgctxt "color setting"
+#~ msgid "Header Border"
+#~ msgstr "Header Rahmen"
+
+#~ msgid "Widget Title Color"
+#~ msgstr "Widget Titel"
+
+#~ msgid "Link Color"
+#~ msgstr "Linkfarbe"
+
+#~ msgid "Footer Area Color"
+#~ msgstr "Footer Farbe"
+
+#~ msgid "Top Navigation Color"
+#~ msgstr "Obere Navigation"
+
+#~ msgid "Header Color"
+#~ msgstr "Header Farbe"
+
+#~ msgid "Footer Line Color"
+#~ msgstr "Farbe der Fußzeile"
+
+#~ msgid "Navigation Active Color"
+#~ msgstr "Navigation Aktiv Farbe"
+
+#~ msgid "Post Slider Color"
+#~ msgstr "Farbe des Beitrags-Sliders"
+
+#~ msgid "Header Background Color"
+#~ msgstr "Header Hintergrundfarbe"
+
+#~ msgid "Footer Background Color"
+#~ msgstr "Footer Hintergrundfarbe"
+
+#~ msgid "Header Line Color"
+#~ msgstr "Header Rahmenfarbe"
+
+#~ msgid "Default Text Font"
+#~ msgstr "Standard Schriftart"
+
+#~ msgid "Title Font"
+#~ msgstr "Titel-Schriftart"
+
+#~ msgid "Site Layout"
+#~ msgstr "Sidebar Layout"
+
+#~ msgid "Excerpt More Text"
+#~ msgstr "Text nach Beitragsauszug"
+
+#~ msgid "Postmeta"
+#~ msgstr "Beitrags-Metadaten"
+
+#~ msgid ""
+#~ "The Header Content configured below will be displayed on the right hand "
+#~ "side of the header area."
+#~ msgstr ""
+#~ "Die hier konfigurierten Header Inhalte werden auf der rechten Seite im "
+#~ "Header angezeigt."
+
+#~ msgid "Display categories on posts."
+#~ msgstr "Zeige die Kategorien des Beitrags"
+
+#~ msgid "Display footer meta on archives."
+#~ msgstr "Zeige Footer Meta auf Archivseiten."
+
+#~ msgid "Post Slideshow"
+#~ msgstr "Beitrags-Slideshow"
