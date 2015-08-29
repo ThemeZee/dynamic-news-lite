@@ -26,7 +26,7 @@ function dynamicnews_customize_register_general_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_layout', array(
-        'label'    => __( 'Theme Width', 'dynamic-news-lite' ),
+        'label'    => __( 'Site Layout', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_general',
         'settings' => 'dynamicnews_theme_options[layout]',
         'type'     => 'radio',
@@ -46,7 +46,7 @@ function dynamicnews_customize_register_general_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_sidebar', array(
-        'label'    => __( 'Theme Layout', 'dynamic-news-lite' ),
+        'label'    => __( 'Sidebar', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_general',
         'settings' => 'dynamicnews_theme_options[sidebar]',
         'type'     => 'radio',
