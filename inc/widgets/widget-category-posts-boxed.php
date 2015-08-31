@@ -299,5 +299,3 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 <?php
 	}
 }
-register_widget('Dynamic_News_Category_Posts_Boxed_Widget');
-?>

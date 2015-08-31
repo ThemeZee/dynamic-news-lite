@@ -254,5 +254,3 @@ class Dynamic_News_Category_Posts_Single_Widget extends WP_Widget {
 <?php
 	}
 }
-register_widget('Dynamic_News_Category_Posts_Single_Widget');
-?>

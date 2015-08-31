@@ -174,7 +174,7 @@ add_action( 'widgets_init', 'dynamicnews_register_sidebars' );
 if ( ! function_exists( 'dynamicnews_register_sidebars' ) ):
 function dynamicnews_register_sidebars() {
 
-	// Register Sidebars
+	// Register Sidebar
 	register_sidebar( array(
 		'name' => __( 'Sidebar', 'dynamic-news-lite' ),
 		'id' => 'sidebar',
@@ -184,6 +184,8 @@ function dynamicnews_register_sidebars() {
 		'before_title' => '<h3 class="widgettitle"><span>',
 		'after_title' => '</span></h3>',
 	));
+	
+	// Register Magazine Homepage
 	register_sidebar( array(
 		'name' => __( 'Magazine Homepage', 'dynamic-news-lite' ),
 		'id' => 'frontpage-magazine',
@@ -193,6 +195,12 @@ function dynamicnews_register_sidebars() {
 		'before_title' => '<h3 class="widgettitle">',
 		'after_title' => '</h3>',
 	));
+	
+	// Register Category Post widgets
+	register_widget('Dynamic_News_Category_Posts_Boxed_Widget');
+	register_widget('Dynamic_News_Category_Posts_Columns_Widget');
+	register_widget('Dynamic_News_Category_Posts_Grid_Widget');
+	register_widget('Dynamic_News_Category_Posts_Single_Widget');
 	
 }
 endif;
