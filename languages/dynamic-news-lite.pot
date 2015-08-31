@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dynamic News Lite\n"
 "Report-Msgid-Bugs-To: http://themezee.com/\n"
-"POT-Creation-Date: 2015-08-29 14:26+0100\n"
-"PO-Revision-Date: 2015-08-29 14:27+0100\n"
+"POT-Creation-Date: 2015-08-31 19:59+0100\n"
+"PO-Revision-Date: 2015-08-31 19:59+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -91,25 +91,25 @@ msgid ""
 "Appears on posts and pages except Magazine Homepage and Fullwidth template."
 msgstr ""
 
-#: functions.php:188
+#: functions.php:190
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:190
+#: functions.php:192
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Category Posts "
 "widgets here."
 msgstr ""
 
-#: functions.php:280
+#: functions.php:288
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:281 functions.php:297
+#: functions.php:289 functions.php:305
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:307
+#: functions.php:315
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
@@ -285,7 +285,11 @@ msgstr ""
 msgid "rate it"
 msgstr ""
 
-#: inc/customizer/customizer.php:46
+#: inc/customizer/customizer.php:39
+msgid "Background"
+msgstr ""
+
+#: inc/customizer/customizer.php:50
 msgid "Display Tagline below site title."
 msgstr ""
 
