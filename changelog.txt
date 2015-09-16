@@ -2,6 +2,12 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.2.4
+-----------------------------------
+[moved] register_widget functions to widgets_init action hook to fix widget translation
+[improved] customizer sections to be translation-ready
+[updated] German translation file
+
 Version 1.2.3
 -----------------------------------
 [changed] text domain to dynamic-news-lite for language packs compatibility

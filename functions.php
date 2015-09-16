@@ -196,12 +196,6 @@ function dynamicnews_register_sidebars() {
 		'after_title' => '</h3>',
 	));
 	
-	// Register Category Post widgets
-	register_widget('Dynamic_News_Category_Posts_Boxed_Widget');
-	register_widget('Dynamic_News_Category_Posts_Columns_Widget');
-	register_widget('Dynamic_News_Category_Posts_Grid_Widget');
-	register_widget('Dynamic_News_Category_Posts_Single_Widget');
-	
 }
 endif;
 
