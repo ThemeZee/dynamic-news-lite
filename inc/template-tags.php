@@ -269,4 +269,57 @@ function dynamicnews_display_social_icons() {
 }
 
 
-?>
+// Custom Template for comments and pingbacks.
+if ( ! function_exists( 'dynamicnews_list_comments' ) ):
+function dynamicnews_list_comments($comment, $args, $depth) {
+
+	$GLOBALS['comment'] = $comment;
+
+	if( $comment->comment_type == 'pingback' or $comment->comment_type == 'trackback' ) : ?>
+
+		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+			<p><?php _e( 'Pingback:', 'dynamic-news-lite' ); ?> <?php comment_author_link(); ?>
+			<?php edit_comment_link( __( '(Edit)', 'dynamic-news-lite' ), '<span class="edit-link">', '</span>' ); ?>
+			</p>
+
+	<?php else : ?>
+
+		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+
+			<div id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+
+				<div class="comment-author vcard clearfix">
+					<span class="fn"><?php echo get_comment_author_link(); ?></span>
+					<div class="comment-meta commentmetadata">
+						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+							<?php echo get_comment_date(); ?>
+							<?php echo get_comment_time(); ?>
+						</a>
+						<?php edit_comment_link(__('(Edit)', 'dynamic-news-lite'),'  ','') ?>
+					</div>
+
+				</div>
+
+				<div class="comment-content clearfix">
+
+					<?php echo get_avatar( $comment, 72 ); ?>
+
+					<?php if ($comment->comment_approved == '0') : ?>
+						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'dynamic-news-lite' ); ?></p>
+					<?php endif; ?>
+
+					<?php comment_text(); ?>
+
+				</div>
+
+				<div class="reply">
+					<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+				</div>
+
+			</div>
+
+<?php
+	endif;
+
+}
+endif;

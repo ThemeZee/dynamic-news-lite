@@ -200,132 +200,6 @@ function dynamicnews_register_sidebars() {
 endif;
 
 
-// Add title tag for older WordPress versions
-if ( ! function_exists( '_wp_render_title_tag' ) ) :
-
-	add_action( 'wp_head', 'dynamicnews_wp_title' );
-	function dynamicnews_wp_title() { ?>
-		
-		<title><?php wp_title( '|', true, 'right' ); ?></title>
-
-<?php
-    }
-    
-endif;
-
-
-// Add Default Menu Fallback Function
-function dynamicnews_default_menu() {
-	echo '<ul id="mainnav-menu" class="menu">'. wp_list_pages('title_li=&echo=0') .'</ul>';
-}
-
-
-// Get Featured Posts
-function dynamicnews_get_featured_content() {
-	return apply_filters( 'dynamicnews_get_featured_content', false );
-}
-
-
-// Change Excerpt Length
-add_filter('excerpt_length', 'dynamicnews_excerpt_length');
-function dynamicnews_excerpt_length($length) {
-
-	// Get Theme Options from Database
-	$theme_options = dynamicnews_theme_options();
-
-	// Return Excerpt Length
-	if ( isset($theme_options['excerpt_length']) and $theme_options['excerpt_length'] >= 0 ) :
-		return absint( $theme_options['excerpt_length'] );
-	else :
-		return 60; // number of words
-	endif;
-
-}
-
-
-// Slideshow Excerpt Length
-function dynamicnews_slideshow_excerpt_length($length) {
-    return 30;
-}
-
-// Frontpage Category Excerpt Length
-function dynamicnews_frontpage_category_excerpt_length($length) {
-    return 25;
-}
-
-
-// Change Excerpt More
-add_filter('excerpt_more', 'dynamicnews_excerpt_more');
-function dynamicnews_excerpt_more($more) {
-    
-	// Get Theme Options from Database
-	$theme_options = dynamicnews_theme_options();
-
-	// Return Excerpt Text
-	if ( isset($theme_options['excerpt_text']) and $theme_options['excerpt_text'] == true ) :
-		return ' [...]';
-	else :
-		return '';
-	endif;
-}
-
-
-// Custom Template for comments and pingbacks.
-if ( ! function_exists( 'dynamicnews_list_comments' ) ):
-function dynamicnews_list_comments($comment, $args, $depth) {
-
-	$GLOBALS['comment'] = $comment;
-
-	if( $comment->comment_type == 'pingback' or $comment->comment_type == 'trackback' ) : ?>
-
-		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-			<p><?php _e( 'Pingback:', 'dynamic-news-lite' ); ?> <?php comment_author_link(); ?>
-			<?php edit_comment_link( __( '(Edit)', 'dynamic-news-lite' ), '<span class="edit-link">', '</span>' ); ?>
-			</p>
-
-	<?php else : ?>
-
-		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-
-			<div id="div-comment-<?php comment_ID(); ?>" class="comment-body">
-
-				<div class="comment-author vcard clearfix">
-					<span class="fn"><?php echo get_comment_author_link(); ?></span>
-					<div class="comment-meta commentmetadata">
-						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
-							<?php echo get_comment_date(); ?>
-							<?php echo get_comment_time(); ?>
-						</a>
-						<?php edit_comment_link(__('(Edit)', 'dynamic-news-lite'),'  ','') ?>
-					</div>
-
-				</div>
-
-				<div class="comment-content clearfix">
-
-					<?php echo get_avatar( $comment, 72 ); ?>
-
-					<?php if ($comment->comment_approved == '0') : ?>
-						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'dynamic-news-lite' ); ?></p>
-					<?php endif; ?>
-
-					<?php comment_text(); ?>
-
-				</div>
-
-				<div class="reply">
-					<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-				</div>
-
-			</div>
-
-<?php
-	endif;
-
-}
-endif;
-
-
 /*==================================== INCLUDE FILES ====================================*/
 
 // include Theme Info page
@@ -339,6 +213,9 @@ require( get_template_directory() . '/inc/customizer/default-options.php' );
 require( get_template_directory() . '/inc/customizer/frontend/custom-layout.php' );
 require( get_template_directory() . '/inc/customizer/frontend/custom-slider.php' );
 
+// Include Extra Functions
+require get_template_directory() . '/inc/extras.php';
+
 // include Template Functions
 require( get_template_directory() . '/inc/template-tags.php' );
 
@@ -350,6 +227,3 @@ require( get_template_directory() . '/inc/widgets/widget-category-posts-single.p
 
 // Include Featured Content class
 require( get_template_directory() . '/inc/featured-content.php' );
-
-
-?>
