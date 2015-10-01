@@ -5,7 +5,6 @@
 // Load default style.css and Javascripts
 add_action('wp_enqueue_scripts', 'dynamicnews_enqueue_scripts');
 
-if ( ! function_exists( 'dynamicnews_enqueue_scripts' ) ):
 function dynamicnews_enqueue_scripts() {
 
 	// Get Theme Options from Database
@@ -38,20 +37,16 @@ function dynamicnews_enqueue_scripts() {
 	// Passing Parameters to Navigation.js Javascript
 	wp_localize_script( 'dynamicnewslite-jquery-navigation', 'dynamicnews_menu_title', __('Menu', 'dynamic-news-lite') );
 	
+	// Register Comment Reply Script for Threaded Comments
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
 	// Register and Enqueue Font
 	wp_enqueue_style('dynamicnewslite-default-fonts', dynamicnews_fonts_url(), array(), null );
 
 }
-endif;
 
-// Load comment-reply.js if comment form is loaded and threaded comments activated
-add_action( 'comment_form_before', 'dynamicnews_enqueue_comment_reply' );
-
-function dynamicnews_enqueue_comment_reply() {
-	if( get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
 
 // HTML5shiv for old IE
 add_action('wp_head', 'dynamicnews_enqueue_html5shiv');
@@ -101,7 +96,6 @@ function dynamicnews_fonts_url() {
 // Setup Function: Registers support for various WordPress features
 add_action( 'after_setup_theme', 'dynamicnews_setup' );
 
-if ( ! function_exists( 'dynamicnews_setup' ) ):
 function dynamicnews_setup() {
 
 	// Set Content Width
@@ -139,13 +133,11 @@ function dynamicnews_setup() {
 	register_nav_menu( 'social', __('Social Icons', 'dynamic-news-lite') );
 
 }
-endif;
 
 
 // Add custom Image Sizes
 add_action( 'after_setup_theme', 'dynamicnews_add_image_sizes' );
 
-if ( ! function_exists( 'dynamicnews_add_image_sizes' ) ):
 function dynamicnews_add_image_sizes() {
 
 	// Add Custom Header Image Size
@@ -165,13 +157,11 @@ function dynamicnews_add_image_sizes() {
 	add_image_size( 'widget_post_thumb', 75, 75, true);
 
 }
-endif;
 
 
 // Register Sidebars
 add_action( 'widgets_init', 'dynamicnews_register_sidebars' );
 
-if ( ! function_exists( 'dynamicnews_register_sidebars' ) ):
 function dynamicnews_register_sidebars() {
 
 	// Register Sidebar
@@ -197,7 +187,6 @@ function dynamicnews_register_sidebars() {
 	));
 	
 }
-endif;
 
 
 /*==================================== INCLUDE FILES ====================================*/
