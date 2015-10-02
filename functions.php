@@ -121,9 +121,6 @@ function dynamicnews_setup() {
 		'width'	=> 1340,
 		'height' => 200,
 		'flex-height' => true));
-		
-	// Add Theme Support for Dynamic News Pro Plugin
-	add_theme_support( 'dynamicnews-pro' );
 
 	// Register Navigation Menus
 	register_nav_menu( 'primary', __('Main Navigation', 'dynamic-news-lite') );
@@ -207,6 +204,9 @@ require get_template_directory() . '/inc/extras.php';
 
 // include Template Functions
 require( get_template_directory() . '/inc/template-tags.php' );
+
+// Include support functions for Theme Addons
+require get_template_directory() . '/inc/addons.php';
 
 // include Widget Files
 require( get_template_directory() . '/inc/widgets/widget-category-posts-boxed.php' );

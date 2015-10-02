@@ -1,0 +1,317 @@
+/*
+ * ThemeZee Widget Bundle CSS
+ * http://themezee.com/addons/widget-bundle/
+ *
+ * Copyright(C) 2015, ThemeZee.com - support@themezee.com
+ * License: GPL v3
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.html
+ *
+ * @package Dynamic News Lite
+ */
+
+ 
+/*--------------------------------------------------------------
+# General Styles
+---------------------------------------------------------------- */
+
+/* Clearing Floats */
+.tzwb-clearfix:before, 
+.tzwb-clearfix:after {  
+	content: " ";
+	display: table;  
+}  
+
+.tzwb-clearfix:after {  
+	clear: both;
+}  
+
+.tzwb-clearfix {
+    *zoom: 1; /* For IE 6/7 only */  
+}
+
+
+/*--------------------------------------------------------------
+# Facebook Like Box Widget
+---------------------------------------------------------------- */
+.tzwb-facebook-likebox .tzwb-content {
+	overflow: hidden;
+}
+
+
+/*--------------------------------------------------------------
+# Recent Posts Widget
+---------------------------------------------------------------- */
+.tzwb-posts-list {
+	margin: 0;
+	padding: 0;
+}
+
+.tzwb-posts-list li {
+	list-style: none;
+	margin: 0 0 0.5em 0;
+	padding: 0;
+	overflow: auto;
+}
+
+.tzwb-posts-list .tzwb-excerpt p {
+	margin: 0;
+	padding: 0;
+}
+
+.tzwb-posts-list .wp-post-image {
+	float: left;
+	margin: 0.3em 0.8em 0.5em 0;
+	max-width: 75px;
+	height: auto;
+}
+
+.tzwb-posts-list .tzwb-postmeta {
+	margin: 0.3em 0;
+	padding: 0;
+	color: #777;
+	font-size: 0.8em;
+}
+
+.tzwb-posts-list  .tzwb-postmeta span {
+	margin-right: 0.2em;
+}
+
+.tzwb-posts-list  .tzwb-postmeta span:not(:first-child) {
+    border-left: 1px solid #aaa;
+	padding-left: 0.4em;
+}
+
+
+/*--------------------------------------------------------------
+# Recent Comments Widget
+---------------------------------------------------------------- */
+.tzwb-comments-list {
+	margin: 0;
+	padding: 0;
+}
+
+.tzwb-comments-list li {
+	list-style: none;
+	margin: 0 0 1em 0;
+	overflow: auto;
+}
+
+.tzwb-comments-list .avatar {
+	float: left;
+	margin: 0.3em 0.8em 0.4em 0;
+}
+
+.tzwb-comments-list .tzwb-comment-content {
+	font-style: italic;
+}
+
+.tzwb-comments-list .tzwb-comment-date {
+	margin: 0.3em 0 0;
+	padding: 0;
+	font-size: 0.8em;
+	color: #777;
+}
+
+
+/*--------------------------------------------------------------
+# Tabbed Content Widget
+---------------------------------------------------------------- */
+.tzwb-tabbed-content .tzwb-tabnavi-wrap {
+	margin: -0.5em -0.5em 0;
+	padding: 0;
+	overflow: auto;
+	list-style: none;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	list-style-position: outside;
+	position: relative;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi li {
+	float: left;
+	list-style: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi li a {
+	display: block;
+	margin: 0 1px 1px 0;
+	padding: 0.5em 1em;
+	font-size: 0.9em;
+	text-decoration: none;
+	background-color: #e84747;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi li a:link, 
+.tzwb-tabbed-content .tzwb-tabnavi li a:visited  {
+	color: #fff;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi li a:hover, 
+.tzwb-tabbed-content .tzwb-tabnavi li a:active {
+	background-color: #303030;
+	text-decoration: none;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
+	text-decoration: underline;
+}
+
+.tzwb-tabbed-content .tzwb-tabcontent {
+	padding: 0;
+	margin: 1em 0 0 0;
+}
+
+.tzwb-tabbed-content .tzwb-tabcontent li.tzwb-has-thumbnail {
+	list-style: none;
+	margin: 0 0 0.5em 0;
+	overflow: auto;
+}
+
+.tzwb-tabbed-content .tzwb-tabcontent  li.tzwb-has-thumbnail .wp-post-image {
+	float: left;
+	margin: 0.3em 0.8em 0.5em 0;
+	max-width: 75px;
+	height: auto;
+}
+
+.tzwb-tabbed-content .tzwb-tabcontent .tzwb-comments-list li.tzwb-has-avatar {
+	list-style: none;
+	margin: 0 0 0.3em 0;
+	overflow: auto;
+}
+
+.tzwb-tabbed-content .tzwb-tabcontent .tzwb-comments-list li.tzwb-has-avatar .avatar {
+	float: left;
+	margin: 0.3em 0.8em 0.3em 0;
+}
+
+.tzwb-tabbed-content .tzwb-tabcontent ul li .tzwb-postmeta {
+	margin: 0.1em 0;
+	padding: 0;
+	font-size: 0.8em;
+	color: #777;
+}
+
+
+/*--------------------------------------------------------------
+# Social Icons Widget
+---------------------------------------------------------------- */
+.tzwb-social-icons .tzwb-social-icons-menu {
+	list-style-type: none;
+	list-style-position: outside;
+	line-height: 1em;
+}
+
+.tzwb-social-icons .tzwb-social-icons-menu li {
+	float: left;
+	margin: 0 1px 1px 0;
+	padding: 0;
+}
+
+.tzwb-social-icons .tzwb-social-icons-menu li a {
+	position: relative;
+	display: inline-block;
+	padding: 0.8em;
+	background: #e84747;
+	text-decoration: none;
+	color: #fff;
+	line-height: 1em;
+}
+
+.tzwb-social-icons .tzwb-social-icons-menu li a:before {
+	color: #fff;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+	line-height: 1;
+	font-family: 'Genericons';
+	text-decoration: inherit;
+	vertical-align: top;
+}
+
+/* Add Genericons */
+.tzwb-social-icons-menu li a:before { content: '\f408';} /* Default Icon */
+.tzwb-social-icons-menu li a[href*="codepen.io"]:before  { content: '\f216'; }
+.tzwb-social-icons-menu li a[href*="digg.com"]:before { content: '\f221'; }
+.tzwb-social-icons-menu li a[href*="dribbble.com"]:before { content: '\f201'; }
+.tzwb-social-icons-menu li a[href*="facebook.com"]:before { content: '\f204'; }
+.tzwb-social-icons-menu li a[href*="flickr.com"]:before { content: '\f211'; }
+.tzwb-social-icons-menu li a[href*="plus.google.com"]:before { content: '\f218'; }
+.tzwb-social-icons-menu li a[href*="github.com"]:before { content: '\f200'; }
+.tzwb-social-icons-menu li a[href*="instagram.com"]:before { content: '\f215'; }
+.tzwb-social-icons-menu li a[href*="linkedin.com"]:before { content: '\f207'; }
+.tzwb-social-icons-menu li a[href*="pinterest.com"]:before { content: '\f209'; }
+.tzwb-social-icons-menu li a[href*="polldaddy.com"]:before { content: '\f217'; }
+.tzwb-social-icons-menu li a[href*="getpocket.com"]:before { content: '\f224'; }
+.tzwb-social-icons-menu li a[href*="reddit.com"]:before { content: '\f222'; }
+.tzwb-social-icons-menu li a[href*="spotify.com"]:before { content: '\f515'; }
+.tzwb-social-icons-menu li a[href*="skype.com"]:before,
+.tzwb-social-icons-menu li a[href*="skype:"]:before { content: '\f220'; }
+.tzwb-social-icons-menu li a[href*="stumbleupon.com"]:before { content: '\f223'; }
+.tzwb-social-icons-menu li a[href*="tumblr.com"]:before { content: '\f214'; }
+.tzwb-social-icons-menu li a[href*="twitter.com"]:before { content: '\f202'; }
+.tzwb-social-icons-menu li a[href*="twitch.tv"]:before { content: '\f516'; }
+.tzwb-social-icons-menu li a[href*="vimeo.com"]:before  { content: '\f212'; }
+.tzwb-social-icons-menu li a[href*="wordpress.org"]:before,
+.tzwb-social-icons-menu li a[href*="wordpress.com"]:before { content: '\f205'; }
+.tzwb-social-icons-menu li a[href*="youtube.com"]:before { content: '\f213'; }
+.tzwb-social-icons-menu li a[href*="/feed"]:before,
+.tzwb-social-icons-menu li a[href*="/feed/"]:before,
+.tzwb-social-icons-menu li a[href*="?feed=rss2"]:before,
+.tzwb-social-icons-menu li a[href*="feedburner.google.com"]:before,
+.tzwb-social-icons-menu li a[href*="feedburner.com"]:before { content: '\f413'; }
+.tzwb-social-icons-menu li a[href*="/newsletter"]:before,
+.tzwb-social-icons-menu li a[href*="mailto:"]:before{ content: '\f410'; }
+
+.tzwb-social-icons-menu li a:hover {
+	text-decoration: none;
+	background: #333;
+}
+
+.tzwb-social-icons-menu li a .screen-reader-text {
+	display: none;
+}
+
+
+/*--------------------------------------------------------------
+# Widget Styling in Footer area
+---------------------------------------------------------------- */
+#footer-widgets .widget .tzwb-posts-list .tzwb-postmeta {
+	color: #ccc;
+}
+
+#footer-widgets .widget .tzwb-comments-list .tzwb-comment-content  {
+	color: #ccc;
+}
+
+#footer-widgets .widget .tzwb-comments-list .tzwb-comment-date {
+	color: #ccc;
+}
+
+#footer-widgets .tzwb-tabbed-content .tzwb-tabnavi li a:link, 
+#footer-widgets .tzwb-tabbed-content .tzwb-tabnavi li a:visited  {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+#footer-widgets .tzwb-tabbed-content .tzwb-tabnavi li a:hover, 
+#footer-widgets .tzwb-tabbed-content .tzwb-tabnavi li a:active  {
+	background: rgba(255, 255, 255, 0.2);
+	text-decoration: none;
+}
+
+#footer-widgets .tzwb-social-icons .tzwb-social-icons-menu li a {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+#footer-widgets .tzwb-social-icons .tzwb-social-icons-menu li a:hover {
+	background: rgba(255, 255, 255, 0.2);
+	text-decoration: none;
+}
