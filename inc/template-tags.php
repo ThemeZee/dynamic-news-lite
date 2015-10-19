@@ -56,47 +56,74 @@ if ( ! function_exists( 'dynamicnews_display_postmeta' ) ):
 		$theme_options = dynamicnews_theme_options();
 
 		// Display Date unless user has deactivated it via settings
-		if ( isset($theme_options['meta_date']) and $theme_options['meta_date'] == true ) : ?>
+		if ( true == $theme_options['meta_date'] ) :
 		
-			<span class="meta-date sep">
-			<?php printf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 
-					esc_url( get_permalink() ),
-					esc_attr( get_the_time() ),
-					esc_attr( get_the_date( 'c' ) ),
-					esc_html( get_the_date() )
-				);
-			?>
-			</span>
-			
-		<?php endif; 
+			dynamicnews_meta_date();
+					
+		endif; 
 		
 		// Display Author unless user has deactivated it via settings
-		if ( isset($theme_options['meta_author']) and $theme_options['meta_author'] == true ) : ?>		
+		if ( true == $theme_options['meta_author'] ) :	
 		
-			<span class="meta-author sep">
-			<?php printf( '<span class="author vcard"><a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 
-					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-					esc_attr( sprintf( __( 'View all posts by %s', 'dynamic-news-lite' ), get_the_author() ) ),
-					get_the_author()
-				);
-			?>
-			</span>
+			dynamicnews_meta_author();
 		
-		<?php endif;
-	
-		if ( comments_open() ) : ?>
+		endif; 
 		
-			<span class="meta-comments">
-				<?php comments_popup_link( __('Leave a comment', 'dynamic-news-lite'),__('One comment','dynamic-news-lite'),__('% comments','dynamic-news-lite') ); ?>
-			</span>
+		// Display Comments
+		if ( comments_open() ) :
+			
+			dynamicnews_meta_comments();
+			
+		endif;
 		
-		<?php endif; ?>
-	
-		<?php
 		edit_post_link(__( 'Edit Post', 'dynamic-news-lite' ));
 	}
 	
 endif;
+
+
+// Display Post Date
+function dynamicnews_meta_date() { ?>		
+		
+	<span class="meta-date sep">
+	<?php printf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 
+			esc_url( get_permalink() ),
+			esc_attr( get_the_time() ),
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date() )
+		);
+	?>
+	</span>
+	
+<?php
+}
+
+
+// Display Post Author
+function dynamicnews_meta_author() { ?>		
+		
+	<span class="meta-author sep">
+	<?php printf( '<span class="author vcard"><a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			esc_attr( sprintf( __( 'View all posts by %s', 'dynamic-news-lite' ), get_the_author() ) ),
+			get_the_author()
+		);
+	?>
+	</span>
+			
+<?php
+}
+
+
+// Display Post Meta Comments
+function dynamicnews_meta_comments() { ?>		
+		
+	<span class="meta-comments">
+		<?php comments_popup_link( __('Leave a comment', 'dynamic-news-lite'),__('One comment','dynamic-news-lite'),__('% comments','dynamic-news-lite') ); ?>
+	</span>
+	
+<?php
+}
 
 
 // Display Post Thumbnail on Archive Pages
