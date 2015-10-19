@@ -2,6 +2,12 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.2.6
+-----------------------------------
+[added] postmeta setting to Category Posts Boxed widget
+[added] postmeta setting to Category Posts Columns widget
+[added] postmeta setting to Category Posts Grid widget
+
 Version 1.2.5
 -----------------------------------
 [moved] additional functions from functions.php to extras.php and template-tags.php

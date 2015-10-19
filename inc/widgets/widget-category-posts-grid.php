@@ -32,7 +32,8 @@ class Dynamic_News_Category_Posts_Grid_Widget extends WP_Widget {
 			'number'			=> 6,
 			'category'			=> 0,
 			'thumbnails'		=> false,
-			'category_link'		=> false
+			'category_link'		=> false,
+			'postmeta'			=> 3
 		);
 		
 		return $defaults;
@@ -148,7 +149,7 @@ class Dynamic_News_Category_Posts_Grid_Widget extends WP_Widget {
 
 							<div class="small-post-content">
 								<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-								<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
+								<?php $this->display_postmeta($instance); ?>
 							</div>
 
 						</article>
@@ -163,7 +164,7 @@ class Dynamic_News_Category_Posts_Grid_Widget extends WP_Widget {
 
 						<h3 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 
-						<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
+						<?php $this->display_postmeta($instance); ?>
 
 						<div class="entry">
 							<?php the_excerpt(); ?>
@@ -201,23 +202,48 @@ class Dynamic_News_Category_Posts_Grid_Widget extends WP_Widget {
 	}
 	
 	// Display Postmeta
-	function display_postmeta($instance) { ?>
-
-		<span class="meta-date sep">
-		<?php printf('<a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>',
-				esc_url( get_permalink() ),
-				esc_attr( get_the_time() ),
-				esc_attr( get_the_date( 'c' ) ),
-				esc_html( get_the_date() )
-			);
-		?>
-		</span>
-
-	<?php if ( comments_open() ) : ?>
-		<span class="meta-comments">
-			<?php comments_popup_link( __('Leave a comment', 'dynamic-news-lite'),__('One comment','dynamic-news-lite'),__('% comments','dynamic-news-lite') ); ?>
-		</span>
-	<?php endif;
+	function display_postmeta( $instance ) {
+	
+		// Get Widget Settings
+		$defaults = $this->default_settings();
+		extract( wp_parse_args( $instance, $defaults ) );
+		
+		// Start Output Buffering
+		ob_start();
+		
+		// Display Date unless deactivated
+		if ( $postmeta > 0 ) :
+		
+			dynamicnews_meta_date();
+					
+		endif; 
+		
+		// Display Author unless deactivated
+		if ( $postmeta == 2 ) :	
+		
+			dynamicnews_meta_author();
+		
+		endif; 
+		
+		// Display Comments
+		if ( $postmeta == 3 and comments_open() ) :
+			
+			dynamicnews_meta_comments();
+			
+		endif;
+		
+		// Save Output Buffer
+		$meta_output = ob_get_contents();
+		
+		// Delete Buffer
+		ob_end_clean();
+		
+		// Only display output if there is postmeta
+		if ( $meta_output <> false ) :
+		
+			echo '<div class="postmeta">' . $meta_output . '</div>';
+		
+		endif;
 
 	}
 	
@@ -285,6 +311,7 @@ class Dynamic_News_Category_Posts_Grid_Widget extends WP_Widget {
 		$instance['number'] = (int)$new_instance['number'];
 		$instance['thumbnails'] = !empty($new_instance['thumbnails']);
 		$instance['category_link'] = !empty($new_instance['category_link']);
+		$instance['postmeta'] = (int)$new_instance['postmeta'];
 		
 		$this->delete_widget_cache();
 		
@@ -338,6 +365,16 @@ class Dynamic_News_Category_Posts_Grid_Widget extends WP_Widget {
 				<input class="checkbox" type="checkbox" <?php checked( $category_link ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
 				<?php _e('Link Widget Title to Category Archive page', 'dynamic-news-lite'); ?>
 			</label>
+		</p>
+		
+		<p>
+			<label for="<?php echo $this->get_field_id( 'postmeta' ); ?>"><?php _e( 'Post Meta:', 'dynamic-news-lite' ); ?></label><br/>
+			<select id="<?php echo $this->get_field_id( 'postmeta' ); ?>" name="<?php echo $this->get_field_name( 'postmeta' ); ?>">
+				<option value="0" <?php selected($postmeta, 0); ?>><?php _e( 'Hide post meta', 'dynamic-news-lite' ); ?></option>
+				<option value="1" <?php selected($postmeta, 1); ?>><?php _e( 'Display post date', 'dynamic-news-lite' ); ?></option>
+				<option value="2" <?php selected($postmeta, 2); ?>><?php _e( 'Display date and author', 'dynamic-news-lite' ); ?></option>
+				<option value="3" <?php selected($postmeta, 3); ?>><?php _e( 'Display date and comments', 'dynamic-news-lite' ); ?></option>
+			</select>
 		</p>
 <?php
 	}
