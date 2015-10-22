@@ -26,7 +26,7 @@ function dynamicnews_customize_register_options( $wp_customize ) {
 		'priority'       => 180,
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
-		'title'          => __( 'Theme Options', 'dynamic-news-lite' ),
+		'title'          => esc_html__( 'Theme Options', 'dynamic-news-lite' ),
 		'description'    => '',
 	) );
 
@@ -36,7 +36,7 @@ function dynamicnews_customize_register_options( $wp_customize ) {
 	
 	// Change default background section
 	$wp_customize->get_control( 'background_color'  )->section   = 'background_image';
-	$wp_customize->get_section( 'background_image'  )->title     = __( 'Background', 'dynamic-news-lite' );
+	$wp_customize->get_section( 'background_image'  )->title     = esc_html__( 'Background', 'dynamic-news-lite' );
 	
 	// Add Header Tagline option
 	$wp_customize->add_setting( 'dynamicnews_theme_options[header_tagline]', array(
@@ -47,7 +47,7 @@ function dynamicnews_customize_register_options( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_header_tagline', array(
-        'label'    => __( 'Display Tagline below site title.', 'dynamic-news-lite' ),
+        'label'    => esc_html__( 'Display Tagline below site title.', 'dynamic-news-lite' ),
         'section'  => 'title_tagline',
         'settings' => 'dynamicnews_theme_options[header_tagline]',
         'type'     => 'checkbox',

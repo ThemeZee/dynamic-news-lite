@@ -11,7 +11,7 @@ function dynamicnews_customize_register_general_settings( $wp_customize ) {
 
 	// Add Section for Theme Options
 	$wp_customize->add_section( 'dynamicnews_section_general', array(
-        'title'    => __( 'General Settings', 'dynamic-news-lite' ),
+        'title'    => esc_html__( 'General Settings', 'dynamic-news-lite' ),
         'priority' => 10,
 		'panel' => 'dynamicnews_options_panel' 
 		)
@@ -26,14 +26,14 @@ function dynamicnews_customize_register_general_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_layout', array(
-        'label'    => __( 'Theme Width', 'dynamic-news-lite' ),
+        'label'    => esc_html__( 'Theme Width', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_general',
         'settings' => 'dynamicnews_theme_options[layout]',
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(
-            'boxed' => __( 'Boxed Layout', 'dynamic-news-lite' ),
-            'wide' => __( 'Wide Layout (Fullwidth)', 'dynamic-news-lite' )
+            'boxed' => esc_html__( 'Boxed Layout', 'dynamic-news-lite' ),
+            'wide' => esc_html__( 'Wide Layout (Fullwidth)', 'dynamic-news-lite' )
 			)
 		)
 	);
@@ -46,14 +46,14 @@ function dynamicnews_customize_register_general_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_sidebar', array(
-        'label'    => __( 'Theme Layout', 'dynamic-news-lite' ),
+        'label'    => esc_html__( 'Theme Layout', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_general',
         'settings' => 'dynamicnews_theme_options[sidebar]',
         'type'     => 'radio',
 		'priority' => 2,
         'choices'  => array(
-            'left-sidebar' => __( 'Left Sidebar', 'dynamic-news-lite' ),
-            'right-sidebar' => __( 'Right Sidebar', 'dynamic-news-lite')
+            'left-sidebar' => esc_html__( 'Left Sidebar', 'dynamic-news-lite' ),
+            'right-sidebar' => esc_html__( 'Right Sidebar', 'dynamic-news-lite' )
 			)
 		)
 	);
@@ -68,7 +68,7 @@ function dynamicnews_customize_register_general_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Dynamic_News_Customize_Header_Control(
         $wp_customize, 'dynamicnews_control_default_fonts', array(
-            'label' => __( 'Default Fonts', 'dynamic-news-lite' ),
+            'label' => esc_html__( 'Default Fonts', 'dynamic-news-lite' ),
             'section' => 'dynamicnews_section_general',
             'settings' => 'dynamicnews_theme_options[default_fonts]',
             'priority' => 3
@@ -85,7 +85,7 @@ function dynamicnews_customize_register_general_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_deactivate_google_fonts', array(
-        'label'    => __( 'Deactivate Google Fonts in case your language is not compatible.', 'dynamic-news-lite' ),
+        'label'    => esc_html__( 'Deactivate Google Fonts in case your language is not compatible.', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_general',
         'settings' => 'dynamicnews_theme_options[deactivate_google_fonts]',
         'type'     => 'checkbox',

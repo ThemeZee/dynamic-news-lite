@@ -8,9 +8,9 @@ class Dynamic_News_Category_Posts_Single_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'dynamicnews_category_posts_single', 
-			'description' => __('Displays a single post from a selected category. Please use this widget ONLY in the Magazine Homepage widget area.', 'dynamic-news-lite')
+			'description' => esc_html__( 'Displays a single post from a selected category. Please use this widget ONLY in the Magazine Homepage widget area.', 'dynamic-news-lite' )
 		);
-		parent::__construct('dynamicnews_category_posts_single', sprintf( __('Category Posts: Single (%s)', 'dynamic-news-lite'), 'Dynamic News' ), $widget_ops);
+		parent::__construct('dynamicnews_category_posts_single', sprintf( esc_html__( 'Category Posts: Single (%s)', 'dynamic-news-lite' ), 'Dynamic News' ), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
@@ -128,7 +128,7 @@ class Dynamic_News_Category_Posts_Single_Widget extends WP_Widget {
 
 					<div class="entry">
 						<?php the_excerpt(); ?>
-						<a href="<?php esc_url(the_permalink()) ?>" class="more-link"><?php _e('Read more', 'dynamic-news-lite'); ?></a>
+						<a href="<?php esc_url(the_permalink()) ?>" class="more-link"><?php esc_html_e( 'Read more', 'dynamic-news-lite' ); ?></a>
 					</div>
 
 				</article>
@@ -211,7 +211,7 @@ class Dynamic_News_Category_Posts_Single_Widget extends WP_Widget {
 				// Check if "All Categories" is selected
 				if( $category == 0 ) :
 				
-					$link_title = __('View all posts', 'dynamic-news-lite');
+					$link_title = esc_html__( 'View all posts', 'dynamic-news-lite' );
 					
 					// Set Link URL to always point to latest posts page
 					if ( get_option( 'show_on_front' ) == 'page' ) :
@@ -223,7 +223,7 @@ class Dynamic_News_Category_Posts_Single_Widget extends WP_Widget {
 				else :
 					
 					// Set Link URL and Title for Category
-					$link_title = sprintf( __('View all posts from category %s', 'dynamic-news-lite'), get_cat_name( $category ) );
+					$link_title = sprintf( esc_html__( 'View all posts from category %s', 'dynamic-news-lite' ), get_cat_name( $category ) );
 					$link_url = esc_url( get_category_link( $category ) );
 					
 				endif;
@@ -266,16 +266,16 @@ class Dynamic_News_Category_Posts_Single_Widget extends WP_Widget {
 
 ?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'dynamic-news-lite'); ?>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php esc_html_e( 'Title:', 'dynamic-news-lite' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</label>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Category:', 'dynamic-news-lite'); ?></label><br/>
+			<label for="<?php echo $this->get_field_id('category'); ?>"><?php esc_html_e( 'Category:', 'dynamic-news-lite' ); ?></label><br/>
 			<?php // Display Category Select
 				$args = array(
-					'show_option_all'    => __('All Categories', 'dynamic-news-lite'),
+					'show_option_all'    => esc_html__( 'All Categories', 'dynamic-news-lite' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $category,
@@ -287,7 +287,7 @@ class Dynamic_News_Category_Posts_Single_Widget extends WP_Widget {
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts:', 'dynamic-news-lite'); ?>
+			<label for="<?php echo $this->get_field_id('number'); ?>"><?php esc_html_e( 'Number of posts:', 'dynamic-news-lite' ); ?>
 				<input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" size="3" />
 			</label>
 		</p>
@@ -295,18 +295,18 @@ class Dynamic_News_Category_Posts_Single_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id('category_link'); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $category_link ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
-				<?php _e('Link Widget Title to Category Archive page', 'dynamic-news-lite'); ?>
+				<?php esc_html_e( 'Link Widget Title to Category Archive page', 'dynamic-news-lite' ); ?>
 			</label>
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id( 'postmeta' ); ?>"><?php _e( 'Post Meta:', 'dynamic-news-lite' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id( 'postmeta' ); ?>"><?php esc_html_e( 'Post Meta:', 'dynamic-news-lite' ); ?></label><br/>
 			<select id="<?php echo $this->get_field_id( 'postmeta' ); ?>" name="<?php echo $this->get_field_name( 'postmeta' ); ?>">
-				<option value="0" <?php selected($postmeta, 0); ?>><?php _e( 'Hide post meta', 'dynamic-news-lite' ); ?></option>
-				<option value="1" <?php selected($postmeta, 1); ?>><?php _e( 'Display post date', 'dynamic-news-lite' ); ?></option>
-				<option value="2" <?php selected($postmeta, 2); ?>><?php _e( 'Display date and author', 'dynamic-news-lite' ); ?></option>
-				<option value="3" <?php selected($postmeta, 3); ?>><?php _e( 'Display date and comments', 'dynamic-news-lite' ); ?></option>
-				<option value="4" <?php selected($postmeta, 4); ?>><?php _e( 'Display date, author and comments', 'dynamic-news-lite' ); ?></option>
+				<option value="0" <?php selected($postmeta, 0); ?>><?php esc_html_e( 'Hide post meta', 'dynamic-news-lite' ); ?></option>
+				<option value="1" <?php selected($postmeta, 1); ?>><?php esc_html_e( 'Display post date', 'dynamic-news-lite' ); ?></option>
+				<option value="2" <?php selected($postmeta, 2); ?>><?php esc_html_e( 'Display date and author', 'dynamic-news-lite' ); ?></option>
+				<option value="3" <?php selected($postmeta, 3); ?>><?php esc_html_e( 'Display date and comments', 'dynamic-news-lite' ); ?></option>
+				<option value="4" <?php selected($postmeta, 4); ?>><?php esc_html_e( 'Display date, author and comments', 'dynamic-news-lite' ); ?></option>
 			</select>
 		</p>
 		

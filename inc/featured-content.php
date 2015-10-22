@@ -365,27 +365,27 @@ class Dynamic_News_Featured_Content {
 
 		// Add Featured Content controls.
 		$wp_customize->add_control( 'featured-content[tag-name]', array(
-			'label'          => __( 'Tag name', 'dynamic-news-lite' ),
+			'label'          => esc_html__( 'Tag name', 'dynamic-news-lite' ),
 			'section'        => 'dynamicnews_section_slider',
 			'priority'       => 5,
 			'active_callback' => 'dynamicnews_slider_activated_callback'
 		) );
 		$wp_customize->add_control( 'featured-content[hide-tag]', array(
-			'label'          => __( 'Hide tag from displaying in post meta and tag clouds.', 'dynamic-news-lite' ),
+			'label'          => esc_html__( 'Hide tag from displaying in post meta and tag clouds.', 'dynamic-news-lite' ),
 			'section'        => 'dynamicnews_section_slider',
 			'type'           => 'checkbox',
 			'priority'       => 6,
 			'active_callback' => 'dynamicnews_slider_activated_callback'
 		) );
 		$wp_customize->add_control( 'featured-content[show-all]', array(
-			'label'          => __( 'Display featured posts in latest blog post listing.', 'dynamic-news-lite' ),
+			'label'          => esc_html__( 'Display featured posts in latest blog post listing.', 'dynamic-news-lite' ),
 			'section'        => 'dynamicnews_section_slider',
 			'type'           => 'checkbox',
 			'priority'       => 7,
 			'active_callback' => 'dynamicnews_slider_activated_callback'
 		) );
 		$wp_customize->add_control( 'featured-content[max-posts]', array(
-			'label'          => __( 'Number of Posts', 'dynamic-news-lite' ),
+			'label'          => esc_html__( 'Number of Posts', 'dynamic-news-lite' ),
 			'section'        => 'dynamicnews_section_slider',
 			'type'           => 'text',
 			'priority'       => 9,

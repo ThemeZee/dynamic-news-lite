@@ -76,42 +76,37 @@ if ( ! function_exists( 'dynamicnews_display_postmeta' ) ):
 			
 		endif;
 		
-		edit_post_link(__( 'Edit Post', 'dynamic-news-lite' ));
+		edit_post_link( esc_html__( 'Edit Post', 'dynamic-news-lite' ));
 	}
 	
 endif;
 
 
 // Display Post Date
-function dynamicnews_meta_date() { ?>		
-		
-	<span class="meta-date sep">
-	<?php printf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 
-			esc_url( get_permalink() ),
-			esc_attr( get_the_time() ),
-			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date() )
-		);
-	?>
-	</span>
+function dynamicnews_meta_date() { 
 	
-<?php
+	$time_string = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
+		esc_url( get_permalink() ),
+		esc_attr( get_the_time() ),
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() )
+	);
+
+	echo '<span class="meta-date sep">' . $time_string . '</span>';
 }
 
 
 // Display Post Author
-function dynamicnews_meta_author() { ?>		
-		
-	<span class="meta-author sep">
-	<?php printf( '<span class="author vcard"><a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'dynamic-news-lite' ), get_the_author() ) ),
-			get_the_author()
-		);
-	?>
-	</span>
-			
-<?php
+function dynamicnews_meta_author() {  
+	
+	$author_string = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		esc_attr( sprintf( esc_html__( 'View all posts by %s', 'dynamic-news-lite' ), get_the_author() ) ),
+		esc_html( get_the_author() )
+	);
+	
+	echo '<span class="meta-author sep"> ' . $author_string . '</span>';
+
 }
 
 
@@ -119,7 +114,7 @@ function dynamicnews_meta_author() { ?>
 function dynamicnews_meta_comments() { ?>		
 		
 	<span class="meta-comments">
-		<?php comments_popup_link( __('Leave a comment', 'dynamic-news-lite'),__('One comment','dynamic-news-lite'),__('% comments','dynamic-news-lite') ); ?>
+		<?php comments_popup_link( esc_html__( 'Leave a comment', 'dynamic-news-lite' ), esc_html__( 'One comment', 'dynamic-news-lite' ), esc_html__( '% comments', 'dynamic-news-lite' ) ); ?>
 	</span>
 	
 <?php
@@ -198,7 +193,7 @@ if ( ! function_exists( 'dynamicnews_display_postinfo_single' ) ):
 			if ( $tag_list ) : ?>
 				
 				<span class="meta-tags">
-					<?php printf(__('tagged with %1$s', 'dynamic-news-lite'), $tag_list); ?>
+					<?php printf( esc_html__( 'tagged with %1$s', 'dynamic-news-lite' ), $tag_list); ?>
 				</span>
 		
 			<?php endif;
@@ -254,7 +249,7 @@ add_action( 'dynamicnews_footer_text', 'dynamicnews_display_footer_text' );
 function dynamicnews_display_footer_text() { ?>
 
 	<span class="credit-link">
-		<?php printf( __( 'Powered by %1$s and %2$s.', 'dynamic-news-lite' ), 
+		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'dynamic-news-lite' ), 
 			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
 			'<a href="http://themezee.com/themes/dynamicnews/" title="Dynamic News WordPress Theme">Dynamic News</a>'
 		); ?>
@@ -288,7 +283,7 @@ function dynamicnews_display_social_icons() {
 	else: // Display Hint how to configure Social Icons ?>
 
 		<p class="social-icons-hint">
-			<?php _e('Please go to Appearance &#8594; Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" location.', 'dynamic-news-lite'); ?>
+			<?php esc_html_e( 'Please go to Appearance &#8594; Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" location.', 'dynamic-news-lite' ); ?>
 		</p>
 <?php
 	endif;
@@ -305,8 +300,8 @@ function dynamicnews_list_comments($comment, $args, $depth) {
 	if( $comment->comment_type == 'pingback' or $comment->comment_type == 'trackback' ) : ?>
 
 		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-			<p><?php _e( 'Pingback:', 'dynamic-news-lite' ); ?> <?php comment_author_link(); ?>
-			<?php edit_comment_link( __( '(Edit)', 'dynamic-news-lite' ), '<span class="edit-link">', '</span>' ); ?>
+			<p><?php esc_html_e( 'Pingback:', 'dynamic-news-lite' ); ?> <?php comment_author_link(); ?>
+			<?php edit_comment_link( esc_html__( '(Edit)', 'dynamic-news-lite' ), '<span class="edit-link">', '</span>' ); ?>
 			</p>
 
 	<?php else : ?>
@@ -322,7 +317,7 @@ function dynamicnews_list_comments($comment, $args, $depth) {
 							<?php echo get_comment_date(); ?>
 							<?php echo get_comment_time(); ?>
 						</a>
-						<?php edit_comment_link(__('(Edit)', 'dynamic-news-lite'),'  ','') ?>
+						<?php edit_comment_link( esc_html__( '(Edit)', 'dynamic-news-lite' ),'  ','') ?>
 					</div>
 
 				</div>
@@ -332,7 +327,7 @@ function dynamicnews_list_comments($comment, $args, $depth) {
 					<?php echo get_avatar( $comment, 72 ); ?>
 
 					<?php if ($comment->comment_approved == '0') : ?>
-						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'dynamic-news-lite' ); ?></p>
+						<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'dynamic-news-lite' ); ?></p>
 					<?php endif; ?>
 
 					<?php comment_text(); ?>

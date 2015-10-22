@@ -11,7 +11,7 @@ function dynamicnews_customize_register_header_settings( $wp_customize ) {
 
 	// Add Sections for Header Content
 	$wp_customize->add_section( 'dynamicnews_section_header', array(
-        'title'    => __( 'Header Settings', 'dynamic-news-lite' ),
+        'title'    => esc_html__( 'Header Settings', 'dynamic-news-lite' ),
         'priority' => 20,
 		'panel' => 'dynamicnews_options_panel' 
 		)
@@ -27,7 +27,7 @@ function dynamicnews_customize_register_header_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Dynamic_News_Customize_Header_Control(
         $wp_customize, 'dynamicnews_control_header_content', array(
-            'label' => __( 'Header Content', 'dynamic-news-lite' ),
+            'label' => esc_html__( 'Header Content', 'dynamic-news-lite' ),
             'section' => 'dynamicnews_section_header',
             'settings' => 'dynamicnews_theme_options[header_content]',
             'priority' => 3
@@ -43,7 +43,7 @@ function dynamicnews_customize_register_header_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Dynamic_News_Customize_Description_Control(
         $wp_customize, 'dynamicnews_control_header_content_description', array(
-            'label' =>  __( 'The Header Content will be displayed on the right hand side of the header area.', 'dynamic-news-lite' ),
+            'label' =>  esc_html__( 'The Header Content will be displayed on the right hand side of the header area.', 'dynamic-news-lite' ),
             'section' => 'dynamicnews_section_header',
             'settings' => 'dynamicnews_theme_options[header_content_description]',
             'priority' => 4
@@ -60,7 +60,7 @@ function dynamicnews_customize_register_header_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_header_search', array(
-        'label'    => __( 'Display search field on header area', 'dynamic-news-lite' ),
+        'label'    => esc_html__( 'Display search field on header area', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_header',
         'settings' => 'dynamicnews_theme_options[header_search]',
         'type'     => 'checkbox',
@@ -76,7 +76,7 @@ function dynamicnews_customize_register_header_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_header_icons', array(
-        'label'    => __( 'Display Social Icons on header area', 'dynamic-news-lite' ),
+        'label'    => esc_html__( 'Display Social Icons on header area', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_header',
         'settings' => 'dynamicnews_theme_options[header_icons]',
         'type'     => 'checkbox',
@@ -92,7 +92,7 @@ function dynamicnews_customize_register_header_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'dynamicnews_control_header_text', array(
-        'label'    => __( 'Header Text Line', 'dynamic-news-lite' ),
+        'label'    => esc_html__( 'Header Text Line', 'dynamic-news-lite' ),
         'section'  => 'dynamicnews_section_header',
         'settings' => 'dynamicnews_theme_options[header_text]',
         'type'     => 'text',

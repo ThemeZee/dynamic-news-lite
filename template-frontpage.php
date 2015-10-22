@@ -36,7 +36,7 @@ Template Name: Magazine Homepage
 			if ( current_user_can( 'edit_theme_options' ) ) : ?>
 
 			<p class="frontpage-magazine-no-widgets">
-				<?php _e('Please go to Appearance &#8594; Widgets and add at least one widget to the "Magazine Homepage" widget area. You can use the Category Posts widgets to set up the theme like the demo website.', 'dynamic-news-lite'); ?>
+				<?php esc_html_e( 'Please go to Appearance &#8594; Widgets and add at least one widget to the "Magazine Homepage" widget area. You can use the Category Posts widgets to set up the theme like the demo website.', 'dynamic-news-lite' ); ?>
 			</p>
 
 			<?php endif;
