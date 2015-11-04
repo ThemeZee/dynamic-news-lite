@@ -65,18 +65,18 @@
 	height: auto;
 }
 
-.tzwb-posts-list .tzwb-postmeta {
+.tzwb-posts-list .tzwb-entry-meta {
 	margin: 0.3em 0;
 	padding: 0;
 	color: #777;
 	font-size: 0.8em;
 }
 
-.tzwb-posts-list  .tzwb-postmeta span {
+.tzwb-posts-list  .tzwb-entry-meta span {
 	margin-right: 0.2em;
 }
 
-.tzwb-posts-list  .tzwb-postmeta span:not(:first-child) {
+.tzwb-posts-list  .tzwb-entry-meta span:not(:first-child) {
     border-left: 1px solid #aaa;
 	padding-left: 0.4em;
 }
@@ -192,7 +192,7 @@
 	margin: 0.3em 0.8em 0.3em 0;
 }
 
-.tzwb-tabbed-content .tzwb-tabcontent ul li .tzwb-postmeta {
+.tzwb-tabbed-content .tzwb-tabcontent ul li .tzwb-entry-meta {
 	margin: 0.1em 0;
 	padding: 0;
 	font-size: 0.8em;
@@ -284,7 +284,7 @@
 /*--------------------------------------------------------------
 # Widget Styling in Footer area
 ---------------------------------------------------------------- */
-#footer-widgets .widget .tzwb-posts-list .tzwb-postmeta {
+#footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta {
 	color: #ccc;
 }
 
