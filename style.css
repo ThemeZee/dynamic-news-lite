@@ -196,6 +196,7 @@ input, textarea, select {
 /* Custom Header Image */
 #custom-header {
 	margin-top: 1px;
+	text-align: center;
 }
 #custom-header img {
 	max-width: 1340px;
