@@ -2,6 +2,11 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.2.8
+-----------------------------------
+[changed] all h2 post and page titles to h1 for better SEO
+[fixed] postmeta styling for widget bundle
+
 Version 1.2.7
 -----------------------------------
 [added] escaping for translation strings for improved security

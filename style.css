@@ -2,7 +2,7 @@
 Theme Name: Dynamic News Lite
 Theme URI: http://themezee.com/themes/dynamicnews/
 Description: A responsive, multipurpose blogging and magazine theme with bold colors and fonts. It comes with a featured content slider and a magazine page template. Dynamic News is a trending theme on wordpress.com and we are sure you will like the WordPress.org version as well.
-Version: 1.2.7
+Version: 1.2.8
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, red, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, blue, silver, white, green, gray
@@ -462,7 +462,7 @@ input, textarea, select {
 	border: 1px solid #ddd;
 	background: #fff;
 }
-.page-title, .post-title {
+.page-title, .entry-title {
 	font-weight: bold;
 	font-family: 'Francois One', Tahoma, Arial;
 	color: #333;
@@ -476,14 +476,14 @@ input, textarea, select {
 .page-title {
     font-size: 2.0em;
 }
-.post-title {
+.entry-title {
     font-size: 1.5em;
 }
-.post-title a:link, .post-title a:visited {
+.entry-title a:link, .entry-title a:visited {
 	color: #333;
 	text-decoration: none;
 }
-.post-title a:hover, .post-title a:active{
+.entry-title a:hover, .entry-title a:active{
 	color: #e84747;
 }
 .sticky {
@@ -1158,7 +1158,7 @@ embed, iframe, object, video {
 .widget-category-posts .more-link:hover, .widget-category-posts .more-link:active {
 	text-decoration: none;
 }
-.widget-category-posts .big-post .post-title {
+.widget-category-posts .big-post .entry-title {
 	font-size: 1.1em;
 }
 .widget-category-posts .big-post .wp-post-image {
@@ -1179,7 +1179,7 @@ embed, iframe, object, video {
 .widget-category-posts .small-post .small-post-content {
 	padding: 0.4em 0.8em;
 }
-.widget-category-posts .small-post .post-title {
+.widget-category-posts .small-post .entry-title {
 	border: none;
 	margin: 0;
 	font-size: 0.95em;
@@ -1652,13 +1652,13 @@ embed, iframe, object, video {
 	.page-title {
 		font-size: 2.0em;
 	}
-	.post-title {
+	.entry-title {
 		font-size: 1.4em;
 	}
-	.widget-category-posts .big-post .post-title {
+	.widget-category-posts .big-post .entry-title {
 		font-size: 1.0em;
 	}
-	.widget-category-posts .small-post .post-title {
+	.widget-category-posts .small-post .entry-title {
 		font-size: 0.9em;
 	}
 

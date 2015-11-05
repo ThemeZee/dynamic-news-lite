@@ -43,7 +43,7 @@ add_filter('excerpt_length', 'dynamicnews_slideshow_excerpt_length');
 			<?php endif;?>
 
 				<div class="slide-entry clearfix">
-					<h2 class="slide-title"><a href="<?php esc_url(the_permalink()) ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+					<?php the_title( sprintf( '<h1 class="slide-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 					<div class="slide-content"><?php the_excerpt(); ?></div>
 					<a href="<?php esc_url(the_permalink()) ?>" class="slide-more-link"><?php esc_html_e( 'Read more &raquo;', 'dynamic-news-lite' ); ?></a>
 				</div>
