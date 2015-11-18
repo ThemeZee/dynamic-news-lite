@@ -15,7 +15,7 @@
 					
 					<?php // Set Widget arguments
 					$args = array(
-						'before_widget' => '<section class="%s">',
+						'before_widget' => '<section class="404-widget">',
 						'after_widget' => '</section>',
 						'before_title' => '<h3>',
 						'after_title' => '</h3>',
