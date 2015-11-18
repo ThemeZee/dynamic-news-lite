@@ -2,6 +2,12 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.2.9
+-----------------------------------
+[removed] empty spaces at the end of template files
+[added] translation files for Norway
+[fixed] header image alignment with wide layout option
+
 Version 1.2.8
 -----------------------------------
 [changed] all h2 post and page titles to h1 for better SEO

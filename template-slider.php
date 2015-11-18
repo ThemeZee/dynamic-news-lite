@@ -29,4 +29,4 @@ Template Name: Post Slider
 		
 	</div>
 	
-<?php get_footer(); ?>	
+<?php get_footer(); ?>

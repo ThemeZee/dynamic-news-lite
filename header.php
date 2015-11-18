@@ -52,4 +52,3 @@
 	
 	<?php // Display Custom Header Image
 		dynamicnews_display_custom_header(); ?>
-		
