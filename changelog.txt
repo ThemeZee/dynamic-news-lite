@@ -7,6 +7,7 @@ Version 1.2.9
 [removed] empty spaces at the end of template files
 [added] translation files for Norway
 [fixed] header image alignment with wide layout option
+[fixed] styling of 404 template
 
 Version 1.2.8
 -----------------------------------
