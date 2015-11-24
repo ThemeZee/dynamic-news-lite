@@ -36,8 +36,8 @@ function dynamicnews_body_classes( $classes ) {
 	// Add Theme Design class
 	if ( isset($theme_options['layout']) and $theme_options['layout'] == 'wide' ) :
 		$classes[] = 'wide-layout';
-	elseif ( isset($theme_options['layout']) and $theme_options['layout'] == 'clean' ) :
-		$classes[] = 'clean-layout';
+	elseif ( isset($theme_options['layout']) and $theme_options['layout'] == 'flat' ) :
+		$classes[] = 'flat-layout';
 	endif;
 
 	return $classes;

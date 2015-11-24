@@ -20,7 +20,7 @@ function dynamicnews_sanitize_checkbox( $value ) {
 // Sanitize the layout width value.
 function dynamicnews_sanitize_layout( $value ) {
 
-	if ( ! in_array( $value, array( 'boxed', 'wide' ), true ) ) :
+	if ( ! in_array( $value, array( 'boxed', 'wide', 'flat' ), true ) ) :
         $value = 'boxed';
 	endif;
 

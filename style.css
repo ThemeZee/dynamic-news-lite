@@ -577,7 +577,7 @@ input, textarea, select {
 	font-weight: bold;
 	color: #333;
 	background: #fff;
-	padding: 1.5em;
+	padding: 1.2em 1.5em;
 	margin-bottom: 1.5em;
 	box-shadow: 0 0 4px #ddd;
 	border: 1px solid #ddd;
@@ -1328,7 +1328,7 @@ embed, iframe, object, video {
 	#wrapper {
 		width: 96%;
 	}
-	.widget, .type-post, .type-page, .type-attachment, #comments {
+	.widget, .type-post, .type-page, .type-attachment, .archive-title, .post-pagination,  #comments {
 		box-shadow: none;
 		border: none;
 		padding: 0;
@@ -1377,7 +1377,7 @@ embed, iframe, object, video {
 		max-width: 100%;
 		float: none;
 	}
-	.widget, .type-post, .type-page, .type-attachment, #comments {
+	.widget, .type-post, .type-page, .type-attachment, .archive-title, .post-pagination,  #comments {
 		box-shadow: 0 0 4px #ddd;
 		border: 1px solid #ddd;
 		padding: 1.5em;
@@ -1545,7 +1545,7 @@ embed, iframe, object, video {
 	#logo .site-title {
 		font-size: 2.3em;
 	}
-	.widget, .type-post, .type-page, .type-attachment, #comments {
+	.widget, .type-post, .type-page, .type-attachment, .archive-title, .post-pagination,  #comments {
 		box-shadow: none;
 		border: none;
 		padding: 0;
@@ -1791,9 +1791,31 @@ embed, iframe, object, video {
 	}
 }
 
+/* Flat Theme Design */
+.flat-layout #mainnav-menu a {
+	padding: 1.1em 1.2em;
+	border-right: 1px solid rgba(255,255,255,0.1);
+}
+.flat-layout .widget, 
+.flat-layout .type-post, 
+.flat-layout .type-page, 
+.flat-layout .type-attachment, 
+.flat-layout .archive-title,
+.flat-layout .post-pagination,
+.flat-layout #comments {
+	box-shadow: none;
+	border-color: #e5e5e5;
+}
 
-/* Clean Theme Design */
+@media only screen and (max-width: 60em) {
 
+	#mainnav-toggle {
+		padding: 0.9em 1.2em;
+	}
+	#mainnav-menu .submenu-dropdown-toggle {
+		padding: 0.7em 1.2em;
+	}
+}
 
 /*--------------------------------------------------------------
 # Media Query Fixes
