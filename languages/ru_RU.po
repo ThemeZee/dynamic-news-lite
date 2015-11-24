@@ -1,0 +1,652 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Dynamic News Lite\n"
+"Report-Msgid-Bugs-To: http://themezee.com/\n"
+"POT-Creation-Date: 2015-11-12 10:00+0100\n"
+"PO-Revision-Date: 2015-11-24 14:39+0100\n"
+"Last-Translator: Valeri Nord <lahmi@yandex.ru>\n"
+"Language-Team: ThemeZee <support@themezee.com>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && n"
+"%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Loco-Target-Locale: ru_RU\n"
+
+#: 404.php:9
+msgid "404: Page not found"
+msgstr "Ошибка 404: Страница не найдена"
+
+#: 404.php:12
+msgid ""
+"It looks like nothing was found at this location. Maybe try a search or one "
+"of the links below?"
+msgstr ""
+"Похоже, что здесь ничего нет...Может, попробуете воспользоваться поиском?"
+
+#: comments.php:11
+msgid "Enter password to view comments."
+msgstr "Введите пароль, чтобы увидеть комментарии."
+
+#: comments.php:21 inc/template-tags.php:117
+msgid "One comment"
+msgstr "Один комментарий"
+
+#: comments.php:21 inc/template-tags.php:117
+#, fuzzy, php-format
+msgid "% comments"
+msgstr "% коммент."
+
+#: content-excerpt.php:12 content-search.php:8 content.php:11
+#: inc/widgets/widget-category-posts-single.php:131
+msgid "Read more"
+msgstr "Читать дальше"
+
+#: featured-content-slider.php:14
+msgid ""
+"There is no featured content to be displayed in the slider. To set up the "
+"slider, go to Appearance &#8594; Customize &#8594; Theme Options, and add a "
+"featured tag in the Post Slider section. The slideshow displays all your "
+"posts which are tagged with that keyword."
+msgstr ""
+"Нет контента для отображения в слайдере. Чтобы настроить слайдер, зайдите во "
+"Внешний вид &#8594; Настроить &#8594; Опции темы, и добавьте определённый "
+"тэг в разделе Слайдера записей. Слайдшоу показывает все ваши записи, "
+"помеченные определённым тэгом. "
+
+#: featured-content-slider.php:48
+msgid "Read more &raquo;"
+msgstr "Читать дальше &raquo;"
+
+#: functions.php:38
+msgid "Menu"
+msgstr "Меню"
+
+#: functions.php:126
+msgid "Main Navigation"
+msgstr "Основная навигация"
+
+#: functions.php:127
+msgid "Footer Navigation"
+msgstr "Навигация футера"
+
+#: functions.php:130
+msgid "Social Icons"
+msgstr "Социальные иконки"
+
+#: functions.php:166 sidebar.php:14
+msgid "Sidebar"
+msgstr "Сайдбар"
+
+#: functions.php:168
+msgid ""
+"Appears on posts and pages except Magazine Homepage and Fullwidth template."
+msgstr ""
+"Отображается на всех страницах и записях, за исключением Журнальной домашней "
+"страницы и полноширинного шаблона. "
+
+#: functions.php:177
+msgid "Magazine Homepage"
+msgstr "Журнальная домашняя страница"
+
+#: functions.php:179
+msgid ""
+"Appears on Magazine Homepage template only. You can use the Category Posts "
+"widgets here."
+msgstr ""
+"Отображается только на Журнальной домашней странице. Вы можете использовать "
+"здесь виджет, выводящий Записи по рубрикам."
+
+#: search.php:13
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Результаты поиска по запросу: %s"
+
+#: search.php:37
+msgid "No matches"
+msgstr "Совпадений нет"
+
+#: search.php:41
+msgid ""
+"Please try again, or use the navigation menus to find what you search for."
+msgstr ""
+"Ничего не обнаружено...попробуйте еще раз. Кто ищет, тот всегда найдёт!"
+
+#: searchform.php:4
+msgctxt "label"
+msgid "Search for:"
+msgstr "Искать:"
+
+#: searchform.php:5
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Искать &hellip;"
+
+#: sidebar.php:16
+msgid ""
+"Please go to Appearance &#8594; Widgets and add some widgets to your sidebar."
+msgstr ""
+"Пожалуйста, зайдите во Внешний вид &#8594; Виджеты и добавьте какой-нибудь "
+"виджет в сайдбар."
+
+#: template-frontpage.php:39
+msgid ""
+"Please go to Appearance &#8594; Widgets and add at least one widget to the "
+"\"Magazine Homepage\" widget area. You can use the Category Posts widgets to "
+"set up the theme like the demo website."
+msgstr ""
+"Пожалуйста, зайдите во Внешний вид &#8594; Виджеты и добавьте хотя бы один "
+"виджет в область \"Журнальная домашняя страница\".  Вы можете использовать "
+"виджеты \"Записи по рубрикам\", чтобы создать нечто вроде демо-сайта."
+
+#: inc/featured-content.php:368
+msgid "Tag name"
+msgstr "Имя тэга"
+
+#: inc/featured-content.php:374
+msgid "Hide tag from displaying in post meta and tag clouds."
+msgstr "Не показывать тэг в мета-данных записи и в облаке тэгов."
+
+#: inc/featured-content.php:381
+msgid "Display featured posts in latest blog post listing."
+msgstr "Показывать определённые записи в списке последних записей блога."
+
+#: inc/featured-content.php:388
+msgid "Number of Posts"
+msgstr "Количество записей"
+
+#: inc/template-tags.php:79
+msgid "Edit Post"
+msgstr "Редактировать запись"
+
+#: inc/template-tags.php:104
+#, php-format
+msgid "View all posts by %s"
+msgstr "Посмотреть все записи, связанные с %s"
+
+#: inc/template-tags.php:117
+msgid "Leave a comment"
+msgstr "Оставить комментарий"
+
+#: inc/template-tags.php:196
+#, php-format
+msgid "tagged with %1$s"
+msgstr "помеченные %1$s"
+
+#: inc/template-tags.php:252
+#, php-format
+msgid "Powered by %1$s and %2$s."
+msgstr "Под управлением %1$s и %2$s."
+
+#: inc/template-tags.php:286
+msgid ""
+"Please go to Appearance &#8594; Menus and create a new custom menu with "
+"custom links to all your social networks. Then click on \"Manage Locations\" "
+"tab and assign your created menu to the \"Social Icons\" location."
+msgstr ""
+"Пожалуйста, зайдите во Внешний вид &#8594; Меню и создайте новое "
+"пользовательское меню со своими ссылками на социальные сети. Затем зайдите в "
+"Управление областями и добавьте своё меню в область \"Социальные иконки\". "
+
+#: inc/template-tags.php:303
+msgid "Pingback:"
+msgstr "Пингбэк:"
+
+#: inc/template-tags.php:304 inc/template-tags.php:320
+msgid "(Edit)"
+msgstr "(Редактировать)"
+
+#: inc/template-tags.php:330
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш комментарий ожидает модерации."
+
+#: inc/theme-info.php:18 inc/theme-info.php:38
+#, php-format
+msgid "Welcome to %1$s %2$s"
+msgstr "Добро пожаловать в %1$s %2$s"
+
+#: inc/theme-info.php:19
+msgid "Theme Info"
+msgstr "Инфо о теме"
+
+#: inc/theme-info.php:44
+msgid "Important Links:"
+msgstr "Важные ссылки:"
+
+#: inc/theme-info.php:45
+msgid "Theme Page"
+msgstr "Веб-страница темы"
+
+#: inc/theme-info.php:46
+msgid "Changelog"
+msgstr "История изменений"
+
+#: inc/theme-info.php:47
+msgid "Theme Demo"
+msgstr "Демо темы"
+
+#: inc/theme-info.php:48 inc/theme-info.php:63
+msgid "Theme Documentation"
+msgstr "Документация темы"
+
+#: inc/theme-info.php:49
+msgid "Rate this theme"
+msgstr "Оцените эту тему"
+
+#: inc/theme-info.php:60
+#, php-format
+msgid "Getting Started with %s"
+msgstr "Начиная с %s"
+
+#: inc/theme-info.php:66
+msgid ""
+"You need help to setup and configure this theme? We got you covered with an "
+"extensive theme documentation on our website."
+msgstr ""
+"Вам нужна помощь в установке и настройке этой темы? Всю исчерпывающую "
+"документацию по теме вы найдёте на нашем сайте. "
+
+#: inc/theme-info.php:70
+#, php-format
+msgid "View %s Documentation"
+msgstr "Посмотреть %s документацию"
+
+#: inc/theme-info.php:76 inc/customizer/customizer.php:29
+msgid "Theme Options"
+msgstr "Опции темы"
+
+#: inc/theme-info.php:79
+#, php-format
+msgid ""
+"%s makes use of the Customizer for all theme settings. Click on \"Customize "
+"Theme\" to open the Customizer now."
+msgstr ""
+"%s использует Настройки темы. Нажмите \"Настроить тему\", чтобы открыть "
+"Настройки темы."
+
+#: inc/theme-info.php:82
+msgid "Customize Theme"
+msgstr "Настроить тему"
+
+#: inc/theme-info.php:87 inc/customizer/sections/customizer-upgrade.php:14
+msgid "Pro Version"
+msgstr "Про-версия"
+
+#: inc/theme-info.php:90
+msgid ""
+"You need more features? Purchase the Pro Version to get additional features "
+"and advanced customization options."
+msgstr ""
+"Вам нужно больше деталей? Приобретите Про-версию, чтобы получить "
+"дополнительные возможности и расширенные настройки темы."
+
+#: inc/theme-info.php:94 inc/customizer/sections/customizer-upgrade.php:62
+#, php-format
+msgid "Learn more about %s Pro"
+msgstr "Узнать больше о %s Про"
+
+#: inc/theme-info.php:115
+#, php-format
+msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
+msgstr ""
+"%1$s с гордостью привёл вас к %2$s. Если вам нравится эта тема, %3$s :)"
+
+#: inc/theme-info.php:118
+msgid "rate it"
+msgstr "поставьте оценку"
+
+#: inc/customizer/customizer.php:39
+msgid "Background"
+msgstr "Фон"
+
+#: inc/customizer/customizer.php:50
+msgid "Display Tagline below site title."
+msgstr "Показывать Слоган под заголовком сайта."
+
+#: inc/customizer/sections/customizer-general.php:14
+msgid "General Settings"
+msgstr "Общие настройки"
+
+#: inc/customizer/sections/customizer-general.php:29
+msgid "Theme Width"
+msgstr "Ширина темы"
+
+#: inc/customizer/sections/customizer-general.php:35
+msgid "Boxed Layout"
+msgstr "Блочная вёрстка"
+
+#: inc/customizer/sections/customizer-general.php:36
+msgid "Wide Layout (Fullwidth)"
+msgstr "Широкий макет (Полноширинный)"
+
+#: inc/customizer/sections/customizer-general.php:49
+msgid "Theme Layout"
+msgstr "Разметка макета"
+
+#: inc/customizer/sections/customizer-general.php:55
+msgid "Left Sidebar"
+msgstr "Левый сайдбар"
+
+#: inc/customizer/sections/customizer-general.php:56
+msgid "Right Sidebar"
+msgstr "Правый сайдбар"
+
+#: inc/customizer/sections/customizer-general.php:71
+msgid "Default Fonts"
+msgstr "Шрифты по умолчанию"
+
+#: inc/customizer/sections/customizer-general.php:88
+msgid "Deactivate Google Fonts in case your language is not compatible."
+msgstr "Деактивировать Гугл Шрифты в случае, если ваш язык их не поддерживает."
+
+#: inc/customizer/sections/customizer-header.php:14
+msgid "Header Settings"
+msgstr "Настройки хэдера"
+
+#: inc/customizer/sections/customizer-header.php:30
+msgid "Header Content"
+msgstr "Содержание хэдера"
+
+#: inc/customizer/sections/customizer-header.php:46
+msgid ""
+"The Header Content will be displayed on the right hand side of the header "
+"area."
+msgstr "Содержание хэдера будет отображаться в правой стороне области хэдера."
+
+#: inc/customizer/sections/customizer-header.php:63
+msgid "Display search field on header area"
+msgstr "Показывать поле Поиска в хэдере"
+
+#: inc/customizer/sections/customizer-header.php:79
+msgid "Display Social Icons on header area"
+msgstr "Показывать Социальные иконки в хэдере"
+
+#: inc/customizer/sections/customizer-header.php:95
+msgid "Header Text Line"
+msgstr "Текстовая строка в хэдере"
+
+#: inc/customizer/sections/customizer-post.php:14
+msgid "Post Settings"
+msgstr "Настройки записи"
+
+#: inc/customizer/sections/customizer-post.php:29
+msgid "Post length on archives"
+msgstr "Длина записи в архивах"
+
+#: inc/customizer/sections/customizer-post.php:35
+msgid "Show full posts"
+msgstr "Показывать запись полностью"
+
+#: inc/customizer/sections/customizer-post.php:36
+msgid "Show post excerpts"
+msgstr "Показывать отрывок записи"
+
+#: inc/customizer/sections/customizer-post.php:50
+msgid "Excerpt Length"
+msgstr "Длина отрывка"
+
+#: inc/customizer/sections/customizer-post.php:69
+msgid "Text after Excerpts"
+msgstr "Текст после отрывка "
+
+#: inc/customizer/sections/customizer-post.php:84
+msgid "Display [...] after excerpts"
+msgstr "Показывать  [...] после отрывка"
+
+#: inc/customizer/sections/customizer-post.php:102
+msgid "Post Images"
+msgstr "Картинки в записях"
+
+#: inc/customizer/sections/customizer-post.php:117
+msgid "Display featured images on archive pages"
+msgstr "Показывать определённые картинки на архивных страницах"
+
+#: inc/customizer/sections/customizer-post.php:133
+msgid "Display featured images on single posts"
+msgstr "Показывать определённые картинки на странице записи"
+
+#: inc/customizer/sections/customizer-post.php:151
+msgid "Post Meta"
+msgstr "Мета-данные записи"
+
+#: inc/customizer/sections/customizer-post.php:166
+#: inc/widgets/widget-category-posts-boxed.php:334
+#: inc/widgets/widget-category-posts-columns.php:386
+#: inc/widgets/widget-category-posts-grid.php:377
+#: inc/widgets/widget-category-posts-single.php:306
+msgid "Display post date"
+msgstr "Показывать дату записи"
+
+#: inc/customizer/sections/customizer-post.php:181
+msgid "Display post author"
+msgstr "Показывать автора записи"
+
+#: inc/customizer/sections/customizer-post.php:196
+msgid "Display post categories"
+msgstr "Показывать рубрику записи"
+
+#: inc/customizer/sections/customizer-post.php:211
+msgid "Display post tags"
+msgstr "Показывать тэги записи"
+
+#: inc/customizer/sections/customizer-slider.php:14
+msgid "Post Slider"
+msgstr "Слайдер записей"
+
+#: inc/customizer/sections/customizer-slider.php:30
+msgid "Activate Post Slider"
+msgstr "Активировать Слайдер записей"
+
+#: inc/customizer/sections/customizer-slider.php:45
+msgid "Show Slider on Magazine Homepage"
+msgstr "Показывать Слайдер на Журнальной домашней странице"
+
+#: inc/customizer/sections/customizer-slider.php:60
+msgid "Show Slider on posts page"
+msgstr "Показывать  Слайдер на странице записи"
+
+#: inc/customizer/sections/customizer-slider.php:78
+msgid "Select Featured Posts"
+msgstr "Выбрать определённые записи"
+
+#: inc/customizer/sections/customizer-slider.php:95
+msgid ""
+"The slideshow displays all your featured posts. You can easily feature posts "
+"by a tag of your choice."
+msgstr ""
+"Слайдшоу показывает все выбранные вами определённые записи. Вы можете легко "
+"определить их по тэгу. "
+
+#: inc/customizer/sections/customizer-slider.php:113
+msgid "Slider Animation"
+msgstr "Анимация Слайдера"
+
+#: inc/customizer/sections/customizer-slider.php:120
+msgid "Slide Effect"
+msgstr "Эффект слайда"
+
+#: inc/customizer/sections/customizer-slider.php:121
+msgid "Fade Effect"
+msgstr "Эффект затухания"
+
+#: inc/customizer/sections/customizer-upgrade.php:30
+msgid "You need more features?"
+msgstr "Вам нужно больше деталей?"
+
+#: inc/customizer/sections/customizer-upgrade.php:46
+msgid ""
+"Purchase the Pro Version to get additional features and advanced "
+"customization options."
+msgstr ""
+"Приобретите Про-версию, чтобы получить дополнительные возможности и "
+"расширенные настройки темы."
+
+#: inc/widgets/widget-category-posts-boxed.php:11
+msgid ""
+"Displays your posts from a selected category in a boxed layout. Please use "
+"this widget ONLY in the Magazine Homepage widget area."
+msgstr ""
+"Показывает записи из выбранной рубрики блочно. Будьте добры использовать "
+"этот виджет ТОЛЬКО в области Журнальной домашней страницы. "
+
+#: inc/widgets/widget-category-posts-boxed.php:13
+#, php-format
+msgid "Category Posts: Boxed (%s)"
+msgstr "Записи по рубрикам: Блочно (%s)"
+
+#: inc/widgets/widget-category-posts-boxed.php:249
+#: inc/widgets/widget-category-posts-columns.php:274
+#: inc/widgets/widget-category-posts-grid.php:276
+#: inc/widgets/widget-category-posts-single.php:214
+msgid "View all posts"
+msgstr "Отображать все записи"
+
+#: inc/widgets/widget-category-posts-boxed.php:261
+#: inc/widgets/widget-category-posts-columns.php:288
+#: inc/widgets/widget-category-posts-grid.php:288
+#: inc/widgets/widget-category-posts-single.php:226
+#, php-format
+msgid "View all posts from category %s"
+msgstr "Отображать все записи из рубрики %s"
+
+#: inc/widgets/widget-category-posts-boxed.php:303
+#: inc/widgets/widget-category-posts-columns.php:327
+#: inc/widgets/widget-category-posts-grid.php:332
+#: inc/widgets/widget-category-posts-single.php:269
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: inc/widgets/widget-category-posts-boxed.php:309
+#: inc/widgets/widget-category-posts-grid.php:338
+#: inc/widgets/widget-category-posts-single.php:275
+msgid "Category:"
+msgstr "Рубрика:"
+
+#: inc/widgets/widget-category-posts-boxed.php:312
+#: inc/widgets/widget-category-posts-columns.php:336
+#: inc/widgets/widget-category-posts-columns.php:351
+#: inc/widgets/widget-category-posts-grid.php:341
+#: inc/widgets/widget-category-posts-single.php:278
+msgid "All Categories"
+msgstr "Все рубрики"
+
+#: inc/widgets/widget-category-posts-boxed.php:326
+#: inc/widgets/widget-category-posts-grid.php:369
+#: inc/widgets/widget-category-posts-single.php:298
+msgid "Link Widget Title to Category Archive page"
+msgstr "Заголовок виджета как ссылка на архивную страницу рубрики"
+
+#: inc/widgets/widget-category-posts-boxed.php:331
+#: inc/widgets/widget-category-posts-columns.php:383
+#: inc/widgets/widget-category-posts-grid.php:374
+#: inc/widgets/widget-category-posts-single.php:303
+msgid "Post Meta:"
+msgstr "Мета-данные:"
+
+#: inc/widgets/widget-category-posts-boxed.php:333
+#: inc/widgets/widget-category-posts-columns.php:385
+#: inc/widgets/widget-category-posts-grid.php:376
+#: inc/widgets/widget-category-posts-single.php:305
+msgid "Hide post meta"
+msgstr "Прятать мета-данные"
+
+#: inc/widgets/widget-category-posts-boxed.php:335
+#: inc/widgets/widget-category-posts-columns.php:387
+#: inc/widgets/widget-category-posts-grid.php:378
+#: inc/widgets/widget-category-posts-single.php:307
+msgid "Display date and author"
+msgstr "Показывать дату и автора"
+
+#: inc/widgets/widget-category-posts-boxed.php:336
+#: inc/widgets/widget-category-posts-columns.php:388
+#: inc/widgets/widget-category-posts-grid.php:379
+#: inc/widgets/widget-category-posts-single.php:308
+msgid "Display date and comments"
+msgstr "Показывать дату и комментарии"
+
+#: inc/widgets/widget-category-posts-columns.php:11
+msgid ""
+"Displays your posts from two selected categories. Please use this widget "
+"ONLY in the Magazine Homepage widget area."
+msgstr ""
+"Показывает записи из двух выбранных рубрик. Будьте добры использовать этот "
+"виджет ТОЛЬКО в области Журнальной домашней страницы. "
+
+#: inc/widgets/widget-category-posts-columns.php:13
+#, php-format
+msgid "Category Posts: 2 Columns (%s)"
+msgstr "Записи по рубрикам: 2 колонки (%s)"
+
+#: inc/widgets/widget-category-posts-columns.php:275
+msgid "Latest Posts"
+msgstr "Самые свежие записи"
+
+#: inc/widgets/widget-category-posts-columns.php:333
+msgid "Left Category:"
+msgstr "Левая рубрика:"
+
+#: inc/widgets/widget-category-posts-columns.php:348
+msgid "Right Category:"
+msgstr "Правая рубрика:"
+
+#: inc/widgets/widget-category-posts-columns.php:363
+#: inc/widgets/widget-category-posts-grid.php:353
+#: inc/widgets/widget-category-posts-single.php:290
+msgid "Number of posts:"
+msgstr "Количество записей:"
+
+#: inc/widgets/widget-category-posts-columns.php:371
+msgid "Highlight first post (big image + excerpt)"
+msgstr "Выделить первую запись (большая картинка + отрывок)"
+
+#: inc/widgets/widget-category-posts-columns.php:378
+msgid "Display Category Titles"
+msgstr "Показывать заголовки рубрик"
+
+#: inc/widgets/widget-category-posts-grid.php:11
+msgid ""
+"Displays your posts from a selected category in a grid layout. Please use "
+"this widget ONLY in the Magazine Homepage widget area."
+msgstr ""
+"Показывает записи из выбранной рубрики в виде сетки. Будьте добры "
+"использовать этот виджет ТОЛЬКО в области Журнальной домашней страницы. "
+
+#: inc/widgets/widget-category-posts-grid.php:13
+#, php-format
+msgid "Category Posts: Grid (%s)"
+msgstr "Записи по рубрикам: Сетка (%s)"
+
+#: inc/widgets/widget-category-posts-grid.php:355
+msgid "Please chose an even number (2, 4, 6, 8)."
+msgstr "Пожалуйста, выберите чётное число (2, 4, 6, 8)."
+
+#: inc/widgets/widget-category-posts-grid.php:362
+msgid "Display as small posts grid with thumbnails"
+msgstr "Показывать как сетку из миниатюр записей"
+
+#: inc/widgets/widget-category-posts-single.php:11
+msgid ""
+"Displays a single post from a selected category. Please use this widget ONLY "
+"in the Magazine Homepage widget area."
+msgstr ""
+"Показывает единичную запись из выбранной рубрики. Будьте добры использовать "
+"этот виджет ТОЛЬКО в области Журнальной домашней страницы. "
+
+#: inc/widgets/widget-category-posts-single.php:13
+#, php-format
+msgid "Category Posts: Single (%s)"
+msgstr "Записи по рубрикам: Единичная (%s)"
+
+#: inc/widgets/widget-category-posts-single.php:309
+msgid "Display date, author and comments"
+msgstr "Показывать дату, автора и комменты"

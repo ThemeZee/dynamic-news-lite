@@ -39,6 +39,17 @@ function dynamicnews_sanitize_sidebar( $value ) {
 }
 
 
+// Sanitize the mobile header value.
+function dynamicnews_sanitize_mobile_header( $value ) {
+
+	if ( ! in_array( $value, array( 'none', 'social', 'search', 'text', 'widgets' ), true ) ) :
+        $value = 'boxed';
+	endif;
+
+    return $value;
+}
+
+
 // Sanitize the post length value.
 function dynamicnews_sanitize_post_length( $value ) {
 

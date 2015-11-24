@@ -100,6 +100,30 @@ function dynamicnews_customize_register_header_settings( $wp_customize ) {
 		)
 	);
 	
+	// Add Settings and Controls for Mobile Header
+	$wp_customize->add_setting( 'dynamicnews_theme_options[mobile_header]', array(
+        'default'           => 'none',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'dynamicnews_sanitize_mobile_header'
+		)
+	);
+    $wp_customize->add_control( 'dynamicnews_control_mobile_header', array(
+        'label'    => esc_html__( 'Header Content on small screens', 'dynamic-news-lite' ),
+        'section'  => 'dynamicnews_section_header',
+        'settings' => 'dynamicnews_theme_options[mobile_header]',
+        'type'     => 'select',
+		'priority' => 8,
+        'choices'  => array(
+            'none' => esc_html__( 'Display no content on small screens', 'dynamic-news-lite' ),
+            'social' => esc_html__( 'Display social icons on small screens', 'dynamic-news-lite' ),
+			'search' => esc_html__( 'Display search field on small screens', 'dynamic-news-lite' ),
+			'text' => esc_html__( 'Display header text on small screens', 'dynamic-news-lite' ),
+			'widgets' => esc_html__( 'Display header widgets on small screens', 'dynamic-news-lite' ),
+			)
+		)
+	);
+	
 }
 
 ?>

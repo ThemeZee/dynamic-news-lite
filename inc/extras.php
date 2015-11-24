@@ -39,6 +39,11 @@ function dynamicnews_body_classes( $classes ) {
 	elseif ( isset($theme_options['layout']) and $theme_options['layout'] == 'flat' ) :
 		$classes[] = 'flat-layout';
 	endif;
+	
+	// Add Mobile Header area class
+	if ( isset($theme_options['mobile_header']) and $theme_options['mobile_header'] <> '' ) :
+		$classes[] = 'mobile-header-' . $theme_options['mobile_header'];
+	endif;
 
 	return $classes;
 }

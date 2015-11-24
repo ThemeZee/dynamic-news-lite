@@ -2,6 +2,12 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.3
+-----------------------------------
+[added] flat layout theme setting
+[added] sliding sidebar on mobile screens
+[added] mobile header content setting
+
 Version 1.2.9
 -----------------------------------
 [removed] empty spaces at the end of template files
