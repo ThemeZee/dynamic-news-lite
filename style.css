@@ -950,6 +950,8 @@ embed, iframe, object, video {
 #social-icons-menu li a[href*="wordpress.org"]:before,
 #social-icons-menu li a[href*="wordpress.com"]:before { content: '\f205'; }
 #social-icons-menu li a[href*="youtube.com"]:before { content: '\f213'; }
+#social-icons-menu li a[href*="newsletter"]:before,
+#social-icons-menu li a[href*="mailto"]:before { content: '\f410'; }
 #social-icons-menu li a[href*="/feed"]:before,
 #social-icons-menu li a[href*="/feed/"]:before,
 #social-icons-menu li a[href*="?feed=rss2"]:before,
@@ -1723,6 +1725,79 @@ embed, iframe, object, video {
 		padding: 0;
 	}
 }
+
+/*--------------------------------------------------------------
+# Theme Option Styles
+--------------------------------------------------------------*/
+
+/* Sidebar Left Layout */
+@media only screen and (min-width: 60em) {
+	.sidebar-left #content {
+		float: right;
+		padding-right: 0;
+		padding-left: 1.5em;
+	}
+	.sidebar-left #sidebar {
+		float: left;
+	}
+}
+
+/* Wide Theme Design */
+@media only screen and (min-width: 60em) {
+	.wide-layout #wrapper {
+		margin: 0;
+		width: 100%;
+		max-width: 100%;
+		background: none;
+	}
+	.wide-layout #header {
+		padding: 3em 0.5em;
+	}
+	.wide-layout .container {
+		max-width: 1340px;
+		width: 92%;
+		margin: 0 auto;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.wide-layout #wrap {
+		padding: 1.5em 0;
+	}
+}
+@media only screen and (max-width: 70em) {
+	.wide-layout .container {
+		width: 94%;
+	}
+}
+@media only screen and (max-width: 65em) {
+	.wide-layout .container {
+		width: 96%;
+	}
+	.wide-layout #wrapper {
+		background: #fff;
+	}
+}
+@media only screen and (max-width: 60em) {
+	.wide-layout .container {
+		width: 100%;
+		margin: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.wide-layout #wrap {
+		padding: 1.5em 1.5em 0;
+	}
+}
+
+
+/* Clean Theme Design */
+
+
+/*--------------------------------------------------------------
+# Media Query Fixes
+--------------------------------------------------------------*/
 
 /* Big Screens Navi Fix | >720px */
 @media only screen and (min-width: 60em) {

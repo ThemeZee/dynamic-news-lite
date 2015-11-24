@@ -17,6 +17,33 @@ function dynamicnews_get_featured_content() {
 	return apply_filters( 'dynamicnews_get_featured_content', false );
 }
 
+/**
+ * Adds custom theme design and sidebar layout classes to the array of body classes.
+ *
+ * @param array $classes Classes for the body element.
+ * @return array
+ */
+function dynamicnews_body_classes( $classes ) {
+	
+	// Get Theme Options from Database
+	$theme_options = dynamicnews_theme_options();
+		
+	// Switch Sidebar Layout to left
+	if ( isset($theme_options['sidebar']) and $theme_options['sidebar'] == 'left-sidebar' ) :
+		$classes[] = 'sidebar-left';
+	endif;
+	
+	// Add Theme Design class
+	if ( isset($theme_options['layout']) and $theme_options['layout'] == 'wide' ) :
+		$classes[] = 'wide-layout';
+	elseif ( isset($theme_options['layout']) and $theme_options['layout'] == 'clean' ) :
+		$classes[] = 'clean-layout';
+	endif;
+
+	return $classes;
+}
+add_filter( 'body_class', 'dynamicnews_body_classes' );
+
 
 // Change Excerpt Length
 add_filter('excerpt_length', 'dynamicnews_excerpt_length');
