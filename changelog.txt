@@ -8,6 +8,7 @@ Version 1.3
 [added] sliding sidebar on mobile screens
 [added] mobile header content setting
 [added] top navigation menu
+[added] header widget area
 
 Version 1.2.9
 -----------------------------------

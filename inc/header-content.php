@@ -10,7 +10,16 @@
 	// Get Theme Options from Database
 	$theme_options = dynamicnews_theme_options();
 
+	// Display Header Widgets
+	if( is_active_sidebar( 'header' ) ) : ?>
 	
+		<div class="header-widgets clearfix">
+			<?php dynamic_sidebar( 'header' ); ?>
+		</div><!-- .header-widgets -->
+		
+	<?php
+	endif;
+							
 	// Display Social Icons
 	if ( isset($theme_options['header_icons']) and $theme_options['header_icons'] == true ) : ?>
 
@@ -18,9 +27,8 @@
 			<?php dynamicnews_display_social_icons(); ?>
 		</div>
 
-<?php
+	<?php
 	endif;
-	
 	
 	// Display Search Form
 	if ( isset($theme_options['header_search']) and $theme_options['header_search'] == true ) : ?>
@@ -29,7 +37,7 @@
 			<?php get_search_form(true); ?>
 		</div>
 
-<?php
+	<?php
 	endif;
 	
 	// Display Text Line

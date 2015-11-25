@@ -176,6 +176,17 @@ function dynamicnews_register_sidebars() {
 		'after_title' => '</span></h3>',
 	));
 	
+	// Register Header Widgets
+	register_sidebar( array(
+		'name' => esc_html__( 'Header', 'dynamic-news-lite' ),
+		'id' => 'header',
+		'description' => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'dynamic-news-lite' ),
+		'before_widget' => '<aside id="%1$s" class="header-widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h4 class="header-widget-title">',
+		'after_title' => '</h4>',
+	));
+	
 	// Register Magazine Homepage
 	register_sidebar( array(
 		'name' => esc_html__( 'Magazine Homepage', 'dynamic-news-lite' ),
