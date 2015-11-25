@@ -124,6 +124,9 @@ function dynamicnews_setup() {
 		'width'	=> 1340,
 		'height' => 200,
 		'flex-height' => true));
+		
+	// Add Theme Support for wooCommerce
+	add_theme_support( 'woocommerce' );
 
 	// Register Navigation Menus
 	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'dynamic-news-lite' ) );
