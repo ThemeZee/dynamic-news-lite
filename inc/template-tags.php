@@ -270,6 +270,7 @@ function dynamicnews_display_social_icons() {
 			'theme_location' => 'social',
 			'container' => false,
 			'menu_id' => 'social-icons-menu',
+			'menu_class' => 'social-icons-menu',
 			'echo' => true,
 			'fallback_cb' => '',
 			'before' => '',

@@ -124,6 +124,39 @@ function dynamicnews_customize_register_header_settings( $wp_customize ) {
 		)
 	);
 	
+	$wp_customize->add_setting( 'dynamicnews_theme_options[topnavi_title]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Dynamic_News_Customize_Header_Control(
+        $wp_customize, 'dynamicnews_control_topnavi_title', array(
+            'label' => esc_html__( 'Top Navigation', 'dynamic-news-lite' ),
+            'section' => 'dynamicnews_section_header',
+            'settings' => 'dynamicnews_theme_options[topnavi_title]',
+            'priority' => 9
+            )
+        )
+    );
+	
+	$wp_customize->add_setting( 'dynamicnews_theme_options[topnavi_icons]', array(
+        'default'           => false,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'dynamicnews_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'dynamicnews_control_topnavi_icons', array(
+        'label'    => esc_html__( 'Display Social Icons on top navigation', 'dynamic-news-lite' ),
+        'section'  => 'dynamicnews_section_header',
+        'settings' => 'dynamicnews_theme_options[topnavi_icons]',
+        'type'     => 'checkbox',
+		'priority' => 10
+		)
+	);
+	
 }
 
 ?>

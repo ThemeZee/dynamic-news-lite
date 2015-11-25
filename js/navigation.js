@@ -111,6 +111,14 @@
 			toggleText: dynamicnews_menu_title,
 			maxWidth: "60em"
 		});
+		
+		/* Setup Top Navigation */
+		$("#topnav").responsiveMenu({
+			menuID: "topnav-menu",
+			toggleID: "topnav-toggle",
+			toggleClass: "nav-toggle",
+			maxWidth: "55em"
+		});
 			
 		/* Add footer navigation toggle effect */
 		$('#footernav-icon').on('click', function(){

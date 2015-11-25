@@ -18,6 +18,10 @@
 
 <div id="wrapper" class="hfeed">
 	
+	<div id="topnavi-wrap">
+		<?php locate_template('/inc/top-navigation.php', true); ?>
+	</div>
+		
 	<div id="header-wrap">
 	
 		<header id="header" class="container clearfix" role="banner">

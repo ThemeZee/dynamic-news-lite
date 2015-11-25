@@ -127,6 +127,7 @@ function dynamicnews_setup() {
 
 	// Register Navigation Menus
 	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'dynamic-news-lite' ) );
+	register_nav_menu( 'secondary', esc_html__( 'Top Navigation', 'dynamic-news-lite' ) );
 	register_nav_menu( 'footer', esc_html__( 'Footer Navigation', 'dynamic-news-lite' ) );
 	
 	// Register Social Icons Menu
