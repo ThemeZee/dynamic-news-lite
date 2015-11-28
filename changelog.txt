@@ -10,6 +10,7 @@ Version 1.3
 [added] top navigation menu
 [added] header widget area
 [added] basic support for wooCommerce
+[added] support for ThemeZee Breadcrumbs plugin
 
 Version 1.2.9
 -----------------------------------

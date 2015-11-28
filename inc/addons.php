@@ -11,11 +11,12 @@ add_action( 'after_setup_theme', 'dynamicnews_theme_addons_setup' );
 
 function dynamicnews_theme_addons_setup() {
 
-	// Add Theme Support for Anderson Pro Plugin
+	// Add Theme Support for Dynamic News Pro Plugin
 	add_theme_support( 'dynamicnews-pro' );
 	
 	// Add Theme Support for ThemeZee Addons
 	add_theme_support( 'themezee-widget-bundle' );
+	add_theme_support( 'themezee-breadcrumbs' );
 
 }
 

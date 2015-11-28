@@ -4,6 +4,8 @@
 		
 		<section id="content" class="primary" role="main">
 
+			<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
+			
 			<div class="type-page">
 			
 				<h2 class="page-title"><?php esc_html_e( '404: Page not found', 'dynamic-news-lite' ); ?></h2>

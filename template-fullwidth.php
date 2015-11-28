@@ -9,6 +9,8 @@ Template Name: Fullwidth
 		
 		<section id="content-full" class="clearfix" role="main">
 		
+		<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
+			
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
 			<div <?php post_class(); ?>>

@@ -8,6 +8,8 @@
 		
 		<section id="content" class="primary" role="main">
 		
+			<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
+			
 			<header class="page-header">
 				<h2 id="search-title" class="archive-title">
 					<?php printf( esc_html__( 'Search Results for: %s', 'dynamic-news-lite' ), '<span>' . get_search_query() . '</span>' ); ?>

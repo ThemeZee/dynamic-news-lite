@@ -732,6 +732,41 @@ input, textarea, select {
 	text-decoration: underline;
 }
 
+/* Breadcrumbs */
+.breadcrumbs {
+	margin-bottom: 1em;
+	padding: 0.7em 1em;
+	color: #333;
+	box-shadow: 0 0 4px #ddd;
+	border: 1px solid #ddd;
+	background: #fff;
+}
+.breadcrumbs .trail-browse,
+.breadcrumbs .trail-items,
+.breadcrumbs .trail-items li {
+	display: inline;
+	line-height: 1.4;
+}
+.breadcrumbs .trail-browse {
+	margin-right: 0.5em;
+}
+.breadcrumbs .trail-items {
+	list-style: none;
+}
+.breadcrumbs .trail-items li::after {
+	content: "\00bb"; /* Raquo */
+	padding: 0 0.5em;
+}
+.trail-separator-slash .trail-items li::after { content: "\002F"; }
+.trail-separator-dash .trail-items li::after { content: "\2013"; }
+.trail-separator-bull .trail-items li::after { content: "\2022"; }
+.trail-separator-arrow-bracket .trail-items li::after { content: "\003e"; }
+.trail-separator-raquo .trail-items li::after { content: "\00bb"; }
+.trail-separator-single-arrow .trail-items li::after { content: "\2192"; }
+.trail-separator-double-arrow .trail-items li::after { content: "\21D2"; }
+.breadcrumbs .trail-items li:last-of-type::after {
+	display: none;
+}
 
 /* Text Elements
 -------------------------------------------------------------- */
@@ -2158,6 +2193,7 @@ embed, iframe, object, video {
 .flat-layout .type-attachment, 
 .flat-layout .archive-title,
 .flat-layout .post-pagination,
+.flat-layout .breadcrumbs,
 .flat-layout #comments {
 	box-shadow: none;
 	border-color: #e5e5e5;

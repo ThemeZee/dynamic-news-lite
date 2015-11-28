@@ -10,7 +10,11 @@ Template Name: Magazine Homepage
 ?>
 	
 	<div id="wrap" class="container clearfix template-frontpage">
+		
 		<section id="content" class="primary" role="main">
+		
+		<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
+			
 		<?php // Display Featured Post Slideshow if activated
 		if ( isset($theme_options['slider_activated_front_page']) and $theme_options['slider_activated_front_page'] == true ) :
 

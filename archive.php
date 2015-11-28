@@ -8,6 +8,8 @@
 		
 		<section id="content" class="primary" role="main">
 		
+			<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
+			
 			<header class="page-header">
 				<?php the_archive_title( '<h2 class="archive-title">', '</h2>' ); ?>
 			</header>
