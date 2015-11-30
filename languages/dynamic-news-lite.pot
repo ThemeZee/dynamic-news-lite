@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dynamic News Lite\n"
 "Report-Msgid-Bugs-To: http://themezee.com/\n"
-"POT-Creation-Date: 2015-11-12 10:00+0100\n"
-"PO-Revision-Date: 2015-11-12 10:00+0100\n"
+"POT-Creation-Date: 2015-11-30 10:21+0100\n"
+"PO-Revision-Date: 2015-11-30 10:21+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -20,11 +20,11 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:9
+#: 404.php:11
 msgid "404: Page not found"
 msgstr ""
 
-#: 404.php:12
+#: 404.php:14
 msgid ""
 "It looks like nothing was found at this location. Maybe try a search or one "
 "of the links below?"
@@ -64,47 +64,59 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
-#: functions.php:126
+#: functions.php:132
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:127
+#: functions.php:133 inc/customizer/sections/customizer-header.php:136
+msgid "Top Navigation"
+msgstr ""
+
+#: functions.php:134
 msgid "Footer Navigation"
 msgstr ""
 
-#: functions.php:130
+#: functions.php:137
 msgid "Social Icons"
 msgstr ""
 
-#: functions.php:166 sidebar.php:14
+#: functions.php:173 sidebar.php:14
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:168
+#: functions.php:175
 msgid ""
 "Appears on posts and pages except Magazine Homepage and Fullwidth template."
 msgstr ""
 
-#: functions.php:177
+#: functions.php:184
+msgid "Header"
+msgstr ""
+
+#: functions.php:186
+msgid "Appears on header area. You can use a search or ad widget here."
+msgstr ""
+
+#: functions.php:195
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:179
+#: functions.php:197
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Category Posts "
 "widgets here."
 msgstr ""
 
-#: search.php:13
+#: search.php:15
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
-#: search.php:37
+#: search.php:39
 msgid "No matches"
 msgstr ""
 
-#: search.php:41
+#: search.php:43
 msgid ""
 "Please try again, or use the navigation menus to find what you search for."
 msgstr ""
@@ -124,7 +136,7 @@ msgid ""
 "Please go to Appearance &#8594; Widgets and add some widgets to your sidebar."
 msgstr ""
 
-#: template-frontpage.php:39
+#: template-frontpage.php:43
 msgid ""
 "Please go to Appearance &#8594; Widgets and add at least one widget to the "
 "\"Magazine Homepage\" widget area. You can use the Category Posts widgets to "
@@ -170,22 +182,22 @@ msgstr ""
 msgid "Powered by %1$s and %2$s."
 msgstr ""
 
-#: inc/template-tags.php:286
+#: inc/template-tags.php:287
 msgid ""
 "Please go to Appearance &#8594; Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
 "tab and assign your created menu to the \"Social Icons\" location."
 msgstr ""
 
-#: inc/template-tags.php:303
+#: inc/template-tags.php:304
 msgid "Pingback:"
 msgstr ""
 
-#: inc/template-tags.php:304 inc/template-tags.php:320
+#: inc/template-tags.php:305 inc/template-tags.php:321
 msgid "(Edit)"
 msgstr ""
 
-#: inc/template-tags.php:330
+#: inc/template-tags.php:331
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
@@ -290,7 +302,7 @@ msgid "General Settings"
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:29
-msgid "Theme Width"
+msgid "Theme Design"
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:35
@@ -301,23 +313,27 @@ msgstr ""
 msgid "Wide Layout (Fullwidth)"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:49
-msgid "Theme Layout"
+#: inc/customizer/sections/customizer-general.php:37
+msgid "Flat Layout"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:55
-msgid "Left Sidebar"
+#: inc/customizer/sections/customizer-general.php:50
+msgid "Sidebar Layout"
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:56
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:57
 msgid "Right Sidebar"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:71
+#: inc/customizer/sections/customizer-general.php:72
 msgid "Default Fonts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:88
+#: inc/customizer/sections/customizer-general.php:89
 msgid "Deactivate Google Fonts in case your language is not compatible."
 msgstr ""
 
@@ -345,6 +361,34 @@ msgstr ""
 
 #: inc/customizer/sections/customizer-header.php:95
 msgid "Header Text Line"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:112
+msgid "Header Content on small screens"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:118
+msgid "Display no content on small screens"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:119
+msgid "Display social icons on small screens"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:120
+msgid "Display search field on small screens"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:121
+msgid "Display header text on small screens"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:122
+msgid "Display header widgets on small screens"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:152
+msgid "Display Social Icons on top navigation"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:14
