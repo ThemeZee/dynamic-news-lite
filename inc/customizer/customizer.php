@@ -51,7 +51,41 @@ function dynamicnews_customize_register_options( $wp_customize ) {
         'section'  => 'title_tagline',
         'settings' => 'dynamicnews_theme_options[header_tagline]',
         'type'     => 'checkbox',
-		'priority' => 99
+		'priority' => 10
+		)
+	);
+	
+	// Add Header Image Link
+	$wp_customize->add_setting( 'dynamicnews_theme_options[custom_header_link]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_url'
+		)
+	);
+    $wp_customize->add_control( 'dynamicnews_control_custom_header_link', array(
+        'label'    => esc_html__( 'Header Image Link', 'dynamic-news-lite' ),
+        'section'  => 'header_image',
+        'settings' => 'dynamicnews_theme_options[custom_header_link]',
+        'type'     => 'url',
+		'priority' => 10
+		)
+	);
+	
+	// Add Custom Header Hide Checkbox
+	$wp_customize->add_setting( 'dynamicnews_theme_options[custom_header_hide]', array(
+        'default'           => false,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'dynamicnews_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'dynamicnews_control_custom_header_hide', array(
+        'label'    => esc_html__( 'Hide header image on front page', 'dynamic-news-lite' ),
+        'section'  => 'header_image',
+        'settings' => 'dynamicnews_theme_options[custom_header_hide]',
+        'type'     => 'checkbox',
+		'priority' => 15
 		)
 	);
 	
