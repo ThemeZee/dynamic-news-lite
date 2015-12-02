@@ -5,6 +5,7 @@ Dynamic News Lite Changelog
 Version 1.3.1
 -----------------------------------
 [added] custom header image settings
+[added] theme links in theme options panel
 
 Version 1.3
 -----------------------------------

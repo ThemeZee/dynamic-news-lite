@@ -41,7 +41,7 @@ function dynamicnews_display_theme_info_page() {
 		
 		<hr>
 		<div class="important-links clearfix">
-			<p><strong><?php esc_html_e( 'Important Links:', 'dynamic-news-lite' ); ?></strong>
+			<p><strong><?php esc_html_e( 'Theme Links:', 'dynamic-news-lite' ); ?></strong>
 				<a href="http://themezee.com/themes/dynamicnews/" target="_blank"><?php esc_html_e( 'Theme Page', 'dynamic-news-lite' ); ?></a>
 				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php esc_html_e( 'Changelog', 'dynamic-news-lite' ); ?></a>
 				<a href="http://preview.themezee.com/dynamicnews/" target="_blank"><?php esc_html_e( 'Theme Demo', 'dynamic-news-lite' ); ?></a>

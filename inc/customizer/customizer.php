@@ -96,7 +96,29 @@ function dynamicnews_customize_register_options( $wp_customize ) {
 add_action( 'customize_preview_init', 'dynamicnews_customize_preview_js' );
 
 function dynamicnews_customize_preview_js() {
-	wp_enqueue_script( 'dynamicnewslite-customizer-js', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20140312', true );
+	wp_enqueue_script( 'dynamicnewslite-customizer-preview', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151202', true );
+}
+
+
+// Embed JS file for Customizer Controls
+add_action( 'customize_controls_enqueue_scripts', 'dynamicnews_customize_controls_js' );
+
+function dynamicnews_customize_controls_js() {
+	
+	wp_enqueue_script( 'dynamicnewslite-customizer-controls', get_template_directory_uri() . '/js/customizer-controls.js', array(), '20151202', true );
+	
+	// Localize the script
+	wp_localize_script( 'dynamicnewslite-customizer-controls', 'dynamicnews_theme_links', array(
+		'title'	=> esc_html__( 'Theme Links', 'dynamic-news-lite' ),
+		'themeURL'	=> esc_url( 'http://themezee.com/themes/dynamicnews/' ),
+		'themeLabel'	=> esc_html__( 'Theme Page', 'dynamic-news-lite' ),
+		'docuURL'	=> esc_url( 'http://themezee.com/docs/dynamicnews-documentation/' ),
+		'docuLabel'	=>  esc_html__( 'Theme Documentation', 'dynamic-news-lite' ),
+		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/dynamic-news-lite?filter=5' ),
+		'rateLabel'	=> esc_html__( 'Rate this theme', 'dynamic-news-lite' ),
+		)
+	);
+
 }
 
 
@@ -104,8 +126,6 @@ function dynamicnews_customize_preview_js() {
 add_action( 'customize_controls_print_styles', 'dynamicnews_customize_preview_css' );
 
 function dynamicnews_customize_preview_css() {
-	wp_enqueue_style( 'dynamicnewslite-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20140312' );
+	wp_enqueue_style( 'dynamicnewslite-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20151202' );
 
 }
-
-?>
