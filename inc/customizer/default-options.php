@@ -35,6 +35,7 @@ function dynamicnews_default_options() {
 		'custom_header_hide'				=> false,
 		'layout' 							=> 'boxed',
 		'sidebar' 							=> 'right-sidebar',
+		'sliding_sidebar'					=> true,
 		'deactivate_google_fonts'			=> false,
 		'header_search' 					=> false,
 		'header_icons' 						=> false,

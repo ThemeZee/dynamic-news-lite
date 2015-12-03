@@ -59,6 +59,41 @@ function dynamicnews_customize_register_general_settings( $wp_customize ) {
 		)
 	);
 	
+	// Add Sliding Sidebar Header
+	$wp_customize->add_setting( 'dynamicnews_theme_options[sliding_sidebar_title]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Dynamic_News_Customize_Header_Control(
+        $wp_customize, 'dynamicnews_control_sliding_sidebar_title', array(
+            'label' => esc_html__( 'Sliding Sidebar', 'dynamic-news-lite' ),
+            'section' => 'dynamicnews_section_general',
+            'settings' => 'dynamicnews_theme_options[sliding_sidebar_title]',
+            'priority' => 5
+            )
+        )
+    );
+	
+	// Add Sliding Sidbar checkbox
+	$wp_customize->add_setting( 'dynamicnews_theme_options[sliding_sidebar]', array(
+        'default'           => true,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'dynamicnews_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'dynamicnews_control_sliding_sidebar', array(
+        'label'    => esc_html__( 'Display Sliding Sidebar on mobile screens', 'dynamic-news-lite' ),
+        'section'  => 'dynamicnews_section_general',
+        'settings' => 'dynamicnews_theme_options[sliding_sidebar]',
+        'type'     => 'checkbox',
+		'priority' => 6
+		)
+	);
+	
 	// Add Default Fonts Header
 	$wp_customize->add_setting( 'dynamicnews_theme_options[default_fonts]', array(
         'default'           => '',
@@ -72,7 +107,7 @@ function dynamicnews_customize_register_general_settings( $wp_customize ) {
             'label' => esc_html__( 'Default Fonts', 'dynamic-news-lite' ),
             'section' => 'dynamicnews_section_general',
             'settings' => 'dynamicnews_theme_options[default_fonts]',
-            'priority' => 3
+            'priority' => 7
             )
         )
     );
@@ -90,7 +125,7 @@ function dynamicnews_customize_register_general_settings( $wp_customize ) {
         'section'  => 'dynamicnews_section_general',
         'settings' => 'dynamicnews_theme_options[deactivate_google_fonts]',
         'type'     => 'checkbox',
-		'priority' => 4
+		'priority' => 8
 		)
 	);
 	

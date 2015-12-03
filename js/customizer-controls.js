@@ -46,7 +46,7 @@
 		
 		setTimeout(function () {
 			$('#accordion-panel-dynamicnews_options_panel .control-panel-content').append(content);
-		}, 200);
+		}, 2000);
 
 		// Remove accordion click event
 		$('.dynamicnews-theme-links a').on('click', function(e) {

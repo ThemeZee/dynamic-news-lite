@@ -1537,78 +1537,6 @@ embed, iframe, object, video {
 		padding: 1em 1.5em;
 	}
 
-	/* Mobile Sidebar */
-	#wrapper {
-		position: relative;
-	}
-	#sidebar {
-		float: none;
-		display: none;
-		position: absolute;
-		top: 0;
-		right: 0;
-		padding: 1.5em;
-		background: #fff;
-		width: 80%;
-		height: 100%;
-		overflow: auto;
-		z-index: 200;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-	
-	#sidebar-overlay {
-		display: none;
-		position: fixed;
-		top: 0; 
-		left: 0; 
-		width: 100%; 
-		height: 100%; 
-		background: rgba(0,0,0,0.5);
-		text-align: center;
-		z-index: 100;
-	}
-	
-	/* Sidebar Toggle */
-	.sidebar-navigation-toggle {
-		float: right;
-		display: inline-block;
-		margin: 0;
-		padding: 1.2em;
-		text-decoration: none;
-		font-size: 1.0em;
-		color: #fff;
-		background: none;
-		border: none;
-		-webkit-transition: all 0.1s ease-out;
-		-moz-transition: all 0.1s ease-out;
-		-ms-transition: all 0.1s ease-out;
-		-o-transition: all 0.1s ease-out;
-		transition: all 0.1s ease-out;
-	}
-	
-	.sidebar-navigation-toggle:hover,
-	.sidebar-navigation-toggle:active,
-	.sidebar-navigation-toggle:focus {
-		cursor: pointer;
-		background: #e84747;
-	}
-	
-	.sidebar-navigation-toggle:after {
-		float: left;
-		display: inline-block;
-		font: normal 24px/1 Genericons;
-		line-height: 1;
-		font-family: 'Genericons';
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		text-decoration: inherit;
-		vertical-align: middle;
-		content: '\f510';
-		color: #ffff;
-	}
-
 	/* Mobile Navigation */
 
 	/* Reset */
@@ -1638,7 +1566,8 @@ embed, iframe, object, video {
 		float: none;
 	}
 	#mainnav-toggle {
-		display: inline-block;
+		display: block;
+		width: 100%;
 		margin: 0;
 		padding: 1.2em;
 		text-align: left;
@@ -1660,8 +1589,8 @@ embed, iframe, object, video {
 		background: #e84747;
 	}
 	#mainnav-toggle:before {
-		float: left;
-		margin: 0 0.8em 0 0;
+		float: right;
+		margin: 0;
 		-webkit-font-smoothing: antialiased;
 		display: inline-block;
 		content: '\f419';
@@ -1753,6 +1682,96 @@ embed, iframe, object, video {
 	#mainnav-menu ul .submenu-dropdown-toggle:hover:before {
 		color: #fff;
 	}
+	
+	/* Display Sidebar under content */
+	#sidebar {
+		clear: both;
+		float: none;
+		margin: 2em 0 0;
+		width: 100%;
+	}
+	
+	/* Sliding Sidebar */
+	.sliding-sidebar #wrapper {
+		position: relative;
+	}
+	.sliding-sidebar #sidebar {
+		float: none;
+		display: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 1.5em;
+		background: #fff;
+		width: 80%;
+		height: 100%;
+		overflow: auto;
+		z-index: 200;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	#sidebar-overlay {
+		display: none;
+		position: fixed;
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+		background: rgba(0,0,0,0.5);
+		text-align: center;
+		z-index: 100;
+	}
+	
+	/* Change Mainnav toggle if sliding sidebar is active */
+	.sliding-sidebar #mainnav-toggle {
+		display: inline-block;
+		width: auto;
+	}
+	.sliding-sidebar #mainnav-toggle:before {
+		float: left;
+		margin: 0 0.8em 0 0;
+	}
+	
+	/* Sidebar Toggle */
+	.sidebar-navigation-toggle {
+		float: right;
+		display: inline-block;
+		margin: 0;
+		padding: 1.2em;
+		text-decoration: none;
+		font-size: 1.0em;
+		color: #fff;
+		background: none;
+		border: none;
+		-webkit-transition: all 0.1s ease-out;
+		-moz-transition: all 0.1s ease-out;
+		-ms-transition: all 0.1s ease-out;
+		-o-transition: all 0.1s ease-out;
+		transition: all 0.1s ease-out;
+	}
+	
+	.sidebar-navigation-toggle:hover,
+	.sidebar-navigation-toggle:active,
+	.sidebar-navigation-toggle:focus {
+		cursor: pointer;
+		background: #e84747;
+	}
+	
+	.sidebar-navigation-toggle:after {
+		float: left;
+		display: inline-block;
+		font: normal 24px/1 Genericons;
+		line-height: 1;
+		font-family: 'Genericons';
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-decoration: inherit;
+		vertical-align: middle;
+		content: '\f510';
+		color: #ffff;
+	}
+	
 }
 
 @media only screen and (max-width: 55em) {
@@ -2224,7 +2243,7 @@ embed, iframe, object, video {
 	#mainnav-menu {
 		display: block !important;
 	}
-	#sidebar {
+	.sliding-sidebar #sidebar {
 		display: block;
 		position: static;
 	}

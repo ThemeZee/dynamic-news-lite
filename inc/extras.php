@@ -27,17 +27,22 @@ function dynamicnews_body_classes( $classes ) {
 	
 	// Get Theme Options from Database
 	$theme_options = dynamicnews_theme_options();
-		
-	// Switch Sidebar Layout to left
-	if ( isset($theme_options['sidebar']) and $theme_options['sidebar'] == 'left-sidebar' ) :
-		$classes[] = 'sidebar-left';
-	endif;
-	
+
 	// Add Theme Design class
 	if ( isset($theme_options['layout']) and $theme_options['layout'] == 'wide' ) :
 		$classes[] = 'wide-layout';
 	elseif ( isset($theme_options['layout']) and $theme_options['layout'] == 'flat' ) :
 		$classes[] = 'flat-layout';
+	endif;
+
+	// Switch Sidebar Layout to left
+	if ( isset($theme_options['sidebar']) and $theme_options['sidebar'] == 'left-sidebar' ) :
+		$classes[] = 'sidebar-left';
+	endif;
+	
+	// Add Sliding Sidebar on mobile devices
+	if ( true == $theme_options['sliding_sidebar'] ) :
+		$classes[] = 'sliding-sidebar';
 	endif;
 	
 	// Add Mobile Header area class
