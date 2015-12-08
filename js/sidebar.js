@@ -52,17 +52,21 @@
 		if ( $( '#sidebar' ).length > 0 ) {
 		
 			/* Add sidebar toggle */
-			$('#navi-wrap').before('<button id=\"sidebar-toggle\" class=\"sidebar-navigation-toggle\"></button>');
+			$('#navi-wrap').before('<button id=\"sidebar-toggle\" class=\"sidebar-navigation-toggle\">' + dynamicnews_sidebar_title + '</button>');
+			
+			/* Add sidebar closing toggle */
+			$('#sidebar').prepend('<button id=\"sidebar-close\" class=\"sidebar-closing-toggle\">' + dynamicnews_sidebar_title + '</button>');
 			
 			/* Add Overlay */
 			$('body').append('<div id=\"sidebar-overlay\"></div>');
 			
 			/* Setup Selectors */
 			var button = $('#sidebar-toggle'),
+				close = $('#sidebar-close'),
 				sidebar = $('#sidebar'),
 				overlay = $('#sidebar-overlay');
 			
-			/* Add sidebare toggle effect */
+			/* Add sidebar toggle effect */
 			button.on('click', function(){
 				if( sidebar.is(':visible') ) {
 					hideSidebar();
@@ -70,6 +74,11 @@
 				else {
 					showSidebar();
 				}
+			});
+			
+			/* Sidebar Close */
+			close.on('click', function(){
+				hideSidebar();
 			});
 					
 		}

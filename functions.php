@@ -41,6 +41,7 @@ function dynamicnews_enqueue_scripts() {
 	if ( true == $theme_options['sliding_sidebar'] ) {
 	
 		wp_enqueue_script( 'dynamicnewslite-jquery-sidebar', get_template_directory_uri() .'/js/sidebar.js', array('jquery') );
+		wp_localize_script( 'dynamicnewslite-jquery-sidebar', 'dynamicnews_sidebar_title', esc_html__( 'Sidebar', 'dynamic-news-lite' ) );
 		
 	}
 	
