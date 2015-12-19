@@ -611,31 +611,31 @@ input, textarea, select {
 }
 
 /* Postmeta */
-.postmeta {
+.entry-meta {
 	display: block;
 	color: #333;
 	margin: 0;
 	padding: 0.7em 1em;
 	background: #eee;
 }
-.postmeta .meta-date, .postmeta .meta-author, 
-.postmeta .meta-comments, .postmeta .post-edit-link {
+.entry-meta .meta-date, .entry-meta .meta-author, 
+.entry-meta .meta-comments, .entry-meta .post-edit-link {
 	font-size: 0.9em;
 	line-height: 1.5em;
 }
-.postmeta a:link, .postmeta a:visited {
+.entry-meta a:link, .entry-meta a:visited {
 	color: #555;
 	text-decoration: underline;
 }
-.postmeta a:hover, .postmeta a:active{
+.entry-meta a:hover, .entry-meta a:active{
 	text-decoration: none;
 }
-.postmeta .sep  {
+.entry-meta .sep  {
 	padding-right: 0.7em;
 	margin-right: 0.8em;
 	border-right: 1px solid #aaa;
 }
-.postmeta .post-edit-link  {
+.entry-meta .post-edit-link  {
 	float: right;
 }
 .postinfo {
@@ -1340,13 +1340,13 @@ embed, iframe, object, video {
 	font-size: 0.95em;
 	font-family: 'Droid Sans', Arial, Tahoma;
 }
-.widget-category-posts .small-post .postmeta {
+.widget-category-posts .small-post .entry-meta {
 	display: inline-block;
 	background: none;
 	padding: 0 0.3em 0.3em 0;
 	font-size: 0.9em;
 }
-.widget-category-posts .small-post .postmeta .sep  {
+.widget-category-posts .small-post .entry-meta .sep  {
 	padding-right: 0.4em;
 	margin-right: 0.6em;
 	border-right: 1px solid #aaa;
@@ -2166,10 +2166,10 @@ embed, iframe, object, video {
 
 /* Smartphones | <320px */
 @media only screen and (max-width: 20em) {
-	.postmeta .meta-date, .postmeta .meta-author, .postmeta .meta-comments, .postinfo span {
+	.entry-meta .meta-date, .entry-meta .meta-author, .entry-meta .meta-comments, .postinfo span {
 		display: block;
 	}
-	.postmeta .sep, .postinfo .sep, .postmeta .post-edit-link {
+	.entry-meta .sep, .postinfo .sep, .entry-meta .post-edit-link {
 		border: none;
 		margin: 0;
 		padding: 0;
