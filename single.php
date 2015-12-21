@@ -13,6 +13,8 @@
 			endwhile;
 		
 		endif; ?>
+		
+		<?php dynamicnews_display_related_posts(); ?>
 			
 		<?php comments_template(); ?>
 		

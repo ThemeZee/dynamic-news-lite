@@ -230,7 +230,25 @@ if ( ! function_exists( 'dynamicnews_display_postinfo_single' ) ):
 endif;
 
 
+// Display Dynamic News Lite plugin
+if ( ! function_exists( 'dynamicnews_display_related_posts' ) ):
 	
+	function dynamicnews_display_related_posts() { 
+		
+		if ( function_exists( 'themezee_related_posts' ) ) {
+
+			themezee_related_posts( array( 
+				'class' => 'related-posts type-page clearfix',
+				'before_title' => '<h2 class="entry-title">',
+				'after_title' => '</h2>'
+			) );
+			
+		}
+	}
+	
+endif;
+
+
 // Display Content Pagination
 if ( ! function_exists( 'dynamicnews_display_pagination' ) ):
 	
