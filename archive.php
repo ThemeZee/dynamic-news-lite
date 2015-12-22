@@ -11,7 +11,10 @@
 			<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
 			
 			<header class="page-header">
-				<?php the_archive_title( '<h2 class="archive-title">', '</h2>' ); ?>
+				<?php 
+					the_archive_title( '<h2 class="archive-title">', '</h2>' ); 
+					the_archive_description( '<div class="archive-description">', '</div>' );
+				?>
 			</header>
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post();

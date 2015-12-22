@@ -2,7 +2,7 @@
 Theme Name: Dynamic News Lite
 Theme URI: http://themezee.com/themes/dynamicnews/
 Description: A responsive, multipurpose blogging and magazine theme with bold colors and fonts. It comes with a featured content slider and a magazine page template. Dynamic News is a trending theme on wordpress.com and we are sure you will like the WordPress.org version as well.
-Version: 1.3.1
+Version: 1.3.2
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, red, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, blue, silver, white, green, gray
@@ -686,18 +686,24 @@ input, textarea, select {
 }
 
 /* Archives and Search Heading */
-.archive-title {
-	font-weight: bold;
-	color: #333;
+.page-header {
 	background: #fff;
 	padding: 1.2em 1.5em;
 	margin-bottom: 1.5em;
 	box-shadow: 0 0 4px #ddd;
 	border: 1px solid #ddd;
+}
+.archive-title {
+	color: #333;
+	font-weight: bold;
 	text-transform: uppercase;
 }
 .archive-title span{
 	color: #e84747;
+}
+.archive-description {
+	line-height: 1.6;
+	margin-top: 1em;
 }
 
 /* Content Pagination */
@@ -1480,7 +1486,7 @@ embed, iframe, object, video {
 	#wrapper {
 		width: 96%;
 	}
-	.widget, .type-post, .type-page, .type-attachment, .archive-title, .post-pagination,  #comments {
+	.widget, .type-post, .type-page, .type-attachment, .page-header, .post-pagination,  #comments {
 		box-shadow: none;
 		border: none;
 		padding: 0;
@@ -1522,7 +1528,7 @@ embed, iframe, object, video {
 		text-align: center;
 	}
 	
-	.widget, .type-post, .type-page, .type-attachment, .archive-title, .post-pagination,  #comments {
+	.widget, .type-post, .type-page, .type-attachment, .page-header, .post-pagination,  #comments {
 		box-shadow: 0 0 4px #ddd;
 		border: 1px solid #ddd;
 		padding: 1.5em;
@@ -1975,7 +1981,7 @@ embed, iframe, object, video {
 	#logo .site-title {
 		font-size: 2.3em;
 	}
-	.widget, .type-post, .type-page, .type-attachment, .archive-title, .post-pagination,  #comments {
+	.widget, .type-post, .type-page, .type-attachment, .page-header, .post-pagination,  #comments {
 		box-shadow: none;
 		border: none;
 		padding: 0;
@@ -2256,7 +2262,7 @@ embed, iframe, object, video {
 .flat-layout .type-post, 
 .flat-layout .type-page, 
 .flat-layout .type-attachment, 
-.flat-layout .archive-title,
+.flat-layout .page-header,
 .flat-layout .post-pagination,
 .flat-layout .breadcrumbs,
 .flat-layout #comments {
