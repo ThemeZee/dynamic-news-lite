@@ -230,7 +230,25 @@ if ( ! function_exists( 'dynamicnews_display_postinfo_single' ) ):
 endif;
 
 
-// Display Dynamic News Lite plugin
+// Display Single Post Navigation
+if ( ! function_exists( 'dynamicnews_display_post_navigation' ) ):
+	
+	function dynamicnews_display_post_navigation() { 
+		
+		// Get Theme Options from Database
+		$theme_options = dynamicnews_theme_options();
+		
+		if ( true == $theme_options['post_navigation'] ) {
+
+			the_post_navigation( array( 'prev_text' => '&laquo; %title', 'next_text' => '%title &raquo;' ) );
+			
+		}
+	}
+	
+endif;
+
+
+// Display ThemeZee Related Posts plugin
 if ( ! function_exists( 'dynamicnews_display_related_posts' ) ):
 	
 	function dynamicnews_display_related_posts() { 

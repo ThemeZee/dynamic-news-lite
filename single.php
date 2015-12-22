@@ -14,6 +14,8 @@
 		
 		endif; ?>
 		
+		<?php dynamicnews_display_post_navigation(); ?>
+			
 		<?php dynamicnews_display_related_posts(); ?>
 			
 		<?php comments_template(); ?>

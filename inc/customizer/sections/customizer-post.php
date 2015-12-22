@@ -215,7 +215,38 @@ function dynamicnews_customize_register_post_settings( $wp_customize ) {
 		'priority' => 12
 		)
 	);
+	
+	// Add Post Footer Settings
+	$wp_customize->add_setting( 'dynamicnews_theme_options[post_footer_headline]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Dynamic_News_Customize_Header_Control(
+        $wp_customize, 'dynamicnews_control_post_footer_headline', array(
+            'label' => esc_html__( 'Post Footer', 'dynamic-news-lite' ),
+            'section' => 'dynamicnews_section_post',
+            'settings' => 'dynamicnews_theme_options[post_footer_headline]',
+            'priority' => 13
+            )
+        )
+    );
+	$wp_customize->add_setting( 'dynamicnews_theme_options[post_navigation]', array(
+        'default'           => false,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'dynamicnews_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'dynamicnews_control_post_navigation', array(
+        'label'    => esc_html__( 'Display post navigation on single posts', 'dynamic-news-lite' ),
+        'section'  => 'dynamicnews_section_post',
+        'settings' => 'dynamicnews_theme_options[post_navigation]',
+        'type'     => 'checkbox',
+		'priority' => 14
+		)
+	);
 
 }
-
-?>

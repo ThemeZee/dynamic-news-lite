@@ -6,6 +6,7 @@ Version 1.3.2
 -----------------------------------
 [added] support for ThemeZee Related Posts plugin
 [added] category and tag descriptions on archive template
+[added] previous/next post navigation on single post view
 
 Version 1.3.1
 -----------------------------------

@@ -110,6 +110,35 @@ input, textarea, select {
 	max-width: 100%;
 }
 
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
 /* Basic Structure
 -------------------------------------------------------------- */
 #wrapper {
@@ -736,6 +765,30 @@ input, textarea, select {
 	margin-right: 0.2em;
 	color: #e84747;
 	text-decoration: underline;
+}
+
+/* Post Navigation */
+.post-navigation {
+	margin: 0 0 1.5em 0;
+	padding: 0.8em 1em;
+	color: #333;
+	background: #fff;
+	border: 1px solid #ddd;
+	box-shadow: 0 0 4px #ddd;
+}
+.post-navigation .nav-links:before,
+.post-navigation .nav-links:after {
+	content: "";
+	display: table;
+}
+.post-navigation .nav-links:after {
+	clear: both;
+}
+.post-navigation .nav-links .nav-previous {
+	float: left;
+}
+.post-navigation .nav-links .nav-next {
+	float: right;
 }
 
 /* Breadcrumbs */
@@ -2264,6 +2317,7 @@ embed, iframe, object, video {
 .flat-layout .type-attachment, 
 .flat-layout .page-header,
 .flat-layout .post-pagination,
+.flat-layout .post-navigation, 
 .flat-layout .breadcrumbs,
 .flat-layout #comments {
 	box-shadow: none;
