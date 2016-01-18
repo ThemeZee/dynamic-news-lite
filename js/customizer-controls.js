@@ -1,8 +1,9 @@
-/*
+/**
  * Customizer-controls.js
  *
  * Add Theme Page, Theme Documentation and Rate this theme quick links to theme options panel in customizer
  *
+ * @package Dynamic News Lite
  */
 
 ( function( $ ) {
@@ -26,23 +27,24 @@
 		themePage = $('<a class="dynamicnews-theme-page"></a>')
 			.attr('href', dynamicnews_theme_links.themeURL)
 			.attr('target', '_blank')
-			.text(dynamicnews_theme_links.themeLabel)
-			.css({ 'display' : 'block' });
+			.text(dynamicnews_theme_links.themeLabel);
 		
 		themeDocu = $('<a class="dynamicnews-theme-docu"></a>')
 			.attr('href', dynamicnews_theme_links.docuURL)
 			.attr('target', '_blank')
-			.text(dynamicnews_theme_links.docuLabel)
-			.css({ 'display' : 'block' });
+			.text(dynamicnews_theme_links.docuLabel);
 		
 		rateTheme = $('<a class="dynamicnews-rate-theme"></a>')
 			.attr('href', dynamicnews_theme_links.rateURL)
 			.attr('target', '_blank')
-			.text(dynamicnews_theme_links.rateLabel)
-			.css({ 'display' : 'block' });
+			.text(dynamicnews_theme_links.rateLabel);
 		
 		// Add Links to Box
-		content = box.append(title).append(themePage).append(themeDocu).append(rateTheme);
+		content = box
+			.append(title)
+			.append(themePage).append("<br />")
+			.append(themeDocu).append("<br />")
+			.append(rateTheme);
 		
 		setTimeout(function () {
 			$('#accordion-panel-dynamicnews_options_panel .control-panel-content').append(content);
