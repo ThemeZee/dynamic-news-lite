@@ -46,7 +46,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				</span>
 				
 				<p>
-					<a href="http://themezee.com/themes/dynamicnews/?utm_source=customizer&utm_medium=button&utm_campaign=dynamic-news&utm_content=pro-version" target="_blank" class="button button-secondary">
+					<a href="https://themezee.com/themes/dynamicnews/?utm_source=customizer&utm_medium=button&utm_campaign=dynamic-news&utm_content=pro-version" target="_blank" class="button button-secondary">
 						<?php printf( esc_html__( 'Learn more about %s Pro', 'dynamic-news-lite' ), 'Dynamic News'); ?>
 					</a>
 				</p>
@@ -62,7 +62,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				</span>
 				
 				<p>
-					<a href="http://themezee.com/addons/toolkit/?utm_source=customizer&utm_medium=button&utm_campaign=dynamic-news&utm_content=toolkit" target="_blank" class="button button-secondary">
+					<a href="https://themezee.com/plugins/toolkit/?utm_source=customizer&utm_medium=button&utm_campaign=dynamic-news&utm_content=toolkit" target="_blank" class="button button-secondary">
 						<?php printf( esc_html__( 'View Details', 'dynamic-news-lite' ), 'Dynamic News'); ?>
 					</a>
 					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
@@ -81,7 +81,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				</span>
 
 				<p>
-					<a href="http://themezee.com/addons/?utm_source=customizer&utm_medium=button&utm_campaign=dynamic-news&utm_content=addons" target="_blank" class="button button-secondary">
+					<a href="https://themezee.com/plugins/?utm_source=customizer&utm_medium=button&utm_campaign=dynamic-news&utm_content=addons" target="_blank" class="button button-secondary">
 						<?php esc_html_e( 'Browse our add-ons', 'dynamic-news-lite' ); ?>
 					</a>
 				</p>

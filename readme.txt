@@ -60,7 +60,7 @@ D) Theme Documentation
 ===================================
 
 Need any help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.
-http://themezee.com/docs/dynamicnews-documentation/
+https://themezee.com/docs/dynamicnews-documentation/
 
 ===================================
 E) Page Templates
