@@ -42,50 +42,34 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				<span class="customize-control-title"><?php esc_html_e( 'Pro Version', 'dynamic-news-lite' ); ?></span>
 				
 				<span class="textfield">
-					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'dynamic-news-lite' ), 'Dynamic News'); ?>
+					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'dynamic-news-lite' ), 'Anderson'); ?>
 				</span>
 				
 				<p>
-					<a href="https://themezee.com/themes/dynamicnews/?utm_source=customizer&utm_medium=button&utm_campaign=dynamic-news&utm_content=pro-version" target="_blank" class="button button-secondary">
+					<a href="<?php echo esc_url( __( 'https://themezee.com/addons/dynamicnews-pro/', 'dynamic-news-lite' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=dynamic-news&utm_content=pro-version" target="_blank" class="button button-secondary">
 						<?php printf( esc_html__( 'Learn more about %s Pro', 'dynamic-news-lite' ), 'Dynamic News'); ?>
 					</a>
 				</p>
 				
 			</div>
 			
-			<div class="upgrade-toolkit">
+			<div class="upgrade-plugins">
 			
-				<span class="customize-control-title"><?php esc_html_e( 'ThemeZee Toolkit', 'dynamic-news-lite' ); ?></span>
+				<span class="customize-control-title"><?php esc_html_e( 'ThemeZee Plugins', 'dynamic-news-lite' ); ?></span>
 				
 				<span class="textfield">
-					<?php esc_html_e( 'The ThemeZee Toolkit add-on is a collection of useful small modules and features, neatly bundled into a single plugin.', 'dynamic-news-lite' ); ?>
+					<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized plugins.', 'dynamic-news-lite' ); ?>
 				</span>
 				
 				<p>
-					<a href="https://themezee.com/plugins/toolkit/?utm_source=customizer&utm_medium=button&utm_campaign=dynamic-news&utm_content=toolkit" target="_blank" class="button button-secondary">
-						<?php printf( esc_html__( 'View Details', 'dynamic-news-lite' ), 'Dynamic News'); ?>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/plugins/', 'dynamic-news-lite' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=dynamic-news&utm_content=plugins" target="_blank" class="button button-secondary">
+						<?php esc_html_e( 'Browse Plugins', 'dynamic-news-lite' ); ?>
 					</a>
 					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
 						<?php esc_html_e( 'Install now', 'dynamic-news-lite' ); ?>
 					</a>
 				</p>
 			
-			</div>
-			
-			<div class="upgrade-addons">
-			
-				<span class="customize-control-title"><?php esc_html_e( 'Add-on plugins', 'dynamic-news-lite' ); ?></span>
-				
-				<span class="textfield">
-					<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized add-ons.', 'dynamic-news-lite' ); ?>
-				</span>
-
-				<p>
-					<a href="https://themezee.com/plugins/?utm_source=customizer&utm_medium=button&utm_campaign=dynamic-news&utm_content=addons" target="_blank" class="button button-secondary">
-						<?php esc_html_e( 'Browse our add-ons', 'dynamic-news-lite' ); ?>
-					</a>
-				</p>
-				
 			</div>
 			
 			<?php

@@ -110,9 +110,9 @@ function dynamicnews_customize_controls_js() {
 	// Localize the script
 	wp_localize_script( 'dynamicnewslite-customizer-controls', 'dynamicnews_theme_links', array(
 		'title'	=> esc_html__( 'Theme Links', 'dynamic-news-lite' ),
-		'themeURL'	=> esc_url( 'https://themezee.com/themes/dynamicnews/?utm_source=customizer&utm_medium=textlink&utm_campaign=dynamic-news&utm_content=theme-page' ),
+		'themeURL'	=> esc_url( __( 'https://themezee.com/themes/dynamicnews/', 'dynamic-news-lite' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=dynamic-news&utm_content=theme-page' ),
 		'themeLabel'	=> esc_html__( 'Theme Page', 'dynamic-news-lite' ),
-		'docuURL'	=> esc_url( 'https://themezee.com/docs/dynamicnews-documentation/?utm_source=customizer&utm_medium=textlink&utm_campaign=dynamic-news&utm_content=documentation' ),
+		'docuURL'	=> esc_url( __( 'https://themezee.com/docs/dynamicnews-documentation/', 'dynamic-news-lite' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=dynamic-news&utm_content=documentation' ),
 		'docuLabel'	=>  esc_html__( 'Theme Documentation', 'dynamic-news-lite' ),
 		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/dynamic-news-lite?filter=5' ),
 		'rateLabel'	=> esc_html__( 'Rate this theme', 'dynamic-news-lite' ),

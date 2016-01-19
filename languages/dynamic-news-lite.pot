@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dynamic News Lite\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2015-12-08 10:33+0100\n"
-"PO-Revision-Date: 2015-12-08 10:33+0100\n"
+"POT-Creation-Date: 2016-01-19 18:05+0100\n"
+"PO-Revision-Date: 2016-01-19 18:05+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -177,27 +177,27 @@ msgstr ""
 msgid "tagged with %1$s"
 msgstr ""
 
-#: inc/template-tags.php:274
+#: inc/template-tags.php:310
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
 
-#: inc/template-tags.php:309
+#: inc/template-tags.php:345
 msgid ""
 "Please go to Appearance &#8594; Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
 "tab and assign your created menu to the \"Social Icons\" location."
 msgstr ""
 
-#: inc/template-tags.php:326
+#: inc/template-tags.php:362
 msgid "Pingback:"
 msgstr ""
 
-#: inc/template-tags.php:327 inc/template-tags.php:343
+#: inc/template-tags.php:363 inc/template-tags.php:379
 msgid "(Edit)"
 msgstr ""
 
-#: inc/template-tags.php:353
+#: inc/template-tags.php:389
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
@@ -214,6 +214,10 @@ msgstr ""
 msgid "Theme Links"
 msgstr ""
 
+#: inc/theme-info.php:45 inc/customizer/customizer.php:113
+msgid "https://themezee.com/themes/dynamicnews/"
+msgstr ""
+
 #: inc/theme-info.php:45 inc/customizer/customizer.php:114
 msgid "Theme Page"
 msgstr ""
@@ -224,6 +228,11 @@ msgstr ""
 
 #: inc/theme-info.php:47
 msgid "Theme Demo"
+msgstr ""
+
+#: inc/theme-info.php:48 inc/theme-info.php:69
+#: inc/customizer/customizer.php:115
+msgid "https://themezee.com/docs/dynamicnews-documentation/"
 msgstr ""
 
 #: inc/theme-info.php:48 inc/theme-info.php:63
@@ -277,6 +286,10 @@ msgid ""
 "customization options."
 msgstr ""
 
+#: inc/theme-info.php:95 inc/customizer/functions/custom-controls.php:49
+msgid "https://themezee.com/addons/dynamicnews-pro/"
+msgstr ""
+
 #: inc/theme-info.php:96 inc/customizer/functions/custom-controls.php:50
 #, php-format
 msgid "Learn more about %s Pro"
@@ -285,6 +298,10 @@ msgstr ""
 #: inc/theme-info.php:117
 #, php-format
 msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
+msgstr ""
+
+#: inc/theme-info.php:119
+msgid "https://themezee.com/"
 msgstr ""
 
 #: inc/theme-info.php:120
@@ -308,35 +325,25 @@ msgid "Hide header image on front page"
 msgstr ""
 
 #: inc/customizer/functions/custom-controls.php:58
-msgid "ThemeZee Toolkit"
+msgid "ThemeZee Plugins"
 msgstr ""
 
 #: inc/customizer/functions/custom-controls.php:61
 msgid ""
-"The ThemeZee Toolkit add-on is a collection of useful small modules and "
-"features, neatly bundled into a single plugin."
+"Extend the functionality of your WordPress website with our customized "
+"plugins."
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:65
+msgid "https://themezee.com/plugins/"
 msgstr ""
 
 #: inc/customizer/functions/custom-controls.php:66
-msgid "View Details"
+msgid "Browse Plugins"
 msgstr ""
 
 #: inc/customizer/functions/custom-controls.php:69
 msgid "Install now"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:77
-msgid "Add-on plugins"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:80
-msgid ""
-"Extend the functionality of your WordPress website with our customized add-"
-"ons."
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:85
-msgid "Browse our add-ons"
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:14
@@ -503,6 +510,14 @@ msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:211
 msgid "Display post tags"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:229
+msgid "Post Footer"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:244
+msgid "Display post navigation on single posts"
 msgstr ""
 
 #: inc/customizer/sections/customizer-slider.php:14
