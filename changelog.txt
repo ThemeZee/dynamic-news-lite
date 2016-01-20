@@ -2,6 +2,11 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.3.3
+-----------------------------------
+[removed] extract() function from widget files for better readable code
+[changed] all themezee.com links to https and made them translatable
+
 Version 1.3.2
 -----------------------------------
 [added] support for ThemeZee Related Posts plugin
