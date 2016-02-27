@@ -2,6 +2,11 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.3.4
+-----------------------------------
+[added] support for Jetpack Infinite Scroll feature
+[fixed] some minor CSS styling bugs
+
 Version 1.3.3
 -----------------------------------
 [removed] extract() function from widget files for better readable code

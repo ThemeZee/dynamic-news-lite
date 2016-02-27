@@ -18,6 +18,13 @@ function dynamicnews_theme_addons_setup() {
 	add_theme_support( 'themezee-widget-bundle' );
 	add_theme_support( 'themezee-breadcrumbs' );
 	add_theme_support( 'themezee-related-posts' );
+	
+	// Add Support for Infinite Scroll
+	add_theme_support( 'infinite-scroll', array(
+		'type' 		=> 'click',
+		'container' => 'content',
+		'render'    => 'dynamicnews_infinite_scroll_render',
+	) );
 
 }
 
@@ -63,3 +70,19 @@ function dynamicnews_theme_addons_image_sizes() {
 	add_image_size( 'themezee-related-posts', 420, 210, true );
 
 }
+
+
+/**
+ * Custom render function for Infinite Scroll.
+ */
+function dynamicnews_infinite_scroll_render() {
+
+	// Get Theme Options from Database
+	$theme_options = dynamicnews_theme_options();
+	
+	while ( have_posts() ) {
+		the_post();
+		get_template_part( 'template-parts/content', $theme_options['posts_length'] );
+	}
+	
+} // dynamicnews_infinite_scroll_render()

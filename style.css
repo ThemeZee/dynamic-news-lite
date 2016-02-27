@@ -2,7 +2,7 @@
 Theme Name: Dynamic News Lite
 Theme URI: https://themezee.com/themes/dynamicnews/
 Description: A responsive, multipurpose blogging and magazine theme with bold colors and fonts. It comes with a featured content slider and a magazine page template. Dynamic News is a trending theme on wordpress.com and we are sure you will like the WordPress.org version as well.
-Version: 1.3.3
+Version: 1.3.4
 Author: ThemeZee
 Author URI: https://themezee.com
 Tags: two-columns, light, red, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, blue, silver, white, green, gray
@@ -714,6 +714,30 @@ input, textarea, select {
 	margin: 0.5em 0 1em;
 }
 
+/* Post Navigation */
+.post-navigation {
+	margin: 0 0 1.5em 0;
+	padding: 0.8em 1em;
+	color: #333;
+	background: #fff;
+	border: 1px solid #ddd;
+	box-shadow: 0 0 4px #ddd;
+}
+.post-navigation .nav-links:before,
+.post-navigation .nav-links:after {
+	content: "";
+	display: table;
+}
+.post-navigation .nav-links:after {
+	clear: both;
+}
+.post-navigation .nav-links .nav-previous {
+	float: left;
+}
+.post-navigation .nav-links .nav-next {
+	float: right;
+}
+
 /* Archives and Search Heading */
 .page-header {
 	background: #fff;
@@ -767,28 +791,24 @@ input, textarea, select {
 	text-decoration: underline;
 }
 
-/* Post Navigation */
-.post-navigation {
-	margin: 0 0 1.5em 0;
-	padding: 0.8em 1em;
-	color: #333;
-	background: #fff;
-	border: 1px solid #ddd;
-	box-shadow: 0 0 4px #ddd;
+/* Infinite Scroll Pagination */
+.infinite-scroll .post-pagination {
+	display: none;
 }
-.post-navigation .nav-links:before,
-.post-navigation .nav-links:after {
-	content: "";
-	display: table;
+.infinite-scroll #infinite-handle span {
+	display: inline-block;
+	margin-bottom: 1.5em;
+	padding: 0.6em 1em;
+	line-height: 1.5;
+	font-size: 1em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #e84747;
 }
-.post-navigation .nav-links:after {
-	clear: both;
-}
-.post-navigation .nav-links .nav-previous {
-	float: left;
-}
-.post-navigation .nav-links .nav-next {
-	float: right;
+.infinite-scroll #infinite-handle span:hover {
+	background-color: #303030;
 }
 
 /* Breadcrumbs */
@@ -901,7 +921,7 @@ dt {
 dd {
 	margin-bottom: 1.5em;
 }
-strong {
+strong, b {
 	font-weight: bold;
 }
 cite,
@@ -913,7 +933,6 @@ big, .big_tag {
 	font-size: 1.3em;
 }
 ins {
-	padding: 1px 2px;
 	text-decoration: none;
 }
 code, pre {
