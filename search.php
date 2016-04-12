@@ -11,9 +11,9 @@
 			<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
 			
 			<header class="page-header">
-				<h2 id="search-title" class="archive-title">
+				<h1 id="search-title" class="archive-title">
 					<?php printf( esc_html__( 'Search Results for: %s', 'dynamic-news-lite' ), '<span>' . get_search_query() . '</span>' ); ?>
-				</h2>
+				</h1>
 			</header>
 			
 		<?php if (have_posts()) : while (have_posts()) : the_post();

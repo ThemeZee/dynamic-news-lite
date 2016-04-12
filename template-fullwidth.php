@@ -11,22 +11,13 @@ Template Name: Fullwidth
 		
 		<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
 			
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		
-			<div <?php post_class(); ?>>
-				
-				<h2 class="page-title"><span><?php the_title(); ?></span></h2>
-				
-				<div class="entry clearfix">
-					<?php the_content(); ?>
-				</div>
-				<?php wp_link_pages(); ?>
-				
-			</div>
+		<?php if (have_posts()) : while (have_posts()) : the_post();
 
-		<?php endwhile; ?>
+			get_template_part( 'content', 'page' );
 
-		<?php endif; ?>
+			endwhile;
+
+		endif; ?>
 		
 		<?php comments_template(); ?>
 		
