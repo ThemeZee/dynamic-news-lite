@@ -11,28 +11,28 @@ function dynamicnews_enqueue_scripts() {
 	$theme_options = dynamicnews_theme_options();
 	
 	// Register and Enqueue Stylesheet
-	wp_enqueue_style('dynamicnewslite-stylesheet', get_stylesheet_uri());
+	wp_enqueue_style( 'dynamicnewslite-stylesheet', get_stylesheet_uri() );
 	
 	// Register Genericons
-	wp_enqueue_style('dynamicnewslite-genericons', get_template_directory_uri() . '/css/genericons/genericons.css');
+	wp_enqueue_style( 'dynamicnewslite-genericons', get_template_directory_uri() . '/css/genericons/genericons.css' );
 
 	// Register and Enqueue FlexSlider JS and CSS if necessary
 	if ( ( isset($theme_options['slider_activated_blog']) and $theme_options['slider_activated_blog'] == true )
 		|| ( isset($theme_options['slider_activated_front_page']) and $theme_options['slider_activated_front_page'] == true ) ) :
 
 		// FlexSlider CSS
-		wp_enqueue_style('dynamicnewslite-flexslider', get_template_directory_uri() . '/css/flexslider.css');
+		wp_enqueue_style( 'dynamicnewslite-flexslider', get_template_directory_uri() . '/css/flexslider.css' );
 
 		// FlexSlider JS
-		wp_enqueue_script('dynamicnewslite-jquery-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'));
+		wp_enqueue_script( 'dynamicnewslite-jquery-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'), '2.6.0' );
 
 		// Register and enqueue slider.js
-		wp_enqueue_script('dynamicnewslite-jquery-frontpage_slider', get_template_directory_uri() .'/js/slider.js', array('dynamicnewslite-jquery-flexslider'));
+		wp_enqueue_script( 'dynamicnewslite-jquery-frontpage_slider', get_template_directory_uri() .'/js/slider.js', array( 'dynamicnewslite-jquery-flexslider' ) );
 
 	endif;
 
 	// Register and enqueue navigation.js
-	wp_enqueue_script('dynamicnewslite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
+	wp_enqueue_script( 'dynamicnewslite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery') );
 	
 	// Passing Parameters to Navigation.js Javascript
 	wp_localize_script( 'dynamicnewslite-jquery-navigation', 'dynamicnews_menu_title', esc_html__( 'Menu', 'dynamic-news-lite' ) );

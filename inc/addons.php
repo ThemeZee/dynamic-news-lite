@@ -82,7 +82,7 @@ function dynamicnews_infinite_scroll_render() {
 	
 	while ( have_posts() ) {
 		the_post();
-		get_template_part( 'template-parts/content', $theme_options['posts_length'] );
+		get_template_part( 'content', $theme_options['posts_length'] );
 	}
 	
 } // dynamicnews_infinite_scroll_render()
