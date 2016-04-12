@@ -8,9 +8,10 @@
  */
 
 // Passing Variables to Featured Content Slider ( js/slider.js)
-add_action('wp_enqueue_scripts', 'dynamicnews_custom_slider_parameter');
+add_action( 'wp_enqueue_scripts', 'dynamicnews_custom_slider_parameter' );
 
-if ( ! function_exists( 'dynamicnews_custom_slider_parameter' ) ):
+if ( ! function_exists( 'dynamicnews_custom_slider_parameter' ) ) :
+
 function dynamicnews_custom_slider_parameter() { 
 	
 	// Get Theme Options from Database
@@ -20,14 +21,13 @@ function dynamicnews_custom_slider_parameter() {
 	$params = array();
 	
 	// Define Slider Animation
-	if( isset($theme_options['slider_animation']) ) :
-		$params['animation'] = esc_js($theme_options['slider_animation']);
-	endif;
+	$params['animation'] = $theme_options['slider_animation'];
+	
+	// Define Slider Speed
+	$params['speed'] = $theme_options['slider_speed'];
 	
 	// Passing Parameters to Javascript
 	wp_localize_script( 'dynamicnewslite-jquery-frontpage_slider', 'dynamicnews_slider_params', $params );
 }
+
 endif;
-
-
-?>

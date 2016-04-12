@@ -64,8 +64,8 @@ function dynamicnews_sanitize_post_length( $value ) {
 // Sanitize the slider animation value.
 function dynamicnews_sanitize_slider_animation( $value ) {
 
-	if ( ! in_array( $value, array( 'horizontal', 'fade' ), true ) ) :
-        $value = 'horizontal';
+	if ( ! in_array( $value, array( 'slide', 'fade' ), true ) ) :
+        $value = 'slide';
 	endif;
 
     return $value;

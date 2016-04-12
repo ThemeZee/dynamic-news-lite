@@ -27,7 +27,7 @@ function dynamicnews_enqueue_scripts() {
 		wp_enqueue_script( 'dynamicnewslite-jquery-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'), '2.6.0' );
 
 		// Register and enqueue slider.js
-		wp_enqueue_script( 'dynamicnewslite-jquery-frontpage_slider', get_template_directory_uri() .'/js/slider.js', array( 'dynamicnewslite-jquery-flexslider' ) );
+		wp_enqueue_script( 'dynamicnewslite-jquery-frontpage_slider', get_template_directory_uri() .'/js/slider.js', array( 'dynamicnewslite-jquery-flexslider' ), '2.6.0' );
 
 	endif;
 
