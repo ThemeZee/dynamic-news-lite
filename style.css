@@ -183,21 +183,32 @@ input, textarea, select {
 	max-width: 100%;
 }
 #logo .site-title {
+	display: inline-block;
 	font-size: 2.5em;
 	font-weight: bold;
 	color: #e84747;
 	font-family: 'Francois One', Tahoma, Arial;
 }
-#logo a:hover {
-	text-decoration: none;
+#logo .site-title a:link, 
+#logo .site-title a:visited {
+	color: #e84747;
 }
-#logo a:hover .site-title {
+#logo .site-title a:hover,
+#logo .site-title a:active {
 	color: #333;
 	text-decoration: none;
 }
 #logo .site-description {
 	margin-top: 0.4em;
 	color: #333;
+}
+#logo .custom-logo {
+	margin: 0 1.5em 0 0;
+	padding: 0;
+	border: none;
+	vertical-align: top;
+	max-width: 100%;
+	height: auto;
 }
 
 /* Header Content */
