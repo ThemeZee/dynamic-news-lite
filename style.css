@@ -2374,7 +2374,7 @@ embed, iframe, object, video {
 --------------------------------------------------------------*/
 
 /* Big Screens Navi Fix | >720px */
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 60.001em) {
 	/* ensure #nav is visible on desktop version */
 	#mainnav-menu {
 		display: block !important;
@@ -2384,7 +2384,7 @@ embed, iframe, object, video {
 		position: static;
 	}
 }
-@media only screen and (min-width: 55em) {
+@media only screen and (min-width: 55.001em) {
 	#topnav-menu {
 		display: block !important;
 	}
@@ -2395,7 +2395,7 @@ embed, iframe, object, video {
 		background: rgba(255,2555,255,0.075);
 	}
 }
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 50.001em) {
 	/* ensure #footernav is visible on desktop version */
 	#footernav-menu {
 		display: block !important;
