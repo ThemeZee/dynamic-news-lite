@@ -2,6 +2,12 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.3.6
+-----------------------------------
+[added] selective refresh support in customizer for sidebars and widgets
+[added] version numbers to wp_enqueue_style and wp_enqueue_script functions
+[updated] flexlider, html5shiv and Genericons
+
 Version 1.3.5
 -----------------------------------
 [added] support for new custom logo feature from WordPress 4.5

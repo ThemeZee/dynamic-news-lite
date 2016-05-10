@@ -8,7 +8,8 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'dynamicnews_category_posts_boxed', 
-			'description' => esc_html__( 'Displays your posts from a selected category in a boxed layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'dynamic-news-lite' )
+			'description' => esc_html__( 'Displays your posts from a selected category in a boxed layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'dynamic-news-lite' ),
+			'customize_selective_refresh' => true,
 		);
 		parent::__construct('dynamicnews_category_posts_boxed', sprintf( esc_html__( 'Category Posts: Boxed (%s)', 'dynamic-news-lite' ), 'Dynamic News' ), $widget_ops);
 		

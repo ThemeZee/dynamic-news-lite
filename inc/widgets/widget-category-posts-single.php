@@ -8,7 +8,8 @@ class Dynamic_News_Category_Posts_Single_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'dynamicnews_category_posts_single', 
-			'description' => esc_html__( 'Displays a single post from a selected category. Please use this widget ONLY in the Magazine Homepage widget area.', 'dynamic-news-lite' )
+			'description' => esc_html__( 'Displays a single post from a selected category. Please use this widget ONLY in the Magazine Homepage widget area.', 'dynamic-news-lite' ),
+			'customize_selective_refresh' => true,
 		);
 		parent::__construct('dynamicnews_category_posts_single', sprintf( esc_html__( 'Category Posts: Single (%s)', 'dynamic-news-lite' ), 'Dynamic News' ), $widget_ops);
 		
