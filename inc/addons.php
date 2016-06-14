@@ -21,8 +21,8 @@ function dynamicnews_theme_addons_setup() {
 	
 	// Add Support for Infinite Scroll
 	add_theme_support( 'infinite-scroll', array(
-		'type' 		=> 'click',
 		'container' => 'content',
+		'footer_widgets' => array( 'footer-left', 'footer-center-left', 'footer-center-right', 'footer-right' ),
 		'render'    => 'dynamicnews_infinite_scroll_render',
 	) );
 

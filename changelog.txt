@@ -2,6 +2,13 @@
 Dynamic News Lite Changelog
 ===================================
 
+Version 1.3.8
+-----------------------------------
+[added] added srcset attributes to custom header image
+[added] support for scroll method of Infinite Scroll
+[removed] theme prefixes for loading common third-party scripts
+[updated] theme tags in style.css
+
 Version 1.3.7
 -----------------------------------
 [added] default alt tag to custom header image for improved accessibility
