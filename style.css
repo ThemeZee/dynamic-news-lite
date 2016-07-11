@@ -2,7 +2,7 @@
 Theme Name: Dynamic News Lite
 Theme URI: https://themezee.com/themes/dynamicnews/
 Description: A responsive, multipurpose blogging and magazine theme with bold colors and fonts. It comes with a featured content slider and a magazine page template. Dynamic News is a trending theme on wordpress.com and we are sure you will like the WordPress.org version as well.
-Version: 1.3.8
+Version: 1.3.9
 Author: ThemeZee
 Author URI: https://themezee.com
 Tags: two-columns, light, red, custom-background, custom-colors, custom-header, custom-menu, editor-style, blog, entertainment, news, holiday, food-and-drink, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, blue, silver, white, green, gray
@@ -189,7 +189,7 @@ input, textarea, select {
 	color: #e84747;
 	font-family: 'Francois One', Tahoma, Arial;
 }
-#logo .site-title a:link, 
+#logo .site-title a:link,
 #logo .site-title a:visited {
 	color: #e84747;
 }
@@ -658,7 +658,7 @@ input, textarea, select {
 	padding: 0.7em 1em;
 	background: #eee;
 }
-.entry-meta .meta-date, .entry-meta .meta-author, 
+.entry-meta .meta-date, .entry-meta .meta-author,
 .entry-meta .meta-comments, .entry-meta .post-edit-link {
 	font-size: 0.9em;
 	line-height: 1.5em;
@@ -1593,7 +1593,7 @@ embed, iframe, object, video {
 	}
 	#header-content #header-social-icons,
 	#header-content #header-text,
-	#header-content #header-search, 
+	#header-content #header-search,
 	#header-content .header-widgets {
 		display: none;
 		margin: 0;
@@ -1610,7 +1610,7 @@ embed, iframe, object, video {
 		width: 100%;
 		text-align: center;
 	}
-	
+
 	.widget, .type-post, .type-page, .type-attachment, .page-header, .post-pagination,  #comments {
 		box-shadow: 0 0 4px #ddd;
 		border: 1px solid #ddd;
@@ -1649,7 +1649,7 @@ embed, iframe, object, video {
 	{
 		display: inline;
 	}
-	
+
 	#mainnav {
 		margin: 1.5em 0;
 		float: none;
@@ -1736,7 +1736,7 @@ embed, iframe, object, video {
 	#mainnav-menu ul li.current_page_item a, #mainnav-menu ul li.current-menu-item a {
 		text-decoration: underline;
 	}
-	
+
 	#mainnav-menu .submenu-dropdown-toggle {
 		float: right;
 		display: block;
@@ -1771,7 +1771,7 @@ embed, iframe, object, video {
 	#mainnav-menu ul .submenu-dropdown-toggle:hover:before {
 		color: #fff;
 	}
-	
+
 	/* Display Sidebar under content */
 	#sidebar {
 		clear: both;
@@ -1779,7 +1779,7 @@ embed, iframe, object, video {
 		margin: 2em 0 0;
 		width: 100%;
 	}
-	
+
 	/* Sliding Sidebar */
 	.sliding-sidebar #wrapper {
 		position: relative;
@@ -1804,15 +1804,15 @@ embed, iframe, object, video {
 	#sidebar-overlay {
 		display: none;
 		position: fixed;
-		top: 0; 
-		left: 0; 
-		width: 100%; 
-		height: 100%; 
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 		background: rgba(0,0,0,0.5);
 		text-align: center;
 		z-index: 100;
 	}
-	
+
 	/* Change Mainnav toggle if sliding sidebar is active */
 	.sliding-sidebar #mainnav-toggle {
 		display: inline-block;
@@ -1822,7 +1822,7 @@ embed, iframe, object, video {
 		float: left;
 		margin: 0 0.8em 0 0;
 	}
-	
+
 	/* Sidebar Toggle */
 	.sidebar-navigation-toggle {
 		float: right;
@@ -1843,14 +1843,14 @@ embed, iframe, object, video {
 		-o-transition: all 0.1s ease-out;
 		transition: all 0.1s ease-out;
 	}
-	
+
 	.sidebar-navigation-toggle:hover,
 	.sidebar-navigation-toggle:active,
 	.sidebar-navigation-toggle:focus {
 		cursor: pointer;
 		background: #e84747;
 	}
-	
+
 	.sidebar-navigation-toggle:after {
 		float: right;
 		display: inline-block;
@@ -1865,7 +1865,7 @@ embed, iframe, object, video {
 		content: '\f510';
 		color: #ffff;
 	}
-	
+
 	/* Sidebar Closing Toggle */
 	.sidebar-closing-toggle {
 		display: block;
@@ -1909,12 +1909,12 @@ embed, iframe, object, video {
 }
 
 @media only screen and (max-width: 55em) {
-	
+
 	/* Mobile Top Navigation */
-	
+
 	/* Reset */
-	#topnav, #topnav-menu, #topnav-menu li, #topnav-menu a, #topnav-menu ul, 
-	#topnav-menu ul a, #topnav-menu ul ul, #topnav-menu li ul ul 
+	#topnav, #topnav-menu, #topnav-menu li, #topnav-menu a, #topnav-menu ul,
+	#topnav-menu ul a, #topnav-menu ul ul, #topnav-menu li ul ul
 	{
 		margin: 0;
 		padding: 0;
@@ -1933,7 +1933,7 @@ embed, iframe, object, video {
 	{
 		display: inline;
 	}
-	
+
 	#topnav-toggle {
 		display: inline-block;
 		margin: 0;
@@ -2010,7 +2010,7 @@ embed, iframe, object, video {
 		text-decoration: underline;
 		background: none;
 	}
-	
+
 	#topnav-menu .submenu-dropdown-toggle {
 		float: right;
 		display: block;
@@ -2040,8 +2040,8 @@ embed, iframe, object, video {
 	#topnav-menu ul .submenu-dropdown-toggle:before {
 		font-size: 22px;
 	}
-	
-	
+
+
 	#topnav-menu li.current_page_item a, #topnav-menu li.current-menu-item a {
 		text-decoration: underline;
 	}
@@ -2088,12 +2088,9 @@ embed, iframe, object, video {
 	.entry tr td {
 		padding: 0.2em 0.4em;
 	}
-	
+
 	/* Mobile Footer Navigation */
-	#footer #footer-text {
-		margin-top: -1.05em;
-	}
-		
+
 	/* Reset */
 	#footernav, #footernav-menu, #footernav-menu li, #footernav-menu a, #footernav-menu ul {
 		margin: 0;
@@ -2136,7 +2133,7 @@ embed, iframe, object, video {
 	#footernav-menu {
 		display: none;
 		width: 100%;
-		padding-bottom: 1em;
+		padding-top: 1em;
 	}
 	#footernav-menu li {
 		display: block;
@@ -2150,7 +2147,7 @@ embed, iframe, object, video {
 	#footernav-menu a:hover {
 		text-decoration: underline;
 	}
-	
+
 }
 
 /* Phablets (portrait) | <640px */
@@ -2243,7 +2240,9 @@ embed, iframe, object, video {
 	}
 	#footer #footer-text {
 		float: none;
-		margin-top: 1.05em;
+	}
+	#footernav-icon {
+		margin-top: 1em;
 	}
 }
 
@@ -2341,13 +2340,13 @@ embed, iframe, object, video {
 .flat-layout #topnav-toggle {
 	padding: 0.55em 1em;
 }
-.flat-layout .widget, 
-.flat-layout .type-post, 
-.flat-layout .type-page, 
-.flat-layout .type-attachment, 
+.flat-layout .widget,
+.flat-layout .type-post,
+.flat-layout .type-page,
+.flat-layout .type-attachment,
 .flat-layout .page-header,
 .flat-layout .post-pagination,
-.flat-layout .post-navigation, 
+.flat-layout .post-navigation,
 .flat-layout .breadcrumbs,
 .flat-layout #comments {
 	box-shadow: none;
