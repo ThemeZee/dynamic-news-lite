@@ -17,43 +17,51 @@
 ?>
 
 <div id="wrapper" class="hfeed">
-	
+
 	<div id="topnavi-wrap">
 		<?php locate_template('/inc/top-navigation.php', true); ?>
 	</div>
-		
+
 	<div id="header-wrap">
-	
+
 		<header id="header" class="container clearfix" role="banner">
 
 			<div id="logo" class="clearfix">
-			
+
 				<?php dynamicnews_site_logo(); ?>
 				<?php dynamicnews_site_title(); ?>
-				
+
 				<?php // Display Tagline on header if activated
-				if ( isset($theme_options['header_tagline']) and $theme_options['header_tagline'] == true ) : ?>			
+				if ( isset($theme_options['header_tagline']) and $theme_options['header_tagline'] == true ) : ?>
 					<h2 class="site-description"><?php echo bloginfo('description'); ?></h2>
 				<?php endif; ?>
-			
+
 			</div>
-			
+
 			<div id="header-content" class="clearfix">
 				<?php get_template_part('inc/header-content'); ?>
 			</div>
 
 		</header>
-	
+
 	</div>
-	
+
 	<div id="navi-wrap">
 		<nav id="mainnav" class="container clearfix" role="navigation">
-			<?php 
+			<?php
 				// Get Navigation out of Theme Options
-				wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_id' => 'mainnav-menu', 'echo' => true, 'fallback_cb' => 'dynamicnews_default_menu', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'depth' => 0));
+				wp_nav_menu( array(
+					'theme_location' => 'primary',
+					'container' => false,
+					'menu_id' => 'mainnav-menu',
+					'menu_class' => 'main-navigation-menu',
+					'echo' => true,
+					'fallback_cb' => 'dynamicnews_default_menu',
+					'depth' => 0
+				) );
 			?>
 		</nav>
 	</div>
-	
+
 	<?php // Display Custom Header Image
 		dynamicnews_display_custom_header(); ?>
