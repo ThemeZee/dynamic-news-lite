@@ -26,6 +26,9 @@ For more information about Dynamic News Lite please go to https://themezee.com/t
 
 == Changelog ==
 
+= 1.4.1 =
+* fixed styling of main navigation menu with default pages
+
 = 1.4.0 =
 * added readme.txt file
 * improved styling of navigation menus

@@ -8,7 +8,7 @@
 
 // Add Default Menu Fallback Function
 function dynamicnews_default_menu() {
-	echo '<ul id="mainnav-menu" class="menu">'. wp_list_pages('title_li=&echo=0') .'</ul>';
+	echo '<ul id="mainnav-menu" class="main-navigation-menu menu">'. wp_list_pages('title_li=&echo=0') .'</ul>';
 }
 
 
@@ -24,7 +24,7 @@ function dynamicnews_get_featured_content() {
  * @return array
  */
 function dynamicnews_body_classes( $classes ) {
-	
+
 	// Get Theme Options from Database
 	$theme_options = dynamicnews_theme_options();
 
@@ -39,12 +39,12 @@ function dynamicnews_body_classes( $classes ) {
 	if ( isset($theme_options['sidebar']) and $theme_options['sidebar'] == 'left-sidebar' ) :
 		$classes[] = 'sidebar-left';
 	endif;
-	
+
 	// Add Sliding Sidebar on mobile devices
 	if ( true == $theme_options['sliding_sidebar'] ) :
 		$classes[] = 'sliding-sidebar';
 	endif;
-	
+
 	// Add Mobile Header area class
 	if ( isset($theme_options['mobile_header']) and $theme_options['mobile_header'] <> '' ) :
 		$classes[] = 'mobile-header-' . $theme_options['mobile_header'];
@@ -86,7 +86,7 @@ function dynamicnews_frontpage_category_excerpt_length($length) {
 // Change Excerpt More
 add_filter('excerpt_more', 'dynamicnews_excerpt_more');
 function dynamicnews_excerpt_more($more) {
-    
+
 	// Get Theme Options from Database
 	$theme_options = dynamicnews_theme_options();
 
