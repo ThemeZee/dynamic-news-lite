@@ -26,6 +26,9 @@ For more information about Dynamic News Lite please go to https://themezee.com/t
 
 == Changelog ==
 
+= 1.4.2 =
+* fixed dropdown menus on mobile navigation menus
+
 = 1.4.1 =
 * fixed styling of main navigation menu with default pages
 
