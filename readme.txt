@@ -26,6 +26,9 @@ For more information about Dynamic News Lite please go to https://themezee.com/t
 
 == Changelog ==
 
+= 1.4.3 =
+* added Right-to-Left language support
+
 = 1.4.2 =
 * fixed dropdown menus on mobile navigation menus
 
