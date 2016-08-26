@@ -333,6 +333,10 @@ blockquote cite {
 		float: left;
 	}
 
+	.main-navigation-menu li {
+		width: 100%;
+	}
+
 	.main-navigation-menu a {
 		clear: right;
 	}
@@ -409,6 +413,10 @@ blockquote cite {
 
 	.top-navigation-menu {
 		float: right;
+	}
+
+	.top-navigation-menu li {
+		width: 100%;
 	}
 
 	.top-navigation-menu a {
