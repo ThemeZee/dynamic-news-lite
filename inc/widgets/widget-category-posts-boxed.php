@@ -223,7 +223,7 @@ class Dynamic_News_Category_Posts_Boxed_Widget extends WP_Widget {
 			echo $args['before_title'];
 
 			// Link Category Title
-			if ( true === $settings['category_link'] ) :
+			if ( true == $settings['category_link'] ) :
 
 				// Check if "All Categories" is selected
 				if ( 0 === $settings['category'] ) :

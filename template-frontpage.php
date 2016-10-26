@@ -16,7 +16,7 @@ Template Name: Magazine Homepage
 		<?php if ( function_exists( 'themezee_breadcrumbs' ) ) { themezee_breadcrumbs(); } ?>
 
 		<?php // Display Featured Post Slideshow if activated
-		if ( true === $theme_options['slider_activated_front_page'] ) :
+		if ( true == $theme_options['slider_activated_front_page'] ) :
 
 			get_template_part( 'featured-content-slider' );
 

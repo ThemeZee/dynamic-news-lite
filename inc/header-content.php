@@ -20,7 +20,7 @@ if ( is_active_sidebar( 'header' ) ) : ?>
 endif;
 
 // Display Social Icons
-if ( true === $theme_options['header_icons'] ) : ?>
+if ( true == $theme_options['header_icons'] ) : ?>
 
 	<div id="header-social-icons" class="social-icons-wrap clearfix">
 		<?php dynamicnews_display_social_icons(); ?>
@@ -30,7 +30,7 @@ if ( true === $theme_options['header_icons'] ) : ?>
 endif;
 
 // Display Search Form.
-if ( true === $theme_options['header_search'] ) : ?>
+if ( true == $theme_options['header_search'] ) : ?>
 
 	<div id="header-search">
 		<?php get_search_form( true ); ?>

@@ -13,7 +13,7 @@ $theme_options = dynamicnews_theme_options();
 	<div id="topnavi" class="container clearfix">
 
 		<?php // Display Social Icons in Navigation
-		if ( false !== $theme_options['topnavi_icons'] ) : ?>
+		if ( true === $theme_options['topnavi_icons'] ) : ?>
 
 			<div id="topnavi-social-icons" class="social-icons-wrap clearfix">
 				<?php dynamicnews_display_social_icons(); ?>

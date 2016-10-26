@@ -148,7 +148,7 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 
 				$posts_query->the_post();
 
-				if ( true === $settings['highlight_post'] and ( isset( $i ) and 0 === $i ) ) : ?>
+				if ( true == $settings['highlight_post'] and ( isset( $i ) and 0 === $i ) ) : ?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'first-post big-post' ); ?>>
 
@@ -242,7 +242,7 @@ class Dynamic_News_Category_Posts_Columns_Widget extends WP_Widget {
 	function display_category_title( $args, $settings, $category_id ) {
 
 		// Display Category title if activated
-		if ( true === $settings['category_titles'] ) :
+		if ( true == $settings['category_titles'] ) :
 
 			echo $args['before_title'];
 

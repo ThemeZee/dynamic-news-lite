@@ -41,7 +41,7 @@ function dynamicnews_body_classes( $classes ) {
 	endif;
 
 	// Add Sliding Sidebar on mobile devices
-	if ( true === $theme_options['sliding_sidebar'] ) :
+	if ( true == $theme_options['sliding_sidebar'] ) :
 		$classes[] = 'sliding-sidebar';
 	endif;
 
@@ -91,7 +91,7 @@ function dynamicnews_excerpt_more( $more ) {
 	$theme_options = dynamicnews_theme_options();
 
 	// Return Excerpt Text
-	if ( true === $theme_options['excerpt_text'] ) :
+	if ( true == $theme_options['excerpt_text'] ) :
 		return ' [...]';
 	else :
 		return '';

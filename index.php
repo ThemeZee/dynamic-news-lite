@@ -11,7 +11,7 @@
 		<?php if ( function_exists( 'themezee_breadcrumbs' ) ) { themezee_breadcrumbs(); } ?>
 
 		<?php // Display Featured Post Slideshow if activated
-		if ( true === $theme_options['slider_activated_blog'] ) :
+		if ( true == $theme_options['slider_activated_blog'] ) :
 
 			get_template_part( 'featured-content-slider' );
 

@@ -107,7 +107,7 @@ class Dynamic_News_Category_Posts_Grid_Widget extends WP_Widget {
 		$i = 0;
 
 		// Select Layout of Grid Posts
-		$settings['layout'] = true === $settings['thumbnails'] ? 'small-post-row' : 'big-post-row';
+		$settings['layout'] = true == $settings['thumbnails'] ? 'small-post-row' : 'big-post-row';
 
 		// Check if there are posts
 		if ( $posts_query->have_posts() ) :
@@ -130,7 +130,7 @@ class Dynamic_News_Category_Posts_Grid_Widget extends WP_Widget {
 				endif; ?>
 
 				<?php // Display small posts or big posts grid layout based on options
-				if ( true === $settings['thumbnails'] ) : ?>
+				if ( true == $settings['thumbnails'] ) : ?>
 
 					<div class="small-post-wrap">
 
@@ -183,7 +183,7 @@ class Dynamic_News_Category_Posts_Grid_Widget extends WP_Widget {
 			endwhile;
 
 			// Close Row if still open
-			if ( true === $row_open ) : ?>
+			if ( true == $row_open ) : ?>
 				</div>
 			<?php endif;
 
@@ -250,7 +250,7 @@ class Dynamic_News_Category_Posts_Grid_Widget extends WP_Widget {
 			echo $args['before_title'];
 
 			// Link Category Title
-			if ( true === $settings['category_link'] ) :
+			if ( true == $settings['category_link'] ) :
 
 				// Check if "All Categories" is selected
 				if ( 0 === $settings['category'] ) :

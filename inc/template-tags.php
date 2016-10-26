@@ -61,7 +61,7 @@ if ( ! function_exists( 'dynamicnews_display_custom_header' ) ) :
 		$theme_options = dynamicnews_theme_options();
 
 		// Hide header image on front page
-		if ( true === $theme_options['custom_header_hide'] and is_front_page() ) {
+		if ( true == $theme_options['custom_header_hide'] and is_front_page() ) {
 			return;
 		}
 
@@ -109,14 +109,14 @@ if ( ! function_exists( 'dynamicnews_display_postmeta' ) ) :
 		$theme_options = dynamicnews_theme_options();
 
 		// Display Date unless user has deactivated it via settings
-		if ( true === $theme_options['meta_date'] ) :
+		if ( true == $theme_options['meta_date'] ) :
 
 			dynamicnews_meta_date();
 
 		endif;
 
 		// Display Author unless user has deactivated it via settings
-		if ( true === $theme_options['meta_author'] ) :
+		if ( true == $theme_options['meta_author'] ) :
 
 			dynamicnews_meta_author();
 
@@ -182,7 +182,7 @@ function dynamicnews_display_thumbnail_index() {
 	$theme_options = dynamicnews_theme_options();
 
 	// Display Post Thumbnail if activated
-	if ( true === $theme_options['post_thumbnails_index'] ) : ?>
+	if ( true == $theme_options['post_thumbnails_index'] ) : ?>
 
 		<a href="<?php the_permalink(); ?>" rel="bookmark">
 			<?php the_post_thumbnail( 'featured_image' ); ?>
@@ -200,7 +200,7 @@ function dynamicnews_display_thumbnail_single() {
 	$theme_options = dynamicnews_theme_options();
 
 	// Display Post Thumbnail if activated
-	if ( true === $theme_options['post_thumbnails_single'] ) :
+	if ( true == $theme_options['post_thumbnails_single'] ) :
 
 		the_post_thumbnail( 'featured_image' );
 
@@ -217,7 +217,7 @@ if ( ! function_exists( 'dynamicnews_display_postinfo_index' ) ) :
 		$theme_options = dynamicnews_theme_options();
 
 		// Display Date unless user has deactivated it via settings
-		if ( true === $theme_options['meta_category'] ) : ?>
+		if ( true == $theme_options['meta_category'] ) : ?>
 
 			<span class="meta-category">
 				<?php echo get_the_category_list( '' ); ?>
@@ -238,7 +238,7 @@ if ( ! function_exists( 'dynamicnews_display_postinfo_single' ) ) :
 		$theme_options = dynamicnews_theme_options();
 
 		// Display Date unless user has deactivated it via settings
-		if ( true === $theme_options['meta_tags'] ) :
+		if ( true == $theme_options['meta_tags'] ) :
 
 			$tag_list = get_the_tag_list( '', ', ' );
 
@@ -268,7 +268,7 @@ if ( ! function_exists( 'dynamicnews_display_post_navigation' ) ) :
 		// Get Theme Options from Database
 		$theme_options = dynamicnews_theme_options();
 
-		if ( true === $theme_options['post_navigation'] ) {
+		if ( true == $theme_options['post_navigation'] ) {
 
 			the_post_navigation( array( 'prev_text' => '&laquo; %title', 'next_text' => '%title &raquo;' ) );
 
