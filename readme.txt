@@ -26,6 +26,10 @@ For more information about Dynamic News Lite please go to https://themezee.com/t
 
 == Changelog ==
 
+= 1.4.6 =
+* removed unnecessary escaping of the_permalink functions
+* improved code formatting of all files
+
 = 1.4.5 =
 * fixed not clickable social icons in top navigation line
 

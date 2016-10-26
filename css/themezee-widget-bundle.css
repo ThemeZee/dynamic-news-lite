@@ -9,24 +9,24 @@
  * @package Dynamic News Lite
  */
 
- 
+
 /*--------------------------------------------------------------
 # General Styles
 ---------------------------------------------------------------- */
 
 /* Clearing Floats */
-.tzwb-clearfix:before, 
-.tzwb-clearfix:after {  
+.tzwb-clearfix:before,
+.tzwb-clearfix:after {
 	content: " ";
-	display: table;  
-}  
+	display: table;
+}
 
-.tzwb-clearfix:after {  
+.tzwb-clearfix:after {
 	clear: both;
-}  
+}
 
 .tzwb-clearfix {
-    *zoom: 1; /* For IE 6/7 only */  
+	*zoom: 1; /* For IE 6/7 only */
 }
 
 
@@ -78,7 +78,7 @@
 }
 
 .tzwb-posts-list  .tzwb-entry-meta span:not(:first-child) {
-    border-left: 1px solid #aaa;
+	border-left: 1px solid #aaa;
 	padding-left: 0.4em;
 }
 
@@ -149,12 +149,12 @@
 	background-color: #e84747;
 }
 
-.tzwb-tabbed-content .tzwb-tabnavi li a:link, 
+.tzwb-tabbed-content .tzwb-tabnavi li a:link,
 .tzwb-tabbed-content .tzwb-tabnavi li a:visited  {
 	color: #fff;
 }
 
-.tzwb-tabbed-content .tzwb-tabnavi li a:hover, 
+.tzwb-tabbed-content .tzwb-tabnavi li a:hover,
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
 	background-color: #303030;
 	text-decoration: none;
@@ -297,12 +297,12 @@
 	color: #ccc;
 }
 
-#footer-widgets .tzwb-tabbed-content .tzwb-tabnavi li a:link, 
+#footer-widgets .tzwb-tabbed-content .tzwb-tabnavi li a:link,
 #footer-widgets .tzwb-tabbed-content .tzwb-tabnavi li a:visited  {
 	background: rgba(255, 255, 255, 0.1);
 }
 
-#footer-widgets .tzwb-tabbed-content .tzwb-tabnavi li a:hover, 
+#footer-widgets .tzwb-tabbed-content .tzwb-tabnavi li a:hover,
 #footer-widgets .tzwb-tabbed-content .tzwb-tabnavi li a:active  {
 	background: rgba(255, 255, 255, 0.2);
 	text-decoration: none;

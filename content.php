@@ -9,7 +9,7 @@
 		
 		<div class="entry clearfix">
 			<?php $read_more_text = '<span>' . esc_html__( 'Read more', 'dynamic-news-lite' ) . '</span>'; ?>
-			<?php the_content($read_more_text); ?>
+			<?php the_content( $read_more_text ); ?>
 			<div class="page-links"><?php wp_link_pages(); ?></div>
 		</div>
 		

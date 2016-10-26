@@ -3,10 +3,10 @@
 
 		<?php
 			// Check if Sidebar has widgets
-			if( is_active_sidebar('sidebar') ) : 
-			
-				dynamic_sidebar('sidebar');
-			
+		if ( is_active_sidebar( 'sidebar' ) ) :
+
+			dynamic_sidebar( 'sidebar' );
+
 			// Show hint where to add widgets
 			else : ?>
 

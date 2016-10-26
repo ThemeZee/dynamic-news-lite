@@ -19,7 +19,7 @@ if ( empty( $slider_posts ) and current_user_can( 'edit_theme_options' ) ) : ?>
 endif;
 
 // Limit the number of words in slideshow post excerpts
-add_filter('excerpt_length', 'dynamicnews_slideshow_excerpt_length');
+add_filter( 'excerpt_length', 'dynamicnews_slideshow_excerpt_length' );
 
 // Display Slider
 ?>
@@ -32,11 +32,11 @@ add_filter('excerpt_length', 'dynamicnews_slideshow_excerpt_length');
 			<li id="slide-<?php the_ID(); ?>" class="zeeslide">
 
 			<?php // Display Post Thumbnail or default thumbnail
-				if( '' != get_the_post_thumbnail() ) :
+			if ( '' != get_the_post_thumbnail() ) :
 
-					the_post_thumbnail('slider_image', array('class' => 'slide-image'));
+				the_post_thumbnail( 'slider_image', array( 'class' => 'slide-image' ) );
 
-				else: ?>
+				else : ?>
 
 					<img src="<?php echo get_template_directory_uri(); ?>/images/default-slider-image.png" class="slide-image default-slide-image wp-post-image" alt="default-image" />
 
@@ -59,7 +59,7 @@ add_filter('excerpt_length', 'dynamicnews_slideshow_excerpt_length');
 
 <?php
 // Remove excerpt filter
-remove_filter('excerpt_length', 'dynamicnews_slideshow_excerpt_length');
+remove_filter( 'excerpt_length', 'dynamicnews_slideshow_excerpt_length' );
 
 // Reset Postdata
 wp_reset_postdata();

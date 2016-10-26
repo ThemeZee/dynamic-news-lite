@@ -1,4 +1,4 @@
-<?php 
+<?php
 /***
  * Comments Template
  *
@@ -7,7 +7,7 @@
  */
 
 
-if ( post_password_required()) : ?>
+if ( post_password_required() ) : ?>
 	<p><?php esc_html_e( 'Enter password to view comments.', 'dynamic-news-lite' ); ?></p>
 <?php return; endif; ?>
 
@@ -28,7 +28,7 @@ if ( post_password_required()) : ?>
 			<?php endif; ?>
 			
 			<ul class="commentlist">
-				<?php wp_list_comments( array('callback' => 'dynamicnews_list_comments')); ?>
+				<?php wp_list_comments( array( 'callback' => 'dynamicnews_list_comments' ) ); ?>
 			</ul>
 
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
@@ -41,7 +41,7 @@ if ( post_password_required()) : ?>
 		<?php endif; ?>
 
 		<?php if ( comments_open() ) : ?>
-			<?php comment_form(array('comment_notes_after' => '')); ?>
+			<?php comment_form( array( 'comment_notes_after' => '' ) ); ?>
 		<?php endif; ?>
 
 	</div>

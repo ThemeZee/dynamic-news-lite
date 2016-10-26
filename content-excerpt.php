@@ -1,5 +1,5 @@
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class('content-excerpt'); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'content-excerpt' ); ?>>
 
 		<?php the_title( sprintf( '<h2 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 

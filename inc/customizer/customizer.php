@@ -35,74 +35,74 @@ function dynamicnews_customize_register_options( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
 	// Change default background section
-	$wp_customize->get_control( 'background_color'  )->section   = 'background_image';
-	$wp_customize->get_section( 'background_image'  )->title     = esc_html__( 'Background', 'dynamic-news-lite' );
+	$wp_customize->get_control( 'background_color' )->section   = 'background_image';
+	$wp_customize->get_section( 'background_image' )->title     = esc_html__( 'Background', 'dynamic-news-lite' );
 
 	// Add Display Site Title Setting
 	$wp_customize->add_setting( 'dynamicnews_theme_options[site_title]', array(
-        'default'           => true,
+		'default'           => true,
 		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'dynamicnews_sanitize_checkbox'
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'dynamicnews_sanitize_checkbox',
 		)
 	);
-    $wp_customize->add_control( 'dynamicnews_theme_options[site_title]', array(
-        'label'    => esc_html__( 'Display Site Title', 'dynamic-news-lite' ),
-        'section'  => 'title_tagline',
-        'settings' => 'dynamicnews_theme_options[site_title]',
-        'type'     => 'checkbox',
-		'priority' => 10
+	$wp_customize->add_control( 'dynamicnews_theme_options[site_title]', array(
+		'label'    => esc_html__( 'Display Site Title', 'dynamic-news-lite' ),
+		'section'  => 'title_tagline',
+		'settings' => 'dynamicnews_theme_options[site_title]',
+		'type'     => 'checkbox',
+		'priority' => 10,
 		)
 	);
 
 	// Add Header Tagline option
 	$wp_customize->add_setting( 'dynamicnews_theme_options[header_tagline]', array(
-        'default'           => false,
+		'default'           => false,
 		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'dynamicnews_sanitize_checkbox'
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'dynamicnews_sanitize_checkbox',
 		)
 	);
-    $wp_customize->add_control( 'dynamicnews_control_header_tagline', array(
-        'label'    => esc_html__( 'Display Tagline below site title.', 'dynamic-news-lite' ),
-        'section'  => 'title_tagline',
-        'settings' => 'dynamicnews_theme_options[header_tagline]',
-        'type'     => 'checkbox',
-		'priority' => 11
+	$wp_customize->add_control( 'dynamicnews_control_header_tagline', array(
+		'label'    => esc_html__( 'Display Tagline below site title.', 'dynamic-news-lite' ),
+		'section'  => 'title_tagline',
+		'settings' => 'dynamicnews_theme_options[header_tagline]',
+		'type'     => 'checkbox',
+		'priority' => 11,
 		)
 	);
 
 	// Add Header Image Link
 	$wp_customize->add_setting( 'dynamicnews_theme_options[custom_header_link]', array(
-        'default'           => '',
+		'default'           => '',
 		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'esc_url'
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'esc_url',
 		)
 	);
-    $wp_customize->add_control( 'dynamicnews_control_custom_header_link', array(
-        'label'    => esc_html__( 'Header Image Link', 'dynamic-news-lite' ),
-        'section'  => 'header_image',
-        'settings' => 'dynamicnews_theme_options[custom_header_link]',
-        'type'     => 'url',
-		'priority' => 10
+	$wp_customize->add_control( 'dynamicnews_control_custom_header_link', array(
+		'label'    => esc_html__( 'Header Image Link', 'dynamic-news-lite' ),
+		'section'  => 'header_image',
+		'settings' => 'dynamicnews_theme_options[custom_header_link]',
+		'type'     => 'url',
+		'priority' => 10,
 		)
 	);
 
 	// Add Custom Header Hide Checkbox
 	$wp_customize->add_setting( 'dynamicnews_theme_options[custom_header_hide]', array(
-        'default'           => false,
+		'default'           => false,
 		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'dynamicnews_sanitize_checkbox'
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'dynamicnews_sanitize_checkbox',
 		)
 	);
-    $wp_customize->add_control( 'dynamicnews_control_custom_header_hide', array(
-        'label'    => esc_html__( 'Hide header image on front page', 'dynamic-news-lite' ),
-        'section'  => 'header_image',
-        'settings' => 'dynamicnews_theme_options[custom_header_hide]',
-        'type'     => 'checkbox',
-		'priority' => 15
+	$wp_customize->add_control( 'dynamicnews_control_custom_header_hide', array(
+		'label'    => esc_html__( 'Hide header image on front page', 'dynamic-news-lite' ),
+		'section'  => 'header_image',
+		'settings' => 'dynamicnews_theme_options[custom_header_hide]',
+		'type'     => 'checkbox',
+		'priority' => 15,
 		)
 	);
 

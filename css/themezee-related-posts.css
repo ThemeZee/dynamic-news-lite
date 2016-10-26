@@ -131,20 +131,20 @@ ul.related-posts-list {
 ---------------------------------------------------------------- */
 
 @media only screen and (max-width: 50em) {
-	
+
 	/* Columns */
 	.related-posts-four-columns .related-post-column {
 		width: 50%;
 	}
-	
+
 	.related-posts-four-columns .related-post-column:nth-child(2n + 1) {
 		clear: left;
 	}
-	
+
 	.related-posts-four-columns .related-post-column .entry-title {
 		font-size: 1.2em;
 	}
-	
+
 	/* List */
 	.related-posts-list li .wp-post-image {
 		max-width: 25%;
@@ -157,7 +157,7 @@ ul.related-posts-list {
 	.related-posts-three-columns {
 		margin: 0;
 	}
-	
+
 	.related-posts-three-columns .related-post-column {
 		float: none;
 		width: 100%;
@@ -178,14 +178,14 @@ ul.related-posts-list {
 	.related-posts-four-columns {
 		margin: 0;
 	}
-	
+
 	.related-posts-two-columns .related-post-column,
 	.related-posts-four-columns .related-post-column {
 		float: none;
 		width: 100%;
 		padding-right: 0;
 	}
-	
+
 	/* List */
 	.related-posts-list li .wp-post-image {
 		float: none;

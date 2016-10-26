@@ -3,7 +3,7 @@
 /*==================================== THEME SETUP ====================================*/
 
 // Load default style.css and Javascripts
-add_action('wp_enqueue_scripts', 'dynamicnews_enqueue_scripts');
+add_action( 'wp_enqueue_scripts', 'dynamicnews_enqueue_scripts' );
 
 function dynamicnews_enqueue_scripts() {
 
@@ -24,17 +24,17 @@ function dynamicnews_enqueue_scripts() {
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and Enqueue FlexSlider JS and CSS if necessary
-	if ( ( isset($theme_options['slider_activated_blog']) and $theme_options['slider_activated_blog'] == true )
-		|| ( isset($theme_options['slider_activated_front_page']) and $theme_options['slider_activated_front_page'] == true ) ) :
+	if ( ( isset( $theme_options['slider_activated_blog'] ) and $theme_options['slider_activated_blog'] == true )
+		|| ( isset( $theme_options['slider_activated_front_page'] ) and $theme_options['slider_activated_front_page'] == true ) ) :
 
 		// FlexSlider CSS
 		wp_enqueue_style( 'dynamicnewslite-flexslider', get_template_directory_uri() . '/css/flexslider.css' );
 
 		// FlexSlider JS
-		wp_enqueue_script( 'flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
+		wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
 
 		// Register and enqueue slider.js
-		wp_enqueue_script( 'dynamicnewslite-jquery-frontpage_slider', get_template_directory_uri() .'/js/slider.js', array( 'flexslider' ), '2.6.0' );
+		wp_enqueue_script( 'dynamicnewslite-jquery-frontpage_slider', get_template_directory_uri() . '/js/slider.js', array( 'flexslider' ), '2.6.0' );
 
 	endif;
 
@@ -47,7 +47,7 @@ function dynamicnews_enqueue_scripts() {
 	// Register and enqueue sidebar.js
 	if ( true == $theme_options['sliding_sidebar'] ) {
 
-		wp_enqueue_script( 'dynamicnewslite-jquery-sidebar', get_template_directory_uri() .'/js/sidebar.js', array( 'jquery' ), '20160421' );
+		wp_enqueue_script( 'dynamicnewslite-jquery-sidebar', get_template_directory_uri() . '/js/sidebar.js', array( 'jquery' ), '20160421' );
 		wp_localize_script( 'dynamicnewslite-jquery-sidebar', 'dynamicnews_sidebar_title', esc_html__( 'Sidebar', 'dynamic-news-lite' ) );
 
 	}
@@ -68,16 +68,16 @@ function dynamicnews_enqueue_scripts() {
 * Source: http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
 */
 function dynamicnews_fonts_url() {
-    $fonts_url = '';
+	$fonts_url = '';
 
 	// Get Theme Options from Database
 	$theme_options = dynamicnews_theme_options();
 
 	// Only embed Google Fonts if not deactivated
-	if ( ! ( isset($theme_options['deactivate_google_fonts']) and $theme_options['deactivate_google_fonts'] == true ) ) :
+	if ( ! ( isset( $theme_options['deactivate_google_fonts'] ) and $theme_options['deactivate_google_fonts'] == true ) ) :
 
 		// Set Default Fonts
-		$font_families = array('Droid Sans:400,700', 'Francois One');
+		$font_families = array( 'Droid Sans:400,700', 'Francois One' );
 
 		// Set Google Font Query Args
 		$query_args = array(
@@ -101,20 +101,21 @@ function dynamicnews_setup() {
 
 	// Set Content Width
 	global $content_width;
-	if ( ! isset( $content_width ) )
+	if ( ! isset( $content_width ) ) {
 		$content_width = 860;
+	}
 
 	// init Localization
-	load_theme_textdomain('dynamic-news-lite', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'dynamic-news-lite', get_template_directory() . '/languages' );
 
 	// Add Theme Support
-	add_theme_support('post-thumbnails');
-	add_theme_support('automatic-feed-links');
-	add_theme_support('title-tag');
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'title-tag' );
 	add_editor_style();
 
 	// Add Custom Background
-	add_theme_support('custom-background', array('default-color' => 'e5e5e5'));
+	add_theme_support( 'custom-background', array( 'default-color' => 'e5e5e5' ) );
 
 	// Set up the WordPress core custom logo feature
 	add_theme_support( 'custom-logo', apply_filters( 'dynamicnews_custom_logo_args', array(
@@ -129,7 +130,8 @@ function dynamicnews_setup() {
 		'header-text' => false,
 		'width'	=> 1340,
 		'height' => 200,
-		'flex-height' => true));
+		'flex-height' => true,
+	));
 
 	// Add Theme Support for wooCommerce
 	add_theme_support( 'woocommerce' );
@@ -154,20 +156,20 @@ add_action( 'after_setup_theme', 'dynamicnews_add_image_sizes' );
 function dynamicnews_add_image_sizes() {
 
 	// Add Custom Header Image Size
-	add_image_size( 'custom_header_image', 1340, 200, true);
+	add_image_size( 'custom_header_image', 1340, 200, true );
 
 	// Add Featured Image Size
-	add_image_size( 'featured_image', 860, 280, true);
+	add_image_size( 'featured_image', 860, 280, true );
 
 	// Add Slider Image Size
-	add_image_size( 'slider_image', 880, 290, true);
+	add_image_size( 'slider_image', 880, 290, true );
 
 	// Add Frontpage Thumbnail Sizes
-	add_image_size( 'category_posts_wide_thumb', 420, 140, true);
-	add_image_size( 'category_posts_small_thumb', 90, 90, true);
+	add_image_size( 'category_posts_wide_thumb', 420, 140, true );
+	add_image_size( 'category_posts_small_thumb', 90, 90, true );
 
 	// Add Widget Post Thumbnail Size
-	add_image_size( 'widget_post_thumb', 75, 75, true);
+	add_image_size( 'widget_post_thumb', 75, 75, true );
 
 }
 

@@ -36,11 +36,11 @@ add_action( 'wp_enqueue_scripts', 'dynamicnews_theme_addons_scripts' );
 function dynamicnews_theme_addons_scripts() {
 
 	// Load widget bundle styles if widgets are active
-	if ( is_active_widget('TZWB_Facebook_Likebox_Widget', false, 'tzwb-facebook-likebox')
-		or is_active_widget('TZWB_Recent_Comments_Widget', false, 'tzwb-recent-comments')
-		or is_active_widget('TZWB_Recent_Posts_Widget', false, 'tzwb-recent-posts')
-		or is_active_widget('TZWB_Social_Icons_Widget', false, 'tzwb-social-icons')
-		or is_active_widget('TZWB_Tabbed_Content_Widget', false, 'tzwb-tabbed-content')
+	if ( is_active_widget( 'TZWB_Facebook_Likebox_Widget', false, 'tzwb-facebook-likebox' )
+		or is_active_widget( 'TZWB_Recent_Comments_Widget', false, 'tzwb-recent-comments' )
+		or is_active_widget( 'TZWB_Recent_Posts_Widget', false, 'tzwb-recent-posts' )
+		or is_active_widget( 'TZWB_Social_Icons_Widget', false, 'tzwb-social-icons' )
+		or is_active_widget( 'TZWB_Tabbed_Content_Widget', false, 'tzwb-tabbed-content' )
 	) {
 
 		// Enqueue Widget Bundle Stylesheet
@@ -49,7 +49,7 @@ function dynamicnews_theme_addons_scripts() {
 	}
 
 	// Load Related Posts stylesheet only on single posts
-	if( is_singular( 'post' ) ) {
+	if ( is_singular( 'post' ) ) {
 
 		// Enqueue Related Post Stylesheet
 		wp_enqueue_style( 'themezee-related-posts', get_template_directory_uri() . '/css/themezee-related-posts.css', array(), '20160421' );

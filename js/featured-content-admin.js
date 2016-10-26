@@ -5,9 +5,9 @@
  *
  * Original Code: Twenty Fourteen http://wordpress.org/themes/twentyfourteen
  * Original Copyright: the WordPress team and contributors.
- * 
- * The following code is a derivative work of the code from the  Twenty Fourteen theme, 
- * which is licensed GPLv2. This code therefore is also licensed under the terms 
+ *
+ * The following code is a derivative work of the code from the  Twenty Fourteen theme,
+ * which is licensed GPLv2. This code therefore is also licensed under the terms
  * of the GNU Public License, version 2.
  */
 /* global ajaxurl:true */

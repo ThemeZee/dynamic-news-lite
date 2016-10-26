@@ -6,15 +6,14 @@
  *
  */
 
-	// Get Theme Options from Database
-	$theme_options = dynamicnews_theme_options();
-
+// Get Theme Options from Database
+$theme_options = dynamicnews_theme_options();
 ?>
 
 	<div id="topnavi" class="container clearfix">
 
 		<?php // Display Social Icons in Navigation
-			if ( isset($theme_options['topnavi_icons']) and $theme_options['topnavi_icons'] == true ) : ?>
+		if ( false !== $theme_options['topnavi_icons'] ) : ?>
 
 			<div id="topnavi-social-icons" class="social-icons-wrap clearfix">
 				<?php dynamicnews_display_social_icons(); ?>
@@ -33,7 +32,8 @@
 					'menu_id' => 'topnav-menu',
 					'menu_class' => 'top-navigation-menu',
 					'echo' => true,
-					'fallback_cb' => '')
+					'fallback_cb' => '',
+					)
 				);
 			?>
 		</nav>

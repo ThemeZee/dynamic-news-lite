@@ -196,18 +196,18 @@ img {
 	font-size: 0.8em;
 	text-align: center;
 }
-.alignleft { 
-	float: left; 
-	display: inline; 
+.alignleft {
+	float: left;
+	display: inline;
 	margin: 1em 2em 1em 0;
 }
 .alignright	{
-	float: right; 
-	display: inline; 
+	float: right;
+	display: inline;
 	margin: 1em 0 1em 2em;
 }
 .aligncenter {
-	margin: 1em auto; 
+	margin: 1em auto;
 	display: block;
 }
 embed, iframe, object, video {

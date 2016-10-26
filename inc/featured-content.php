@@ -14,12 +14,12 @@
  *
  * Original Code: Twenty Fourteen http://wordpress.org/themes/twentyfourteen
  * Original Copyright: the WordPress team and contributors.
- * 
- * The following code is a derivative work of the code from the Twenty Fourteen theme, 
- * which is licensed GPLv2. This code therefore is also licensed under the terms 
+ *
+ * The following code is a derivative work of the code from the Twenty Fourteen theme,
+ * which is licensed GPLv2. This code therefore is also licensed under the terms
  * of the GNU Public License, version 2.
  */
- 
+
 class Dynamic_News_Featured_Content {
 
 	/**
@@ -37,15 +37,15 @@ class Dynamic_News_Featured_Content {
 	 */
 	public static function init() {
 
-		add_filter( 'dynamicnews_get_featured_content',   array( __CLASS__, 'get_featured_posts' )    );
+		add_filter( 'dynamicnews_get_featured_content',   array( __CLASS__, 'get_featured_posts' ) );
 		add_action( 'customize_register',                 array( __CLASS__, 'customize_register' ), 9 );
-		add_action( 'admin_init',                         array( __CLASS__, 'register_setting'   )    );
-		add_action( 'save_post',                          array( __CLASS__, 'delete_transient'   )    );
-		add_action( 'delete_post_tag',                    array( __CLASS__, 'delete_post_tag'    )    );
-		add_action( 'customize_controls_enqueue_scripts', array( __CLASS__, 'enqueue_scripts'    )    );
-		add_action( 'pre_get_posts',                      array( __CLASS__, 'pre_get_posts'      )    );
-		add_action( 'switch_theme',                       array( __CLASS__, 'delete_transient'   )    );
-		add_action( 'wp_loaded',                          array( __CLASS__, 'wp_loaded'          )    );
+		add_action( 'admin_init',                         array( __CLASS__, 'register_setting' ) );
+		add_action( 'save_post',                          array( __CLASS__, 'delete_transient' ) );
+		add_action( 'delete_post_tag',                    array( __CLASS__, 'delete_post_tag' ) );
+		add_action( 'customize_controls_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
+		add_action( 'pre_get_posts',                      array( __CLASS__, 'pre_get_posts' ) );
+		add_action( 'switch_theme',                       array( __CLASS__, 'delete_transient' ) );
+		add_action( 'wp_loaded',                          array( __CLASS__, 'wp_loaded' ) );
 
 	}
 
@@ -57,7 +57,7 @@ class Dynamic_News_Featured_Content {
 	 */
 	public static function wp_loaded() {
 		if ( self::get_setting( 'hide-tag' ) ) {
-			add_filter( 'get_terms',     array( __CLASS__, 'hide_featured_term'     ), 10, 3 );
+			add_filter( 'get_terms',     array( __CLASS__, 'hide_featured_term' ), 10, 3 );
 			add_filter( 'get_the_terms', array( __CLASS__, 'hide_the_featured_term' ), 10, 3 );
 		}
 	}
@@ -79,7 +79,7 @@ class Dynamic_News_Featured_Content {
 
 		$featured_posts = get_posts( array(
 			'include'        => $post_ids,
-			'posts_per_page' => count( $post_ids )
+			'posts_per_page' => count( $post_ids ),
 		) );
 
 		return $featured_posts;
@@ -96,7 +96,7 @@ class Dynamic_News_Featured_Content {
 	 * @return array Array of post IDs.
 	 */
 	public static function get_featured_post_ids() {
-		
+
 		// Return array of cached results if they exist.
 		$featured_ids = get_transient( 'featured_content_ids' );
 		if ( ! empty( $featured_ids ) ) {
@@ -115,7 +115,7 @@ class Dynamic_News_Featured_Content {
 		} else {
 			return apply_filters( 'dynamicnews_featured_content_post_ids', array() );
 		}
-		
+
 		// Query for featured posts.
 		$featured = get_posts( array(
 			'numberposts' => absint( $settings['max-posts'] ),
@@ -129,8 +129,9 @@ class Dynamic_News_Featured_Content {
 		) );
 
 		// Return empty array if no featured content exists.
-		if ( ! $featured )
+		if ( ! $featured ) {
 			return apply_filters( 'dynamicnews_featured_content_post_ids', array() );
+		}
 
 		// Ensure correct format before save/return.
 		$featured_ids = wp_list_pluck( (array) $featured, 'ID' );
@@ -368,28 +369,28 @@ class Dynamic_News_Featured_Content {
 			'label'          => esc_html__( 'Tag name', 'dynamic-news-lite' ),
 			'section'        => 'dynamicnews_section_slider',
 			'priority'       => 5,
-			'active_callback' => 'dynamicnews_slider_activated_callback'
+			'active_callback' => 'dynamicnews_slider_activated_callback',
 		) );
 		$wp_customize->add_control( 'featured-content[hide-tag]', array(
 			'label'          => esc_html__( 'Hide tag from displaying in post meta and tag clouds.', 'dynamic-news-lite' ),
 			'section'        => 'dynamicnews_section_slider',
 			'type'           => 'checkbox',
 			'priority'       => 6,
-			'active_callback' => 'dynamicnews_slider_activated_callback'
+			'active_callback' => 'dynamicnews_slider_activated_callback',
 		) );
 		$wp_customize->add_control( 'featured-content[show-all]', array(
 			'label'          => esc_html__( 'Display featured posts in latest blog post listing.', 'dynamic-news-lite' ),
 			'section'        => 'dynamicnews_section_slider',
 			'type'           => 'checkbox',
 			'priority'       => 7,
-			'active_callback' => 'dynamicnews_slider_activated_callback'
+			'active_callback' => 'dynamicnews_slider_activated_callback',
 		) );
 		$wp_customize->add_control( 'featured-content[max-posts]', array(
 			'label'          => esc_html__( 'Number of Posts', 'dynamic-news-lite' ),
 			'section'        => 'dynamicnews_section_slider',
 			'type'           => 'text',
 			'priority'       => 9,
-			'active_callback' => 'dynamicnews_slider_activated_callback'
+			'active_callback' => 'dynamicnews_slider_activated_callback',
 		) );
 	}
 
@@ -470,7 +471,7 @@ class Dynamic_News_Featured_Content {
 		$output['hide-tag'] = isset( $input['hide-tag'] ) && $input['hide-tag'] ? 1 : 0;
 
 		$output['show-all'] = isset( $input['show-all'] ) && $input['show-all'] ? 1 : 0;
-		
+
 		$output['max-posts'] = isset( $input['max-posts'] ) && $input['max-posts'] > 0 ? absint( $input['max-posts'] ) : 20;
 
 		self::delete_transient();
@@ -482,4 +483,4 @@ class Dynamic_News_Featured_Content {
 Dynamic_News_Featured_Content::setup();
 
 
-?>
+

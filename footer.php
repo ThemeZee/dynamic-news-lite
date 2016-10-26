@@ -1,12 +1,11 @@
-
-	<?php do_action('dynamicnews_before_footer'); ?>
+<?php do_action( 'dynamicnews_before_footer' ); ?>
 
 	<div id="footer-wrap">
 
 		<footer id="footer" class="container clearfix" role="contentinfo">
 
 			<div id="footer-text">
-				<?php do_action('dynamicnews_footer_text'); ?>
+				<?php do_action( 'dynamicnews_footer_text' ); ?>
 			</div>
 
 			<?php // Check if there is a top navigation menu.
@@ -20,8 +19,10 @@
 							'theme_location' => 'footer',
 							'container' => false,
 							'menu_id' => 'footernav-menu',
-							'echo' => true, 'fallback_cb' => '',
-							'depth' => 1)
+							'echo' => true,
+							'fallback_cb' => '',
+							'depth' => 1,
+							)
 						);
 					?>
 				</nav>

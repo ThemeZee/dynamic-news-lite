@@ -4,7 +4,7 @@
 		
 		<section id="content" class="primary" role="main">
 		
-			<div id="post-<?php the_ID(); ?>" <?php post_class('type-page clearfix'); ?>>
+			<div id="post-<?php the_ID(); ?>" <?php post_class( 'type-page clearfix' ); ?>>
 			
 				<?php woocommerce_content(); ?>
 				

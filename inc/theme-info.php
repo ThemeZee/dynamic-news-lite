@@ -149,7 +149,7 @@ function dynamicnews_theme_info_page() {
 			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'dynamic-news-lite' ),
 				$theme->get( 'Name' ),
 				'<a target="_blank" href="' . __( 'https://themezee.com/', 'dynamic-news-lite' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=dynamicnews" title="ThemeZee">ThemeZee</a>',
-				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/dynamic-news-lite/reviews/?filter=5', 'dynamic-news-lite' ) . '" title="' . esc_attr__( 'Review Dynamic News', 'dynamic-news-lite' ) . '">' . esc_html__( 'rate it', 'dynamic-news-lite' ) . '</a>'); ?>
+			'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/dynamic-news-lite/reviews/?filter=5', 'dynamic-news-lite' ) . '" title="' . esc_attr__( 'Review Dynamic News', 'dynamic-news-lite' ) . '">' . esc_html__( 'rate it', 'dynamic-news-lite' ) . '</a>'); ?>
 			</p>
 
 		</div>
@@ -172,7 +172,7 @@ function dynamicnews_theme_info_page_css( $hook ) {
 	}
 
 	// Embed theme info css style.
-	wp_enqueue_style( 'dynamicnews-theme-info-css', get_template_directory_uri() .'/css/theme-info.css' );
+	wp_enqueue_style( 'dynamicnews-theme-info-css', get_template_directory_uri() . '/css/theme-info.css' );
 
 }
 add_action( 'admin_enqueue_scripts', 'dynamicnews_theme_info_page_css' );

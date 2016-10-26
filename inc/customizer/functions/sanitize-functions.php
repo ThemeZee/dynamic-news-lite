@@ -7,13 +7,10 @@
 /*========================== CUSTOMIZER SANITIZE FUNCTIONS ==========================*/
 
 // Sanitize checkboxes
-function dynamicnews_sanitize_checkbox( $value ) {
+function dynamicnews_sanitize_checkbox( $checked ) {
 
-	if ( $value == 1) :
-        return 1;
-	else:
-		return '';
-	endif;
+	// Boolean check.
+	return ( ( isset( $checked ) && true === $checked ) ? true : false );
 }
 
 
@@ -21,10 +18,10 @@ function dynamicnews_sanitize_checkbox( $value ) {
 function dynamicnews_sanitize_layout( $value ) {
 
 	if ( ! in_array( $value, array( 'boxed', 'wide', 'flat' ), true ) ) :
-        $value = 'boxed';
+		$value = 'boxed';
 	endif;
 
-    return $value;
+	return $value;
 }
 
 
@@ -32,10 +29,10 @@ function dynamicnews_sanitize_layout( $value ) {
 function dynamicnews_sanitize_sidebar( $value ) {
 
 	if ( ! in_array( $value, array( 'left-sidebar', 'right-sidebar', 'fullwidth' ), true ) ) :
-        $value = 'right-sidebar';
+		$value = 'right-sidebar';
 	endif;
 
-    return $value;
+	return $value;
 }
 
 
@@ -43,10 +40,10 @@ function dynamicnews_sanitize_sidebar( $value ) {
 function dynamicnews_sanitize_mobile_header( $value ) {
 
 	if ( ! in_array( $value, array( 'none', 'social', 'search', 'text', 'widgets' ), true ) ) :
-        $value = 'boxed';
+		$value = 'boxed';
 	endif;
 
-    return $value;
+	return $value;
 }
 
 
@@ -54,10 +51,10 @@ function dynamicnews_sanitize_mobile_header( $value ) {
 function dynamicnews_sanitize_post_length( $value ) {
 
 	if ( ! in_array( $value, array( 'index', 'excerpt' ), true ) ) :
-        $value = 'index';
+		$value = 'index';
 	endif;
 
-    return $value;
+	return $value;
 }
 
 
@@ -65,11 +62,8 @@ function dynamicnews_sanitize_post_length( $value ) {
 function dynamicnews_sanitize_slider_animation( $value ) {
 
 	if ( ! in_array( $value, array( 'slide', 'fade' ), true ) ) :
-        $value = 'slide';
+		$value = 'slide';
 	endif;
 
-    return $value;
+	return $value;
 }
-
-
-?>
