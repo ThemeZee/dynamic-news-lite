@@ -13,7 +13,7 @@ if ( empty( $slider_posts ) and current_user_can( 'edit_theme_options' ) ) : ?>
 	<p class="frontpage-slider-empty-posts">
 		<?php esc_html_e( 'There is no featured content to be displayed in the slider. To set up the slider, go to Appearance &#8594; Customize &#8594; Theme Options, and add a featured tag in the Post Slider section. The slideshow displays all your posts which are tagged with that keyword.', 'dynamic-news-lite' ); ?>
 	</p>
-	
+
 <?php
 	return;
 endif;
@@ -45,7 +45,7 @@ add_filter('excerpt_length', 'dynamicnews_slideshow_excerpt_length');
 				<div class="slide-entry clearfix">
 					<?php the_title( sprintf( '<h2 class="slide-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 					<div class="slide-content"><?php the_excerpt(); ?></div>
-					<a href="<?php esc_url(the_permalink()) ?>" class="slide-more-link"><?php esc_html_e( 'Read more &raquo;', 'dynamic-news-lite' ); ?></a>
+					<a href="<?php the_permalink(); ?>" class="slide-more-link"><?php esc_html_e( 'Read more &raquo;', 'dynamic-news-lite' ); ?></a>
 				</div>
 
 			</li>
