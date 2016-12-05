@@ -40,6 +40,7 @@ function dynamicnews_default_options() {
 		'header_icons' 						=> false,
 		'header_text' 						=> '',
 		'mobile_header' 					=> 'none',
+		'topnavi_icons' 					=> false,
 		'posts_length' 						=> 'index',
 		'excerpt_length' 					=> 60,
 		'excerpt_text' 						=> false,
