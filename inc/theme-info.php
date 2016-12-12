@@ -45,7 +45,7 @@ function dynamicnews_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'dynamic-news-lite' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/dynamicnews/', 'dynamic-news-lite' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=dynamicnews&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'dynamic-news-lite' ); ?></a>
-				<a href="http://preview.themezee.com/dynamicnews/?utm_source=theme-info&utm_medium=textlink&utm_campaign=dynamicnews&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'dynamic-news-lite' ); ?></a>
+				<a href="http://preview.themezee.com/?demo=dynamicnews&utm_source=theme-info&utm_medium=textlink&utm_campaign=dynamicnews&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'dynamic-news-lite' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/dynamicnews-documentation/', 'dynamic-news-lite' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=dynamicnews&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'dynamic-news-lite' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/dynamic-news-lite/reviews/?filter=5', 'dynamic-news-lite' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'dynamic-news-lite' ); ?></a>
 			</p>
@@ -80,7 +80,7 @@ function dynamicnews_theme_info_page() {
 							<?php printf( esc_html__( '%s makes use of the Customizer for all theme settings. Click on "Customize Theme" to open the Customizer now.', 'dynamic-news-lite' ), $theme->get( 'Name' ) ); ?>
 						</p>
 						<p>
-							<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary"><?php esc_html_e( 'Customize Theme', 'dynamic-news-lite' ); ?></a>
+							<a href="<?php echo wp_customize_url(); ?>" class="button button-primary"><?php esc_html_e( 'Customize Theme', 'dynamic-news-lite' ); ?></a>
 						</p>
 					</div>
 
@@ -130,7 +130,7 @@ function dynamicnews_theme_info_page() {
 							<?php esc_html_e( 'Extend the functionality of your WordPress website with our free and easy to use plugins.', 'dynamic-news-lite' ); ?>
 						</p>
 						<p>
-							<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-secondary">
+							<a href="<?php echo esc_url( admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ) ); ?>" class="button button-secondary">
 								<?php esc_html_e( 'Install Plugins', 'dynamic-news-lite' ); ?>
 							</a>
 						</p>

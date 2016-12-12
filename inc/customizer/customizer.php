@@ -121,7 +121,7 @@ function dynamicnews_customize_preview_js() {
 add_action( 'customize_controls_print_styles', 'dynamicnews_customize_preview_css' );
 
 function dynamicnews_customize_preview_css() {
-	wp_enqueue_style( 'dynamicnewslite-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20160915' );
+	wp_enqueue_style( 'dynamicnewslite-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20161214' );
 
 }
 
@@ -144,7 +144,7 @@ function dynamicnews_customize_theme_links() {
 			</p>
 
 			<p>
-				<a href="http://preview.themezee.com/dynamicnews/?utm_source=theme-info&utm_medium=textlink&utm_campaign=dynamicnews&utm_content=demo" target="_blank">
+				<a href="http://preview.themezee.com/?demo=dynamicnews&utm_source=theme-info&utm_medium=textlink&utm_campaign=dynamicnews&utm_content=demo" target="_blank">
 					<?php esc_html_e( 'Theme Demo', 'dynamic-news-lite' ); ?>
 				</a>
 			</p>
