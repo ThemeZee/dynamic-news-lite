@@ -170,7 +170,7 @@ function dynamicnews_customize_theme_links() {
 			</p>
 
 			<p>
-				<a href="http://preview.themezee.com/?demo=dynamicnews&utm_source=theme-info&utm_medium=textlink&utm_campaign=dynamicnews&utm_content=demo" target="_blank">
+				<a href="http://preview.themezee.com/?demo=dynamicnews&utm_source=customizer&utm_campaign=dynamicnews" target="_blank">
 					<?php esc_html_e( 'Theme Demo', 'dynamic-news-lite' ); ?>
 				</a>
 			</p>

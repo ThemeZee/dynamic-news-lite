@@ -45,7 +45,7 @@ function dynamicnews_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'dynamic-news-lite' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/dynamicnews/', 'dynamic-news-lite' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=dynamicnews&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'dynamic-news-lite' ); ?></a>
-				<a href="http://preview.themezee.com/?demo=dynamicnews&utm_source=theme-info&utm_medium=textlink&utm_campaign=dynamicnews&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'dynamic-news-lite' ); ?></a>
+				<a href="http://preview.themezee.com/?demo=dynamicnews&utm_source=theme-info&utm_campaign=dynamicnews" target="_blank"><?php esc_html_e( 'Theme Demo', 'dynamic-news-lite' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/dynamicnews-documentation/', 'dynamic-news-lite' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=dynamicnews&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'dynamic-news-lite' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/dynamic-news-lite/reviews/?filter=5', 'dynamic-news-lite' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'dynamic-news-lite' ); ?></a>
 			</p>
