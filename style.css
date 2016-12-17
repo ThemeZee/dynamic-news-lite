@@ -2,10 +2,10 @@
 Theme Name: Dynamic News Lite
 Theme URI: https://themezee.com/themes/dynamicnews/
 Description: A responsive, multipurpose blogging and magazine theme with bold colors and fonts. It comes with a featured content slider and a magazine page template. Dynamic News is a trending theme on wordpress.com and we are sure you will like the WordPress.org version as well.
-Version: 1.4.6
+Version: 1.4.7
 Author: ThemeZee
 Author URI: https://themezee.com
-Tags: two-columns, light, red, custom-background, custom-colors, custom-header, custom-menu, editor-style, rtl-language-support, blog, news, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, blue, silver, white, green, gray
+Tags: two-columns, custom-background, custom-colors, custom-header, custom-menu, editor-style, rtl-language-support, blog, news, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Text Domain: dynamic-news-lite
 Domain Path: /languages/
 License: GNU General Public License v2.0
@@ -1548,9 +1548,6 @@ embed, iframe, object, video {
 }
 
 /* Footer Navigation Menu */
-#footernav-icon {
-	display: none;
-}
 #footernav {
 	float: left;
 }
@@ -1563,7 +1560,7 @@ embed, iframe, object, video {
 #footernav-menu li {
 	float: left;
 	position: relative;
-	padding-right: 2em;
+	margin-right: 2em;
 }
 #footernav-menu a {
 	display: inline-block;
@@ -1947,6 +1944,28 @@ embed, iframe, object, video {
 		color: #fff;
 		margin: -3px 0.15em -5px -0.15em;
 	}
+
+	/* Footer */
+	#footer {
+		text-align: center;
+	}
+
+	#footer #footer-text {
+		float: none;
+	}
+
+	/* Footer Navigation Menu */
+	#footernav {
+		float: none;
+	}
+	#footernav-menu {
+		float: none;
+	}
+	#footernav-menu li {
+		float: none;
+		display: inline-block;
+		margin: 0 1em 1.5em;
+	}
 }
 
 @media only screen and (max-width: 55em) {
@@ -2135,66 +2154,6 @@ embed, iframe, object, video {
 	.entry tr td {
 		padding: 0.2em 0.4em;
 	}
-
-	/* Mobile Footer Navigation */
-
-	/* Reset */
-	#footernav, #footernav-menu, #footernav-menu li, #footernav-menu a, #footernav-menu ul {
-		margin: 0;
-		padding: 0;
-		position: static;
-		float: none;
-		display: inline;
-		font-size: 1.0em;
-		border: none;
-		box-shadow: none;
-		background: none;
-		top: 0;
-		left: 0;
-	}
-	#footernav {
-		float: none;
-	}
-	#footernav-icon {
-		display: block;
-		text-decoration: none;
-		font-size: 1.0em;
-		color: #fff;
-	}
-	#footernav-icon:hover {
-		cursor: pointer;
-		text-decoration: underline;
-	}
-	#footernav-icon:after {
-		margin: 0.05em 0 0 0;
-		-webkit-font-smoothing: antialiased;
-		display: inline-block;
-		content: '\f419';
-		font: normal 16px/1 Genericons;
-		text-decoration: inherit;
-		vertical-align: text-bottom;
-	}
-	#footernav-icon:hover:after {
-		text-decoration: none;
-	}
-	#footernav-menu {
-		display: none;
-		width: 100%;
-		padding-top: 1em;
-	}
-	#footernav-menu li {
-		display: block;
-		padding: 0.8em 0.4em;
-	}
-	#footernav-menu a {
-		display: inline-block;
-		text-decoration: none;
-		font-size: 0.9em;
-	}
-	#footernav-menu a:hover {
-		text-decoration: underline;
-	}
-
 }
 
 /* Phablets (portrait) | <640px */
@@ -2291,11 +2250,11 @@ embed, iframe, object, video {
 		float: none;
 		margin: 1em 0;
 	}
-	#footer #footer-text {
-		float: none;
-	}
-	#footernav-icon {
-		margin-top: 1em;
+
+	/* Footer Navigation Menu */
+	#footernav-menu li {
+		display: block;
+		margin: 0 0 1.5em;
 	}
 }
 
@@ -2445,11 +2404,5 @@ embed, iframe, object, video {
 	}
 	.top-navigation-menu li.menu-item li a:hover {
 		background: rgba(255,2555,255,0.075);
-	}
-}
-@media only screen and (min-width: 50.001em) {
-	/* ensure #footernav is visible on desktop version */
-	#footernav-menu {
-		display: block !important;
 	}
 }

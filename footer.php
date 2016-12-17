@@ -4,15 +4,10 @@
 
 		<footer id="footer" class="container clearfix" role="contentinfo">
 
-			<div id="footer-text">
-				<?php do_action( 'dynamicnews_footer_text' ); ?>
-			</div>
-
 			<?php // Check if there is a top navigation menu.
 			if ( has_nav_menu( 'footer' ) ) : ?>
 
 				<nav id="footernav" class="clearfix" role="navigation">
-					<h4 id="footernav-icon"></h4>
 					<?php
 						// Get Navigation out of Theme Options
 						wp_nav_menu( array(
@@ -28,6 +23,10 @@
 				</nav>
 
 			<?php endif; ?>
+
+			<div id="footer-text">
+				<?php do_action( 'dynamicnews_footer_text' ); ?>
+			</div>
 
 		</footer>
 
