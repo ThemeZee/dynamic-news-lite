@@ -26,6 +26,9 @@ For more information about Dynamic News Lite please go to https://themezee.com/t
 
 == Changelog ==
 
+= 1.4.8 =
+* added Magazine Homepage widgets to blog index
+
 = 1.4.7 =
 * added editor shortcuts and instant live preview for site title and tagline in Customizer
 * improved styling of footer navigation menu

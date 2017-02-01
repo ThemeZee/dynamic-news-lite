@@ -22,8 +22,6 @@ Template Name: Magazine Homepage
 
 		endif; ?>
 
-
-
 		<?php // Display Frontpage Widgets
 		if ( is_active_sidebar( 'frontpage-magazine' ) ) : ?>
 
