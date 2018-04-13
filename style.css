@@ -58,7 +58,7 @@ html {
 	font-size: 100.01%;
 }
 body {
-	font-family: 'Droid Sans', Arial, Tahoma;
+	font-family: 'Ubuntu', Arial, Tahoma;
 	font-size: 1.0em;
 	border: 0;
 	color: #111;
@@ -81,7 +81,7 @@ input, textarea {
 	border: 1px solid #ddd;
 	font-size: 1.0em;
 	color: #333;
-	font-family: 'Droid Sans', Arial, Tahoma;
+	font-family: 'Ubuntu', Arial, Tahoma;
 }
 input[type="submit"] {
 	border: none;
@@ -484,7 +484,7 @@ input, textarea, select {
 }
 .widgettitle {
 	font-size: 0.9em;
-	font-family: 'Droid Sans', Arial, Tahoma;
+	font-family: 'Ubuntu', Arial, Tahoma;
 	padding: 0.8em;
 	margin: -0.5em -0.5em 1.5em -0.5em;
 	background: #333;
@@ -1449,7 +1449,7 @@ embed, iframe, object, video {
 	border: none;
 	margin: 0;
 	font-size: 0.95em;
-	font-family: 'Droid Sans', Arial, Tahoma;
+	font-family: 'Ubuntu', Arial, Tahoma;
 }
 .widget-category-posts .small-post .entry-meta {
 	display: inline-block;
