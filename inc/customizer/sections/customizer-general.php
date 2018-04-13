@@ -91,38 +91,4 @@ function dynamicnews_customize_register_general_settings( $wp_customize ) {
 		)
 	);
 
-	// Add Default Fonts Header
-	$wp_customize->add_setting( 'dynamicnews_theme_options[default_fonts]', array(
-		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'esc_attr',
-		)
-	);
-	$wp_customize->add_control( new Dynamic_News_Customize_Header_Control(
-		$wp_customize, 'dynamicnews_control_default_fonts', array(
-			'label' => esc_html__( 'Default Fonts', 'dynamic-news-lite' ),
-			'section' => 'dynamicnews_section_general',
-			'settings' => 'dynamicnews_theme_options[default_fonts]',
-			'priority' => 7,
-		)
-	) );
-
-	// Add Settings and Controls for Deactivate Google Font setting
-	$wp_customize->add_setting( 'dynamicnews_theme_options[deactivate_google_fonts]', array(
-		'default'           => false,
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'dynamicnews_sanitize_checkbox',
-		)
-	);
-	$wp_customize->add_control( 'dynamicnews_control_deactivate_google_fonts', array(
-		'label'    => esc_html__( 'Deactivate Google Fonts in case your language is not compatible.', 'dynamic-news-lite' ),
-		'section'  => 'dynamicnews_section_general',
-		'settings' => 'dynamicnews_theme_options[deactivate_google_fonts]',
-		'type'     => 'checkbox',
-		'priority' => 8,
-		)
-	);
-
 }
