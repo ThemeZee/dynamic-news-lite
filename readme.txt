@@ -29,6 +29,7 @@ For more information about Dynamic News Lite please go to https://themezee.com/t
 = 1.5 =
 * added default theme fonts as local fonts
 * use local fonts instead of Google fonts for GDPR compliance
+* changed default font from Droid Sans to Ubuntu
 
 = 1.4.8 =
 * added Magazine Homepage widgets to blog index
