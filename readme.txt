@@ -26,6 +26,11 @@ For more information about Dynamic News Lite please go to https://themezee.com/t
 
 == Changelog ==
 
+= 1.6 =
+* added styling for Gutenberg blocks
+* added custom color palette for Gutenberg
+* added editor styling for WordPress 5.0
+
 = 1.5 =
 * added default theme fonts as local fonts
 * use local fonts instead of Google fonts for GDPR compliance

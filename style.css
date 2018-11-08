@@ -2,7 +2,7 @@
 Theme Name: Dynamic News Lite
 Theme URI: https://themezee.com/themes/dynamicnews/
 Description: A responsive, multipurpose blogging and magazine theme with bold colors and fonts. It comes with a featured content slider and a magazine page template. Dynamic News is a trending theme on wordpress.com and we are sure you will like the WordPress.org version as well.
-Version: 1.5
+Version: 1.6
 Author: ThemeZee
 Author URI: https://themezee.com
 Tags: two-columns, custom-background, custom-colors, custom-header, custom-menu, editor-style, rtl-language-support, blog, news, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
@@ -968,21 +968,26 @@ big, .big_tag {
 ins {
 	text-decoration: none;
 }
+hr {
+	margin-bottom: 1.5em;
+	height: 1px;
+	border: 0;
+	background-color: #ccc;
+}
 code, pre {
-	padding: 3px 8px;
-	margin: 0 1px;
-	background: #eeeeee;
-	color: #222;
-	font-size: 0.9em;
-	font-family: Monospace, "Courier New", Courier;
 	overflow: auto;
-	line-height: 1.4em;
+	margin-bottom: 1.5em;
+	padding: 1.5em;
+	max-width: 100%;
+	border: 1px solid #e5e5e5;
+	background: #f5f5f5;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	line-height: 1.6;
 }
 del, strike, s{
 	text-decoration: line-through;
-}
-pre {
-	font-family: "Courier 10 Pitch", Courier, monospace;
 }
 small {
 	font-size: 0.7em;
@@ -1011,15 +1016,38 @@ sub {
 	font-family: "Courier 10 Pitch", Courier, monospace;
 }
 blockquote {
-	background:#f5f5f5;
-	border-left: 10px solid #ccc;
-	margin: 1.2em 0;
-	padding: 0.5em 1.5em;
-}
-blockquote cite {
-	display: block;
-	margin: 0.5em 0 0 0.5em;
+	margin: 0 0 1.5em;
+	padding-left: 1.25em;
+	border-left: 4px solid #303030;
 	color: #777;
+	font-style: italic;
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+blockquote cite,
+blockquote small {
+	display: block;
+	margin-top: 1em;
+	color: #303030;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.75;
+}
+
+blockquote cite:before,
+blockquote small:before {
+	content: "\2014\00a0";
+}
+
+blockquote em,
+blockquote i,
+blockquote cite {
+	font-style: normal;
+}
+
+blockquote > :last-child {
+	margin-bottom: 0.5em;
 }
 .entry table {
 	border-collapse: collapse;
@@ -1219,6 +1247,121 @@ embed, iframe, object, video {
 /* Top Navigation Social Icons */
 #topnavi-social-icons .social-icons-menu li a {
 	padding: 0.6em;
+}
+
+/* Gutenberg Blocks
+--------------------------------------------------------------*/
+
+/* Audio */
+.wp-block-audio audio {
+	width: 100%;
+}
+
+/* Gallery */
+.wp-block-gallery,
+.entry .wp-block-gallery {
+	margin: 0 0 1.5em;
+}
+
+/* Separator */
+.wp-block-separator {
+	height: 2px;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	max-width: 100px;
+}
+
+/* Quote */
+.wp-block-quote.is-style-large {
+	border: none;
+	margin: 0 0 1.5em;
+	padding: 0;
+	font-size: 28px;
+	font-size: 1.75rem;
+}
+
+.wp-block-quote.is-style-large p {
+	margin-bottom: 0.5em;
+	font-size: inherit;
+	font-style: inherit;
+	line-height: inherit;
+}
+
+.wp-block-quote.is-style-large cite {
+	text-align: inherit;
+}
+
+/* Pullquote */
+.wp-block-pullquote {
+	margin-bottom: 1.5em;
+	padding: 1.5em 0;
+    border-bottom: 4px solid #ccc;
+    border-top: 4px solid #ccc;
+}
+
+.wp-block-pullquote blockquote {
+	border: none;
+	margin: 0;
+	padding: 0;
+	font-size: 28px;
+	font-size: 1.75rem;
+}
+
+.wp-block-pullquote blockquote p {
+	margin-bottom: 0.5em;
+}
+
+/* Cover */
+.wp-block-cover {
+	display: flex;
+}
+
+.wp-block-cover-text {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* Block Text Colors */
+.has-primary-color {
+	color: #e84747;
+}
+
+.has-white-color {
+	color: #ffffff;
+}
+
+.has-light-gray-color {
+	color: #f0f0f0;
+}
+
+.has-dark-gray-color {
+	color: #777777;
+}
+
+.has-black-color {
+	color: #303030;
+}
+
+/* Block Background Colors */
+.has-primary-background-color {
+	background-color: #e84747;
+}
+
+.has-white-background-color {
+	background-color: #ffffff;
+}
+
+.has-light-gray-background-color {
+	background-color: #f0f0f0;
+}
+
+.has-dark-gray-background-color {
+	background-color: #777777;
+}
+
+.has-black-background-color {
+	background-color: #303030;
 }
 
 /* Comments
