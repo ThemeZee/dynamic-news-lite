@@ -26,6 +26,9 @@ For more information about Dynamic News Lite please go to https://themezee.com/t
 
 == Changelog ==
 
+= 1.6.2 =
+* fixed missing slider tag bug in WordPress Block Editor
+
 = 1.6.1 =
 * added font display swap to default theme fonts
 

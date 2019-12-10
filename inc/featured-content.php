@@ -45,21 +45,6 @@ class Dynamic_News_Featured_Content {
 		add_action( 'customize_controls_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
 		add_action( 'pre_get_posts',                      array( __CLASS__, 'pre_get_posts' ) );
 		add_action( 'switch_theme',                       array( __CLASS__, 'delete_transient' ) );
-		add_action( 'wp_loaded',                          array( __CLASS__, 'wp_loaded' ) );
-
-	}
-
-	/**
-	 * Hide "featured" tag from the front-end.
-	 *
-	 * Has to run on wp_loaded so that the preview filters of the customizer
-	 * have a chance to alter the value.
-	 */
-	public static function wp_loaded() {
-		if ( self::get_setting( 'hide-tag' ) ) {
-			add_filter( 'get_terms',     array( __CLASS__, 'hide_featured_term' ), 10, 3 );
-			add_filter( 'get_the_terms', array( __CLASS__, 'hide_the_featured_term' ), 10, 3 );
-		}
 	}
 
 	/**
@@ -228,98 +213,6 @@ class Dynamic_News_Featured_Content {
 	}
 
 	/**
-	 * Hide featured tag from displaying when global terms are queried from
-	 * the front-end.
-	 *
-	 * Hooks into the "get_terms" filter.
-	 *
-	 * @uses Dynamic_News_Featured_Content::get_setting()
-	 *
-	 * @param array $terms A list of term objects. This is the return value of get_terms().
-	 * @param array $taxonomies An array of taxonomy slugs.
-	 * @return array $terms
-	 */
-	public static function hide_featured_term( $terms, $taxonomies, $args ) {
-
-		// This filter is only appropriate on the front-end.
-		if ( is_admin() ) {
-			return $terms;
-		}
-
-		// We only want to hide the featured tag.
-		if ( ! in_array( 'post_tag', $taxonomies ) ) {
-			return $terms;
-		}
-
-		// Bail if no terms were returned.
-		if ( empty( $terms ) ) {
-			return $terms;
-		}
-
-		// Bail if term objects are unavailable.
-		if ( 'all' != $args['fields'] ) {
-			return $terms;
-		}
-
-		$settings = self::get_setting();
-		$tag = get_term_by( 'name', $settings['tag-name'], 'post_tag' );
-
-		if ( false !== $tag ) {
-			foreach ( $terms as $order => $term ) {
-				if ( is_object( $term ) && ( $settings['tag-id'] === $term->term_id || $settings['tag-name'] === $term->name ) ) {
-					unset( $terms[ $order ] );
-				}
-			}
-		}
-
-		return $terms;
-	}
-
-	/**
-	 * Hide featured tag from displaying when terms associated with a post object
-	 * are queried from the front-end.
-	 *
-	 * Hooks into the "get_the_terms" filter.
-	 *
-	 * @uses Dynamic_News_Featured_Content::get_setting()
-	 *
-	 * @param array $terms A list of term objects. This is the return value of get_the_terms().
-	 * @param int $id The ID field for the post object that terms are associated with.
-	 * @param array $taxonomy An array of taxonomy slugs.
-	 * @return array $terms
-	 */
-	public static function hide_the_featured_term( $terms, $id, $taxonomy ) {
-
-		// This filter is only appropriate on the front-end.
-		if ( is_admin() ) {
-			return $terms;
-		}
-
-		// Make sure we are in the correct taxonomy.
-		if ( 'post_tag' != $taxonomy ) {
-			return $terms;
-		}
-
-		// No terms? Return early!
-		if ( empty( $terms ) ) {
-			return $terms;
-		}
-
-		$settings = self::get_setting();
-		$tag = get_term_by( 'name', $settings['tag-name'], 'post_tag' );
-
-		if ( false !== $tag ) {
-			foreach ( $terms as $order => $term ) {
-				if ( $settings['tag-id'] === $term->term_id || $settings['tag-name'] === $term->name ) {
-					unset( $terms[ $order ] );
-				}
-			}
-		}
-
-		return $terms;
-	}
-
-	/**
 	 * Register custom setting on the Settings -> Reading screen.
 	 *
 	 * @uses Dynamic_News_Featured_Content::validate_settings()
@@ -348,11 +241,6 @@ class Dynamic_News_Featured_Content {
 			'type'                 => 'option',
 			'sanitize_js_callback' => array( __CLASS__, 'delete_transient' ),
 		) );
-		$wp_customize->add_setting( 'featured-content[hide-tag]', array(
-			'default'              => true,
-			'type'                 => 'option',
-			'sanitize_js_callback' => array( __CLASS__, 'delete_transient' ),
-		) );
 		$wp_customize->add_setting( 'featured-content[show-all]', array(
 			'default'              => false,
 			'type'                 => 'option',
@@ -369,13 +257,6 @@ class Dynamic_News_Featured_Content {
 			'label'          => esc_html__( 'Tag name', 'dynamic-news-lite' ),
 			'section'        => 'dynamicnews_section_slider',
 			'priority'       => 5,
-			'active_callback' => 'dynamicnews_slider_activated_callback',
-		) );
-		$wp_customize->add_control( 'featured-content[hide-tag]', array(
-			'label'          => esc_html__( 'Hide tag from displaying in post meta and tag clouds.', 'dynamic-news-lite' ),
-			'section'        => 'dynamicnews_section_slider',
-			'type'           => 'checkbox',
-			'priority'       => 6,
 			'active_callback' => 'dynamicnews_slider_activated_callback',
 		) );
 		$wp_customize->add_control( 'featured-content[show-all]', array(
@@ -418,7 +299,6 @@ class Dynamic_News_Featured_Content {
 		$saved = (array) get_option( 'featured-content' );
 
 		$defaults = array(
-			'hide-tag' => 1,
 			'tag-id'   => 0,
 			'tag-name' => '',
 			'show-all' => 0,
@@ -468,8 +348,6 @@ class Dynamic_News_Featured_Content {
 			$output['tag-name'] = $input['tag-name'];
 		}
 
-		$output['hide-tag'] = isset( $input['hide-tag'] ) && $input['hide-tag'] ? 1 : 0;
-
 		$output['show-all'] = isset( $input['show-all'] ) && $input['show-all'] ? 1 : 0;
 
 		$output['max-posts'] = isset( $input['max-posts'] ) && $input['max-posts'] > 0 ? absint( $input['max-posts'] ) : 20;
@@ -481,6 +359,3 @@ class Dynamic_News_Featured_Content {
 }
 
 Dynamic_News_Featured_Content::setup();
-
-
-
