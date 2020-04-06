@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/dynamicnews/
 Contributors: themezee
 Tags: two-columns, custom-background, custom-colors, custom-header, custom-menu, editor-style, rtl-language-support, blog, news, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Requires at least: 4.7
-Tested up to: 5.3
+Tested up to: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,10 @@ For more information about Dynamic News Lite please go to https://themezee.com/t
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 1.6.4 =
+* added new wp_body_open action hook
+* improved Block Editor styling for WordPress 5.4
 
 = 1.6.3 =
 * added Skip-to-Content link for improved accessibility

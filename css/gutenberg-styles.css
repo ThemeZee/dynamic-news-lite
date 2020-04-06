@@ -20,8 +20,7 @@
 # 1.0 - Editor
 --------------------------------------------------------------*/
 body.block-editor-page .edit-post-visual-editor .editor-post-title__block,
-body.block-editor-page .edit-post-visual-editor .editor-default-block-appender,
-body.block-editor-page .edit-post-visual-editor .editor-block-list__block {
+.wp-block {
     max-width: 890px;
 }
 
@@ -38,28 +37,29 @@ body.block-editor-page .edit-post-visual-editor .editor-block-list__block {
 /*--------------------------------------------------------------
 # 2.0 - Typography
 --------------------------------------------------------------*/
-.edit-post-visual-editor .editor-block-list__block {
+.editor-styles-wrapper > * {
 	font-family: 'Ubuntu', Arial, Tahoma;
 	font-size: 16px;
 	font-size: 1.0rem;
 	color: #111;
-	line-height: 1;
+	line-height: 1.5;
 }
 
-.edit-post-visual-editor .editor-block-list__block p {
+.editor-styles-wrapper .wp-block p {
 	font-size: 1.0em;
 	margin: 0.75em 0;
+	line-height: 1.5;
 }
 
-.edit-post-visual-editor .editor-block-list__block a {
+.editor-styles-wrapper a {
     color: #e84747;
 }
 
-.edit-post-visual-editor .editor-block-list__block .has-text-color a {
+.editor-styles-wrapper .has-text-color a {
     color: inherit;
 }
 
-.edit-post-visual-editor .editor-block-list__block pre {
+.editor-styles-wrapper pre {
 	overflow: auto;
 	padding: 1.5em;
 	border: 1px solid #e5e5e5;
@@ -70,38 +70,38 @@ body.block-editor-page .edit-post-visual-editor .editor-block-list__block {
 	line-height: 1.6;
 }
 
-.edit-post-visual-editor .editor-block-list__block h1,
-.edit-post-visual-editor .editor-block-list__block h2,
-.edit-post-visual-editor .editor-block-list__block h3,
-.edit-post-visual-editor .editor-block-list__block h4,
-.edit-post-visual-editor .editor-block-list__block h5,
-.edit-post-visual-editor .editor-block-list__block h6 {
+.editor-styles-wrapper .wp-block h1,
+.editor-styles-wrapper .wp-block h2,
+.editor-styles-wrapper .wp-block h3,
+.editor-styles-wrapper .wp-block h4,
+.editor-styles-wrapper .wp-block h5,
+.editor-styles-wrapper .wp-block h6 {
 	clear: both;
 	margin: 1.2em 0 0.3em;
 	line-height: 1.4;
 }
 
-.edit-post-visual-editor .editor-block-list__block h1 {
+.editor-styles-wrapper .wp-block h1 {
 	font-size: 3.0em;
 }
 
-.edit-post-visual-editor .editor-block-list__block h2 {
+.editor-styles-wrapper .wp-block h2 {
 	font-size: 2.25em;
 }
 
-.edit-post-visual-editor .editor-block-list__block h3 {
+.editor-styles-wrapper .wp-block h3 {
 	font-size: 1.5em;
 }
 
-.edit-post-visual-editor .editor-block-list__block h4 {
+.editor-styles-wrapper .wp-block h4 {
 	font-size: 1.25em;
 }
 
-.edit-post-visual-editor .editor-block-list__block h5 {
+.editor-styles-wrapper .wp-block h5 {
 	font-size: 1.125em;
 }
 
-.edit-post-visual-editor .editor-block-list__block h6 {
+.editor-styles-wrapper .wp-block h6 {
 	font-size: 1.0em;
 }
 
@@ -194,7 +194,7 @@ body.block-editor-page .edit-post-visual-editor .editor-block-list__block {
 }
 
 /* Cover */
-.edit-post-visual-editor .editor-block-list__block p.wp-block-cover-text {
+.editor-styles-wrapper p.wp-block-cover-text {
 	margin-top: 0;
 	margin-bottom: 0;
 	font-size: 2em;
