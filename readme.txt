@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/dynamicnews/
 Contributors: themezee
 Tags: two-columns, custom-background, custom-colors, custom-header, custom-menu, editor-style, rtl-language-support, blog, news, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Requires at least: 5.2
-Tested up to: 5.5
+Tested up to: 5.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,9 @@ For more information about Dynamic News Lite please go to https://themezee.com/t
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 1.6.6 =
+* fixed PHP warning in wp_localize_script
 
 = 1.6.5 =
 * fixed lazy loading bug for slider images

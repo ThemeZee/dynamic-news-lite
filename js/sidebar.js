@@ -52,10 +52,10 @@
 		if ( $( '#sidebar' ).length > 0 ) {
 
 			/* Add sidebar toggle */
-			$( '#navi-wrap' ).before( '<button id=\"sidebar-toggle\" class=\"sidebar-navigation-toggle\">' + dynamicnews_sidebar_title + '</button>' );
+			$( '#navi-wrap' ).before( '<button id=\"sidebar-toggle\" class=\"sidebar-navigation-toggle\">' + dynamicnews_sidebar_title.text + '</button>' );
 
 			/* Add sidebar closing toggle */
-			$( '#sidebar' ).prepend( '<button id=\"sidebar-close\" class=\"sidebar-closing-toggle\">' + dynamicnews_sidebar_title + '</button>' );
+			$( '#sidebar' ).prepend( '<button id=\"sidebar-close\" class=\"sidebar-closing-toggle\">' + dynamicnews_sidebar_title.text + '</button>' );
 
 			/* Add Overlay */
 			$( 'body' ).append( '<div id=\"sidebar-overlay\"></div>' );

@@ -107,7 +107,7 @@
 			menuID: "mainnav-menu",
 			toggleID: "mainnav-toggle",
 			toggleClass: "nav-toggle",
-			toggleText: dynamicnews_menu_title,
+			toggleText: dynamicnews_menu_title.text,
 			maxWidth: "60em"
 		});
 
