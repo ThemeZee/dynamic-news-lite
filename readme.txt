@@ -26,6 +26,9 @@ For more information about Dynamic News Lite please go to https://themezee.com/t
 
 == Changelog ==
 
+= 1.6.7 - 2021-06-06 =
+* fixed styling of Social Icons widget from Widget Bundle plugin
+
 = 1.6.6 =
 * fixed PHP warning in wp_localize_script
 

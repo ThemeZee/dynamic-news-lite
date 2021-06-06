@@ -2,7 +2,7 @@
 Theme Name: Dynamic News Lite
 Theme URI: https://themezee.com/themes/dynamicnews/
 Description: A responsive, multipurpose blogging and magazine theme with bold colors and fonts. It comes with a featured content slider and a magazine page template. Dynamic News is a trending theme on wordpress.com and we are sure you will like the WordPress.org version as well.
-Version: 1.6.6
+Version: 1.6.7
 Requires at least: 5.2
 Tested up to: 5.7
 Requires PHP: 5.6
@@ -1203,7 +1203,8 @@ embed, iframe, object, video {
 	text-decoration: inherit;
 	vertical-align: top;
 }
-.social-icons-menu li a .screen-reader-text {
+.social-icons-menu li a .screen-reader-text,
+.social-icons-menu li a .icon {
 	display: none;
 }
 .social-icons-wrap .social-icons-hint {
