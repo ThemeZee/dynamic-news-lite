@@ -348,10 +348,13 @@ function dynamicnews_display_footer_text() {
 	?>
 
 	<span class="credit-link">
-		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'dynamic-news-lite' ),
-			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
-			'<a href="https://themezee.com/themes/dynamicnews/" title="Dynamic News WordPress Theme">Dynamic News</a>'
-		); ?>
+		<?php
+		// translators: Theme Name and Link to ThemeZee.
+		printf( esc_html__( 'WordPress Theme: %1$s by %2$s.', 'dynamic-news-lite' ),
+			esc_html__( 'Dynamic News', 'dynamic-news-lite' ),
+			'ThemeZee'
+		);
+		?>
 	</span>
 
 	<?php
